@@ -39,6 +39,25 @@ it characterizes the failure mode, it does not claim to close #191; geometry
 proxies derive from GT, so label quality confounds the strata; the <6 vox
 spacing bins are thin (~2k background points).
 
+## Follow-up: label-completeness QC (`scripts/qc192_labels.py`)
+
+Turns the label-incompleteness hypothesis above into a measurement. For each
+patch it detects **candidate unlabeled sheets** — high-confidence predictions
+>3 vox outside the GT that are sheet-shaped (planar PCA) and CT-bright — and
+scores the patch's label incompleteness.
+
+- Mean incompleteness across the 200 patches: **6.4%** of sheet voxels;
+  the worst decile of patches exceeds **14%**.
+- **Cross-model validation (the honest number):** the score computed from model
+  A's predictions correlates with the *independent* model B's per-patch dice at
+  **Spearman −0.45 / Pearson −0.49** — label incompleteness is a real,
+  model-independent contributor to low evaluation scores (~24% of variance).
+  The same-model correlation is −0.91 but partially circular (the score counts
+  a subset of that model's own false positives), so we do not headline it.
+- Visual check: in the worst patches the detected candidates are long coherent
+  sheets clearly present in the CT and absent from the GT
+  (`results/label_qc/worst_incomplete.png`, red = candidate, green = GT).
+
 ## Contents
 
 - `scripts/diag2_191.py` — recall stratification: sliding-window inference +

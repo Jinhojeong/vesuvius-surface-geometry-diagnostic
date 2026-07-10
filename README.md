@@ -26,18 +26,18 @@ models degrade monotonically through all 10 deciles:
 | `surface_recto_059_redo` | **0.413** (below chance) | 0.886 |
 | `surface_recto` (nnUNetv2) | 0.771 | 0.943 |
 
-Additional observations: recall-only metrics flatter high-firing-rate models in
-exactly these hard regions (they made `surface_recto` look immune to
-compression — it isn't); and in the lowest-dice patches the predictions
+Two additional observations. Recall-only metrics flatter high-firing-rate
+models in these hard regions (they made `surface_recto` look immune to
+compression, which it isn't). And in the lowest-dice patches the predictions
 visibly track fine CT sheet structure that the sparse GT bands miss, so part of
-the low tail is plausibly **label incompleteness** (moderate evidence — see the
-CT-brightness oracle in `results/oracle.csv`).
+the low tail is plausibly **label incompleteness** (see the CT-brightness
+check in `results/oracle.csv`).
 
-Caveats: patches likely overlap both models' training distribution (curves are
-optimistic bounds); this is not the official Kaggle Surface Detection metric —
-it characterizes the failure mode, it does not claim to close #191; geometry
-proxies derive from GT, so label quality confounds the strata; the <6 vox
-spacing bins are thin (~2k background points).
+Caveats: patches likely overlap both models' training distribution, so the
+curves are optimistic bounds. This is not the official Kaggle Surface
+Detection metric; it characterizes the failure mode rather than closing #191.
+Geometry proxies derive from GT, so label quality confounds the strata. The
+<6 vox spacing bins are thin (~2k background points).
 
 ## Follow-up: label-completeness QC (`scripts/qc192_labels.py`)
 
@@ -48,12 +48,13 @@ scores the patch's label incompleteness.
 
 - Mean incompleteness across the 200 patches: **6.4%** of sheet voxels;
   the worst decile of patches exceeds **14%**.
-- **Cross-model validation (the honest number):** the score computed from model
-  A's predictions correlates with the *independent* model B's per-patch dice at
-  **Spearman −0.45 / Pearson −0.49** — label incompleteness is a real,
+- **Cross-model validation:** the score computed from model A's predictions
+  correlates with the *independent* model B's per-patch dice at
+  **Spearman −0.45 / Pearson −0.49**, so label incompleteness is a real,
   model-independent contributor to low evaluation scores (~24% of variance).
   The same-model correlation is −0.91 but partially circular (the score counts
-  a subset of that model's own false positives), so we do not headline it.
+  a subset of that model's own false positives), so the cross-model number is
+  the one to use.
 - Visual check: in the worst patches the detected candidates are long coherent
   sheets clearly present in the CT and absent from the GT
   (`results/label_qc/worst_incomplete.png`, red = candidate, green = GT).

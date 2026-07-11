@@ -83,9 +83,25 @@ delta −0.003 ± 0.004 (t p=0.43, Wilcoxon p=0.80), fine-tuned model ahead on
 68/123. An n=40 sample had suggested −0.01; it did not survive the larger
 sample. The operating threshold shifts from 0.4 to 0.6.
 
-Repaired checkpoints (`ckpt_ft_ctrl.pth`, `ckpt_ft_msr.pth`) are in the
-GitHub Release. Known issue: the official metric library segfaults on one of
-the s4 evaluation patches (C++ Betti matching); reproducer available.
+Scaling exposure further (full 1554-patch pool, 6000 steps) gives the best
+numbers in 7 of 8 spacing bins and surface dice 0.850, but the compressed
+bin saturates around **0.65** — that plateau looks like the real remaining
+ceiling for this recipe (`results/finetune/full_auc.json`,
+`full_official.json`).
+
+**A second diagnostic axis fell out of this work:** discrimination is also
+systematically worse where the sheet normal is aligned with a volume axis.
+Baseline AUC is 0.90 for oblique normals vs 0.80 for axis-aligned ones, and
+the gap survives controlling for curvature (low-curvature half: 0.955 vs
+0.853) and for compression (persists within every spacing band, −0.05 to
+−0.09). A plausible mechanism is partial-volume stair-stepping for
+grid-parallel sheets. Fine-tuning narrows this gap too (0.80 → 0.87).
+Tables: `results/finetune/orient_strata.json`, `orient_x_spacing.json`.
+
+Repaired checkpoints (`ckpt_ft_full.pth` recommended; `ckpt_ft_ctrl.pth` and
+`ckpt_ft_msr.pth` for the ablation arms) are in the GitHub Release. Known
+issue: the official metric library segfaults on one of the s4 evaluation
+patches (C++ Betti matching); reproducer available.
 
 ## Contents
 

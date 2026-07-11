@@ -59,6 +59,34 @@ scores the patch's label incompleteness.
   sheets clearly present in the CT and absent from the GT
   (`results/label_qc/worst_incomplete.png`, red = candidate, green = GT).
 
+## Follow-up 2: why compression fails, and a repair that costs nothing
+
+I traced the compressed-region collapse of `surface_recto_059_redo` to its
+cause by elimination, then tested a fix against the official metric:
+
+- Not information limits: a model-free phase-demodulation score (local period
+  by autocorrelation along the sheet normal, phase-locked matched filter) sits
+  at chance (0.50-0.53) in the tight-spacing bins where a fine-tuned network
+  reaches 0.65 (`scripts/phase_prior.py`, `results/finetune/phase_auc.json`).
+- Not label incompleteness: fine-tuning with QC-derived ignore masks changes
+  nothing vs an identical run without them (max +0.005 in compression bins;
+  `scripts/qc_make_ignore.py`, `scripts/ft059.py`).
+- Not the loss: fine-tuning with the original combined loss (DC+SkelREC+CE)
+  reproduces the repair within ±0.003 of a plain CE+dice arm
+  (`scripts/arm_msr.py`, `results/finetune/msr_auc.json`).
+
+What fixes it is continued training itself: 3000 steps on 500 fresh Dataset059
+patches (~5h, one 11GB 2080 Ti) lifts <4 vox spacing AUC from **0.41 to 0.65**,
+with the whole degradation curve shifting up. Cost on the official
+`topometrics` leaderboard blend: none detectable — paired over n=123 patches,
+delta −0.003 ± 0.004 (t p=0.43, Wilcoxon p=0.80), fine-tuned model ahead on
+68/123. An n=40 sample had suggested −0.01; it did not survive the larger
+sample. The operating threshold shifts from 0.4 to 0.6.
+
+Repaired checkpoints (`ckpt_ft_ctrl.pth`, `ckpt_ft_msr.pth`) are in the
+GitHub Release. Known issue: the official metric library segfaults on one of
+the s4 evaluation patches (C++ Betti matching); reproducer available.
+
 ## Contents
 
 - `scripts/diag2_191.py` — recall stratification: sliding-window inference +

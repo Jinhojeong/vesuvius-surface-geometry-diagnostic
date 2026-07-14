@@ -1,0 +1,24 @@
+{
+ "released": {
+  "cats": {
+   "bimodal_splittable": 1,
+   "unimodal_unresolved": 155,
+   "missed": 25,
+   "other": 19
+  },
+  "n": 200,
+  "valley_mean": 0.02244967222213745,
+  "bimodal_frac": 0.005
+ },
+ "finetuned": {
+  "cats": {
+   "bimodal_splittable": 1,
+   "unimodal_unresolved": 166,
+   "missed": 18,
+   "other": 15
+  },
+  "n": 200,
+  "valley_mean": 0.08648860454559326,
+  "bimodal_frac": 0.005
+ }
+}

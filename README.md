@@ -89,6 +89,20 @@ bin saturates around **0.65** — that plateau looks like the real remaining
 ceiling for this recipe (`results/finetune/full_auc.json`,
 `full_official.json`).
 
+That ceiling looks like a resolution limit, not a thresholding gap a
+post-process could clear. Sampling the predicted probability along the sheet
+normal at 200 compressed GT points (neighbour sheet <4 vox away), the released
+model shows a single broad peak covering both sheets in **78%** of them and two
+resolved peaks a splitter could separate in only **0.5%**. Fine-tuning does not
+change that shape (still **83%** one peak, 0.5% two peaks); it helps this bin by
+detecting sheets it used to miss, not by separating merged ones. A direct
+normal-direction split of thick predictions drops the topology score without
+helping, which fits a field with one mode to split. So the AUC can reach 0.65
+while the topology stays wrong (one connected component where GT has two), and
+getting past it needs resolution rather than post-processing
+(`scripts/bimodal191.py`, `scripts/peel191.py`,
+`results/finetune/bimodal_taxonomy.json`).
+
 **A second diagnostic axis fell out of this work:** discrimination is also
 systematically worse where the sheet normal is aligned with a volume axis.
 Baseline AUC is 0.90 for oblique normals vs 0.80 for axis-aligned ones, and
@@ -112,6 +126,10 @@ patches (C++ Betti matching); reproducer available.
 - `scripts/loader059.py` — loading recipe for `Model_epoch499.pth`
   (`_orig_mod.` prefix + duplicate per-task encoder keys + `separate_decoders`)
 - `scripts/oracle191.py` — CT-brightness label-incompleteness probe
+- `scripts/bimodal191.py` — along-normal peak analysis of the compressed-bin
+  ceiling (released vs fine-tuned), the resolution-limit vs post-process test
+- `scripts/peel191.py` — normal-direction split attempt and its official-metric
+  cost (the post-process that does not help)
 - `results/` — per-patch CSVs, strata tables (JSON), figures
 
 ## Reproduce

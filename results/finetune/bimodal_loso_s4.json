@@ -1,0 +1,24 @@
+{
+ "released": {
+  "cats": {
+   "bimodal_splittable": 2,
+   "unimodal_unresolved": 151,
+   "missed": 29,
+   "other": 2
+  },
+  "n": 184,
+  "valley_mean": 0.050460368394851685,
+  "bimodal_frac": 0.010869565217391304
+ },
+ "loso_s1": {
+  "cats": {
+   "bimodal_splittable": 2,
+   "unimodal_unresolved": 163,
+   "missed": 14,
+   "other": 5
+  },
+  "n": 184,
+  "valley_mean": 0.0028517842292785645,
+  "bimodal_frac": 0.010869565217391304
+ }
+}

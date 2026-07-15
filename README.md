@@ -117,6 +117,55 @@ Repaired checkpoints (`ckpt_ft_full.pth` recommended; `ckpt_ft_ctrl.pth` and
 issue: the official metric library segfaults on one of the s4 evaluation
 patches (C++ Betti matching); reproducer available.
 
+## Follow-up 3: does the repair transfer to an unseen scroll?
+
+The repair above was fine-tuned and evaluated on the same dataset, so it shows
+more exposure repairs this distribution, not that it generalizes. I checked that
+directly with a leave-one-scroll-out test: fine-tune the released 059 on Scroll 1
+patches only (same recipe, 500-patch pool, 3000 steps, no s4 or s5 seen), then
+evaluate on Scroll 4, a scroll the fine-tune never touched.
+
+Two metrics move in opposite directions.
+
+Per-voxel discrimination transfers strongly. On Scroll 4 the tight-spacing bin
+(<4 vox) rises from about 0.52 to about 0.89 AUC, and every wider bin improves
+too. A model that only saw Scroll 1 reads Scroll 4's compressed geometry much
+better by this measure.
+
+The official topometrics blend regresses. Sweeping the threshold for both arms
+and comparing each at its own best, base scores 0.693 (at 0.4) and the fine-tune
+0.624 (at 0.5), a drop of about 0.067, driven by topology (0.414 to 0.301). It is
+not a threshold artifact: the fine-tune is below base's best at every threshold.
+
+The two disagree because of the resolution limit from Follow-up 2. At <4 vox the
+two sheets already read as one probability peak. The bimodality diagnostic on
+Scroll 4 shows the fine-tune converts missed sheets into detected ones (no-peak
+share 15.8% to 7.6%) but detects them as merged blobs, not resolved pairs
+(bimodal stays at 1.1%, single-peak rises 82.1% to 88.6%). Both ground-truth
+sheets then get high probability, so per-voxel AUC rises, while the merged blob is
+one connected component where there should be two, so topology falls.
+
+This replicates across three fine-tune seeds (1234, 2025, 42): <4 vox AUC lands
+at 0.888 / 0.896 / 0.892 and the fair official delta at -0.069 / -0.067 / -0.066,
+so it is not a single-run effect. Scope is one architecture (059) and one held-out
+scroll (Scroll 4); model- and multi-scroll generality is not tested here.
+
+Takeaway: per-voxel AUC is misleading in compressed geometry, and a cross-scroll
+fine-tune that improves it can quietly degrade the topology-aware quality the
+official metric measures. Judge cross-scroll transfer with geometry-stratified,
+topology-aware metrics, not AUC alone.
+
+Note on baselines: Scroll 4 is intrinsically easier than the Scroll 1 dominated
+mix used earlier (base <4 vox AUC 0.52 vs 0.41), so the 0.65 ceiling is a Scroll 1
+property, not a universal constant, and the 0.52 to 0.89 jump should be read
+against this easier baseline.
+
+Scripts: `scripts/loso_ft.py` (Scroll-1-only fine-tune, `SEED` env),
+`scripts/loso_eval.py` (per-bin AUC), `scripts/loso_sweep.py` (fair threshold
+sweep), `scripts/loso_seed_val.py` (compact per-seed validation),
+`scripts/bimodal_loso.py` (the merged-blob check on Scroll 4). Results in
+`results/finetune/loso_*.json`.
+
 ## Contents
 
 - `scripts/diag2_191.py` — recall stratification: sliding-window inference +
@@ -130,6 +179,10 @@ patches (C++ Betti matching); reproducer available.
   ceiling (released vs fine-tuned), the resolution-limit vs post-process test
 - `scripts/peel191.py` — normal-direction split attempt and its official-metric
   cost (the post-process that does not help)
+- `scripts/loso_ft.py` — leave-one-scroll-out fine-tune (Scroll 1 only, `SEED` env)
+- `scripts/loso_eval.py`, `scripts/loso_sweep.py`, `scripts/loso_seed_val.py` —
+  cross-scroll transfer AUC, fair threshold sweep, and per-seed replication
+- `scripts/bimodal_loso.py` — merged-blob mechanism check on the unseen scroll
 - `results/` — per-patch CSVs, strata tables (JSON), figures
 
 ## Reproduce

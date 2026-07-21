@@ -198,6 +198,36 @@ python scripts/diag4_auc.py   # two-model AUC strata
 Paths at the top of each script point at local data/model directories — adjust
 to your layout. GPU: everything runs on a single 11 GB RTX 2080 Ti.
 
+## Patch-mode eval for external splitters
+
+`scripts/eval_patch.py` scores any splitter/segmenter output against a GT
+surface patch, reporting the official blend (TopoScore / SurfaceDice@2 / VOI)
+plus each term, connected-component stats and, when instance labels are
+given, instance count and instance-level VOI. A two-input mode prints an
+A -> B delta table (e.g. splitter OFF vs ON), which is the number that
+matters for split evaluation — see the metric-response caveats in the #191
+thread (the blend's VOI term rewards predicted mass, so read topology
+changes on the component/Betti side).
+
+```bash
+# single prediction (mask tif/npy, or npz with an int 'labels' array)
+python scripts/eval_patch.py --gt labelsTr/s1_z10240_y2560_x2560.tif        --pred my_instances.npz
+# OFF -> ON delta
+python scripts/eval_patch.py --gt gt.tif --pred off.npz --pred-b on.npz
+```
+
+Patch layout (two sample patches are attached to the `patches-v1` release:
+one Scroll 1 crop at 300^3, one Scroll 4 / PHerc1667 crop at 236^3):
+
+```
+imagesTr/{scroll}_z{Z}_y{Y}_x{X}_0000.tif  uint8 raw CT, zyx order
+labelsTr/{scroll}_z{Z}_y{Y}_x{X}.tif       uint8 binary GT surface, same grid
+```
+
+Filename coordinates are the crop origin in scroll voxel space. The raw CT
+channel is a direct re-extraction from the released scroll volumes; no
+Frangi/EDT preprocessing anywhere in the eval loop.
+
 ## License
 
 MIT. Data and models are Vesuvius Challenge resources (CC BY-NC 4.0 — credit

@@ -33,7 +33,7 @@ visibly track fine CT sheet structure that the sparse GT bands miss, so part of
 the low tail is plausibly **label incompleteness** (see the CT-brightness
 check in `results/oracle.csv`).
 
-Caveats: patches likely overlap both models' training distribution, so the
+One limit to keep in mind: patches likely overlap both models' training distribution, so the
 curves are optimistic bounds. This is not the official Kaggle Surface
 Detection metric; it characterizes the failure mode rather than closing #191.
 Geometry proxies derive from GT, so label quality confounds the strata. The
@@ -205,7 +205,7 @@ surface patch, reporting the official blend (TopoScore / SurfaceDice@2 / VOI)
 plus each term, connected-component stats and, when instance labels are
 given, instance count and instance-level VOI. A two-input mode prints an
 A -> B delta table (e.g. splitter OFF vs ON), which is the number that
-matters for split evaluation — see the metric-response caveats in the #191
+matters for split evaluation — see the metric-response notes in the #191
 thread (the blend's VOI term rewards predicted mass, so read topology
 changes on the component/Betti side).
 

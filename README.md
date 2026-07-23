@@ -198,6 +198,30 @@ python scripts/diag4_auc.py   # two-model AUC strata
 Paths at the top of each script point at local data/model directories — adjust
 to your layout. GPU: everything runs on a single 11 GB RTX 2080 Ti.
 
+## Reproduce the geometric-channel check
+
+The measurement most worth re-running is the one that kills the obvious next
+idea. Feeding a model geometry instead of intensity looks promising until the
+control shows the signal is band thickness:
+
+```bash
+# patches from the patches-v1 release, or your own Dataset059 crops
+python scripts/reproduce_geometry_check.py --data path/to/patches
+```
+
+Expected, on eight patches (n around 674):
+
+| classifier input | AUC |
+|---|---|
+| full feature set | 0.79 |
+| thickness alone | 0.98 |
+| structure tensor and curvature only | 0.51 |
+| thickness-matched subset | 0.48 |
+
+Local CT geometry carries no weld information; the headline 0.79 is measuring
+how thick the band is, which a model already has. Runs on CPU in about half an
+hour.
+
 ## Patch-mode eval for external splitters
 
 `scripts/eval_patch.py` scores any splitter/segmenter output against a GT

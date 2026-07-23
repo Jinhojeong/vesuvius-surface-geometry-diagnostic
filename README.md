@@ -76,7 +76,7 @@ cause by elimination, then tested a fix against the official metric:
   (`scripts/arm_msr.py`, `results/finetune/msr_auc.json`).
 
 What fixes it is continued training itself: 3000 steps on 500 fresh Dataset059
-patches (~5h, one 11GB 2080 Ti) lifts <4 vox spacing AUC from **0.41 to 0.65**,
+patches (~50 min, one 11GB 2080 Ti) lifts <4 vox spacing AUC from **0.41 to 0.65**,
 with the whole degradation curve shifting up. Cost on the official
 `topometrics` leaderboard blend: none detectable — paired over n=123 patches,
 delta −0.003 ± 0.004 (t p=0.43, Wilcoxon p=0.80), fine-tuned model ahead on
@@ -205,7 +205,7 @@ idea. Feeding a model geometry instead of intensity looks promising until the
 control shows the signal is band thickness:
 
 ```bash
-# patches from the patches-v1 release, or your own Dataset059 crops
+# eight Dataset059 crops of your own; see the note below on patches-v1
 python scripts/reproduce_geometry_check.py --data path/to/patches
 ```
 
@@ -221,6 +221,14 @@ Expected, on eight patches (n around 674):
 Local CT geometry carries no weld information; the headline 0.79 is measuring
 how thick the band is, which a model already has. Runs on CPU in about half an
 hour.
+
+The table needs eight crops, four from Scroll 1 and four from Scroll 4. The
+`patches-v1` release holds two, so it is a smoke test for the code rather than a
+reproduction of the table. On two crops the per-volume cap of 60 sites per class
+leaves n around 170, and the thickness-matched control falls under the 60-pair
+minimum the script requires, so that row prints `nan` while the other three
+still print. The matched row is the one the conclusion rests on, so treat the
+table as reproduced only on eight crops.
 
 ## Patch-mode eval for external splitters
 

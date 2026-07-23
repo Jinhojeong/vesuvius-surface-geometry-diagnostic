@@ -26,7 +26,13 @@ Expected output (8 Dataset059 patches, n=674 as shipped):
 Usage:
   python scripts/reproduce_geometry_check.py --data /path/to/patches
 where the directory holds imagesTr/{id}_0000.tif (uint8 raw CT) and
-labelsTr/{id}.tif (binary GT), as in the patches-v1 release.
+labelsTr/{id}.tif (binary GT), in the layout of the patches-v1 release.
+
+The numbers above need eight crops. patches-v1 ships two, which is enough to
+check the code runs but not to reproduce the table: with two volumes the
+per-class cap leaves n around 170, and the thickness-matched control falls
+under the 60-pair minimum below, so that row prints nan while the other three
+print normally. The matched row is the one the conclusion rests on.
 """
 import argparse
 import glob
@@ -220,9 +226,16 @@ def main():
     print(f"thickness alone           AUC {thick_only:.3f}")
     print(f"structure tensor only     AUC {geom[0]:.3f} +- {geom[1]:.3f}")
     print(f"thickness-matched (n={len(pairs)})  AUC {matched[0]:.3f}")
-    print("\nReading: the full-set number is a thickness artifact. Geometry alone "
-          "is at chance, so a geometric input channel has no weld signal to give "
-          "a model.")
+    if len(pairs) < 60:
+        print(f"\nNOT REPRODUCED: the thickness-matched control needs 60 pairs and "
+              f"got {len(pairs)}, so the row above is nan. That control is what "
+              f"separates a real geometric signal from a thickness artifact, and "
+              f"without it the other three rows do not support any conclusion. "
+              f"Re-run on eight crops; two are not enough.")
+    else:
+        print("\nReading: the full-set number is a thickness artifact. Geometry alone "
+              "is at chance, so a geometric input channel has no weld signal to give "
+              "a model.")
     if args.out:
         json.dump({"n": int(len(Y)), "full": full, "thickness_only": thick_only,
                    "geometry_only": geom, "thickness_matched": matched,

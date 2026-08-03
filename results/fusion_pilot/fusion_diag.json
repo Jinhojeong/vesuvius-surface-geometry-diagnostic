@@ -1,0 +1,258 @@
+{
+ "seed0_pitch160": {
+  "n_neighbour_sites": 19993,
+  "center_prob_quartiles": [
+   0.08,
+   0.26,
+   0.6
+  ],
+  "t0.4": {
+   "fused_pct": 29.9,
+   "sep_true_gap_kept_pct": 2.12,
+   "sep_neighbour_miss_pct": 1.64,
+   "sep_own_miss_pct": 66.35,
+   "detected_at_center_pct": 37.97,
+   "fused_given_detected_pct": 78.74
+  },
+  "t0.5": {
+   "fused_pct": 23.78,
+   "sep_true_gap_kept_pct": 1.71,
+   "sep_neighbour_miss_pct": 1.45,
+   "sep_own_miss_pct": 73.07,
+   "detected_at_center_pct": 31.27,
+   "fused_given_detected_pct": 76.07
+  },
+  "t0.6": {
+   "fused_pct": 18.21,
+   "sep_true_gap_kept_pct": 1.4,
+   "sep_neighbour_miss_pct": 1.09,
+   "sep_own_miss_pct": 79.31,
+   "detected_at_center_pct": 24.99,
+   "fused_given_detected_pct": 72.86
+  }
+ },
+ "seed0_pitch200": {
+  "n_neighbour_sites": 19986,
+  "center_prob_quartiles": [
+   0.163,
+   0.407,
+   0.678
+  ],
+  "t0.4": {
+   "fused_pct": 41.6,
+   "sep_true_gap_kept_pct": 4.2,
+   "sep_neighbour_miss_pct": 1.62,
+   "sep_own_miss_pct": 52.58,
+   "detected_at_center_pct": 50.69,
+   "fused_given_detected_pct": 82.08
+  },
+  "t0.5": {
+   "fused_pct": 32.58,
+   "sep_true_gap_kept_pct": 4.13,
+   "sep_neighbour_miss_pct": 1.7,
+   "sep_own_miss_pct": 61.59,
+   "detected_at_center_pct": 41.54,
+   "fused_given_detected_pct": 78.42
+  },
+  "t0.6": {
+   "fused_pct": 24.1,
+   "sep_true_gap_kept_pct": 3.73,
+   "sep_neighbour_miss_pct": 1.5,
+   "sep_own_miss_pct": 70.67,
+   "detected_at_center_pct": 32.56,
+   "fused_given_detected_pct": 74.02
+  }
+ },
+ "seed0_pitch250": {
+  "n_neighbour_sites": 19980,
+  "center_prob_quartiles": [
+   0.163,
+   0.412,
+   0.673
+  ],
+  "t0.4": {
+   "fused_pct": 41.61,
+   "sep_true_gap_kept_pct": 5.33,
+   "sep_neighbour_miss_pct": 2.34,
+   "sep_own_miss_pct": 50.73,
+   "detected_at_center_pct": 51.04,
+   "fused_given_detected_pct": 81.53
+  },
+  "t0.5": {
+   "fused_pct": 32.48,
+   "sep_true_gap_kept_pct": 5.42,
+   "sep_neighbour_miss_pct": 1.94,
+   "sep_own_miss_pct": 60.16,
+   "detected_at_center_pct": 41.8,
+   "fused_given_detected_pct": 77.7
+  },
+  "t0.6": {
+   "fused_pct": 23.6,
+   "sep_true_gap_kept_pct": 4.94,
+   "sep_neighbour_miss_pct": 1.82,
+   "sep_own_miss_pct": 69.64,
+   "detected_at_center_pct": 32.21,
+   "fused_given_detected_pct": 73.26
+  }
+ },
+ "seed0_pitch300": {
+  "n_neighbour_sites": 19926,
+  "center_prob_quartiles": [
+   0.118,
+   0.348,
+   0.628
+  ],
+  "t0.4": {
+   "fused_pct": 35.37,
+   "sep_true_gap_kept_pct": 6.98,
+   "sep_neighbour_miss_pct": 1.75,
+   "sep_own_miss_pct": 55.91,
+   "detected_at_center_pct": 45.06,
+   "fused_given_detected_pct": 78.49
+  },
+  "t0.5": {
+   "fused_pct": 27.03,
+   "sep_true_gap_kept_pct": 6.51,
+   "sep_neighbour_miss_pct": 1.64,
+   "sep_own_miss_pct": 64.82,
+   "detected_at_center_pct": 36.21,
+   "fused_given_detected_pct": 74.64
+  },
+  "t0.6": {
+   "fused_pct": 19.02,
+   "sep_true_gap_kept_pct": 5.8,
+   "sep_neighbour_miss_pct": 1.68,
+   "sep_own_miss_pct": 73.5,
+   "detected_at_center_pct": 27.67,
+   "fused_given_detected_pct": 68.73
+  }
+ },
+ "seed1_pitch160": {
+  "n_neighbour_sites": 19993,
+  "center_prob_quartiles": [
+   0.081,
+   0.265,
+   0.61
+  ],
+  "t0.4": {
+   "fused_pct": 30.68,
+   "sep_true_gap_kept_pct": 1.86,
+   "sep_neighbour_miss_pct": 1.54,
+   "sep_own_miss_pct": 65.93,
+   "detected_at_center_pct": 38.69,
+   "fused_given_detected_pct": 79.29
+  },
+  "t0.5": {
+   "fused_pct": 24.54,
+   "sep_true_gap_kept_pct": 1.76,
+   "sep_neighbour_miss_pct": 1.33,
+   "sep_own_miss_pct": 72.37,
+   "detected_at_center_pct": 32.09,
+   "fused_given_detected_pct": 76.49
+  },
+  "t0.6": {
+   "fused_pct": 18.89,
+   "sep_true_gap_kept_pct": 1.39,
+   "sep_neighbour_miss_pct": 1.31,
+   "sep_own_miss_pct": 78.42,
+   "detected_at_center_pct": 25.8,
+   "fused_given_detected_pct": 73.19
+  }
+ },
+ "seed1_pitch200": {
+  "n_neighbour_sites": 19986,
+  "center_prob_quartiles": [
+   0.162,
+   0.406,
+   0.674
+  ],
+  "t0.4": {
+   "fused_pct": 41.46,
+   "sep_true_gap_kept_pct": 4.18,
+   "sep_neighbour_miss_pct": 1.69,
+   "sep_own_miss_pct": 52.67,
+   "detected_at_center_pct": 50.56,
+   "fused_given_detected_pct": 82.01
+  },
+  "t0.5": {
+   "fused_pct": 31.99,
+   "sep_true_gap_kept_pct": 4.09,
+   "sep_neighbour_miss_pct": 1.79,
+   "sep_own_miss_pct": 62.13,
+   "detected_at_center_pct": 41.24,
+   "fused_given_detected_pct": 77.58
+  },
+  "t0.6": {
+   "fused_pct": 23.31,
+   "sep_true_gap_kept_pct": 3.75,
+   "sep_neighbour_miss_pct": 1.56,
+   "sep_own_miss_pct": 71.38,
+   "detected_at_center_pct": 32.11,
+   "fused_given_detected_pct": 72.6
+  }
+ },
+ "seed1_pitch250": {
+  "n_neighbour_sites": 19980,
+  "center_prob_quartiles": [
+   0.159,
+   0.408,
+   0.67
+  ],
+  "t0.4": {
+   "fused_pct": 41.48,
+   "sep_true_gap_kept_pct": 5.19,
+   "sep_neighbour_miss_pct": 2.22,
+   "sep_own_miss_pct": 51.12,
+   "detected_at_center_pct": 50.69,
+   "fused_given_detected_pct": 81.82
+  },
+  "t0.5": {
+   "fused_pct": 32.39,
+   "sep_true_gap_kept_pct": 5.39,
+   "sep_neighbour_miss_pct": 1.91,
+   "sep_own_miss_pct": 60.31,
+   "detected_at_center_pct": 41.66,
+   "fused_given_detected_pct": 77.75
+  },
+  "t0.6": {
+   "fused_pct": 23.48,
+   "sep_true_gap_kept_pct": 5.19,
+   "sep_neighbour_miss_pct": 1.8,
+   "sep_own_miss_pct": 69.53,
+   "detected_at_center_pct": 32.25,
+   "fused_given_detected_pct": 72.82
+  }
+ },
+ "seed1_pitch300": {
+  "n_neighbour_sites": 19926,
+  "center_prob_quartiles": [
+   0.12,
+   0.347,
+   0.625
+  ],
+  "t0.4": {
+   "fused_pct": 35.19,
+   "sep_true_gap_kept_pct": 6.53,
+   "sep_neighbour_miss_pct": 1.82,
+   "sep_own_miss_pct": 56.46,
+   "detected_at_center_pct": 44.62,
+   "fused_given_detected_pct": 78.86
+  },
+  "t0.5": {
+   "fused_pct": 26.88,
+   "sep_true_gap_kept_pct": 6.31,
+   "sep_neighbour_miss_pct": 1.63,
+   "sep_own_miss_pct": 65.18,
+   "detected_at_center_pct": 35.85,
+   "fused_given_detected_pct": 74.98
+  },
+  "t0.6": {
+   "fused_pct": 18.78,
+   "sep_true_gap_kept_pct": 5.68,
+   "sep_neighbour_miss_pct": 1.66,
+   "sep_own_miss_pct": 73.88,
+   "detected_at_center_pct": 27.2,
+   "fused_given_detected_pct": 69.04
+  }
+ }
+}

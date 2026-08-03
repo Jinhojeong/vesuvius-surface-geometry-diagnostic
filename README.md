@@ -264,3 +264,21 @@ Frangi/EDT preprocessing anywhere in the eval loop.
 
 MIT. Data and models are Vesuvius Challenge resources (CC BY-NC 4.0 — credit
 to the Vesuvius Challenge team and the `Dataset059` / model authors).
+
+## Twin validation (2026-08)
+
+The ray flag and the continuity splitter were validated against exact ground
+truth on a finite-thickness, instance-labelled build of Diego-dcv's synthetic
+scroll twin (harness: `scripts/twin_harness.py`; the build and its two bugs in
+the shipped painter are documented in
+https://github.com/Diego-dcv/vesuvius-topological-grid/issues/1).
+
+Flag: precision 98.2 percent against true turn ids in both sampling seeds,
+recall 73.1 and 72.7 percent, control contamination 0 of roughly 11,400 sites
+in both. Splitter (production repair path on merged pairs): 427 of 450
+true-interface sites split, identity accuracy 99.2 and 98.9 percent over 2.2
+million reassigned voxels on disjoint site subsamples; the 23 refusals are
+explicit outcomes concentrated in the three-sheet weld sector. Verdict files
+and the build parameters are under `results/twin/`; measurement scripts are
+`scripts/twin_measure.py` and `scripts/twin_split.py` (paths inside point at
+the box layout and take the run directory as argument).

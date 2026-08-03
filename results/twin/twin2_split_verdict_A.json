@@ -1,0 +1,26 @@
+{
+ "decisions": {
+  "SPLIT": 427,
+  "NO_OPPOSITE_ANCHORS": 21,
+  "ONE_SIDED": 2
+ },
+ "n_sites": 450,
+ "n_split": 427,
+ "identity_acc_pct": 99.23,
+ "ok": 2205273,
+ "wrong": 17195,
+ "per_pair": {
+  "22-23": {
+   "n_split": 130,
+   "acc_pct": 99.01
+  },
+  "11-12": {
+   "n_split": 149,
+   "acc_pct": 99.31
+  },
+  "28-29": {
+   "n_split": 148,
+   "acc_pct": 99.33
+  }
+ }
+}

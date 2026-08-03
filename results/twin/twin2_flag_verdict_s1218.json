@@ -1,0 +1,10 @@
+{
+ "n_valid": 20000,
+ "median": 8.5,
+ "n_flagged": 6192,
+ "precision_pct": 98.23966408268734,
+ "n_multi": 8319,
+ "recall_pct": 73.12176944344272,
+ "n_control": 11387,
+ "control_multi_pct": 0.0
+}

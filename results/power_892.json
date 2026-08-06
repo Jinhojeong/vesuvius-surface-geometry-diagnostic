@@ -1,0 +1,12 @@
+{
+ "n_sims": 500,
+ "n_located": 189,
+ "n_nonlocated": 703,
+ "pooled_median": 0.011,
+ "power": {
+  "0.03pp": 0.198,
+  "0.06pp": 0.888,
+  "0.1pp": 0.99,
+  "0.2pp": 1.0
+ }
+}

@@ -1,0 +1,18 @@
+n=491337 s range 0-12207mm
+  s p50: 1598mm, ring p50: 14
+  s p90: 4219mm, ring p90: 40
+  s p95: 5185mm, ring p95: 49
+  s p99: 8060mm, ring p99: 79
+ring hist: {'<=16': 274889, '17-38': 159231, '>38': 57217}
+ring 0: n_slices 313 perimeter median 117.0mm range 96.1-128.4
+ring 10: n_slices 311 perimeter median 108.1mm range 89.0-126.1
+ring 20: n_slices 300 perimeter median 100.7mm range 78.4-121.1
+ring 30: n_slices 284 perimeter median 92.9mm range 68.1-121.6
+ring 38: n_slices 260 perimeter median 88.0mm range 56.6-125.4
+ring 45: n_slices 177 perimeter median 84.4mm range 53.3-126.7
+ring 60: n_slices 43 perimeter median 89.1mm range 67.6-116.2
+ring 80: n_slices 34 perimeter median 83.8mm range 58.5-104.3
+[ring<=38/fitted] W=121.5 o=58.0 n_band=231562 contrast -0.181pp p=0.9200 sd 0.131pp
+[ring<=38/prior160] W=160.0 o=18.0 n_band=231562 contrast -0.142pp p=0.8675 sd 0.131pp
+[ring<=16/fitted] W=120.5 o=60.0 n_band=144059 contrast -0.287pp p=0.9550 sd 0.159pp
+[ring<=16/prior160] W=160.0 o=18.0 n_band=144059 contrast -0.320pp p=0.9750 sd 0.162pp

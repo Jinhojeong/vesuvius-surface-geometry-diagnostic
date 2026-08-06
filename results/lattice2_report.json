@@ -1,0 +1,36 @@
+{
+ "design": "mass contrast band-vs-background at the fence; label-permutation null (anti-conservative for the fitted-W arm, see docstring)",
+ "n_band": 262228,
+ "n_background": 229109,
+ "drops": {
+  "z_range": 33028,
+  "dr_too_far": 49664,
+  "ring_unresolved": 70119
+ },
+ "arms": {
+  "fitted": {
+   "W_mm": 120.0,
+   "offset_mm": 62.0,
+   "note": "W and offset fitted on the band stratum",
+   "frac_band": 0.24866909712158886,
+   "frac_background": 0.25042228808121897,
+   "contrast_pp": -0.17531909596301132,
+   "perm_p": 0.92,
+   "null_mean_pp": -0.0017153256661334491,
+   "null_sd_pp": 0.12532824318178376,
+   "null_q95_pp": 0.19192342345422675
+  },
+  "prior160": {
+   "W_mm": 160.0,
+   "offset_mm": 18.0,
+   "note": "W fixed at 160.0 mm (manufacture prior), offset fitted on the band stratum",
+   "frac_band": 0.24595008923532194,
+   "frac_background": 0.24709199551305275,
+   "contrast_pp": -0.11419062777308087,
+   "perm_p": 0.837,
+   "null_mean_pp": 0.005400972492862774,
+   "null_sd_pp": 0.12136829036290032,
+   "null_q95_pp": 0.2039417406787758
+  }
+ }
+}

@@ -1,0 +1,44 @@
+[
+ {
+  "sample": "sample_00161",
+  "dice_ourprep_vs_nnunetprep": 0.949892,
+  "max_abs_prob_diff": 0.91614,
+  "mean_abs_prob_diff": 0.02613565,
+  "recall_prec_ours": [
+   0.9411,
+   0.7468
+  ],
+  "recall_prec_nnunet": [
+   0.9468,
+   0.7535
+  ]
+ },
+ {
+  "sample": "sample_00162",
+  "dice_ourprep_vs_nnunetprep": 0.939737,
+  "max_abs_prob_diff": 0.933537,
+  "mean_abs_prob_diff": 0.02140748,
+  "recall_prec_ours": [
+   0.9156,
+   0.743
+  ],
+  "recall_prec_nnunet": [
+   0.926,
+   0.7514
+  ]
+ },
+ {
+  "sample": "sample_00163",
+  "dice_ourprep_vs_nnunetprep": 0.954386,
+  "max_abs_prob_diff": 0.894022,
+  "mean_abs_prob_diff": 0.02006716,
+  "recall_prec_ours": [
+   0.9503,
+   0.7402
+  ],
+  "recall_prec_nnunet": [
+   0.9594,
+   0.7461
+  ]
+ }
+]

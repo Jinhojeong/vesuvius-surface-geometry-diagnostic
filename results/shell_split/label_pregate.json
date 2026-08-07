@@ -1,0 +1,7 @@
+{
+ "n": 60,
+ "n_margin_scored_exact_voxel_match": "60/60",
+ "margin_share_of_nonsheet_match_1e-6": "60/60",
+ "mismatched": [],
+ "reading": "the margin mask is recomputed from CT+labels through his own across_sheet_dirs/relabel_margin; an exact voxel-count match on every volume means our CT, our labels, our crop and our margin are his"
+}

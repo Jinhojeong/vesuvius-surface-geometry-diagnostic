@@ -1,0 +1,203 @@
+{
+ "all892": {
+  "tag": "all 892",
+  "n": 855,
+  "beyond1_vol_share_pct": {
+   "per_volume_median": 90.92,
+   "pooled": 91.71
+  },
+  "beyond2_vol_share_pct": {
+   "per_volume_median": 81.29,
+   "pooled": 83.03
+  },
+  "beyond3_vol_share_pct": {
+   "per_volume_median": 69.47,
+   "pooled": 72.46
+  },
+  "beyond4_vol_share_pct": {
+   "per_volume_median": 61.35,
+   "pooled": 64.7
+  },
+  "shell_vol_share_pct": {
+   "per_volume_median": [
+    9.08,
+    9.64,
+    11.76,
+    8.54,
+    8.82
+   ],
+   "pooled": [
+    8.29,
+    8.67,
+    10.57,
+    7.76,
+    8.46
+   ]
+  },
+  "median_base_rate": 0.1247,
+  "median_sheet_voxels": 131570,
+  "n_with_no_sheet": 0
+ },
+ "located189": {
+  "tag": "located 189",
+  "n": 174,
+  "beyond1_vol_share_pct": {
+   "per_volume_median": 87.62,
+   "pooled": 88.77
+  },
+  "beyond2_vol_share_pct": {
+   "per_volume_median": 74.1,
+   "pooled": 77.1
+  },
+  "beyond3_vol_share_pct": {
+   "per_volume_median": 58.97,
+   "pooled": 63.09
+  },
+  "beyond4_vol_share_pct": {
+   "per_volume_median": 46.94,
+   "pooled": 52.87
+  },
+  "shell_vol_share_pct": {
+   "per_volume_median": [
+    12.38,
+    13.14,
+    15.55,
+    10.97,
+    10.48
+   ],
+   "pooled": [
+    11.23,
+    11.67,
+    14.01,
+    10.21,
+    10.75
+   ]
+  },
+  "median_base_rate": 0.1631,
+  "median_sheet_voxels": 160139,
+  "n_with_no_sheet": 0
+ },
+ "nonlocated703": {
+  "tag": "nonlocated 703",
+  "n": 681,
+  "beyond1_vol_share_pct": {
+   "per_volume_median": 91.55,
+   "pooled": 92.38
+  },
+  "beyond2_vol_share_pct": {
+   "per_volume_median": 82.77,
+   "pooled": 84.39
+  },
+  "beyond3_vol_share_pct": {
+   "per_volume_median": 71.65,
+   "pooled": 74.6
+  },
+  "beyond4_vol_share_pct": {
+   "per_volume_median": 63.57,
+   "pooled": 67.39
+  },
+  "shell_vol_share_pct": {
+   "per_volume_median": [
+    8.45,
+    8.79,
+    11.04,
+    7.98,
+    8.45
+   ],
+   "pooled": [
+    7.62,
+    7.99,
+    9.79,
+    7.21,
+    7.93
+   ]
+  },
+  "median_base_rate": 0.117,
+  "median_sheet_voxels": 123816,
+  "n_with_no_sheet": 0
+ },
+ "his60": {
+  "tag": "his cohort 60",
+  "n": 60,
+  "beyond1_vol_share_pct": {
+   "per_volume_median": 85.43,
+   "pooled": 86.51
+  },
+  "beyond2_vol_share_pct": {
+   "per_volume_median": 70.14,
+   "pooled": 72.72
+  },
+  "beyond3_vol_share_pct": {
+   "per_volume_median": 52.8,
+   "pooled": 56.3
+  },
+  "beyond4_vol_share_pct": {
+   "per_volume_median": 40.19,
+   "pooled": 44.15
+  },
+  "shell_vol_share_pct": {
+   "per_volume_median": [
+    14.57,
+    15.03,
+    17.86,
+    12.93,
+    12.18
+   ],
+   "pooled": [
+    13.49,
+    13.79,
+    16.42,
+    12.14,
+    12.23
+   ]
+  },
+  "median_base_rate": 0.1863,
+  "median_sheet_voxels": 179163,
+  "n_with_no_sheet": 0
+ },
+ "nonlocated60": {
+  "tag": "extension draw 60",
+  "n": 58,
+  "beyond1_vol_share_pct": {
+   "per_volume_median": 91.68,
+   "pooled": 92.27
+  },
+  "beyond2_vol_share_pct": {
+   "per_volume_median": 83.17,
+   "pooled": 84.24
+  },
+  "beyond3_vol_share_pct": {
+   "per_volume_median": 73.8,
+   "pooled": 74.42
+  },
+  "beyond4_vol_share_pct": {
+   "per_volume_median": 65.71,
+   "pooled": 67.11
+  },
+  "shell_vol_share_pct": {
+   "per_volume_median": [
+    8.32,
+    8.41,
+    9.63,
+    8.18,
+    8.06
+   ],
+   "pooled": [
+    7.73,
+    8.02,
+    9.82,
+    7.32,
+    8.07
+   ]
+  },
+  "median_base_rate": 0.1137,
+  "median_sheet_voxels": 123395,
+  "n_with_no_sheet": 0
+ },
+ "degenerate": {
+  "n_no_sheet_all892": 37,
+  "n_no_sheet_nonlocated": 22,
+  "n_no_sheet_in_draw60": 2,
+  "n_sheet_under_400_in_draw60": 3
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "criteria_doc": "The control gate: pass criteria written down before the run, then the verdict.\n\nTolerance and why it is what it is\n----------------------------------\nWe are not reproducing his inference stack bit for bit and never could: he drives villa's\n`vesuvius.predict` wrapper under a Windows conda env, we drive nnUNetv2 2.8.1's own\nsliding window. Patch placement, blend weights and fp16 rounding all differ a little, so\nan exact match is not the bar. The bar is that the statistic his control rests on comes\nout the same to a precision that still separates the two hypotheses that control was\nbuilt to separate: a STEP at shell 1 versus a SMOOTH DECAY.\n\n  G1  every one of the five per-volume median shell enrichments within 10% relative\n  G2  per-volume Pearson and Spearman correlation of shell-1 enrichment >= 0.95\n  G3  per-volume median obs/pred within 0.05 absolute of his 0.7554\n  G4  per-volume median margin enrichment within 10% relative of his 3.104\n  G5  ordering shell_1 > shell_2 > ... > shell_5 preserved, and median obs/pred on the\n      same side of 1 as his\n\n10% on shell 1 is +-0.31 on a value of 3.10. The gap his control turns on is shell 1\n(3.10) against shell 2 (1.85), which is 1.25. A 10% band is a fifth of that gap, so it\nstill discriminates; anything looser stops discriminating and the gate stops being a gate.\n",
+ "G1_shell_medians_within_10pct": {
+  "shell_1": {
+   "his": 3.103,
+   "ours": 5.474,
+   "rel_err": 0.7641,
+   "pass": false
+  },
+  "shell_2": {
+   "his": 1.851,
+   "ours": 1.286,
+   "rel_err": -0.3052,
+   "pass": false
+  },
+  "shell_3": {
+   "his": 1.012,
+   "ours": 0.2755,
+   "rel_err": -0.7278,
+   "pass": false
+  },
+  "shell_4": {
+   "his": 0.588,
+   "ours": 0.0555,
+   "rel_err": -0.9056,
+   "pass": false
+  },
+  "shell_5": {
+   "his": 0.306,
+   "ours": 0.013,
+   "rel_err": -0.9575,
+   "pass": false
+  }
+ },
+ "G2_shell1_per_volume_correlation_ge_0.95": {
+  "pearson": 0.8841,
+  "spearman": 0.8582,
+  "pass": false
+ },
+ "G3_obs_over_pred_within_0.05": {
+  "his": 0.7554,
+  "ours": 1.0078,
+  "abs_diff": 0.2524,
+  "pass": false
+ },
+ "G4_margin_enrichment_within_10pct": {
+  "his": 3.104,
+  "ours": 5.037,
+  "rel_err": 0.6227,
+  "pass": false
+ },
+ "G5_shape_and_sign_preserved": {
+  "monotone_decay": true,
+  "his_obs_over_pred_below_1": true,
+  "ours_obs_over_pred_below_1": false,
+  "same_side_of_1": false,
+  "pass": false
+ },
+ "G1_pass": false,
+ "verdict": "FAIL",
+ "failed": [
+  "G1",
+  "G2",
+  "G3",
+  "G4",
+  "G5"
+ ]
+}

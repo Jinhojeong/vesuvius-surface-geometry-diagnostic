@@ -1059,7 +1059,7 @@
    "gap": 0.0095,
    "matched_located_median_recall": 0.6452,
    "recovery": -0.2686,
-   "recovered_share_of_gap": -28.2151
+   "recovered_share_of_gap_REMOVED": "removed 2026-08-07: this divided the matched-copy recall change by the located-minus-nonlocated gap, which is near zero under plans normalization (0.0095), so the ratio was unstable and meaningless (was -28.2151). Read the absolute deltas in this file instead."
   },
   "instance_zscore_wrapper_path": {
    "located_n": 60,
@@ -1069,7 +1069,7 @@
    "gap": 0.1794,
    "matched_located_median_recall": 0.6869,
    "recovery": -0.0483,
-   "recovered_share_of_gap": -0.269
+   "recovered_share_of_gap_REMOVED": "removed 2026-08-07: this divided the matched-copy recall change by the located-minus-nonlocated gap, which is near zero under plans normalization (0.0095), so the ratio was unstable and meaningless (was -0.269). Read the absolute deltas in this file instead."
   }
  },
  "reproduction_checks": {

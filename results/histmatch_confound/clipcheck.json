@@ -12,7 +12,8 @@
   "affine_frac_below_lo": 0.041065,
   "affine_frac_above_hi": 9.4e-05,
   "match_frac_above_hi": 0.001428,
-  "match_frac_below_lo": 0.0
+  "match_frac_below_lo": 0.0,
+  "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
  },
  "per_volume": [
   {
@@ -24,7 +25,8 @@
    "affine_frac_below_lo": 0.032549142837524414,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0010804533958435059,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00162",
@@ -35,7 +37,8 @@
    "affine_frac_below_lo": 0.008460283279418945,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0015797019004821777,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00163",
@@ -46,7 +49,8 @@
    "affine_frac_below_lo": 0.028215765953063965,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.001389145851135254,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00164",
@@ -57,7 +61,8 @@
    "affine_frac_below_lo": 0.01650238037109375,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0015175938606262207,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00165",
@@ -68,7 +73,8 @@
    "affine_frac_below_lo": 0.0488395094871521,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.001315474510192871,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00166",
@@ -79,7 +85,8 @@
    "affine_frac_below_lo": 0.0428774356842041,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0013356208801269531,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00167",
@@ -90,7 +97,8 @@
    "affine_frac_below_lo": 0.026417136192321777,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.001491248607635498,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00168",
@@ -101,7 +109,8 @@
    "affine_frac_below_lo": 0.004683196544647217,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.004912018775939941,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00169",
@@ -112,7 +121,8 @@
    "affine_frac_below_lo": 0.006915867328643799,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0038551688194274902,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00170",
@@ -123,7 +133,8 @@
    "affine_frac_below_lo": 0.0008257627487182617,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0014182329177856445,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00172",
@@ -134,7 +145,8 @@
    "affine_frac_below_lo": 0.05695551633834839,
    "affine_frac_above_hi": 0.0004082322120666504,
    "match_frac_above_hi": 0.0010941624641418457,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00173",
@@ -145,7 +157,8 @@
    "affine_frac_below_lo": 0.0445331335067749,
    "affine_frac_above_hi": 0.0003393888473510742,
    "match_frac_above_hi": 0.0014492273330688477,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00174",
@@ -156,7 +169,8 @@
    "affine_frac_below_lo": 0.05046796798706055,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0014346837997436523,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00175",
@@ -167,7 +181,8 @@
    "affine_frac_below_lo": 0.040048956871032715,
    "affine_frac_above_hi": 0.00038826465606689453,
    "match_frac_above_hi": 0.0011373162269592285,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00177",
@@ -178,7 +193,8 @@
    "affine_frac_below_lo": 0.03984802961349487,
    "affine_frac_above_hi": 0.0012903213500976562,
    "match_frac_above_hi": 0.0014209151268005371,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00178",
@@ -189,7 +205,8 @@
    "affine_frac_below_lo": 0.03188025951385498,
    "affine_frac_above_hi": 0.0004898905754089355,
    "match_frac_above_hi": 0.0007727146148681641,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00179",
@@ -200,7 +217,8 @@
    "affine_frac_below_lo": 0.042080581188201904,
    "affine_frac_above_hi": 0.0008206963539123535,
    "match_frac_above_hi": 0.00135725736618042,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00180",
@@ -211,7 +229,8 @@
    "affine_frac_below_lo": 0.05874669551849365,
    "affine_frac_above_hi": 0.0008969306945800781,
    "match_frac_above_hi": 0.0014064908027648926,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00181",
@@ -222,7 +241,8 @@
    "affine_frac_below_lo": 0.05015075206756592,
    "affine_frac_above_hi": 0.0002092123031616211,
    "match_frac_above_hi": 0.001157224178314209,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00183",
@@ -233,7 +253,8 @@
    "affine_frac_below_lo": 0.05846959352493286,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.001434922218322754,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00184",
@@ -244,7 +265,8 @@
    "affine_frac_below_lo": 0.05655938386917114,
    "affine_frac_above_hi": 0.0006926655769348145,
    "match_frac_above_hi": 0.00142747163772583,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00185",
@@ -255,7 +277,8 @@
    "affine_frac_below_lo": 0.058155834674835205,
    "affine_frac_above_hi": 0.0007116198539733887,
    "match_frac_above_hi": 0.0012142658233642578,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00187",
@@ -266,7 +289,8 @@
    "affine_frac_below_lo": 0.051301658153533936,
    "affine_frac_above_hi": 0.0010628104209899902,
    "match_frac_above_hi": 0.0012104511260986328,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00188",
@@ -277,7 +301,8 @@
    "affine_frac_below_lo": 0.0559268593788147,
    "affine_frac_above_hi": 0.0006015300750732422,
    "match_frac_above_hi": 0.0014341473579406738,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00189",
@@ -288,7 +313,8 @@
    "affine_frac_below_lo": 0.046770334243774414,
    "affine_frac_above_hi": 0.00018709897994995117,
    "match_frac_above_hi": 0.0012068748474121094,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00191",
@@ -299,7 +325,8 @@
    "affine_frac_below_lo": 0.053930461406707764,
    "affine_frac_above_hi": 0.0008001327514648438,
    "match_frac_above_hi": 0.001478433609008789,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00192",
@@ -310,7 +337,8 @@
    "affine_frac_below_lo": 0.04429268836975098,
    "affine_frac_above_hi": 0.0006179213523864746,
    "match_frac_above_hi": 0.0013137459754943848,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00193",
@@ -321,7 +349,8 @@
    "affine_frac_below_lo": 0.053628385066986084,
    "affine_frac_above_hi": 0.0006086230278015137,
    "match_frac_above_hi": 0.0012826919555664062,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00194",
@@ -332,7 +361,8 @@
    "affine_frac_below_lo": 0.05918169021606445,
    "affine_frac_above_hi": 0.001190781593322754,
    "match_frac_above_hi": 0.0016326308250427246,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00196",
@@ -343,7 +373,8 @@
    "affine_frac_below_lo": 0.04947233200073242,
    "affine_frac_above_hi": 0.0005578994750976562,
    "match_frac_above_hi": 0.0014081001281738281,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00197",
@@ -354,7 +385,8 @@
    "affine_frac_below_lo": 0.055094242095947266,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.00154799222946167,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00198",
@@ -365,7 +397,8 @@
    "affine_frac_below_lo": 0.03304755687713623,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0016037225723266602,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00199",
@@ -376,7 +409,8 @@
    "affine_frac_below_lo": 0.044145286083221436,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0012009143829345703,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00200",
@@ -387,7 +421,8 @@
    "affine_frac_below_lo": 0.05153059959411621,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0010123252868652344,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00201",
@@ -398,7 +433,8 @@
    "affine_frac_below_lo": 0.03581070899963379,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0015685558319091797,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00202",
@@ -409,7 +445,8 @@
    "affine_frac_below_lo": 0.03978997468948364,
    "affine_frac_above_hi": 0.0011361241340637207,
    "match_frac_above_hi": 0.001369476318359375,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00203",
@@ -420,7 +457,8 @@
    "affine_frac_below_lo": 0.0162351131439209,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.001236557960510254,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00204",
@@ -431,7 +469,8 @@
    "affine_frac_below_lo": 0.013558626174926758,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0016058087348937988,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00205",
@@ -442,7 +481,8 @@
    "affine_frac_below_lo": 0.010631203651428223,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0015569329261779785,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00206",
@@ -453,7 +493,8 @@
    "affine_frac_below_lo": 0.03270232677459717,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0016156435012817383,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00208",
@@ -464,7 +505,8 @@
    "affine_frac_below_lo": 0.05214303731918335,
    "affine_frac_above_hi": 0.0009241700172424316,
    "match_frac_above_hi": 0.0014976859092712402,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00209",
@@ -475,7 +517,8 @@
    "affine_frac_below_lo": 0.048229098320007324,
    "affine_frac_above_hi": 0.0005745887756347656,
    "match_frac_above_hi": 0.0014916062355041504,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00210",
@@ -486,7 +529,8 @@
    "affine_frac_below_lo": 0.05285906791687012,
    "affine_frac_above_hi": 0.00033932924270629883,
    "match_frac_above_hi": 0.0012348294258117676,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00211",
@@ -497,7 +541,8 @@
    "affine_frac_below_lo": 0.05556541681289673,
    "affine_frac_above_hi": 0.0008667707443237305,
    "match_frac_above_hi": 0.0016973614692687988,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00213",
@@ -508,7 +553,8 @@
    "affine_frac_below_lo": 0.016402363777160645,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0014846324920654297,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00214",
@@ -519,7 +565,8 @@
    "affine_frac_below_lo": 0.007928729057312012,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0015537142753601074,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00215",
@@ -530,7 +577,8 @@
    "affine_frac_below_lo": 0.029339730739593506,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0016739368438720703,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00216",
@@ -541,7 +589,8 @@
    "affine_frac_below_lo": 0.02223879098892212,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0014347434043884277,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00217",
@@ -552,7 +601,8 @@
    "affine_frac_below_lo": 0.00398021936416626,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0011788606643676758,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00218",
@@ -563,7 +613,8 @@
    "affine_frac_below_lo": 0.013495326042175293,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0014278888702392578,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00219",
@@ -574,7 +625,8 @@
    "affine_frac_below_lo": 0.02923142910003662,
    "affine_frac_above_hi": 0.00028580427169799805,
    "match_frac_above_hi": 0.001514732837677002,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00220",
@@ -585,7 +637,8 @@
    "affine_frac_below_lo": 0.025897085666656494,
    "affine_frac_above_hi": 0.0007531046867370605,
    "match_frac_above_hi": 0.0013750791549682617,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00221",
@@ -596,7 +649,8 @@
    "affine_frac_below_lo": 0.02741295099258423,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0015132427215576172,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00222",
@@ -607,7 +661,8 @@
    "affine_frac_below_lo": 0.052321672439575195,
    "affine_frac_above_hi": 0.0008334517478942871,
    "match_frac_above_hi": 0.0012647509574890137,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00224",
@@ -618,7 +673,8 @@
    "affine_frac_below_lo": 0.051888883113861084,
    "affine_frac_above_hi": 0.00045096874237060547,
    "match_frac_above_hi": 0.0009927749633789062,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00225",
@@ -629,7 +685,8 @@
    "affine_frac_below_lo": 0.04967665672302246,
    "affine_frac_above_hi": 0.0003147721290588379,
    "match_frac_above_hi": 0.0011999011039733887,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00226",
@@ -640,7 +697,8 @@
    "affine_frac_below_lo": 0.04867750406265259,
    "affine_frac_above_hi": 0.0007404685020446777,
    "match_frac_above_hi": 0.00159531831741333,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00227",
@@ -651,7 +709,8 @@
    "affine_frac_below_lo": 0.02561253309249878,
    "affine_frac_above_hi": 0.0009371638298034668,
    "match_frac_above_hi": 0.0015115737915039062,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00229",
@@ -662,7 +721,8 @@
    "affine_frac_below_lo": 0.006036818027496338,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0015769600868225098,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   },
   {
    "sample": "sample_00231",
@@ -673,7 +733,8 @@
    "affine_frac_below_lo": 0.020382225513458252,
    "affine_frac_above_hi": 0.0,
    "match_frac_above_hi": 0.0013265609741210938,
-   "match_frac_below_lo": 0.0
+   "match_frac_below_lo": 0.0,
+   "match_frac_below_lo_note": "0.0 is trivially true because a uint8 LUT cannot map below 0. It does NOT mean the matched arm preserves the bottom end: the LUTs collapse a median of 62 input grey levels onto 0, producing a zero pile of about 1.52% of block voxels, against 1.14% in the real non-located volumes and 4.11% in the affine arm. See zerocheck.json."
   }
  ]
 }

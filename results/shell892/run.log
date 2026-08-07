@@ -1,0 +1,1789 @@
+MARKER init ok  workers=8  todo=892  already=0
+MARKER geom TRIM=64 SIZE=256 THRESH=0.2  intensity={'max': 255.0, 'mean': 87.54424285888672, 'median': 81.0, 'min': 0.0, 'percentile_00_5': 0.0, 'percentile_99_5': 212.0, 'std': 47.74376678466797}
+MARKER num_seg_heads=2
+MARKER pred_on_empty_ct=0.00000000 max_p=0.000384
+MARKER gpu sample_00001 2.0s queued=1
+MARKER gpu sample_00003 2.0s queued=2
+MARKER gpu sample_00005 2.1s queued=3
+MARKER gpu sample_00007 2.1s queued=4
+MARKER gpu sample_00008 2.1s queued=5
+MARKER gpu sample_00009 2.2s queued=6
+MARKER gpu sample_00010 2.3s queued=7
+MARKER gpu sample_00012 2.2s queued=8
+MARKER gpu sample_00013 2.1s queued=9
+MARKER gpu sample_00014 2.2s queued=10
+MARKER gpu sample_00016 2.3s queued=11
+MARKER gpu sample_00017 2.4s queued=12
+MARKER gpu sample_00018 2.3s queued=13
+MARKER gpu sample_00019 2.4s queued=14
+MARKER gpu sample_00021 2.2s queued=15
+MARKER gpu sample_00022 2.2s queued=16
+MARKER [1/892] sample_00001 status=ok enr=6.493 shell1=6.046 n_sheet=73530 cpu=9.9s elapsed=39s rate=38.91s/vol eta=578min
+MARKER gpu sample_00024 2.2s queued=16
+MARKER [2/892] sample_00003 status=ok enr=6.067 shell1=8.653 n_sheet=226298 cpu=20.3s elapsed=41s rate=20.75s/vol eta=308min
+MARKER gpu sample_00025 2.3s queued=16
+MARKER [3/892] sample_00005 status=ok enr=12.913 shell1=12.006 n_sheet=234496 cpu=35.9s elapsed=44s rate=14.66s/vol eta=217min
+MARKER gpu sample_00026 2.4s queued=16
+MARKER [4/892] sample_00007 status=ok enr=3.9 shell1=4.859 n_sheet=2564 cpu=10.3s elapsed=47s rate=11.65s/vol eta=172min
+MARKER gpu sample_00028 2.3s queued=16
+MARKER [5/892] sample_00008 status=ok enr=4.636 shell1=6.146 n_sheet=273354 cpu=29.8s elapsed=49s rate=9.85s/vol eta=146min
+MARKER gpu sample_00029 2.4s queued=16
+MARKER [6/892] sample_00009 status=ok enr=8.362 shell1=7.972 n_sheet=160695 cpu=26.5s elapsed=52s rate=8.65s/vol eta=128min
+MARKER gpu sample_00030 2.5s queued=16
+MARKER [7/892] sample_00010 status=ok enr=10.876 shell1=11.68 n_sheet=21099 cpu=15.2s elapsed=55s rate=7.84s/vol eta=116min
+MARKER gpu sample_00031 2.4s queued=16
+MARKER [8/892] sample_00012 status=ok enr=8.488 shell1=8.808 n_sheet=123600 cpu=25.3s elapsed=58s rate=7.19s/vol eta=106min
+MARKER gpu sample_00032 2.4s queued=16
+MARKER [9/892] sample_00013 status=ok enr=7.15 shell1=8.694 n_sheet=147077 cpu=15.4s elapsed=60s rate=6.68s/vol eta=98min
+MARKER gpu sample_00033 2.3s queued=16
+MARKER [10/892] sample_00014 status=ok enr=4.484 shell1=5.58 n_sheet=161242 cpu=38.7s elapsed=63s rate=6.28s/vol eta=92min
+MARKER gpu sample_00034 2.5s queued=16
+MARKER [11/892] sample_00016 status=ok enr=29.973 shell1=26.86 n_sheet=111817 cpu=32.1s elapsed=66s rate=5.98s/vol eta=88min
+MARKER gpu sample_00035 2.3s queued=16
+MARKER [12/892] sample_00017 status=ok enr=3.408 shell1=4.374 n_sheet=6109 cpu=16.8s elapsed=68s rate=5.69s/vol eta=83min
+MARKER gpu sample_00036 2.4s queued=16
+MARKER [13/892] sample_00018 status=ok enr=8.727 shell1=9.096 n_sheet=59839 cpu=17.3s elapsed=71s rate=5.45s/vol eta=80min
+MARKER gpu sample_00037 2.4s queued=16
+MARKER [14/892] sample_00019 status=ok enr=9.829 shell1=9.914 n_sheet=211511 cpu=38.6s elapsed=79s rate=5.63s/vol eta=82min
+MARKER gpu sample_00038 2.4s queued=16
+MARKER [15/892] sample_00021 status=ok enr=25.723 shell1=24.807 n_sheet=58226 cpu=22.8s elapsed=81s rate=5.43s/vol eta=79min
+MARKER gpu sample_00039 2.6s queued=16
+MARKER [16/892] sample_00022 status=ok enr=9.297 shell1=9.27 n_sheet=214721 cpu=35.7s elapsed=84s rate=5.28s/vol eta=77min
+MARKER gpu sample_00040 2.3s queued=16
+MARKER [17/892] sample_00024 status=ok enr=5.517 shell1=6.45 n_sheet=150118 cpu=28.0s elapsed=87s rate=5.12s/vol eta=75min
+MARKER gpu sample_00041 2.5s queued=16
+MARKER [18/892] sample_00025 status=ok enr=5.899 shell1=5.356 n_sheet=75531 cpu=44.4s elapsed=93s rate=5.17s/vol eta=75min
+MARKER gpu sample_00042 2.4s queued=16
+MARKER [19/892] sample_00026 status=ok enr=12.971 shell1=11.947 n_sheet=172171 cpu=31.4s elapsed=96s rate=5.05s/vol eta=73min
+MARKER gpu sample_00043 2.4s queued=16
+MARKER [20/892] sample_00028 status=ok enr=7.608 shell1=6.628 n_sheet=162793 cpu=29.0s elapsed=99s rate=4.93s/vol eta=72min
+MARKER gpu sample_00044 2.4s queued=16
+MARKER [21/892] sample_00029 status=ok enr=3.502 shell1=4.084 n_sheet=98891 cpu=23.6s elapsed=101s rate=4.82s/vol eta=70min
+MARKER gpu sample_00045 2.4s queued=16
+MARKER [22/892] sample_00030 status=ok enr=11.817 shell1=15.919 n_sheet=89471 cpu=38.5s elapsed=104s rate=4.72s/vol eta=68min
+MARKER gpu sample_00046 2.3s queued=16
+MARKER [23/892] sample_00031 status=ok enr=12.104 shell1=11.311 n_sheet=245441 cpu=54.6s elapsed=127s rate=5.52s/vol eta=80min
+MARKER gpu sample_00047 2.5s queued=16
+MARKER [24/892] sample_00032 status=ok enr=13.17 shell1=12.035 n_sheet=235441 cpu=49.3s elapsed=130s rate=5.42s/vol eta=78min
+MARKER gpu sample_00048 2.5s queued=16
+MARKER [25/892] sample_00033 status=ok enr=8.936 shell1=9.967 n_sheet=144206 cpu=33.5s elapsed=133s rate=5.31s/vol eta=77min
+MARKER gpu sample_00050 2.2s queued=16
+MARKER [26/892] sample_00034 status=ok enr=20.052 shell1=22.043 n_sheet=141793 cpu=38.5s elapsed=135s rate=5.20s/vol eta=75min
+MARKER gpu sample_00051 2.3s queued=16
+MARKER [27/892] sample_00035 status=ok enr=4.658 shell1=4.678 n_sheet=241786 cpu=45.5s elapsed=138s rate=5.11s/vol eta=74min
+MARKER gpu sample_00052 2.4s queued=16
+MARKER [28/892] sample_00036 status=degenerate enr=None shell1=None n_sheet=0 cpu=11.8s elapsed=141s rate=5.02s/vol eta=72min
+MARKER gpu sample_00053 2.4s queued=16
+MARKER [29/892] sample_00037 status=ok enr=5.195 shell1=5.891 n_sheet=5584 cpu=18.7s elapsed=143s rate=4.94s/vol eta=71min
+MARKER gpu sample_00054 2.3s queued=16
+MARKER [30/892] sample_00038 status=degenerate enr=None shell1=None n_sheet=0 cpu=7.7s elapsed=146s rate=4.87s/vol eta=70min
+MARKER gpu sample_00056 2.5s queued=16
+MARKER [31/892] sample_00039 status=ok enr=19.715 shell1=22.078 n_sheet=144711 cpu=29.7s elapsed=149s rate=4.80s/vol eta=69min
+MARKER gpu sample_00057 2.4s queued=16
+MARKER [32/892] sample_00040 status=ok enr=11.064 shell1=12.932 n_sheet=93095 cpu=25.9s elapsed=152s rate=4.74s/vol eta=68min
+MARKER gpu sample_00058 2.4s queued=16
+MARKER [33/892] sample_00041 status=ok enr=12.39 shell1=12.915 n_sheet=133485 cpu=17.3s elapsed=154s rate=4.68s/vol eta=67min
+MARKER gpu sample_00059 2.5s queued=16
+MARKER [34/892] sample_00042 status=ok enr=10.785 shell1=10.219 n_sheet=92013 cpu=19.6s elapsed=157s rate=4.63s/vol eta=66min
+MARKER gpu sample_00060 2.3s queued=16
+MARKER [35/892] sample_00043 status=ok enr=7.864 shell1=7.843 n_sheet=272898 cpu=40.9s elapsed=165s rate=4.70s/vol eta=67min
+MARKER gpu sample_00062 2.4s queued=16
+MARKER [36/892] sample_00044 status=ok enr=19.661 shell1=17.639 n_sheet=164460 cpu=32.2s elapsed=167s rate=4.65s/vol eta=66min
+MARKER gpu sample_00063 2.4s queued=16
+MARKER [37/892] sample_00045 status=ok enr=10.28 shell1=11.412 n_sheet=53163 cpu=23.2s elapsed=170s rate=4.60s/vol eta=66min
+MARKER gpu sample_00064 2.4s queued=16
+MARKER [38/892] sample_00046 status=ok enr=17.276 shell1=25.311 n_sheet=129233 cpu=31.2s elapsed=173s rate=4.55s/vol eta=65min
+MARKER gpu sample_00065 2.4s queued=16
+MARKER [39/892] sample_00047 status=ok enr=6.358 shell1=6.066 n_sheet=14859 cpu=15.4s elapsed=176s rate=4.50s/vol eta=64min
+MARKER gpu sample_00066 2.4s queued=16
+MARKER [40/892] sample_00048 status=ok enr=9.945 shell1=9.418 n_sheet=107284 cpu=31.4s elapsed=178s rate=4.45s/vol eta=63min
+MARKER gpu sample_00067 2.4s queued=16
+MARKER [41/892] sample_00050 status=ok enr=7.443 shell1=7.381 n_sheet=229630 cpu=46.4s elapsed=182s rate=4.43s/vol eta=63min
+MARKER gpu sample_00068 2.4s queued=16
+MARKER [42/892] sample_00051 status=ok enr=9.082 shell1=8.357 n_sheet=220082 cpu=42.3s elapsed=184s rate=4.39s/vol eta=62min
+MARKER gpu sample_00069 2.5s queued=16
+MARKER [43/892] sample_00052 status=ok enr=17.322 shell1=16.567 n_sheet=175388 cpu=40.4s elapsed=188s rate=4.36s/vol eta=62min
+MARKER gpu sample_00070 2.3s queued=16
+MARKER [44/892] sample_00053 status=ok enr=9.928 shell1=8.471 n_sheet=175725 cpu=38.4s elapsed=190s rate=4.32s/vol eta=61min
+MARKER gpu sample_00071 2.4s queued=16
+MARKER [45/892] sample_00054 status=ok enr=11.08 shell1=10.243 n_sheet=154217 cpu=29.9s elapsed=193s rate=4.29s/vol eta=61min
+MARKER gpu sample_00072 2.5s queued=16
+MARKER [46/892] sample_00056 status=ok enr=7.875 shell1=9.203 n_sheet=226656 cpu=40.0s elapsed=200s rate=4.35s/vol eta=61min
+MARKER gpu sample_00073 2.4s queued=16
+MARKER [47/892] sample_00057 status=ok enr=4.956 shell1=4.711 n_sheet=16512 cpu=32.3s elapsed=203s rate=4.33s/vol eta=61min
+MARKER gpu sample_00074 2.5s queued=16
+MARKER [48/892] sample_00058 status=ok enr=6.834 shell1=6.612 n_sheet=138135 cpu=31.0s elapsed=206s rate=4.29s/vol eta=60min
+MARKER gpu sample_00075 2.4s queued=16
+MARKER [49/892] sample_00059 status=ok enr=14.817 shell1=17.537 n_sheet=83951 cpu=23.8s elapsed=209s rate=4.26s/vol eta=60min
+MARKER gpu sample_00076 2.3s queued=16
+MARKER [50/892] sample_00060 status=ok enr=10.251 shell1=13.834 n_sheet=29031 cpu=16.4s elapsed=211s rate=4.23s/vol eta=59min
+MARKER gpu sample_00077 2.4s queued=16
+MARKER [51/892] sample_00062 status=ok enr=7.876 shell1=6.917 n_sheet=248228 cpu=56.5s elapsed=244s rate=4.79s/vol eta=67min
+MARKER gpu sample_00078 2.2s queued=16
+MARKER [52/892] sample_00063 status=ok enr=8.432 shell1=7.824 n_sheet=169775 cpu=42.4s elapsed=247s rate=4.74s/vol eta=66min
+MARKER gpu sample_00079 2.1s queued=16
+MARKER [53/892] sample_00064 status=ok enr=12.727 shell1=12.738 n_sheet=230174 cpu=41.1s elapsed=249s rate=4.70s/vol eta=66min
+MARKER gpu sample_00080 2.2s queued=16
+MARKER [54/892] sample_00065 status=ok enr=12.479 shell1=13.57 n_sheet=69690 cpu=20.2s elapsed=251s rate=4.65s/vol eta=65min
+MARKER gpu sample_00081 2.2s queued=16
+MARKER [55/892] sample_00066 status=ok enr=16.777 shell1=15.914 n_sheet=136003 cpu=23.6s elapsed=254s rate=4.61s/vol eta=64min
+MARKER gpu sample_00082 2.3s queued=16
+MARKER [56/892] sample_00067 status=ok enr=8.288 shell1=9.671 n_sheet=63050 cpu=26.9s elapsed=256s rate=4.58s/vol eta=64min
+MARKER gpu sample_00083 2.4s queued=16
+MARKER [57/892] sample_00068 status=ok enr=22.541 shell1=24.799 n_sheet=125683 cpu=24.6s elapsed=259s rate=4.55s/vol eta=63min
+MARKER gpu sample_00084 2.4s queued=16
+MARKER [58/892] sample_00069 status=ok enr=13.834 shell1=13.259 n_sheet=217556 cpu=34.1s elapsed=262s rate=4.51s/vol eta=63min
+MARKER gpu sample_00085 2.5s queued=16
+MARKER [59/892] sample_00070 status=ok enr=9.752 shell1=8.74 n_sheet=124553 cpu=28.8s elapsed=265s rate=4.49s/vol eta=62min
+MARKER gpu sample_00088 2.3s queued=16
+MARKER [60/892] sample_00071 status=ok enr=10.398 shell1=9.78 n_sheet=258364 cpu=28.7s elapsed=267s rate=4.46s/vol eta=62min
+MARKER gpu sample_00089 2.4s queued=16
+MARKER [61/892] sample_00072 status=ok enr=35.285 shell1=33.933 n_sheet=92206 cpu=18.1s elapsed=270s rate=4.43s/vol eta=61min
+MARKER gpu sample_00090 2.3s queued=16
+MARKER [62/892] sample_00073 status=ok enr=14.649 shell1=12.913 n_sheet=110706 cpu=18.9s elapsed=273s rate=4.40s/vol eta=61min
+MARKER gpu sample_00091 2.3s queued=16
+MARKER [63/892] sample_00074 status=ok enr=11.422 shell1=12.757 n_sheet=203889 cpu=35.7s elapsed=275s rate=4.37s/vol eta=60min
+MARKER gpu sample_00092 2.4s queued=16
+MARKER [64/892] sample_00075 status=degenerate enr=None shell1=None n_sheet=4 cpu=16.5s elapsed=278s rate=4.35s/vol eta=60min
+MARKER gpu sample_00093 2.4s queued=16
+MARKER [65/892] sample_00076 status=ok enr=47.066 shell1=61.069 n_sheet=48001 cpu=22.5s elapsed=281s rate=4.32s/vol eta=60min
+MARKER gpu sample_00094 2.5s queued=16
+MARKER [66/892] sample_00077 status=ok enr=5.036 shell1=5.23 n_sheet=111756 cpu=17.0s elapsed=284s rate=4.30s/vol eta=59min
+MARKER gpu sample_00095 2.5s queued=16
+MARKER [67/892] sample_00078 status=ok enr=15.754 shell1=14.002 n_sheet=72882 cpu=20.4s elapsed=286s rate=4.27s/vol eta=59min
+MARKER gpu sample_00096 2.5s queued=16
+MARKER [68/892] sample_00079 status=ok enr=13.093 shell1=13.361 n_sheet=194729 cpu=26.4s elapsed=289s rate=4.25s/vol eta=58min
+MARKER gpu sample_00097 2.4s queued=16
+MARKER [69/892] sample_00080 status=ok enr=11.453 shell1=15.268 n_sheet=192380 cpu=29.4s elapsed=292s rate=4.23s/vol eta=58min
+MARKER gpu sample_00098 2.3s queued=16
+MARKER [70/892] sample_00081 status=ok enr=8.593 shell1=11.21 n_sheet=95163 cpu=18.2s elapsed=294s rate=4.20s/vol eta=58min
+MARKER gpu sample_00099 2.5s queued=16
+MARKER [71/892] sample_00082 status=ok enr=6.932 shell1=6.891 n_sheet=114479 cpu=38.6s elapsed=297s rate=4.18s/vol eta=57min
+MARKER gpu sample_00100 2.3s queued=16
+MARKER [72/892] sample_00083 status=ok enr=8.192 shell1=7.896 n_sheet=255863 cpu=45.9s elapsed=306s rate=4.25s/vol eta=58min
+MARKER gpu sample_00101 2.4s queued=16
+MARKER [73/892] sample_00084 status=ok enr=11.077 shell1=10.334 n_sheet=206985 cpu=24.6s elapsed=309s rate=4.23s/vol eta=58min
+MARKER gpu sample_00102 2.3s queued=16
+MARKER [74/892] sample_00085 status=ok enr=17.792 shell1=15.063 n_sheet=131233 cpu=19.4s elapsed=312s rate=4.21s/vol eta=57min
+MARKER gpu sample_00103 2.4s queued=16
+MARKER [75/892] sample_00088 status=ok enr=6.002 shell1=6.243 n_sheet=19285 cpu=18.8s elapsed=314s rate=4.19s/vol eta=57min
+MARKER gpu sample_00104 2.4s queued=16
+MARKER [76/892] sample_00089 status=ok enr=11.125 shell1=13.996 n_sheet=206427 cpu=45.8s elapsed=318s rate=4.18s/vol eta=57min
+MARKER gpu sample_00105 2.4s queued=16
+MARKER [77/892] sample_00090 status=ok enr=8.752 shell1=10.65 n_sheet=251388 cpu=48.5s elapsed=324s rate=4.21s/vol eta=57min
+MARKER gpu sample_00106 2.4s queued=16
+MARKER [78/892] sample_00091 status=ok enr=12.395 shell1=12.081 n_sheet=62742 cpu=36.4s elapsed=327s rate=4.19s/vol eta=57min
+MARKER gpu sample_00107 2.3s queued=16
+MARKER [79/892] sample_00092 status=ok enr=22.752 shell1=24.292 n_sheet=130435 cpu=29.0s elapsed=329s rate=4.17s/vol eta=56min
+MARKER gpu sample_00108 2.3s queued=16
+MARKER [80/892] sample_00093 status=ok enr=20.429 shell1=21.531 n_sheet=143613 cpu=35.9s elapsed=332s rate=4.15s/vol eta=56min
+MARKER gpu sample_00109 2.4s queued=16
+MARKER [81/892] sample_00094 status=ok enr=13.69 shell1=12.001 n_sheet=162420 cpu=24.2s elapsed=335s rate=4.13s/vol eta=56min
+MARKER gpu sample_00110 2.4s queued=16
+MARKER [82/892] sample_00095 status=ok enr=14.453 shell1=12.749 n_sheet=96425 cpu=19.4s elapsed=337s rate=4.12s/vol eta=56min
+MARKER gpu sample_00111 2.5s queued=16
+MARKER [83/892] sample_00096 status=ok enr=25.763 shell1=24.178 n_sheet=83185 cpu=29.9s elapsed=340s rate=4.10s/vol eta=55min
+MARKER gpu sample_00112 2.5s queued=16
+MARKER [84/892] sample_00097 status=ok enr=14.014 shell1=15.396 n_sheet=137968 cpu=26.3s elapsed=343s rate=4.09s/vol eta=55min
+MARKER gpu sample_00113 2.3s queued=16
+MARKER [85/892] sample_00098 status=ok enr=10.678 shell1=13.254 n_sheet=226312 cpu=32.1s elapsed=346s rate=4.08s/vol eta=55min
+MARKER gpu sample_00114 2.5s queued=16
+MARKER [86/892] sample_00099 status=ok enr=6.118 shell1=5.597 n_sheet=167324 cpu=30.5s elapsed=350s rate=4.06s/vol eta=55min
+MARKER gpu sample_00115 2.3s queued=16
+MARKER [87/892] sample_00100 status=ok enr=8.985 shell1=10.639 n_sheet=100793 cpu=15.6s elapsed=352s rate=4.05s/vol eta=54min
+MARKER gpu sample_00117 2.4s queued=16
+MARKER [88/892] sample_00101 status=ok enr=8.008 shell1=7.486 n_sheet=130325 cpu=35.2s elapsed=355s rate=4.03s/vol eta=54min
+MARKER gpu sample_00118 2.4s queued=16
+MARKER [89/892] sample_00102 status=ok enr=7.989 shell1=7.272 n_sheet=287265 cpu=35.5s elapsed=358s rate=4.02s/vol eta=54min
+MARKER gpu sample_00119 2.4s queued=16
+MARKER [90/892] sample_00103 status=ok enr=8.084 shell1=9.935 n_sheet=126684 cpu=36.3s elapsed=360s rate=4.01s/vol eta=54min
+MARKER gpu sample_00121 2.4s queued=16
+MARKER [91/892] sample_00104 status=ok enr=9.652 shell1=10.869 n_sheet=71807 cpu=20.7s elapsed=363s rate=3.99s/vol eta=53min
+MARKER gpu sample_00122 2.4s queued=16
+MARKER [92/892] sample_00105 status=ok enr=11.039 shell1=11.008 n_sheet=137795 cpu=25.1s elapsed=366s rate=3.98s/vol eta=53min
+MARKER gpu sample_00123 2.5s queued=16
+MARKER [93/892] sample_00106 status=ok enr=9.391 shell1=9.249 n_sheet=61449 cpu=35.3s elapsed=372s rate=4.00s/vol eta=53min
+MARKER gpu sample_00124 2.4s queued=16
+MARKER [94/892] sample_00107 status=ok enr=20.588 shell1=22.703 n_sheet=47028 cpu=33.7s elapsed=379s rate=4.03s/vol eta=54min
+MARKER gpu sample_00125 2.4s queued=16
+MARKER [95/892] sample_00108 status=ok enr=11.338 shell1=10.887 n_sheet=124602 cpu=24.7s elapsed=382s rate=4.02s/vol eta=53min
+MARKER gpu sample_00126 2.5s queued=16
+MARKER [96/892] sample_00109 status=ok enr=7.688 shell1=5.208 n_sheet=1812 cpu=19.5s elapsed=385s rate=4.01s/vol eta=53min
+MARKER gpu sample_00127 2.4s queued=16
+MARKER [97/892] sample_00110 status=ok enr=5.791 shell1=8.299 n_sheet=83708 cpu=24.1s elapsed=387s rate=3.99s/vol eta=53min
+MARKER gpu sample_00128 2.4s queued=16
+MARKER [98/892] sample_00111 status=ok enr=10.477 shell1=13.229 n_sheet=117150 cpu=29.0s elapsed=390s rate=3.98s/vol eta=53min
+MARKER gpu sample_00129 2.6s queued=16
+MARKER [99/892] sample_00112 status=ok enr=8.929 shell1=9.538 n_sheet=167391 cpu=27.6s elapsed=393s rate=3.97s/vol eta=52min
+MARKER gpu sample_00130 2.5s queued=16
+MARKER [100/892] sample_00113 status=ok enr=9.522 shell1=12.437 n_sheet=101650 cpu=23.3s elapsed=396s rate=3.96s/vol eta=52min
+MARKER gpu sample_00131 2.4s queued=16
+MARKER [101/892] sample_00114 status=ok enr=4.721 shell1=4.446 n_sheet=108961 cpu=17.2s elapsed=399s rate=3.95s/vol eta=52min
+MARKER gpu sample_00132 2.3s queued=16
+MARKER [102/892] sample_00115 status=ok enr=11.382 shell1=13.398 n_sheet=116019 cpu=27.3s elapsed=401s rate=3.93s/vol eta=52min
+MARKER gpu sample_00133 2.4s queued=16
+MARKER [103/892] sample_00117 status=ok enr=9.772 shell1=9.18 n_sheet=44551 cpu=26.4s elapsed=404s rate=3.92s/vol eta=52min
+MARKER gpu sample_00134 2.3s queued=16
+MARKER [104/892] sample_00118 status=ok enr=9.162 shell1=8.269 n_sheet=248189 cpu=33.7s elapsed=411s rate=3.96s/vol eta=52min
+MARKER gpu sample_00136 2.3s queued=16
+MARKER [105/892] sample_00119 status=ok enr=14.649 shell1=14.616 n_sheet=185118 cpu=35.2s elapsed=414s rate=3.95s/vol eta=52min
+MARKER gpu sample_00137 2.3s queued=16
+MARKER [106/892] sample_00121 status=ok enr=18.934 shell1=23.855 n_sheet=49885 cpu=13.0s elapsed=417s rate=3.93s/vol eta=52min
+MARKER gpu sample_00138 2.3s queued=16
+MARKER [107/892] sample_00122 status=ok enr=9.983 shell1=9.597 n_sheet=34300 cpu=18.2s elapsed=419s rate=3.92s/vol eta=51min
+MARKER gpu sample_00139 2.4s queued=16
+MARKER [108/892] sample_00123 status=ok enr=27.474 shell1=28.822 n_sheet=82116 cpu=27.7s elapsed=422s rate=3.91s/vol eta=51min
+MARKER gpu sample_00140 2.3s queued=16
+MARKER [109/892] sample_00124 status=ok enr=9.195 shell1=12.165 n_sheet=147916 cpu=24.7s elapsed=425s rate=3.90s/vol eta=51min
+MARKER gpu sample_00141 2.3s queued=16
+MARKER [110/892] sample_00125 status=ok enr=5.265 shell1=7.166 n_sheet=104548 cpu=22.3s elapsed=427s rate=3.88s/vol eta=51min
+MARKER gpu sample_00142 2.4s queued=16
+MARKER [111/892] sample_00126 status=ok enr=8.903 shell1=10.792 n_sheet=27438 cpu=17.4s elapsed=430s rate=3.87s/vol eta=50min
+MARKER gpu sample_00143 2.3s queued=16
+MARKER [112/892] sample_00127 status=degenerate enr=None shell1=None n_sheet=7 cpu=11.8s elapsed=432s rate=3.86s/vol eta=50min
+MARKER gpu sample_00144 2.4s queued=16
+MARKER [113/892] sample_00128 status=ok enr=9.626 shell1=8.155 n_sheet=33481 cpu=21.9s elapsed=435s rate=3.85s/vol eta=50min
+MARKER gpu sample_00145 2.4s queued=16
+MARKER [114/892] sample_00129 status=ok enr=4.308 shell1=3.644 n_sheet=98125 cpu=19.9s elapsed=437s rate=3.84s/vol eta=50min
+MARKER gpu sample_00146 2.4s queued=16
+MARKER [115/892] sample_00130 status=ok enr=47.975 shell1=44.665 n_sheet=66898 cpu=18.0s elapsed=440s rate=3.82s/vol eta=50min
+MARKER gpu sample_00147 2.3s queued=16
+MARKER [116/892] sample_00131 status=ok enr=6.862 shell1=7.812 n_sheet=56306 cpu=19.6s elapsed=442s rate=3.81s/vol eta=49min
+MARKER gpu sample_00148 2.3s queued=16
+MARKER [117/892] sample_00132 status=ok enr=9.404 shell1=9.569 n_sheet=181649 cpu=29.4s elapsed=445s rate=3.80s/vol eta=49min
+MARKER gpu sample_00149 2.4s queued=16
+MARKER [118/892] sample_00133 status=ok enr=9.15 shell1=9.413 n_sheet=87837 cpu=24.2s elapsed=448s rate=3.79s/vol eta=49min
+MARKER gpu sample_00150 2.4s queued=16
+MARKER [119/892] sample_00134 status=ok enr=8.5 shell1=8.839 n_sheet=80974 cpu=22.5s elapsed=450s rate=3.79s/vol eta=49min
+MARKER gpu sample_00151 2.3s queued=16
+MARKER [120/892] sample_00136 status=ok enr=6.393 shell1=6.373 n_sheet=70407 cpu=22.1s elapsed=453s rate=3.78s/vol eta=49min
+MARKER gpu sample_00152 2.5s queued=16
+MARKER [121/892] sample_00137 status=ok enr=13.313 shell1=14.198 n_sheet=47127 cpu=13.8s elapsed=456s rate=3.77s/vol eta=48min
+MARKER gpu sample_00153 2.4s queued=16
+MARKER [122/892] sample_00138 status=ok enr=13.63 shell1=13.695 n_sheet=83348 cpu=18.9s elapsed=458s rate=3.76s/vol eta=48min
+MARKER gpu sample_00154 2.3s queued=16
+MARKER [123/892] sample_00139 status=ok enr=11.403 shell1=11.738 n_sheet=157711 cpu=26.6s elapsed=461s rate=3.75s/vol eta=48min
+MARKER gpu sample_00155 2.3s queued=16
+MARKER [124/892] sample_00140 status=ok enr=19.408 shell1=19.907 n_sheet=91193 cpu=27.3s elapsed=464s rate=3.74s/vol eta=48min
+MARKER gpu sample_00156 2.5s queued=16
+MARKER [125/892] sample_00141 status=ok enr=4.779 shell1=4.607 n_sheet=123573 cpu=12.8s elapsed=467s rate=3.73s/vol eta=48min
+MARKER gpu sample_00157 2.3s queued=16
+MARKER [126/892] sample_00142 status=ok enr=8.55 shell1=8.007 n_sheet=147624 cpu=8.7s elapsed=469s rate=3.72s/vol eta=48min
+MARKER gpu sample_00158 2.5s queued=16
+MARKER [127/892] sample_00143 status=ok enr=4.792 shell1=6.27 n_sheet=61065 cpu=8.2s elapsed=472s rate=3.72s/vol eta=47min
+MARKER gpu sample_00159 2.3s queued=16
+MARKER [128/892] sample_00144 status=ok enr=7.864 shell1=9.334 n_sheet=196540 cpu=12.3s elapsed=475s rate=3.71s/vol eta=47min
+MARKER gpu sample_00160 2.6s queued=16
+MARKER [129/892] sample_00145 status=ok enr=7.998 shell1=9.182 n_sheet=148160 cpu=11.7s elapsed=478s rate=3.70s/vol eta=47min
+MARKER gpu sample_00171 2.4s queued=16
+MARKER [130/892] sample_00146 status=ok enr=5.349 shell1=5.179 n_sheet=77713 cpu=10.0s elapsed=480s rate=3.70s/vol eta=47min
+MARKER gpu sample_00176 2.4s queued=16
+MARKER [131/892] sample_00147 status=degenerate enr=None shell1=None n_sheet=0 cpu=45.9s elapsed=494s rate=3.77s/vol eta=48min
+MARKER gpu sample_00182 2.4s queued=16
+MARKER [132/892] sample_00148 status=ok enr=4.382 shell1=4.916 n_sheet=98862 cpu=34.6s elapsed=497s rate=3.77s/vol eta=48min
+MARKER gpu sample_00186 2.3s queued=16
+MARKER [133/892] sample_00149 status=ok enr=7.91 shell1=10.352 n_sheet=132178 cpu=28.3s elapsed=500s rate=3.76s/vol eta=48min
+MARKER gpu sample_00190 2.3s queued=16
+MARKER [134/892] sample_00150 status=degenerate enr=None shell1=None n_sheet=0 cpu=7.6s elapsed=502s rate=3.75s/vol eta=47min
+MARKER gpu sample_00195 2.4s queued=16
+MARKER [135/892] sample_00151 status=ok enr=6.201 shell1=5.941 n_sheet=3771 cpu=17.4s elapsed=505s rate=3.74s/vol eta=47min
+MARKER gpu sample_00207 2.5s queued=16
+MARKER [136/892] sample_00152 status=ok enr=3.922 shell1=3.938 n_sheet=101252 cpu=22.2s elapsed=508s rate=3.73s/vol eta=47min
+MARKER gpu sample_00212 2.4s queued=16
+MARKER [137/892] sample_00153 status=ok enr=6.269 shell1=5.811 n_sheet=146741 cpu=18.7s elapsed=511s rate=3.73s/vol eta=47min
+MARKER gpu sample_00223 2.4s queued=16
+MARKER [138/892] sample_00154 status=ok enr=4.337 shell1=4.488 n_sheet=193686 cpu=32.6s elapsed=514s rate=3.72s/vol eta=47min
+MARKER gpu sample_00230 2.3s queued=16
+MARKER [139/892] sample_00155 status=ok enr=6.15 shell1=7.637 n_sheet=103904 cpu=27.0s elapsed=516s rate=3.71s/vol eta=47min
+MARKER gpu sample_00232 2.2s queued=16
+MARKER [140/892] sample_00156 status=ok enr=8.189 shell1=8.278 n_sheet=220093 cpu=41.1s elapsed=519s rate=3.71s/vol eta=46min
+MARKER gpu sample_00233 2.1s queued=16
+MARKER [141/892] sample_00157 status=ok enr=6.621 shell1=7.545 n_sheet=266082 cpu=32.4s elapsed=521s rate=3.70s/vol eta=46min
+MARKER gpu sample_00234 2.2s queued=16
+MARKER [142/892] sample_00158 status=ok enr=4.92 shell1=5.601 n_sheet=95292 cpu=17.5s elapsed=524s rate=3.69s/vol eta=46min
+MARKER gpu sample_00236 2.2s queued=16
+MARKER [143/892] sample_00159 status=ok enr=4.981 shell1=4.239 n_sheet=4268 cpu=26.0s elapsed=526s rate=3.68s/vol eta=46min
+MARKER gpu sample_00237 2.3s queued=16
+MARKER [144/892] sample_00160 status=ok enr=3.998 shell1=4.127 n_sheet=87449 cpu=22.8s elapsed=529s rate=3.67s/vol eta=46min
+MARKER gpu sample_00238 2.2s queued=16
+MARKER [145/892] sample_00171 status=degenerate enr=None shell1=None n_sheet=0 cpu=18.0s elapsed=531s rate=3.66s/vol eta=46min
+MARKER gpu sample_00239 2.2s queued=16
+MARKER [146/892] sample_00176 status=degenerate enr=None shell1=None n_sheet=0 cpu=14.9s elapsed=534s rate=3.65s/vol eta=45min
+MARKER gpu sample_00241 2.2s queued=16
+MARKER [147/892] sample_00182 status=degenerate enr=None shell1=None n_sheet=0 cpu=20.6s elapsed=536s rate=3.65s/vol eta=45min
+MARKER gpu sample_00242 2.2s queued=16
+MARKER [148/892] sample_00186 status=degenerate enr=None shell1=None n_sheet=0 cpu=20.1s elapsed=539s rate=3.64s/vol eta=45min
+MARKER gpu sample_00243 2.4s queued=16
+MARKER [149/892] sample_00190 status=degenerate enr=None shell1=None n_sheet=0 cpu=10.9s elapsed=541s rate=3.63s/vol eta=45min
+MARKER gpu sample_00244 2.4s queued=16
+MARKER [150/892] sample_00195 status=degenerate enr=None shell1=None n_sheet=0 cpu=11.3s elapsed=544s rate=3.63s/vol eta=45min
+MARKER gpu sample_00245 2.3s queued=16
+MARKER [151/892] sample_00207 status=degenerate enr=None shell1=None n_sheet=0 cpu=6.7s elapsed=547s rate=3.62s/vol eta=45min
+MARKER gpu sample_00246 2.5s queued=16
+MARKER [152/892] sample_00212 status=degenerate enr=None shell1=None n_sheet=0 cpu=19.1s elapsed=550s rate=3.62s/vol eta=45min
+MARKER gpu sample_00247 2.4s queued=16
+MARKER [153/892] sample_00223 status=degenerate enr=None shell1=None n_sheet=0 cpu=10.8s elapsed=552s rate=3.61s/vol eta=44min
+MARKER gpu sample_00248 2.5s queued=16
+MARKER [154/892] sample_00230 status=degenerate enr=None shell1=None n_sheet=0 cpu=14.1s elapsed=555s rate=3.61s/vol eta=44min
+MARKER gpu sample_00249 2.4s queued=16
+MARKER [155/892] sample_00232 status=ok enr=4.391 shell1=5.432 n_sheet=93893 cpu=23.5s elapsed=558s rate=3.60s/vol eta=44min
+MARKER gpu sample_00250 2.4s queued=16
+MARKER [156/892] sample_00233 status=ok enr=5.499 shell1=5.48 n_sheet=39625 cpu=15.6s elapsed=561s rate=3.59s/vol eta=44min
+MARKER gpu sample_00251 2.3s queued=16
+MARKER [157/892] sample_00234 status=ok enr=7.269 shell1=7.296 n_sheet=255531 cpu=46.3s elapsed=570s rate=3.63s/vol eta=44min
+MARKER gpu sample_00252 2.3s queued=16
+MARKER [158/892] sample_00236 status=ok enr=7.48 shell1=7.361 n_sheet=70635 cpu=9.0s elapsed=572s rate=3.62s/vol eta=44min
+MARKER gpu sample_00253 2.4s queued=16
+MARKER [159/892] sample_00237 status=ok enr=6.352 shell1=6.043 n_sheet=203556 cpu=34.8s elapsed=575s rate=3.62s/vol eta=44min
+MARKER gpu sample_00254 2.5s queued=16
+MARKER [160/892] sample_00238 status=ok enr=5.907 shell1=5.559 n_sheet=231653 cpu=37.4s elapsed=578s rate=3.61s/vol eta=44min
+MARKER gpu sample_00255 2.4s queued=16
+MARKER [161/892] sample_00239 status=ok enr=8.004 shell1=8.155 n_sheet=152928 cpu=25.6s elapsed=581s rate=3.61s/vol eta=44min
+MARKER gpu sample_00256 2.3s queued=16
+MARKER [162/892] sample_00241 status=ok enr=4.703 shell1=4.744 n_sheet=46019 cpu=26.1s elapsed=584s rate=3.60s/vol eta=44min
+MARKER gpu sample_00257 2.6s queued=16
+MARKER [163/892] sample_00242 status=ok enr=3.472 shell1=3.787 n_sheet=27382 cpu=28.8s elapsed=587s rate=3.60s/vol eta=44min
+MARKER gpu sample_00258 2.4s queued=16
+MARKER [164/892] sample_00243 status=ok enr=4.311 shell1=4.646 n_sheet=196958 cpu=46.4s elapsed=589s rate=3.59s/vol eta=44min
+MARKER gpu sample_00259 2.4s queued=16
+MARKER [165/892] sample_00244 status=ok enr=4.197 shell1=4.076 n_sheet=193246 cpu=31.9s elapsed=592s rate=3.59s/vol eta=43min
+MARKER gpu sample_00260 2.3s queued=16
+MARKER [166/892] sample_00245 status=ok enr=5.487 shell1=6.235 n_sheet=188160 cpu=35.2s elapsed=595s rate=3.58s/vol eta=43min
+MARKER gpu sample_00261 2.5s queued=16
+MARKER [167/892] sample_00246 status=ok enr=6.551 shell1=6.48 n_sheet=124535 cpu=24.5s elapsed=598s rate=3.58s/vol eta=43min
+MARKER gpu sample_00263 2.4s queued=16
+MARKER [168/892] sample_00247 status=ok enr=4.248 shell1=4.279 n_sheet=30362 cpu=31.5s elapsed=600s rate=3.57s/vol eta=43min
+MARKER gpu sample_00264 2.4s queued=16
+MARKER [169/892] sample_00248 status=ok enr=9.406 shell1=9.686 n_sheet=183714 cpu=28.7s elapsed=603s rate=3.57s/vol eta=43min
+MARKER gpu sample_00265 2.4s queued=16
+MARKER [170/892] sample_00249 status=ok enr=4.511 shell1=4.564 n_sheet=121010 cpu=17.3s elapsed=606s rate=3.56s/vol eta=43min
+MARKER gpu sample_00266 2.4s queued=16
+MARKER [171/892] sample_00250 status=ok enr=8.543 shell1=8.773 n_sheet=201362 cpu=31.7s elapsed=609s rate=3.56s/vol eta=43min
+MARKER gpu sample_00267 2.5s queued=16
+MARKER [172/892] sample_00251 status=ok enr=4.28 shell1=5.41 n_sheet=778 cpu=18.5s elapsed=612s rate=3.56s/vol eta=43min
+MARKER gpu sample_00268 2.3s queued=16
+MARKER [173/892] sample_00252 status=ok enr=6.76 shell1=6.962 n_sheet=141347 cpu=23.8s elapsed=614s rate=3.55s/vol eta=43min
+MARKER gpu sample_00269 2.5s queued=16
+MARKER [174/892] sample_00253 status=ok enr=3.973 shell1=4.165 n_sheet=254299 cpu=29.8s elapsed=617s rate=3.55s/vol eta=42min
+MARKER gpu sample_00270 2.5s queued=16
+MARKER [175/892] sample_00254 status=degenerate enr=None shell1=None n_sheet=0 cpu=13.0s elapsed=620s rate=3.54s/vol eta=42min
+MARKER gpu sample_00271 2.3s queued=16
+MARKER [176/892] sample_00255 status=ok enr=10.24 shell1=12.624 n_sheet=195679 cpu=37.5s elapsed=632s rate=3.59s/vol eta=43min
+MARKER gpu sample_00272 2.4s queued=16
+MARKER [177/892] sample_00256 status=ok enr=7.529 shell1=7.758 n_sheet=55445 cpu=25.3s elapsed=635s rate=3.59s/vol eta=43min
+MARKER gpu sample_00273 2.4s queued=16
+MARKER [178/892] sample_00257 status=ok enr=7.705 shell1=7.418 n_sheet=81590 cpu=26.9s elapsed=638s rate=3.58s/vol eta=43min
+MARKER gpu sample_00274 2.3s queued=16
+MARKER [179/892] sample_00258 status=ok enr=5.491 shell1=5.68 n_sheet=10681 cpu=21.0s elapsed=640s rate=3.58s/vol eta=43min
+MARKER gpu sample_00275 2.5s queued=16
+MARKER [180/892] sample_00259 status=ok enr=9.024 shell1=10.881 n_sheet=60582 cpu=19.0s elapsed=643s rate=3.57s/vol eta=42min
+MARKER gpu sample_00276 2.3s queued=16
+MARKER [181/892] sample_00260 status=ok enr=6.553 shell1=7.465 n_sheet=140391 cpu=41.4s elapsed=646s rate=3.57s/vol eta=42min
+MARKER gpu sample_00277 2.4s queued=16
+MARKER [182/892] sample_00261 status=ok enr=5.261 shell1=5.722 n_sheet=258469 cpu=43.0s elapsed=653s rate=3.59s/vol eta=42min
+MARKER gpu sample_00278 2.5s queued=16
+MARKER [183/892] sample_00263 status=ok enr=4.412 shell1=4.55 n_sheet=315090 cpu=36.7s elapsed=656s rate=3.58s/vol eta=42min
+MARKER gpu sample_00279 2.4s queued=16
+MARKER [184/892] sample_00264 status=ok enr=4.597 shell1=4.439 n_sheet=157889 cpu=37.5s elapsed=659s rate=3.58s/vol eta=42min
+MARKER gpu sample_00280 2.5s queued=16
+MARKER [185/892] sample_00265 status=ok enr=5.108 shell1=5.289 n_sheet=190584 cpu=41.9s elapsed=662s rate=3.58s/vol eta=42min
+MARKER gpu sample_00281 2.3s queued=16
+MARKER [186/892] sample_00266 status=ok enr=4.166 shell1=4.291 n_sheet=15059 cpu=22.3s elapsed=665s rate=3.57s/vol eta=42min
+MARKER gpu sample_00282 2.4s queued=16
+MARKER [187/892] sample_00267 status=ok enr=7.595 shell1=7.264 n_sheet=270300 cpu=41.8s elapsed=668s rate=3.57s/vol eta=42min
+MARKER gpu sample_00284 2.4s queued=16
+MARKER [188/892] sample_00268 status=ok enr=4.082 shell1=4.081 n_sheet=266837 cpu=32.4s elapsed=671s rate=3.57s/vol eta=42min
+MARKER gpu sample_00285 2.4s queued=16
+MARKER [189/892] sample_00269 status=ok enr=8.273 shell1=9.017 n_sheet=39025 cpu=30.1s elapsed=673s rate=3.56s/vol eta=42min
+MARKER gpu sample_00286 2.4s queued=16
+MARKER [190/892] sample_00270 status=degenerate enr=None shell1=None n_sheet=0 cpu=11.1s elapsed=676s rate=3.56s/vol eta=42min
+MARKER gpu sample_00287 2.5s queued=16
+MARKER [191/892] sample_00271 status=ok enr=4.892 shell1=5.716 n_sheet=84529 cpu=32.0s elapsed=685s rate=3.58s/vol eta=42min
+MARKER gpu sample_00288 2.4s queued=16
+MARKER [192/892] sample_00272 status=ok enr=6.334 shell1=6.443 n_sheet=210957 cpu=29.3s elapsed=687s rate=3.58s/vol eta=42min
+MARKER gpu sample_00289 2.5s queued=16
+MARKER [193/892] sample_00273 status=ok enr=10.284 shell1=9.791 n_sheet=248521 cpu=32.3s elapsed=690s rate=3.58s/vol eta=42min
+MARKER gpu sample_00290 2.4s queued=16
+MARKER [194/892] sample_00274 status=ok enr=5.533 shell1=5.563 n_sheet=143504 cpu=46.5s elapsed=701s rate=3.61s/vol eta=42min
+MARKER gpu sample_00291 2.3s queued=16
+MARKER [195/892] sample_00275 status=ok enr=4.663 shell1=4.67 n_sheet=159669 cpu=31.3s elapsed=704s rate=3.61s/vol eta=42min
+MARKER gpu sample_00292 2.4s queued=16
+MARKER [196/892] sample_00276 status=ok enr=9.262 shell1=11.336 n_sheet=121463 cpu=28.0s elapsed=707s rate=3.61s/vol eta=42min
+MARKER gpu sample_00293 2.3s queued=16
+MARKER [197/892] sample_00277 status=ok enr=7.256 shell1=8.232 n_sheet=266681 cpu=50.4s elapsed=715s rate=3.63s/vol eta=42min
+MARKER gpu sample_00295 2.4s queued=16
+MARKER [198/892] sample_00278 status=ok enr=6.312 shell1=6.486 n_sheet=78318 cpu=19.7s elapsed=718s rate=3.62s/vol eta=42min
+MARKER gpu sample_00296 2.5s queued=16
+MARKER [199/892] sample_00279 status=ok enr=4.254 shell1=4.182 n_sheet=47798 cpu=18.6s elapsed=721s rate=3.62s/vol eta=42min
+MARKER gpu sample_00297 2.3s queued=16
+MARKER [200/892] sample_00280 status=ok enr=14.507 shell1=15.757 n_sheet=105233 cpu=30.7s elapsed=723s rate=3.62s/vol eta=42min
+MARKER gpu sample_00298 2.4s queued=16
+MARKER [201/892] sample_00281 status=ok enr=5.756 shell1=6.232 n_sheet=185387 cpu=35.6s elapsed=726s rate=3.61s/vol eta=42min
+MARKER gpu sample_00299 2.4s queued=16
+MARKER [202/892] sample_00282 status=ok enr=4.928 shell1=5.576 n_sheet=160609 cpu=29.3s elapsed=729s rate=3.61s/vol eta=41min
+MARKER gpu sample_00300 2.4s queued=16
+MARKER [203/892] sample_00284 status=ok enr=5.182 shell1=5.804 n_sheet=93523 cpu=13.8s elapsed=732s rate=3.60s/vol eta=41min
+MARKER gpu sample_00301 2.4s queued=16
+MARKER [204/892] sample_00285 status=ok enr=6.552 shell1=7.692 n_sheet=48153 cpu=13.6s elapsed=734s rate=3.60s/vol eta=41min
+MARKER gpu sample_00302 2.6s queued=16
+MARKER [205/892] sample_00286 status=ok enr=4.021 shell1=4.251 n_sheet=46584 cpu=20.2s elapsed=738s rate=3.60s/vol eta=41min
+MARKER gpu sample_00303 2.4s queued=16
+MARKER [206/892] sample_00287 status=ok enr=9.16 shell1=10.084 n_sheet=75458 cpu=13.2s elapsed=740s rate=3.59s/vol eta=41min
+MARKER gpu sample_00304 2.5s queued=16
+MARKER [207/892] sample_00288 status=ok enr=6.922 shell1=7.046 n_sheet=186220 cpu=35.4s elapsed=743s rate=3.59s/vol eta=41min
+MARKER gpu sample_00305 2.4s queued=16
+MARKER [208/892] sample_00289 status=ok enr=6.962 shell1=7.513 n_sheet=68065 cpu=34.7s elapsed=746s rate=3.59s/vol eta=41min
+MARKER gpu sample_00306 2.3s queued=16
+MARKER [209/892] sample_00290 status=ok enr=10.951 shell1=12.165 n_sheet=192457 cpu=36.0s elapsed=751s rate=3.59s/vol eta=41min
+MARKER gpu sample_00307 2.4s queued=16
+MARKER [210/892] sample_00291 status=ok enr=11.336 shell1=13.138 n_sheet=40663 cpu=16.6s elapsed=753s rate=3.59s/vol eta=41min
+MARKER gpu sample_00308 2.3s queued=16
+MARKER [211/892] sample_00292 status=ok enr=5.519 shell1=5.483 n_sheet=59923 cpu=25.6s elapsed=756s rate=3.58s/vol eta=41min
+MARKER gpu sample_00309 2.4s queued=16
+MARKER [212/892] sample_00293 status=ok enr=7.223 shell1=9.328 n_sheet=106407 cpu=18.1s elapsed=758s rate=3.58s/vol eta=41min
+MARKER gpu sample_00310 2.4s queued=16
+MARKER [213/892] sample_00295 status=ok enr=5.379 shell1=5.582 n_sheet=118145 cpu=24.3s elapsed=761s rate=3.57s/vol eta=40min
+MARKER gpu sample_00311 2.3s queued=16
+MARKER [214/892] sample_00296 status=ok enr=7.791 shell1=8.767 n_sheet=62036 cpu=18.2s elapsed=764s rate=3.57s/vol eta=40min
+MARKER gpu sample_00312 2.5s queued=16
+MARKER [215/892] sample_00297 status=ok enr=7.471 shell1=8.321 n_sheet=107734 cpu=36.4s elapsed=768s rate=3.57s/vol eta=40min
+MARKER gpu sample_00313 2.3s queued=16
+MARKER [216/892] sample_00298 status=ok enr=7.359 shell1=7.826 n_sheet=64708 cpu=30.8s elapsed=771s rate=3.57s/vol eta=40min
+MARKER gpu sample_00314 2.6s queued=16
+MARKER [217/892] sample_00299 status=ok enr=4.097 shell1=4.501 n_sheet=101484 cpu=22.1s elapsed=774s rate=3.56s/vol eta=40min
+MARKER gpu sample_00315 2.4s queued=16
+MARKER [218/892] sample_00300 status=ok enr=6.813 shell1=8.078 n_sheet=36152 cpu=21.4s elapsed=776s rate=3.56s/vol eta=40min
+MARKER gpu sample_00316 2.6s queued=16
+MARKER [219/892] sample_00301 status=degenerate enr=None shell1=None n_sheet=0 cpu=13.5s elapsed=779s rate=3.56s/vol eta=40min
+MARKER gpu sample_00317 2.3s queued=16
+MARKER [220/892] sample_00302 status=degenerate enr=None shell1=None n_sheet=0 cpu=12.7s elapsed=782s rate=3.55s/vol eta=40min
+MARKER gpu sample_00318 2.4s queued=16
+MARKER [221/892] sample_00303 status=ok enr=7.995 shell1=8.531 n_sheet=82735 cpu=17.9s elapsed=785s rate=3.55s/vol eta=40min
+MARKER gpu sample_00319 2.4s queued=16
+MARKER [222/892] sample_00304 status=ok enr=9.015 shell1=9.089 n_sheet=241802 cpu=45.3s elapsed=796s rate=3.58s/vol eta=40min
+MARKER gpu sample_00320 2.4s queued=16
+MARKER [223/892] sample_00305 status=ok enr=8.502 shell1=8.265 n_sheet=212953 cpu=35.5s elapsed=799s rate=3.58s/vol eta=40min
+MARKER gpu sample_00321 2.4s queued=16
+MARKER [224/892] sample_00306 status=ok enr=6.059 shell1=6.28 n_sheet=295925 cpu=45.1s elapsed=801s rate=3.58s/vol eta=40min
+MARKER gpu sample_00322 2.3s queued=16
+MARKER [225/892] sample_00307 status=ok enr=8.533 shell1=8.725 n_sheet=36433 cpu=26.9s elapsed=804s rate=3.57s/vol eta=40min
+MARKER gpu sample_00323 2.4s queued=16
+MARKER [226/892] sample_00308 status=ok enr=9.961 shell1=9.922 n_sheet=182008 cpu=23.8s elapsed=807s rate=3.57s/vol eta=40min
+MARKER gpu sample_00324 2.5s queued=16
+MARKER [227/892] sample_00309 status=ok enr=18.173 shell1=17.678 n_sheet=70944 cpu=20.4s elapsed=810s rate=3.57s/vol eta=40min
+MARKER gpu sample_00325 2.4s queued=16
+MARKER [228/892] sample_00310 status=ok enr=7.574 shell1=9.362 n_sheet=93089 cpu=18.6s elapsed=812s rate=3.56s/vol eta=39min
+MARKER gpu sample_00326 2.3s queued=16
+MARKER [229/892] sample_00311 status=ok enr=6.229 shell1=6.231 n_sheet=76245 cpu=32.4s elapsed=815s rate=3.56s/vol eta=39min
+MARKER gpu sample_00327 2.2s queued=16
+MARKER [230/892] sample_00312 status=ok enr=6.605 shell1=6.82 n_sheet=133188 cpu=43.8s elapsed=828s rate=3.60s/vol eta=40min
+MARKER gpu sample_00328 2.4s queued=16
+MARKER [231/892] sample_00313 status=ok enr=8.738 shell1=10.567 n_sheet=116258 cpu=28.2s elapsed=831s rate=3.60s/vol eta=40min
+MARKER gpu sample_00329 2.6s queued=16
+MARKER [232/892] sample_00314 status=ok enr=7.193 shell1=7.194 n_sheet=119407 cpu=39.5s elapsed=834s rate=3.59s/vol eta=40min
+MARKER gpu sample_00330 2.4s queued=16
+MARKER [233/892] sample_00315 status=ok enr=9.016 shell1=9.709 n_sheet=246633 cpu=45.2s elapsed=836s rate=3.59s/vol eta=39min
+MARKER gpu sample_00331 2.5s queued=16
+MARKER [234/892] sample_00316 status=ok enr=6.167 shell1=7.005 n_sheet=96274 cpu=33.9s elapsed=839s rate=3.59s/vol eta=39min
+MARKER gpu sample_00332 2.3s queued=16
+MARKER [235/892] sample_00317 status=ok enr=10.914 shell1=14.038 n_sheet=163448 cpu=41.4s elapsed=842s rate=3.58s/vol eta=39min
+MARKER gpu sample_00333 2.5s queued=16
+MARKER [236/892] sample_00318 status=ok enr=2.56 shell1=2.515 n_sheet=3048 cpu=34.0s elapsed=845s rate=3.58s/vol eta=39min
+MARKER gpu sample_00334 2.4s queued=16
+MARKER [237/892] sample_00319 status=ok enr=6.615 shell1=6.426 n_sheet=147723 cpu=37.4s elapsed=848s rate=3.58s/vol eta=39min
+MARKER gpu sample_00335 2.5s queued=16
+MARKER [238/892] sample_00320 status=ok enr=8.938 shell1=9.88 n_sheet=225539 cpu=50.3s elapsed=865s rate=3.63s/vol eta=40min
+MARKER gpu sample_00336 2.4s queued=16
+MARKER [239/892] sample_00321 status=ok enr=9.355 shell1=9.736 n_sheet=208986 cpu=34.5s elapsed=867s rate=3.63s/vol eta=40min
+MARKER gpu sample_00337 2.4s queued=16
+MARKER [240/892] sample_00322 status=ok enr=8.744 shell1=9.569 n_sheet=116262 cpu=27.3s elapsed=870s rate=3.63s/vol eta=39min
+MARKER gpu sample_00339 2.4s queued=16
+MARKER [241/892] sample_00323 status=degenerate enr=None shell1=None n_sheet=0 cpu=35.0s elapsed=873s rate=3.62s/vol eta=39min
+MARKER gpu sample_00340 2.4s queued=16
+MARKER [242/892] sample_00324 status=ok enr=4.001 shell1=3.898 n_sheet=98336 cpu=22.0s elapsed=876s rate=3.62s/vol eta=39min
+MARKER gpu sample_00341 2.4s queued=16
+MARKER [243/892] sample_00325 status=ok enr=7.863 shell1=8.051 n_sheet=132461 cpu=23.0s elapsed=878s rate=3.61s/vol eta=39min
+MARKER gpu sample_00342 2.4s queued=16
+MARKER [244/892] sample_00326 status=ok enr=9.542 shell1=9.581 n_sheet=200683 cpu=44.1s elapsed=881s rate=3.61s/vol eta=39min
+MARKER gpu sample_00345 2.3s queued=16
+MARKER [245/892] sample_00327 status=ok enr=6.076 shell1=6.355 n_sheet=23853 cpu=19.2s elapsed=884s rate=3.61s/vol eta=39min
+MARKER gpu sample_00346 2.3s queued=16
+MARKER [246/892] sample_00328 status=ok enr=6.595 shell1=6.809 n_sheet=80487 cpu=36.4s elapsed=890s rate=3.62s/vol eta=39min
+MARKER gpu sample_00347 2.5s queued=16
+MARKER [247/892] sample_00329 status=ok enr=11.278 shell1=12.454 n_sheet=188776 cpu=45.5s elapsed=902s rate=3.65s/vol eta=39min
+MARKER gpu sample_00348 2.5s queued=16
+MARKER [248/892] sample_00330 status=ok enr=9.213 shell1=9.23 n_sheet=204513 cpu=38.5s elapsed=904s rate=3.65s/vol eta=39min
+MARKER gpu sample_00349 2.4s queued=16
+MARKER [249/892] sample_00331 status=ok enr=60.509 shell1=74.055 n_sheet=34400 cpu=20.5s elapsed=907s rate=3.64s/vol eta=39min
+MARKER gpu sample_00351 2.4s queued=16
+MARKER [250/892] sample_00332 status=ok enr=11.511 shell1=11.652 n_sheet=207891 cpu=34.5s elapsed=910s rate=3.64s/vol eta=39min
+MARKER gpu sample_00352 2.5s queued=16
+MARKER [251/892] sample_00333 status=ok enr=10.902 shell1=12.106 n_sheet=136456 cpu=31.8s elapsed=913s rate=3.64s/vol eta=39min
+MARKER gpu sample_00353 2.4s queued=16
+MARKER [252/892] sample_00334 status=ok enr=10.963 shell1=11.753 n_sheet=161811 cpu=30.2s elapsed=916s rate=3.63s/vol eta=39min
+MARKER gpu sample_00354 2.3s queued=16
+MARKER [253/892] sample_00335 status=ok enr=11.017 shell1=11.091 n_sheet=197815 cpu=37.9s elapsed=918s rate=3.63s/vol eta=39min
+MARKER gpu sample_00355 2.3s queued=16
+MARKER [254/892] sample_00336 status=ok enr=5.252 shell1=6.583 n_sheet=144550 cpu=22.9s elapsed=921s rate=3.63s/vol eta=39min
+MARKER gpu sample_00356 2.4s queued=16
+MARKER [255/892] sample_00337 status=ok enr=9.894 shell1=9.904 n_sheet=145579 cpu=28.4s elapsed=924s rate=3.62s/vol eta=38min
+MARKER gpu sample_00358 2.6s queued=16
+MARKER [256/892] sample_00339 status=ok enr=7.936 shell1=7.938 n_sheet=49942 cpu=22.8s elapsed=927s rate=3.62s/vol eta=38min
+MARKER gpu sample_00359 2.4s queued=16
+MARKER [257/892] sample_00340 status=ok enr=12.932 shell1=14.236 n_sheet=149388 cpu=34.2s elapsed=929s rate=3.62s/vol eta=38min
+MARKER gpu sample_00360 2.3s queued=16
+MARKER [258/892] sample_00341 status=ok enr=13.069 shell1=15.724 n_sheet=137949 cpu=24.9s elapsed=932s rate=3.61s/vol eta=38min
+MARKER gpu sample_00362 2.5s queued=16
+MARKER [259/892] sample_00342 status=ok enr=11.38 shell1=12.292 n_sheet=106378 cpu=18.7s elapsed=935s rate=3.61s/vol eta=38min
+MARKER gpu sample_00363 2.4s queued=16
+MARKER [260/892] sample_00345 status=ok enr=10.329 shell1=11.757 n_sheet=147299 cpu=42.0s elapsed=944s rate=3.63s/vol eta=38min
+MARKER gpu sample_00364 2.6s queued=16
+MARKER [261/892] sample_00346 status=ok enr=7.853 shell1=7.723 n_sheet=147971 cpu=32.3s elapsed=946s rate=3.63s/vol eta=38min
+MARKER gpu sample_00365 2.3s queued=16
+MARKER [262/892] sample_00347 status=ok enr=6.853 shell1=7.785 n_sheet=63108 cpu=22.8s elapsed=949s rate=3.62s/vol eta=38min
+MARKER gpu sample_00366 2.4s queued=16
+MARKER [263/892] sample_00348 status=ok enr=6.069 shell1=6.962 n_sheet=70364 cpu=16.4s elapsed=952s rate=3.62s/vol eta=38min
+MARKER gpu sample_00368 2.5s queued=16
+MARKER [264/892] sample_00349 status=ok enr=12.757 shell1=12.706 n_sheet=96104 cpu=19.3s elapsed=955s rate=3.62s/vol eta=38min
+MARKER gpu sample_00369 2.4s queued=16
+MARKER [265/892] sample_00351 status=ok enr=9.898 shell1=10.502 n_sheet=60584 cpu=19.0s elapsed=958s rate=3.61s/vol eta=38min
+MARKER gpu sample_00370 2.3s queued=16
+MARKER [266/892] sample_00352 status=ok enr=11.195 shell1=11.898 n_sheet=131627 cpu=26.4s elapsed=960s rate=3.61s/vol eta=38min
+MARKER gpu sample_00371 2.3s queued=16
+MARKER [267/892] sample_00353 status=ok enr=13.163 shell1=14.15 n_sheet=132591 cpu=24.3s elapsed=963s rate=3.61s/vol eta=38min
+MARKER gpu sample_00372 2.5s queued=16
+MARKER [268/892] sample_00354 status=ok enr=9.223 shell1=9.348 n_sheet=119164 cpu=16.8s elapsed=966s rate=3.60s/vol eta=37min
+MARKER gpu sample_00373 2.3s queued=16
+MARKER [269/892] sample_00355 status=ok enr=10.424 shell1=11.48 n_sheet=37142 cpu=11.9s elapsed=968s rate=3.60s/vol eta=37min
+MARKER gpu sample_00374 2.5s queued=16
+MARKER [270/892] sample_00356 status=ok enr=16.733 shell1=17.662 n_sheet=136714 cpu=22.3s elapsed=971s rate=3.60s/vol eta=37min
+MARKER gpu sample_00375 2.3s queued=16
+MARKER [271/892] sample_00358 status=ok enr=13.83 shell1=13.557 n_sheet=148560 cpu=30.9s elapsed=974s rate=3.59s/vol eta=37min
+MARKER gpu sample_00376 2.5s queued=16
+MARKER [272/892] sample_00359 status=ok enr=21.213 shell1=21.001 n_sheet=99375 cpu=18.8s elapsed=977s rate=3.59s/vol eta=37min
+MARKER gpu sample_00377 2.3s queued=16
+MARKER [273/892] sample_00360 status=ok enr=6.642 shell1=7.622 n_sheet=61760 cpu=23.7s elapsed=979s rate=3.59s/vol eta=37min
+MARKER gpu sample_00378 2.5s queued=16
+MARKER [274/892] sample_00362 status=ok enr=4.329 shell1=None n_sheet=10 cpu=17.7s elapsed=982s rate=3.59s/vol eta=37min
+MARKER gpu sample_00379 2.5s queued=16
+MARKER [275/892] sample_00363 status=ok enr=13.996 shell1=14.428 n_sheet=138981 cpu=35.7s elapsed=985s rate=3.58s/vol eta=37min
+MARKER gpu sample_00380 2.5s queued=16
+MARKER [276/892] sample_00364 status=ok enr=15.464 shell1=15.257 n_sheet=134404 cpu=30.0s elapsed=988s rate=3.58s/vol eta=37min
+MARKER gpu sample_00381 2.3s queued=16
+MARKER [277/892] sample_00365 status=ok enr=29.749 shell1=31.798 n_sheet=80799 cpu=25.0s elapsed=991s rate=3.58s/vol eta=37min
+MARKER gpu sample_00383 2.4s queued=16
+MARKER [278/892] sample_00366 status=ok enr=12.61 shell1=16.102 n_sheet=162447 cpu=23.2s elapsed=993s rate=3.57s/vol eta=37min
+MARKER gpu sample_00384 2.4s queued=16
+MARKER [279/892] sample_00368 status=ok enr=8.474 shell1=9.458 n_sheet=95997 cpu=20.6s elapsed=996s rate=3.57s/vol eta=36min
+MARKER gpu sample_00385 2.5s queued=16
+MARKER [280/892] sample_00369 status=ok enr=23.307 shell1=24.085 n_sheet=50064 cpu=19.8s elapsed=999s rate=3.57s/vol eta=36min
+MARKER gpu sample_00386 2.3s queued=16
+MARKER [281/892] sample_00370 status=ok enr=10.433 shell1=10.792 n_sheet=191344 cpu=32.0s elapsed=1002s rate=3.56s/vol eta=36min
+MARKER gpu sample_00388 2.3s queued=16
+MARKER [282/892] sample_00371 status=ok enr=11.651 shell1=12.054 n_sheet=159071 cpu=26.1s elapsed=1004s rate=3.56s/vol eta=36min
+MARKER gpu sample_00389 2.6s queued=16
+MARKER [283/892] sample_00372 status=ok enr=20.598 shell1=22.926 n_sheet=71300 cpu=18.4s elapsed=1007s rate=3.56s/vol eta=36min
+MARKER gpu sample_00390 2.4s queued=16
+MARKER [284/892] sample_00373 status=ok enr=10.132 shell1=10.863 n_sheet=129793 cpu=24.2s elapsed=1010s rate=3.56s/vol eta=36min
+MARKER gpu sample_00391 2.3s queued=16
+MARKER [285/892] sample_00374 status=ok enr=10.026 shell1=10.856 n_sheet=33262 cpu=17.1s elapsed=1013s rate=3.55s/vol eta=36min
+MARKER gpu sample_00392 2.4s queued=16
+MARKER [286/892] sample_00375 status=ok enr=9.971 shell1=12.194 n_sheet=54974 cpu=15.5s elapsed=1015s rate=3.55s/vol eta=36min
+MARKER gpu sample_00393 2.4s queued=16
+MARKER [287/892] sample_00376 status=ok enr=21.643 shell1=21.114 n_sheet=66771 cpu=17.3s elapsed=1018s rate=3.55s/vol eta=36min
+MARKER gpu sample_00394 2.4s queued=16
+MARKER [288/892] sample_00377 status=ok enr=11.099 shell1=11.279 n_sheet=167844 cpu=36.2s elapsed=1021s rate=3.54s/vol eta=36min
+MARKER gpu sample_00395 2.3s queued=16
+MARKER [289/892] sample_00378 status=ok enr=8.542 shell1=9.257 n_sheet=154991 cpu=27.8s elapsed=1024s rate=3.54s/vol eta=36min
+MARKER gpu sample_00396 2.4s queued=16
+MARKER [290/892] sample_00379 status=ok enr=14.782 shell1=14.422 n_sheet=146978 cpu=34.3s elapsed=1030s rate=3.55s/vol eta=36min
+MARKER gpu sample_00397 2.4s queued=16
+MARKER [291/892] sample_00380 status=ok enr=5.503 shell1=7.005 n_sheet=85346 cpu=22.8s elapsed=1032s rate=3.55s/vol eta=36min
+MARKER gpu sample_00398 2.5s queued=16
+MARKER [292/892] sample_00381 status=degenerate enr=None shell1=None n_sheet=0 cpu=12.7s elapsed=1035s rate=3.54s/vol eta=35min
+MARKER gpu sample_00399 2.4s queued=16
+MARKER [293/892] sample_00383 status=ok enr=10.084 shell1=12.741 n_sheet=186752 cpu=31.2s elapsed=1038s rate=3.54s/vol eta=35min
+MARKER gpu sample_00400 2.4s queued=16
+MARKER [294/892] sample_00384 status=ok enr=11.734 shell1=12.351 n_sheet=99659 cpu=24.5s elapsed=1041s rate=3.54s/vol eta=35min
+MARKER gpu sample_00401 2.4s queued=16
+MARKER [295/892] sample_00385 status=ok enr=6.893 shell1=7.185 n_sheet=140620 cpu=22.7s elapsed=1043s rate=3.54s/vol eta=35min
+MARKER gpu sample_00402 2.4s queued=16
+MARKER [296/892] sample_00386 status=ok enr=5.954 shell1=6.766 n_sheet=36707 cpu=19.8s elapsed=1046s rate=3.53s/vol eta=35min
+MARKER gpu sample_00403 2.5s queued=16
+MARKER [297/892] sample_00388 status=ok enr=22.28 shell1=23.774 n_sheet=88035 cpu=33.1s elapsed=1053s rate=3.54s/vol eta=35min
+MARKER gpu sample_00404 2.4s queued=16
+MARKER [298/892] sample_00389 status=ok enr=12.253 shell1=12.369 n_sheet=107708 cpu=22.0s elapsed=1056s rate=3.54s/vol eta=35min
+MARKER gpu sample_00405 2.4s queued=16
+MARKER [299/892] sample_00390 status=ok enr=9.196 shell1=10.611 n_sheet=148104 cpu=23.6s elapsed=1058s rate=3.54s/vol eta=35min
+MARKER gpu sample_00406 2.4s queued=16
+MARKER [300/892] sample_00391 status=ok enr=16.144 shell1=20.376 n_sheet=98538 cpu=18.5s elapsed=1061s rate=3.54s/vol eta=35min
+MARKER gpu sample_00407 2.4s queued=16
+MARKER [301/892] sample_00392 status=ok enr=18.202 shell1=19.154 n_sheet=112951 cpu=18.0s elapsed=1064s rate=3.53s/vol eta=35min
+MARKER gpu sample_00408 2.3s queued=16
+MARKER [302/892] sample_00393 status=ok enr=21.695 shell1=22.336 n_sheet=107809 cpu=23.0s elapsed=1066s rate=3.53s/vol eta=35min
+MARKER gpu sample_00409 2.4s queued=16
+MARKER [303/892] sample_00394 status=ok enr=8.882 shell1=9.359 n_sheet=88558 cpu=18.8s elapsed=1069s rate=3.53s/vol eta=35min
+MARKER gpu sample_00411 2.3s queued=16
+MARKER [304/892] sample_00395 status=ok enr=16.009 shell1=18.45 n_sheet=120382 cpu=22.4s elapsed=1072s rate=3.53s/vol eta=35min
+MARKER gpu sample_00412 2.2s queued=16
+MARKER [305/892] sample_00396 status=ok enr=39.301 shell1=37.596 n_sheet=73999 cpu=25.7s elapsed=1074s rate=3.52s/vol eta=34min
+MARKER gpu sample_00413 2.4s queued=16
+MARKER [306/892] sample_00397 status=ok enr=10.221 shell1=11.856 n_sheet=132868 cpu=23.9s elapsed=1077s rate=3.52s/vol eta=34min
+MARKER gpu sample_00414 2.3s queued=16
+MARKER [307/892] sample_00398 status=ok enr=6.305 shell1=7.4 n_sheet=148036 cpu=24.3s elapsed=1080s rate=3.52s/vol eta=34min
+MARKER gpu sample_00416 2.4s queued=16
+MARKER [308/892] sample_00399 status=ok enr=8.455 shell1=8.19 n_sheet=147674 cpu=17.6s elapsed=1082s rate=3.51s/vol eta=34min
+MARKER gpu sample_00417 2.6s queued=16
+MARKER [309/892] sample_00400 status=ok enr=9.001 shell1=9.276 n_sheet=69619 cpu=12.8s elapsed=1085s rate=3.51s/vol eta=34min
+MARKER gpu sample_00418 2.5s queued=16
+MARKER [310/892] sample_00401 status=ok enr=17.145 shell1=19.36 n_sheet=64588 cpu=17.6s elapsed=1088s rate=3.51s/vol eta=34min
+MARKER gpu sample_00419 2.4s queued=16
+MARKER [311/892] sample_00402 status=ok enr=15.855 shell1=18.611 n_sheet=95934 cpu=18.2s elapsed=1091s rate=3.51s/vol eta=34min
+MARKER gpu sample_00420 2.3s queued=16
+MARKER [312/892] sample_00403 status=degenerate enr=None shell1=None n_sheet=0 cpu=12.2s elapsed=1094s rate=3.51s/vol eta=34min
+MARKER gpu sample_00421 2.4s queued=16
+MARKER [313/892] sample_00404 status=degenerate enr=None shell1=None n_sheet=0 cpu=10.7s elapsed=1096s rate=3.50s/vol eta=34min
+MARKER gpu sample_00422 2.3s queued=16
+MARKER [314/892] sample_00405 status=ok enr=11.181 shell1=11.856 n_sheet=39808 cpu=18.1s elapsed=1099s rate=3.50s/vol eta=34min
+MARKER gpu sample_00423 2.2s queued=16
+MARKER [315/892] sample_00406 status=ok enr=5.384 shell1=6.13 n_sheet=125336 cpu=31.7s elapsed=1102s rate=3.50s/vol eta=34min
+MARKER gpu sample_00424 2.3s queued=16
+MARKER [316/892] sample_00407 status=ok enr=8.921 shell1=12.269 n_sheet=55695 cpu=10.7s elapsed=1104s rate=3.49s/vol eta=34min
+MARKER gpu sample_00425 2.3s queued=16
+MARKER [317/892] sample_00408 status=ok enr=18.815 shell1=21.181 n_sheet=112401 cpu=20.8s elapsed=1107s rate=3.49s/vol eta=33min
+MARKER gpu sample_00426 2.3s queued=16
+MARKER [318/892] sample_00409 status=ok enr=5.656 shell1=5.582 n_sheet=40211 cpu=19.6s elapsed=1110s rate=3.49s/vol eta=33min
+MARKER gpu sample_00427 2.4s queued=16
+MARKER [319/892] sample_00411 status=ok enr=7.341 shell1=8.39 n_sheet=102680 cpu=21.8s elapsed=1112s rate=3.49s/vol eta=33min
+MARKER gpu sample_00428 2.4s queued=16
+MARKER [320/892] sample_00412 status=ok enr=9.396 shell1=10.289 n_sheet=99450 cpu=24.3s elapsed=1115s rate=3.49s/vol eta=33min
+MARKER gpu sample_00429 2.5s queued=16
+MARKER [321/892] sample_00413 status=ok enr=12.828 shell1=14.924 n_sheet=73026 cpu=12.4s elapsed=1118s rate=3.48s/vol eta=33min
+MARKER gpu sample_00430 2.4s queued=16
+MARKER [322/892] sample_00414 status=ok enr=11.361 shell1=13.195 n_sheet=121604 cpu=17.3s elapsed=1121s rate=3.48s/vol eta=33min
+MARKER gpu sample_00431 2.4s queued=16
+MARKER [323/892] sample_00416 status=ok enr=38.067 shell1=41.69 n_sheet=61212 cpu=17.3s elapsed=1124s rate=3.48s/vol eta=33min
+MARKER gpu sample_00432 2.3s queued=16
+MARKER [324/892] sample_00417 status=ok enr=6.096 shell1=6.355 n_sheet=191650 cpu=25.3s elapsed=1126s rate=3.48s/vol eta=33min
+MARKER gpu sample_00433 2.4s queued=16
+MARKER [325/892] sample_00418 status=ok enr=16.166 shell1=17.592 n_sheet=100384 cpu=15.7s elapsed=1129s rate=3.47s/vol eta=33min
+MARKER gpu sample_00434 2.3s queued=16
+MARKER [326/892] sample_00419 status=ok enr=7.56 shell1=9.117 n_sheet=152165 cpu=32.6s elapsed=1132s rate=3.47s/vol eta=33min
+MARKER gpu sample_00435 2.4s queued=16
+MARKER [327/892] sample_00420 status=ok enr=16.092 shell1=18.716 n_sheet=138427 cpu=26.2s elapsed=1135s rate=3.47s/vol eta=33min
+MARKER gpu sample_00436 2.4s queued=16
+MARKER [328/892] sample_00421 status=ok enr=11.009 shell1=11.321 n_sheet=143214 cpu=26.0s elapsed=1137s rate=3.47s/vol eta=33min
+MARKER gpu sample_00437 2.4s queued=16
+MARKER [329/892] sample_00422 status=ok enr=12.823 shell1=15.291 n_sheet=145345 cpu=30.3s elapsed=1140s rate=3.46s/vol eta=33min
+MARKER gpu sample_00438 2.4s queued=16
+MARKER [330/892] sample_00423 status=ok enr=8.292 shell1=9.785 n_sheet=82551 cpu=19.1s elapsed=1143s rate=3.46s/vol eta=32min
+MARKER gpu sample_00439 2.3s queued=16
+MARKER [331/892] sample_00424 status=ok enr=10.79 shell1=13.318 n_sheet=172368 cpu=36.5s elapsed=1145s rate=3.46s/vol eta=32min
+MARKER gpu sample_00440 2.5s queued=16
+MARKER [332/892] sample_00425 status=degenerate enr=None shell1=None n_sheet=0 cpu=18.2s elapsed=1148s rate=3.46s/vol eta=32min
+MARKER gpu sample_00441 2.4s queued=16
+MARKER [333/892] sample_00426 status=ok enr=7.638 shell1=7.554 n_sheet=81934 cpu=24.9s elapsed=1151s rate=3.46s/vol eta=32min
+MARKER gpu sample_00442 2.4s queued=16
+MARKER [334/892] sample_00427 status=ok enr=8.744 shell1=8.904 n_sheet=94038 cpu=50.0s elapsed=1170s rate=3.50s/vol eta=33min
+MARKER gpu sample_00443 2.3s queued=16
+MARKER [335/892] sample_00428 status=ok enr=10.706 shell1=12.667 n_sheet=96420 cpu=28.9s elapsed=1172s rate=3.50s/vol eta=32min
+MARKER gpu sample_00444 2.3s queued=16
+MARKER [336/892] sample_00429 status=ok enr=13.5 shell1=16.968 n_sheet=117575 cpu=17.6s elapsed=1175s rate=3.50s/vol eta=32min
+MARKER gpu sample_00445 2.3s queued=16
+MARKER [337/892] sample_00430 status=ok enr=10.319 shell1=12.101 n_sheet=206391 cpu=34.3s elapsed=1178s rate=3.49s/vol eta=32min
+MARKER gpu sample_00446 2.2s queued=16
+MARKER [338/892] sample_00431 status=ok enr=10.951 shell1=10.35 n_sheet=140579 cpu=29.7s elapsed=1180s rate=3.49s/vol eta=32min
+MARKER gpu sample_00447 2.2s queued=16
+MARKER [339/892] sample_00432 status=degenerate enr=None shell1=None n_sheet=0 cpu=12.4s elapsed=1183s rate=3.49s/vol eta=32min
+MARKER gpu sample_00449 2.2s queued=16
+MARKER [340/892] sample_00433 status=ok enr=8.356 shell1=9.227 n_sheet=183108 cpu=37.1s elapsed=1185s rate=3.49s/vol eta=32min
+MARKER gpu sample_00452 2.3s queued=16
+MARKER [341/892] sample_00434 status=ok enr=6.479 shell1=6.645 n_sheet=105238 cpu=27.0s elapsed=1188s rate=3.48s/vol eta=32min
+MARKER gpu sample_00453 2.2s queued=16
+MARKER [342/892] sample_00435 status=ok enr=4.495 shell1=4.606 n_sheet=80375 cpu=23.4s elapsed=1190s rate=3.48s/vol eta=32min
+MARKER gpu sample_00454 2.3s queued=16
+MARKER [343/892] sample_00436 status=ok enr=13.522 shell1=13.702 n_sheet=169748 cpu=32.7s elapsed=1193s rate=3.48s/vol eta=32min
+MARKER gpu sample_00455 2.4s queued=16
+MARKER [344/892] sample_00437 status=ok enr=11.649 shell1=10.934 n_sheet=118580 cpu=17.4s elapsed=1195s rate=3.48s/vol eta=32min
+MARKER gpu sample_00456 2.4s queued=16
+MARKER [345/892] sample_00438 status=ok enr=11.527 shell1=13.542 n_sheet=65095 cpu=16.9s elapsed=1198s rate=3.47s/vol eta=32min
+MARKER gpu sample_00457 2.4s queued=16
+MARKER [346/892] sample_00439 status=ok enr=5.531 shell1=5.187 n_sheet=28590 cpu=12.9s elapsed=1201s rate=3.47s/vol eta=32min
+MARKER gpu sample_00458 2.4s queued=16
+MARKER [347/892] sample_00440 status=ok enr=6.711 shell1=6.733 n_sheet=116530 cpu=17.8s elapsed=1204s rate=3.47s/vol eta=32min
+MARKER gpu sample_00459 2.3s queued=16
+MARKER [348/892] sample_00441 status=ok enr=8.865 shell1=8.783 n_sheet=120117 cpu=13.2s elapsed=1206s rate=3.47s/vol eta=31min
+MARKER gpu sample_00461 2.3s queued=16
+MARKER [349/892] sample_00442 status=ok enr=13.213 shell1=13.836 n_sheet=137603 cpu=17.2s elapsed=1209s rate=3.46s/vol eta=31min
+MARKER gpu sample_00462 2.4s queued=16
+MARKER [350/892] sample_00443 status=ok enr=8.485 shell1=10.376 n_sheet=122554 cpu=15.8s elapsed=1212s rate=3.46s/vol eta=31min
+MARKER gpu sample_00463 2.4s queued=16
+MARKER [351/892] sample_00444 status=degenerate enr=None shell1=None n_sheet=0 cpu=11.3s elapsed=1215s rate=3.46s/vol eta=31min
+MARKER gpu sample_00464 2.5s queued=16
+MARKER [352/892] sample_00445 status=ok enr=7.795 shell1=7.825 n_sheet=285905 cpu=26.1s elapsed=1218s rate=3.46s/vol eta=31min
+MARKER gpu sample_00465 2.3s queued=16
+MARKER [353/892] sample_00446 status=ok enr=7.327 shell1=8.525 n_sheet=108887 cpu=16.7s elapsed=1220s rate=3.46s/vol eta=31min
+MARKER gpu sample_00466 2.4s queued=16
+MARKER [354/892] sample_00447 status=ok enr=25.208 shell1=27.568 n_sheet=87393 cpu=16.3s elapsed=1223s rate=3.45s/vol eta=31min
+MARKER gpu sample_00467 2.3s queued=16
+MARKER [355/892] sample_00449 status=ok enr=8.442 shell1=8.144 n_sheet=83811 cpu=44.0s elapsed=1229s rate=3.46s/vol eta=31min
+MARKER gpu sample_00468 2.5s queued=16
+MARKER [356/892] sample_00452 status=degenerate enr=None shell1=None n_sheet=0 cpu=13.5s elapsed=1232s rate=3.46s/vol eta=31min
+MARKER gpu sample_00469 2.5s queued=16
+MARKER [357/892] sample_00453 status=ok enr=8.458 shell1=11.124 n_sheet=60462 cpu=27.9s elapsed=1235s rate=3.46s/vol eta=31min
+MARKER gpu sample_00470 2.3s queued=16
+MARKER [358/892] sample_00454 status=ok enr=8.698 shell1=8.829 n_sheet=229716 cpu=31.7s elapsed=1238s rate=3.46s/vol eta=31min
+MARKER gpu sample_00471 2.4s queued=16
+MARKER [359/892] sample_00455 status=ok enr=8.156 shell1=9.351 n_sheet=186491 cpu=26.1s elapsed=1240s rate=3.45s/vol eta=31min
+MARKER gpu sample_00472 2.4s queued=16
+MARKER [360/892] sample_00456 status=ok enr=7.578 shell1=9.427 n_sheet=41281 cpu=15.9s elapsed=1243s rate=3.45s/vol eta=31min
+MARKER gpu sample_00474 2.4s queued=16
+MARKER [361/892] sample_00457 status=ok enr=11.061 shell1=13.189 n_sheet=160117 cpu=28.5s elapsed=1246s rate=3.45s/vol eta=31min
+MARKER gpu sample_00475 2.4s queued=16
+MARKER [362/892] sample_00458 status=ok enr=6.877 shell1=7.077 n_sheet=152623 cpu=22.3s elapsed=1248s rate=3.45s/vol eta=30min
+MARKER gpu sample_00476 2.3s queued=16
+MARKER [363/892] sample_00459 status=ok enr=9.53 shell1=10.97 n_sheet=124849 cpu=29.3s elapsed=1251s rate=3.45s/vol eta=30min
+MARKER gpu sample_00477 2.4s queued=16
+MARKER [364/892] sample_00461 status=degenerate enr=None shell1=None n_sheet=0 cpu=16.4s elapsed=1254s rate=3.44s/vol eta=30min
+MARKER gpu sample_00478 2.4s queued=16
+MARKER [365/892] sample_00462 status=ok enr=9.113 shell1=9.721 n_sheet=172985 cpu=36.5s elapsed=1256s rate=3.44s/vol eta=30min
+MARKER gpu sample_00479 2.4s queued=16
+MARKER [366/892] sample_00463 status=ok enr=10.58 shell1=11.14 n_sheet=107495 cpu=27.9s elapsed=1259s rate=3.44s/vol eta=30min
+MARKER gpu sample_00480 2.4s queued=16
+MARKER [367/892] sample_00464 status=ok enr=19.994 shell1=18.12 n_sheet=147751 cpu=31.8s elapsed=1262s rate=3.44s/vol eta=30min
+MARKER gpu sample_00481 2.3s queued=16
+MARKER [368/892] sample_00465 status=ok enr=13.081 shell1=13.677 n_sheet=80954 cpu=19.4s elapsed=1264s rate=3.43s/vol eta=30min
+MARKER gpu sample_00482 2.5s queued=16
+MARKER [369/892] sample_00466 status=ok enr=15.652 shell1=16.723 n_sheet=47418 cpu=21.7s elapsed=1267s rate=3.43s/vol eta=30min
+MARKER gpu sample_00483 2.6s queued=16
+MARKER [370/892] sample_00467 status=ok enr=7.353 shell1=7.474 n_sheet=257036 cpu=41.2s elapsed=1271s rate=3.43s/vol eta=30min
+MARKER gpu sample_00484 2.4s queued=16
+MARKER [371/892] sample_00468 status=ok enr=5.601 shell1=6.523 n_sheet=74280 cpu=24.4s elapsed=1273s rate=3.43s/vol eta=30min
+MARKER gpu sample_00485 2.3s queued=16
+MARKER [372/892] sample_00469 status=ok enr=10.316 shell1=11.965 n_sheet=84872 cpu=26.1s elapsed=1276s rate=3.43s/vol eta=30min
+MARKER gpu sample_00486 2.3s queued=16
+MARKER [373/892] sample_00470 status=ok enr=5.364 shell1=6.064 n_sheet=252680 cpu=36.1s elapsed=1282s rate=3.44s/vol eta=30min
+MARKER gpu sample_00487 2.2s queued=16
+MARKER [374/892] sample_00471 status=ok enr=5.954 shell1=7.411 n_sheet=9028 cpu=13.8s elapsed=1284s rate=3.43s/vol eta=30min
+MARKER gpu sample_00488 2.1s queued=16
+MARKER [375/892] sample_00472 status=ok enr=9.792 shell1=11.549 n_sheet=137449 cpu=23.1s elapsed=1286s rate=3.43s/vol eta=30min
+MARKER gpu sample_00489 2.1s queued=16
+MARKER [376/892] sample_00474 status=ok enr=9.416 shell1=9.842 n_sheet=134076 cpu=21.7s elapsed=1288s rate=3.43s/vol eta=29min
+MARKER gpu sample_00490 2.1s queued=16
+MARKER [377/892] sample_00475 status=ok enr=7.011 shell1=7.032 n_sheet=82246 cpu=13.5s elapsed=1290s rate=3.42s/vol eta=29min
+MARKER gpu sample_00491 2.1s queued=16
+MARKER [378/892] sample_00476 status=ok enr=6.14 shell1=6.487 n_sheet=50787 cpu=14.5s elapsed=1293s rate=3.42s/vol eta=29min
+MARKER gpu sample_00492 2.1s queued=16
+MARKER [379/892] sample_00477 status=ok enr=6.804 shell1=6.661 n_sheet=59360 cpu=8.1s elapsed=1295s rate=3.42s/vol eta=29min
+MARKER gpu sample_00493 2.1s queued=16
+MARKER [380/892] sample_00478 status=ok enr=11.428 shell1=11.196 n_sheet=154797 cpu=13.2s elapsed=1297s rate=3.41s/vol eta=29min
+MARKER gpu sample_00494 2.1s queued=16
+MARKER [381/892] sample_00479 status=ok enr=6.906 shell1=7.044 n_sheet=105146 cpu=9.3s elapsed=1299s rate=3.41s/vol eta=29min
+MARKER gpu sample_00495 2.1s queued=16
+MARKER [382/892] sample_00480 status=ok enr=10.066 shell1=10.743 n_sheet=212893 cpu=15.7s elapsed=1302s rate=3.41s/vol eta=29min
+MARKER gpu sample_00496 2.1s queued=16
+MARKER [383/892] sample_00481 status=ok enr=9.824 shell1=11.035 n_sheet=31658 cpu=6.1s elapsed=1304s rate=3.40s/vol eta=29min
+MARKER gpu sample_00497 2.1s queued=16
+MARKER [384/892] sample_00482 status=ok enr=6.381 shell1=7.547 n_sheet=32821 cpu=7.5s elapsed=1306s rate=3.40s/vol eta=29min
+MARKER gpu sample_00498 2.1s queued=16
+MARKER [385/892] sample_00483 status=ok enr=9.979 shell1=10.336 n_sheet=206810 cpu=9.7s elapsed=1308s rate=3.40s/vol eta=29min
+MARKER gpu sample_00499 2.1s queued=16
+MARKER [386/892] sample_00484 status=ok enr=5.716 shell1=6.027 n_sheet=50693 cpu=7.8s elapsed=1311s rate=3.40s/vol eta=29min
+MARKER gpu sample_00500 2.1s queued=16
+MARKER [387/892] sample_00485 status=ok enr=9.303 shell1=10.821 n_sheet=205065 cpu=9.3s elapsed=1313s rate=3.39s/vol eta=29min
+MARKER gpu sample_00502 2.1s queued=16
+MARKER [388/892] sample_00486 status=ok enr=10.947 shell1=14.008 n_sheet=84844 cpu=5.3s elapsed=1315s rate=3.39s/vol eta=28min
+MARKER gpu sample_00503 2.1s queued=16
+MARKER [389/892] sample_00487 status=ok enr=5.656 shell1=5.677 n_sheet=146960 cpu=3.6s elapsed=1317s rate=3.39s/vol eta=28min
+MARKER gpu sample_00504 2.1s queued=16
+MARKER [390/892] sample_00488 status=ok enr=9.987 shell1=9.907 n_sheet=243177 cpu=5.1s elapsed=1319s rate=3.38s/vol eta=28min
+MARKER gpu sample_00505 2.1s queued=16
+MARKER [391/892] sample_00489 status=ok enr=7.929 shell1=8.329 n_sheet=136112 cpu=4.9s elapsed=1321s rate=3.38s/vol eta=28min
+MARKER gpu sample_00507 2.1s queued=16
+MARKER [392/892] sample_00490 status=ok enr=4.926 shell1=6.414 n_sheet=83662 cpu=3.3s elapsed=1324s rate=3.38s/vol eta=28min
+MARKER gpu sample_00508 2.1s queued=16
+MARKER [393/892] sample_00491 status=ok enr=10.196 shell1=12.852 n_sheet=180392 cpu=4.8s elapsed=1326s rate=3.37s/vol eta=28min
+MARKER gpu sample_00509 2.1s queued=16
+MARKER [394/892] sample_00492 status=ok enr=22.506 shell1=24.294 n_sheet=88017 cpu=4.9s elapsed=1328s rate=3.37s/vol eta=28min
+MARKER gpu sample_00510 2.1s queued=16
+MARKER [395/892] sample_00493 status=ok enr=6.36 shell1=7.25 n_sheet=104866 cpu=3.3s elapsed=1330s rate=3.37s/vol eta=28min
+MARKER gpu sample_00511 2.1s queued=16
+MARKER [396/892] sample_00494 status=ok enr=8.349 shell1=8.106 n_sheet=106305 cpu=4.7s elapsed=1332s rate=3.36s/vol eta=28min
+MARKER gpu sample_00512 2.1s queued=16
+MARKER [397/892] sample_00495 status=ok enr=18.86 shell1=22.156 n_sheet=109638 cpu=5.1s elapsed=1335s rate=3.36s/vol eta=28min
+MARKER gpu sample_00513 2.1s queued=16
+MARKER [398/892] sample_00496 status=ok enr=15.031 shell1=17.901 n_sheet=135467 cpu=4.7s elapsed=1337s rate=3.36s/vol eta=28min
+MARKER gpu sample_00515 2.1s queued=16
+MARKER [399/892] sample_00497 status=ok enr=10.979 shell1=11.861 n_sheet=49393 cpu=3.4s elapsed=1339s rate=3.36s/vol eta=28min
+MARKER gpu sample_00517 2.1s queued=16
+MARKER [400/892] sample_00498 status=ok enr=5.718 shell1=5.945 n_sheet=41083 cpu=3.4s elapsed=1341s rate=3.35s/vol eta=27min
+MARKER gpu sample_00518 2.1s queued=16
+MARKER [401/892] sample_00499 status=ok enr=11.627 shell1=12.696 n_sheet=72633 cpu=3.2s elapsed=1344s rate=3.35s/vol eta=27min
+MARKER gpu sample_00519 2.1s queued=16
+MARKER [402/892] sample_00500 status=ok enr=10.686 shell1=11.639 n_sheet=163403 cpu=3.6s elapsed=1346s rate=3.35s/vol eta=27min
+MARKER gpu sample_00520 2.1s queued=16
+MARKER [403/892] sample_00502 status=ok enr=15.492 shell1=20.703 n_sheet=130913 cpu=4.8s elapsed=1348s rate=3.35s/vol eta=27min
+MARKER gpu sample_00521 2.1s queued=16
+MARKER [404/892] sample_00503 status=ok enr=9.861 shell1=11.595 n_sheet=146863 cpu=4.5s elapsed=1350s rate=3.34s/vol eta=27min
+MARKER gpu sample_00522 2.1s queued=16
+MARKER [405/892] sample_00504 status=ok enr=13.276 shell1=13.825 n_sheet=155037 cpu=6.1s elapsed=1353s rate=3.34s/vol eta=27min
+MARKER gpu sample_00523 2.1s queued=16
+MARKER [406/892] sample_00505 status=ok enr=12.955 shell1=16.109 n_sheet=119863 cpu=3.8s elapsed=1355s rate=3.34s/vol eta=27min
+MARKER gpu sample_00524 2.2s queued=16
+MARKER [407/892] sample_00507 status=ok enr=7.912 shell1=8.605 n_sheet=106646 cpu=3.7s elapsed=1357s rate=3.33s/vol eta=27min
+MARKER gpu sample_00525 2.2s queued=16
+MARKER [408/892] sample_00508 status=ok enr=9.179 shell1=9.571 n_sheet=225807 cpu=5.1s elapsed=1360s rate=3.33s/vol eta=27min
+MARKER gpu sample_00526 2.3s queued=16
+MARKER [409/892] sample_00509 status=ok enr=7.916 shell1=7.657 n_sheet=147761 cpu=4.9s elapsed=1362s rate=3.33s/vol eta=27min
+MARKER gpu sample_00527 2.3s queued=16
+MARKER [410/892] sample_00510 status=ok enr=8.415 shell1=8.409 n_sheet=148296 cpu=3.5s elapsed=1365s rate=3.33s/vol eta=27min
+MARKER gpu sample_00528 2.3s queued=16
+MARKER [411/892] sample_00511 status=ok enr=7.673 shell1=7.615 n_sheet=218956 cpu=5.0s elapsed=1368s rate=3.33s/vol eta=27min
+MARKER gpu sample_00529 2.2s queued=16
+MARKER [412/892] sample_00512 status=ok enr=9.558 shell1=11.363 n_sheet=61206 cpu=4.5s elapsed=1370s rate=3.33s/vol eta=27min
+MARKER gpu sample_00530 2.2s queued=16
+MARKER [413/892] sample_00513 status=ok enr=7.863 shell1=8.474 n_sheet=75526 cpu=4.6s elapsed=1373s rate=3.32s/vol eta=27min
+MARKER gpu sample_00531 2.3s queued=16
+MARKER [414/892] sample_00515 status=ok enr=13.635 shell1=16.03 n_sheet=133787 cpu=4.8s elapsed=1375s rate=3.32s/vol eta=26min
+MARKER gpu sample_00532 2.3s queued=16
+MARKER [415/892] sample_00517 status=ok enr=13.675 shell1=14.451 n_sheet=150984 cpu=5.0s elapsed=1378s rate=3.32s/vol eta=26min
+MARKER gpu sample_00533 2.3s queued=16
+MARKER [416/892] sample_00518 status=ok enr=11.959 shell1=13.329 n_sheet=183313 cpu=5.0s elapsed=1380s rate=3.32s/vol eta=26min
+MARKER gpu sample_00534 2.3s queued=16
+MARKER [417/892] sample_00519 status=ok enr=5.733 shell1=6.316 n_sheet=15896 cpu=6.9s elapsed=1383s rate=3.32s/vol eta=26min
+MARKER gpu sample_00535 2.3s queued=16
+MARKER [418/892] sample_00520 status=ok enr=4.83 shell1=5.013 n_sheet=26817 cpu=19.4s elapsed=1386s rate=3.32s/vol eta=26min
+MARKER gpu sample_00536 2.2s queued=16
+MARKER [419/892] sample_00521 status=ok enr=10.299 shell1=10.191 n_sheet=143890 cpu=17.1s elapsed=1388s rate=3.31s/vol eta=26min
+MARKER gpu sample_00537 2.2s queued=16
+MARKER [420/892] sample_00522 status=ok enr=10.456 shell1=11.043 n_sheet=123816 cpu=14.4s elapsed=1391s rate=3.31s/vol eta=26min
+MARKER gpu sample_00538 2.2s queued=16
+MARKER [421/892] sample_00523 status=ok enr=16.234 shell1=19.238 n_sheet=74035 cpu=7.5s elapsed=1393s rate=3.31s/vol eta=26min
+MARKER gpu sample_00539 2.3s queued=16
+MARKER [422/892] sample_00524 status=ok enr=7.838 shell1=8.004 n_sheet=177181 cpu=15.5s elapsed=1396s rate=3.31s/vol eta=26min
+MARKER gpu sample_00540 2.3s queued=16
+MARKER [423/892] sample_00525 status=ok enr=5.755 shell1=6.217 n_sheet=186088 cpu=15.7s elapsed=1399s rate=3.31s/vol eta=26min
+MARKER gpu sample_00541 2.5s queued=16
+MARKER [424/892] sample_00526 status=ok enr=7.725 shell1=7.73 n_sheet=202376 cpu=21.8s elapsed=1401s rate=3.31s/vol eta=26min
+MARKER gpu sample_00542 2.5s queued=16
+MARKER [425/892] sample_00527 status=ok enr=10.757 shell1=11.999 n_sheet=140350 cpu=17.7s elapsed=1404s rate=3.30s/vol eta=26min
+MARKER gpu sample_00543 2.4s queued=16
+MARKER [426/892] sample_00528 status=ok enr=9.303 shell1=11.927 n_sheet=115036 cpu=17.0s elapsed=1407s rate=3.30s/vol eta=26min
+MARKER gpu sample_00544 2.6s queued=16
+MARKER [427/892] sample_00529 status=ok enr=8.057 shell1=9.33 n_sheet=111940 cpu=14.5s elapsed=1410s rate=3.30s/vol eta=26min
+MARKER gpu sample_00546 2.4s queued=16
+MARKER [428/892] sample_00530 status=degenerate enr=None shell1=None n_sheet=0 cpu=13.1s elapsed=1413s rate=3.30s/vol eta=26min
+MARKER gpu sample_00547 2.3s queued=16
+MARKER [429/892] sample_00531 status=ok enr=14.275 shell1=17.914 n_sheet=101304 cpu=14.0s elapsed=1416s rate=3.30s/vol eta=25min
+MARKER gpu sample_00549 2.4s queued=16
+MARKER [430/892] sample_00532 status=ok enr=10.284 shell1=10.656 n_sheet=144045 cpu=17.5s elapsed=1418s rate=3.30s/vol eta=25min
+MARKER gpu sample_00550 2.4s queued=16
+MARKER [431/892] sample_00533 status=ok enr=9.986 shell1=9.978 n_sheet=249654 cpu=37.0s elapsed=1421s rate=3.30s/vol eta=25min
+MARKER gpu sample_00551 2.4s queued=16
+MARKER [432/892] sample_00534 status=ok enr=11.883 shell1=12.16 n_sheet=212509 cpu=39.1s elapsed=1424s rate=3.30s/vol eta=25min
+MARKER gpu sample_00552 2.4s queued=16
+MARKER [433/892] sample_00535 status=ok enr=14.761 shell1=14.011 n_sheet=189450 cpu=35.8s elapsed=1426s rate=3.29s/vol eta=25min
+MARKER gpu sample_00554 2.5s queued=16
+MARKER [434/892] sample_00536 status=ok enr=7.398 shell1=7.019 n_sheet=79108 cpu=19.7s elapsed=1429s rate=3.29s/vol eta=25min
+MARKER gpu sample_00555 2.3s queued=16
+MARKER [435/892] sample_00537 status=ok enr=8.449 shell1=10.539 n_sheet=27877 cpu=17.3s elapsed=1432s rate=3.29s/vol eta=25min
+MARKER gpu sample_00558 2.5s queued=16
+MARKER [436/892] sample_00538 status=ok enr=5.546 shell1=7.578 n_sheet=12142 cpu=18.2s elapsed=1435s rate=3.29s/vol eta=25min
+MARKER gpu sample_00559 2.4s queued=16
+MARKER [437/892] sample_00539 status=ok enr=5.943 shell1=6.753 n_sheet=109419 cpu=23.7s elapsed=1438s rate=3.29s/vol eta=25min
+MARKER gpu sample_00560 2.4s queued=16
+MARKER [438/892] sample_00540 status=ok enr=9.181 shell1=9.736 n_sheet=138947 cpu=18.7s elapsed=1440s rate=3.29s/vol eta=25min
+MARKER gpu sample_00561 2.4s queued=16
+MARKER [439/892] sample_00541 status=ok enr=10.719 shell1=10.821 n_sheet=105701 cpu=23.9s elapsed=1443s rate=3.29s/vol eta=25min
+MARKER gpu sample_00562 2.3s queued=16
+MARKER [440/892] sample_00542 status=ok enr=9.251 shell1=8.963 n_sheet=253962 cpu=29.6s elapsed=1446s rate=3.29s/vol eta=25min
+MARKER gpu sample_00563 2.3s queued=16
+MARKER [441/892] sample_00543 status=ok enr=6.993 shell1=6.651 n_sheet=295524 cpu=31.3s elapsed=1449s rate=3.28s/vol eta=25min
+MARKER gpu sample_00564 2.3s queued=16
+MARKER [442/892] sample_00544 status=ok enr=5.831 shell1=5.374 n_sheet=96703 cpu=12.7s elapsed=1451s rate=3.28s/vol eta=25min
+MARKER gpu sample_00565 2.3s queued=16
+MARKER [443/892] sample_00546 status=ok enr=9.273 shell1=10.159 n_sheet=147520 cpu=20.8s elapsed=1454s rate=3.28s/vol eta=25min
+MARKER gpu sample_00566 2.3s queued=16
+MARKER [444/892] sample_00547 status=ok enr=9.272 shell1=10.378 n_sheet=171159 cpu=26.3s elapsed=1457s rate=3.28s/vol eta=24min
+MARKER gpu sample_00567 2.4s queued=16
+MARKER [445/892] sample_00549 status=ok enr=6.947 shell1=7.862 n_sheet=97676 cpu=29.7s elapsed=1459s rate=3.28s/vol eta=24min
+MARKER gpu sample_00568 2.5s queued=16
+MARKER [446/892] sample_00550 status=degenerate enr=None shell1=None n_sheet=0 cpu=12.8s elapsed=1462s rate=3.28s/vol eta=24min
+MARKER gpu sample_00569 2.3s queued=16
+MARKER [447/892] sample_00551 status=ok enr=6.474 shell1=7.989 n_sheet=172705 cpu=27.1s elapsed=1465s rate=3.28s/vol eta=24min
+MARKER gpu sample_00570 2.5s queued=16
+MARKER [448/892] sample_00552 status=ok enr=7.554 shell1=7.525 n_sheet=134274 cpu=28.6s elapsed=1468s rate=3.28s/vol eta=24min
+MARKER gpu sample_00571 2.3s queued=16
+MARKER [449/892] sample_00554 status=ok enr=9.306 shell1=10.674 n_sheet=90588 cpu=12.8s elapsed=1470s rate=3.27s/vol eta=24min
+MARKER gpu sample_00572 2.6s queued=16
+MARKER [450/892] sample_00555 status=ok enr=8.743 shell1=8.619 n_sheet=45967 cpu=18.1s elapsed=1473s rate=3.27s/vol eta=24min
+MARKER gpu sample_00573 2.3s queued=16
+MARKER [451/892] sample_00558 status=ok enr=3.467 shell1=3.72 n_sheet=27931 cpu=22.9s elapsed=1476s rate=3.27s/vol eta=24min
+MARKER gpu sample_00574 2.5s queued=16
+MARKER [452/892] sample_00559 status=ok enr=8.246 shell1=7.733 n_sheet=213670 cpu=29.9s elapsed=1479s rate=3.27s/vol eta=24min
+MARKER gpu sample_00575 2.5s queued=16
+MARKER [453/892] sample_00560 status=ok enr=8.351 shell1=7.97 n_sheet=234583 cpu=26.4s elapsed=1482s rate=3.27s/vol eta=24min
+MARKER gpu sample_00576 2.6s queued=16
+MARKER [454/892] sample_00561 status=ok enr=7.011 shell1=7.029 n_sheet=64409 cpu=24.3s elapsed=1484s rate=3.27s/vol eta=24min
+MARKER gpu sample_00577 2.4s queued=16
+MARKER [455/892] sample_00562 status=ok enr=7.04 shell1=8.037 n_sheet=207541 cpu=29.1s elapsed=1487s rate=3.27s/vol eta=24min
+MARKER gpu sample_00578 2.4s queued=16
+MARKER [456/892] sample_00563 status=ok enr=9.991 shell1=10.596 n_sheet=202105 cpu=32.1s elapsed=1490s rate=3.27s/vol eta=24min
+MARKER gpu sample_00579 2.4s queued=16
+MARKER [457/892] sample_00564 status=ok enr=11.407 shell1=11.6 n_sheet=42229 cpu=19.3s elapsed=1493s rate=3.27s/vol eta=24min
+MARKER gpu sample_00580 2.5s queued=16
+MARKER [458/892] sample_00565 status=ok enr=7.455 shell1=8.181 n_sheet=148170 cpu=20.6s elapsed=1496s rate=3.27s/vol eta=24min
+MARKER gpu sample_00581 2.3s queued=16
+MARKER [459/892] sample_00566 status=ok enr=7.972 shell1=9.868 n_sheet=37144 cpu=16.4s elapsed=1498s rate=3.26s/vol eta=24min
+MARKER gpu sample_00582 2.4s queued=16
+MARKER [460/892] sample_00567 status=ok enr=6.542 shell1=8.102 n_sheet=68224 cpu=23.4s elapsed=1501s rate=3.26s/vol eta=23min
+MARKER gpu sample_00583 2.4s queued=16
+MARKER [461/892] sample_00568 status=degenerate enr=None shell1=None n_sheet=0 cpu=12.6s elapsed=1504s rate=3.26s/vol eta=23min
+MARKER gpu sample_00585 2.4s queued=16
+MARKER [462/892] sample_00569 status=ok enr=4.391 shell1=4.95 n_sheet=6986 cpu=13.7s elapsed=1507s rate=3.26s/vol eta=23min
+MARKER gpu sample_00586 2.4s queued=16
+MARKER [463/892] sample_00570 status=ok enr=6.378 shell1=6.876 n_sheet=111111 cpu=34.3s elapsed=1511s rate=3.26s/vol eta=23min
+MARKER gpu sample_00587 2.4s queued=16
+MARKER [464/892] sample_00571 status=degenerate enr=None shell1=None n_sheet=0 cpu=18.1s elapsed=1513s rate=3.26s/vol eta=23min
+MARKER gpu sample_00588 2.3s queued=16
+MARKER [465/892] sample_00572 status=ok enr=10.1 shell1=11.949 n_sheet=144248 cpu=25.0s elapsed=1516s rate=3.26s/vol eta=23min
+MARKER gpu sample_00589 2.3s queued=16
+MARKER [466/892] sample_00573 status=ok enr=6.992 shell1=7.912 n_sheet=42585 cpu=18.1s elapsed=1519s rate=3.26s/vol eta=23min
+MARKER gpu sample_00590 2.1s queued=16
+MARKER [467/892] sample_00574 status=ok enr=12.412 shell1=12.649 n_sheet=186773 cpu=37.9s elapsed=1523s rate=3.26s/vol eta=23min
+MARKER gpu sample_00591 2.3s queued=16
+MARKER [468/892] sample_00575 status=ok enr=7.729 shell1=7.726 n_sheet=92534 cpu=23.3s elapsed=1526s rate=3.26s/vol eta=23min
+MARKER gpu sample_00592 2.1s queued=16
+MARKER [469/892] sample_00576 status=ok enr=3.323 shell1=4.469 n_sheet=5665 cpu=13.2s elapsed=1528s rate=3.26s/vol eta=23min
+MARKER gpu sample_00593 2.2s queued=16
+MARKER [470/892] sample_00577 status=ok enr=13.352 shell1=14.661 n_sheet=168974 cpu=35.1s elapsed=1531s rate=3.26s/vol eta=23min
+MARKER gpu sample_00594 2.1s queued=16
+MARKER [471/892] sample_00578 status=ok enr=5.918 shell1=7.038 n_sheet=10723 cpu=13.8s elapsed=1533s rate=3.26s/vol eta=23min
+MARKER gpu sample_00595 2.3s queued=16
+MARKER [472/892] sample_00579 status=ok enr=7.202 shell1=6.653 n_sheet=64083 cpu=12.4s elapsed=1536s rate=3.25s/vol eta=23min
+MARKER gpu sample_00597 2.2s queued=16
+MARKER [473/892] sample_00580 status=ok enr=14.763 shell1=15.511 n_sheet=103981 cpu=20.3s elapsed=1538s rate=3.25s/vol eta=23min
+MARKER gpu sample_00598 2.2s queued=16
+MARKER [474/892] sample_00581 status=ok enr=8.308 shell1=10.17 n_sheet=137885 cpu=22.8s elapsed=1541s rate=3.25s/vol eta=23min
+MARKER gpu sample_00599 2.1s queued=16
+MARKER [475/892] sample_00582 status=ok enr=12.749 shell1=12.576 n_sheet=62075 cpu=29.4s elapsed=1543s rate=3.25s/vol eta=23min
+MARKER gpu sample_00600 2.1s queued=16
+MARKER [476/892] sample_00583 status=ok enr=7.632 shell1=8.791 n_sheet=140683 cpu=22.1s elapsed=1545s rate=3.25s/vol eta=23min
+MARKER gpu sample_00601 2.2s queued=16
+MARKER [477/892] sample_00585 status=ok enr=6.47 shell1=7.236 n_sheet=147501 cpu=16.2s elapsed=1548s rate=3.24s/vol eta=22min
+MARKER gpu sample_00602 2.1s queued=16
+MARKER [478/892] sample_00586 status=ok enr=5.912 shell1=5.639 n_sheet=197067 cpu=16.3s elapsed=1550s rate=3.24s/vol eta=22min
+MARKER gpu sample_00604 2.3s queued=16
+MARKER [479/892] sample_00587 status=degenerate enr=None shell1=None n_sheet=0 cpu=14.5s elapsed=1553s rate=3.24s/vol eta=22min
+MARKER gpu sample_00605 2.2s queued=16
+MARKER [480/892] sample_00588 status=ok enr=4.921 shell1=4.649 n_sheet=67447 cpu=15.5s elapsed=1555s rate=3.24s/vol eta=22min
+MARKER gpu sample_00606 2.1s queued=16
+MARKER [481/892] sample_00589 status=ok enr=8.547 shell1=8.427 n_sheet=256962 cpu=30.3s elapsed=1558s rate=3.24s/vol eta=22min
+MARKER gpu sample_00607 2.3s queued=16
+MARKER [482/892] sample_00590 status=ok enr=7.646 shell1=7.746 n_sheet=156561 cpu=27.6s elapsed=1560s rate=3.24s/vol eta=22min
+MARKER gpu sample_00608 2.2s queued=16
+MARKER [483/892] sample_00591 status=ok enr=5.29 shell1=5.703 n_sheet=9240 cpu=19.6s elapsed=1563s rate=3.24s/vol eta=22min
+MARKER gpu sample_00609 2.2s queued=16
+MARKER [484/892] sample_00592 status=ok enr=8.891 shell1=9.981 n_sheet=157688 cpu=20.4s elapsed=1565s rate=3.23s/vol eta=22min
+MARKER gpu sample_00611 2.3s queued=16
+MARKER [485/892] sample_00593 status=ok enr=7.133 shell1=7.2 n_sheet=61539 cpu=22.8s elapsed=1568s rate=3.23s/vol eta=22min
+MARKER gpu sample_00613 2.2s queued=16
+MARKER [486/892] sample_00594 status=ok enr=8.505 shell1=8.824 n_sheet=26549 cpu=17.9s elapsed=1570s rate=3.23s/vol eta=22min
+MARKER gpu sample_00614 2.1s queued=16
+MARKER [487/892] sample_00595 status=ok enr=11.787 shell1=14.876 n_sheet=78464 cpu=19.3s elapsed=1573s rate=3.23s/vol eta=22min
+MARKER gpu sample_00615 2.1s queued=16
+MARKER [488/892] sample_00597 status=ok enr=14.249 shell1=14.344 n_sheet=188816 cpu=33.2s elapsed=1575s rate=3.23s/vol eta=22min
+MARKER gpu sample_00616 2.3s queued=16
+MARKER [489/892] sample_00598 status=ok enr=9.095 shell1=9.725 n_sheet=110403 cpu=22.0s elapsed=1577s rate=3.23s/vol eta=22min
+MARKER gpu sample_00617 2.2s queued=16
+MARKER [490/892] sample_00599 status=ok enr=13.402 shell1=16.039 n_sheet=98676 cpu=20.8s elapsed=1580s rate=3.22s/vol eta=22min
+MARKER gpu sample_00618 2.1s queued=16
+MARKER [491/892] sample_00600 status=ok enr=14.268 shell1=16.553 n_sheet=144124 cpu=24.3s elapsed=1582s rate=3.22s/vol eta=22min
+MARKER gpu sample_00619 2.2s queued=16
+MARKER [492/892] sample_00601 status=degenerate enr=None shell1=None n_sheet=0 cpu=9.7s elapsed=1585s rate=3.22s/vol eta=21min
+MARKER gpu sample_00620 2.1s queued=16
+MARKER [493/892] sample_00602 status=ok enr=12.823 shell1=15.665 n_sheet=126608 cpu=25.4s elapsed=1587s rate=3.22s/vol eta=21min
+MARKER gpu sample_00621 2.3s queued=16
+MARKER [494/892] sample_00604 status=ok enr=7.674 shell1=8.229 n_sheet=102522 cpu=11.8s elapsed=1590s rate=3.22s/vol eta=21min
+MARKER gpu sample_00622 2.1s queued=16
+MARKER [495/892] sample_00605 status=ok enr=7.547 shell1=10.339 n_sheet=18187 cpu=15.3s elapsed=1592s rate=3.22s/vol eta=21min
+MARKER gpu sample_00623 2.1s queued=16
+MARKER [496/892] sample_00606 status=ok enr=31.867 shell1=35.188 n_sheet=59588 cpu=20.0s elapsed=1595s rate=3.21s/vol eta=21min
+MARKER gpu sample_00624 2.3s queued=16
+MARKER [497/892] sample_00607 status=ok enr=12.472 shell1=13.236 n_sheet=174589 cpu=25.0s elapsed=1597s rate=3.21s/vol eta=21min
+MARKER gpu sample_00625 2.3s queued=16
+MARKER [498/892] sample_00608 status=ok enr=10.364 shell1=10.66 n_sheet=147486 cpu=16.7s elapsed=1600s rate=3.21s/vol eta=21min
+MARKER gpu sample_00627 2.1s queued=16
+MARKER [499/892] sample_00609 status=ok enr=5.794 shell1=5.896 n_sheet=65194 cpu=18.6s elapsed=1602s rate=3.21s/vol eta=21min
+MARKER gpu sample_00628 2.3s queued=16
+MARKER [500/892] sample_00611 status=ok enr=10.329 shell1=13.087 n_sheet=109840 cpu=26.9s elapsed=1604s rate=3.21s/vol eta=21min
+MARKER gpu sample_00629 2.6s queued=16
+MARKER [501/892] sample_00613 status=ok enr=19.514 shell1=23.981 n_sheet=114694 cpu=27.8s elapsed=1608s rate=3.21s/vol eta=21min
+MARKER gpu sample_00630 2.5s queued=16
+MARKER [502/892] sample_00614 status=ok enr=13.516 shell1=13.382 n_sheet=172791 cpu=38.9s elapsed=1617s rate=3.22s/vol eta=21min
+MARKER gpu sample_00631 2.4s queued=16
+MARKER [503/892] sample_00615 status=ok enr=10.422 shell1=11.412 n_sheet=74237 cpu=19.7s elapsed=1620s rate=3.22s/vol eta=21min
+MARKER gpu sample_00632 2.3s queued=16
+MARKER [504/892] sample_00616 status=ok enr=11.827 shell1=13.841 n_sheet=170775 cpu=36.5s elapsed=1623s rate=3.22s/vol eta=21min
+MARKER gpu sample_00635 2.4s queued=16
+MARKER [505/892] sample_00617 status=ok enr=26.03 shell1=24.363 n_sheet=109102 cpu=32.0s elapsed=1625s rate=3.22s/vol eta=21min
+MARKER gpu sample_00636 2.4s queued=16
+MARKER [506/892] sample_00618 status=ok enr=16.44 shell1=16.268 n_sheet=146515 cpu=37.7s elapsed=1628s rate=3.22s/vol eta=21min
+MARKER gpu sample_00637 2.5s queued=16
+MARKER [507/892] sample_00619 status=ok enr=12.728 shell1=16.164 n_sheet=169344 cpu=29.2s elapsed=1631s rate=3.22s/vol eta=21min
+MARKER gpu sample_00638 2.4s queued=16
+MARKER [508/892] sample_00620 status=ok enr=7.838 shell1=10.464 n_sheet=46517 cpu=18.7s elapsed=1634s rate=3.22s/vol eta=21min
+MARKER gpu sample_00639 2.4s queued=16
+MARKER [509/892] sample_00621 status=ok enr=10.696 shell1=12.705 n_sheet=146852 cpu=22.6s elapsed=1637s rate=3.22s/vol eta=21min
+MARKER gpu sample_00640 2.4s queued=16
+MARKER [510/892] sample_00622 status=ok enr=9.956 shell1=9.602 n_sheet=235568 cpu=37.2s elapsed=1639s rate=3.21s/vol eta=20min
+MARKER gpu sample_00641 2.4s queued=16
+MARKER [511/892] sample_00623 status=ok enr=14.162 shell1=14.189 n_sheet=139538 cpu=27.1s elapsed=1644s rate=3.22s/vol eta=20min
+MARKER gpu sample_00642 2.4s queued=16
+MARKER [512/892] sample_00624 status=ok enr=13.294 shell1=13.733 n_sheet=48452 cpu=18.6s elapsed=1647s rate=3.22s/vol eta=20min
+MARKER gpu sample_00643 2.5s queued=16
+MARKER [513/892] sample_00625 status=ok enr=8.671 shell1=10.124 n_sheet=100598 cpu=24.6s elapsed=1650s rate=3.22s/vol eta=20min
+MARKER gpu sample_00645 2.4s queued=16
+MARKER [514/892] sample_00627 status=ok enr=5.688 shell1=5.736 n_sheet=111540 cpu=22.9s elapsed=1653s rate=3.22s/vol eta=20min
+MARKER gpu sample_00646 2.4s queued=16
+MARKER [515/892] sample_00628 status=ok enr=5.279 shell1=5.018 n_sheet=37833 cpu=22.9s elapsed=1655s rate=3.21s/vol eta=20min
+MARKER gpu sample_00647 2.5s queued=16
+MARKER [516/892] sample_00629 status=ok enr=8.767 shell1=8.667 n_sheet=71406 cpu=28.2s elapsed=1658s rate=3.21s/vol eta=20min
+MARKER gpu sample_00648 2.4s queued=16
+MARKER [517/892] sample_00630 status=ok enr=7.656 shell1=7.633 n_sheet=206594 cpu=35.3s elapsed=1664s rate=3.22s/vol eta=20min
+MARKER gpu sample_00650 2.3s queued=16
+MARKER [518/892] sample_00631 status=ok enr=7.764 shell1=7.213 n_sheet=172855 cpu=33.0s elapsed=1669s rate=3.22s/vol eta=20min
+MARKER gpu sample_00651 2.5s queued=16
+MARKER [519/892] sample_00632 status=ok enr=5.166 shell1=5.445 n_sheet=80908 cpu=30.3s elapsed=1672s rate=3.22s/vol eta=20min
+MARKER gpu sample_00652 2.3s queued=16
+MARKER [520/892] sample_00635 status=ok enr=8.794 shell1=9.815 n_sheet=23630 cpu=21.2s elapsed=1675s rate=3.22s/vol eta=20min
+MARKER gpu sample_00653 2.3s queued=16
+MARKER [521/892] sample_00636 status=ok enr=10.2 shell1=10.519 n_sheet=196725 cpu=28.6s elapsed=1678s rate=3.22s/vol eta=20min
+MARKER gpu sample_00654 2.4s queued=16
+MARKER [522/892] sample_00637 status=ok enr=12.948 shell1=13.431 n_sheet=165553 cpu=32.8s elapsed=1680s rate=3.22s/vol eta=20min
+MARKER gpu sample_00655 2.4s queued=16
+MARKER [523/892] sample_00638 status=ok enr=7.429 shell1=9.524 n_sheet=239851 cpu=46.3s elapsed=1692s rate=3.24s/vol eta=20min
+MARKER gpu sample_00656 2.4s queued=16
+MARKER [524/892] sample_00639 status=ok enr=23.446 shell1=27.537 n_sheet=75223 cpu=31.9s elapsed=1695s rate=3.24s/vol eta=20min
+MARKER gpu sample_00657 2.2s queued=16
+MARKER [525/892] sample_00640 status=ok enr=6.522 shell1=6.804 n_sheet=137425 cpu=18.5s elapsed=1698s rate=3.23s/vol eta=20min
+MARKER gpu sample_00658 2.4s queued=16
+MARKER [526/892] sample_00641 status=ok enr=19.854 shell1=20.546 n_sheet=120691 cpu=40.8s elapsed=1705s rate=3.24s/vol eta=20min
+MARKER gpu sample_00659 2.5s queued=16
+MARKER [527/892] sample_00642 status=ok enr=8.521 shell1=9.797 n_sheet=169311 cpu=24.1s elapsed=1708s rate=3.24s/vol eta=20min
+MARKER gpu sample_00660 2.5s queued=16
+MARKER [528/892] sample_00643 status=ok enr=5.508 shell1=6.755 n_sheet=83992 cpu=20.1s elapsed=1711s rate=3.24s/vol eta=20min
+MARKER gpu sample_00661 2.5s queued=16
+MARKER [529/892] sample_00645 status=ok enr=14.65 shell1=14.605 n_sheet=177650 cpu=31.6s elapsed=1714s rate=3.24s/vol eta=20min
+MARKER gpu sample_00662 2.5s queued=16
+MARKER [530/892] sample_00646 status=ok enr=6.633 shell1=6.977 n_sheet=32823 cpu=13.1s elapsed=1717s rate=3.24s/vol eta=20min
+MARKER gpu sample_00663 2.4s queued=16
+MARKER [531/892] sample_00647 status=ok enr=7.122 shell1=9.022 n_sheet=89664 cpu=29.4s elapsed=1720s rate=3.24s/vol eta=19min
+MARKER gpu sample_00664 2.4s queued=16
+MARKER [532/892] sample_00648 status=ok enr=8.498 shell1=10.092 n_sheet=92173 cpu=28.1s elapsed=1723s rate=3.24s/vol eta=19min
+MARKER gpu sample_00665 2.3s queued=16
+MARKER [533/892] sample_00650 status=ok enr=10.507 shell1=10.788 n_sheet=206941 cpu=31.9s elapsed=1725s rate=3.24s/vol eta=19min
+MARKER gpu sample_00666 2.4s queued=16
+MARKER [534/892] sample_00651 status=ok enr=10.186 shell1=12.602 n_sheet=197861 cpu=37.5s elapsed=1728s rate=3.24s/vol eta=19min
+MARKER gpu sample_00668 2.4s queued=16
+MARKER [535/892] sample_00652 status=ok enr=11.032 shell1=11.365 n_sheet=194257 cpu=29.7s elapsed=1731s rate=3.24s/vol eta=19min
+MARKER gpu sample_00669 2.4s queued=16
+MARKER [536/892] sample_00653 status=ok enr=16.917 shell1=16.182 n_sheet=157442 cpu=39.9s elapsed=1734s rate=3.23s/vol eta=19min
+MARKER gpu sample_00670 2.4s queued=16
+MARKER [537/892] sample_00654 status=ok enr=8.092 shell1=9.761 n_sheet=587 cpu=19.1s elapsed=1737s rate=3.23s/vol eta=19min
+MARKER gpu sample_00671 2.3s queued=16
+MARKER [538/892] sample_00655 status=ok enr=3.859 shell1=3.984 n_sheet=35877 cpu=26.1s elapsed=1739s rate=3.23s/vol eta=19min
+MARKER gpu sample_00672 2.5s queued=16
+MARKER [539/892] sample_00656 status=ok enr=7.795 shell1=8.534 n_sheet=166796 cpu=26.1s elapsed=1742s rate=3.23s/vol eta=19min
+MARKER gpu sample_00673 2.3s queued=16
+MARKER [540/892] sample_00657 status=ok enr=10.751 shell1=11.026 n_sheet=63671 cpu=29.8s elapsed=1745s rate=3.23s/vol eta=19min
+MARKER gpu sample_00674 2.5s queued=16
+MARKER [541/892] sample_00658 status=ok enr=10.909 shell1=11.12 n_sheet=221260 cpu=37.1s elapsed=1759s rate=3.25s/vol eta=19min
+MARKER gpu sample_00675 2.4s queued=16
+MARKER [542/892] sample_00659 status=ok enr=5.906 shell1=5.68 n_sheet=174393 cpu=38.4s elapsed=1761s rate=3.25s/vol eta=19min
+MARKER gpu sample_00676 2.5s queued=16
+MARKER [543/892] sample_00660 status=ok enr=5.968 shell1=5.698 n_sheet=263993 cpu=54.7s elapsed=1778s rate=3.27s/vol eta=19min
+MARKER gpu sample_00678 2.4s queued=16
+MARKER [544/892] sample_00661 status=ok enr=7.882 shell1=7.956 n_sheet=110593 cpu=40.5s elapsed=1781s rate=3.27s/vol eta=19min
+MARKER gpu sample_00680 2.3s queued=16
+MARKER [545/892] sample_00662 status=ok enr=6.975 shell1=8.161 n_sheet=41277 cpu=12.1s elapsed=1784s rate=3.27s/vol eta=19min
+MARKER gpu sample_00681 2.4s queued=16
+MARKER [546/892] sample_00663 status=ok enr=11.436 shell1=11.675 n_sheet=208960 cpu=43.9s elapsed=1787s rate=3.27s/vol eta=19min
+MARKER gpu sample_00682 2.4s queued=16
+MARKER [547/892] sample_00664 status=ok enr=5.628 shell1=6.722 n_sheet=201064 cpu=31.0s elapsed=1790s rate=3.27s/vol eta=19min
+MARKER gpu sample_00683 2.5s queued=16
+MARKER [548/892] sample_00665 status=ok enr=7.438 shell1=8.877 n_sheet=97228 cpu=28.0s elapsed=1793s rate=3.27s/vol eta=19min
+MARKER gpu sample_00684 2.5s queued=16
+MARKER [549/892] sample_00666 status=ok enr=11.258 shell1=13.993 n_sheet=163467 cpu=23.6s elapsed=1795s rate=3.27s/vol eta=19min
+MARKER gpu sample_00685 2.6s queued=16
+MARKER [550/892] sample_00668 status=ok enr=8.946 shell1=11.343 n_sheet=99893 cpu=19.3s elapsed=1799s rate=3.27s/vol eta=19min
+MARKER gpu sample_00686 2.3s queued=16
+MARKER [551/892] sample_00669 status=ok enr=10.161 shell1=13.362 n_sheet=34882 cpu=17.1s elapsed=1801s rate=3.27s/vol eta=19min
+MARKER gpu sample_00687 2.5s queued=16
+MARKER [552/892] sample_00670 status=ok enr=11.782 shell1=14.044 n_sheet=166483 cpu=33.1s elapsed=1804s rate=3.27s/vol eta=19min
+MARKER gpu sample_00688 2.4s queued=16
+MARKER [553/892] sample_00671 status=ok enr=8.554 shell1=8.657 n_sheet=249060 cpu=34.3s elapsed=1807s rate=3.27s/vol eta=18min
+MARKER gpu sample_00689 2.3s queued=16
+MARKER [554/892] sample_00672 status=ok enr=13.751 shell1=14.663 n_sheet=175661 cpu=39.4s elapsed=1810s rate=3.27s/vol eta=18min
+MARKER gpu sample_00690 2.5s queued=16
+MARKER [555/892] sample_00673 status=ok enr=8.209 shell1=8.596 n_sheet=44389 cpu=15.9s elapsed=1813s rate=3.27s/vol eta=18min
+MARKER gpu sample_00692 2.5s queued=16
+MARKER [556/892] sample_00674 status=ok enr=10.256 shell1=12.197 n_sheet=135038 cpu=23.0s elapsed=1815s rate=3.27s/vol eta=18min
+MARKER gpu sample_00693 2.3s queued=16
+MARKER [557/892] sample_00675 status=ok enr=10.99 shell1=11.401 n_sheet=131943 cpu=24.0s elapsed=1818s rate=3.26s/vol eta=18min
+MARKER gpu sample_00694 2.4s queued=16
+MARKER [558/892] sample_00676 status=ok enr=13.018 shell1=14.345 n_sheet=154256 cpu=22.6s elapsed=1821s rate=3.26s/vol eta=18min
+MARKER gpu sample_00695 2.6s queued=16
+MARKER [559/892] sample_00678 status=ok enr=7.978 shell1=8.977 n_sheet=14193 cpu=14.2s elapsed=1824s rate=3.26s/vol eta=18min
+MARKER gpu sample_00696 2.4s queued=16
+MARKER [560/892] sample_00680 status=ok enr=7.666 shell1=8.079 n_sheet=40889 cpu=23.6s elapsed=1827s rate=3.26s/vol eta=18min
+MARKER gpu sample_00697 2.4s queued=16
+MARKER [561/892] sample_00681 status=ok enr=16.501 shell1=20.354 n_sheet=120308 cpu=23.0s elapsed=1830s rate=3.26s/vol eta=18min
+MARKER gpu sample_00698 2.4s queued=16
+MARKER [562/892] sample_00682 status=ok enr=9.11 shell1=9.458 n_sheet=245391 cpu=48.9s elapsed=1848s rate=3.29s/vol eta=18min
+MARKER gpu sample_00699 2.2s queued=16
+MARKER [563/892] sample_00683 status=ok enr=7.51 shell1=7.872 n_sheet=179456 cpu=42.7s elapsed=1851s rate=3.29s/vol eta=18min
+MARKER gpu sample_00700 2.2s queued=16
+MARKER [564/892] sample_00684 status=ok enr=11.128 shell1=13.231 n_sheet=60333 cpu=17.5s elapsed=1853s rate=3.29s/vol eta=18min
+MARKER gpu sample_00701 2.2s queued=16
+MARKER [565/892] sample_00685 status=ok enr=10.353 shell1=10.559 n_sheet=154360 cpu=24.7s elapsed=1856s rate=3.28s/vol eta=18min
+MARKER gpu sample_00702 2.2s queued=16
+MARKER [566/892] sample_00686 status=ok enr=11.673 shell1=11.942 n_sheet=157219 cpu=35.8s elapsed=1858s rate=3.28s/vol eta=18min
+MARKER gpu sample_00704 2.2s queued=16
+MARKER [567/892] sample_00687 status=ok enr=7.416 shell1=8.795 n_sheet=151552 cpu=18.9s elapsed=1861s rate=3.28s/vol eta=18min
+MARKER gpu sample_00705 2.4s queued=16
+MARKER [568/892] sample_00688 status=ok enr=4.814 shell1=5.29 n_sheet=134487 cpu=20.6s elapsed=1864s rate=3.28s/vol eta=18min
+MARKER gpu sample_00706 2.3s queued=16
+MARKER [569/892] sample_00689 status=degenerate enr=None shell1=None n_sheet=0 cpu=13.4s elapsed=1866s rate=3.28s/vol eta=18min
+MARKER gpu sample_00707 2.4s queued=16
+MARKER [570/892] sample_00690 status=ok enr=9.167 shell1=9.495 n_sheet=145800 cpu=19.0s elapsed=1869s rate=3.28s/vol eta=18min
+MARKER gpu sample_00708 2.4s queued=16
+MARKER [571/892] sample_00692 status=ok enr=9.568 shell1=9.981 n_sheet=95532 cpu=22.0s elapsed=1872s rate=3.28s/vol eta=18min
+MARKER gpu sample_00709 2.4s queued=16
+MARKER [572/892] sample_00693 status=ok enr=8.327 shell1=8.576 n_sheet=194427 cpu=26.0s elapsed=1875s rate=3.28s/vol eta=17min
+MARKER gpu sample_00710 2.5s queued=16
+MARKER [573/892] sample_00694 status=ok enr=3.406 shell1=3.727 n_sheet=23581 cpu=19.9s elapsed=1877s rate=3.28s/vol eta=17min
+MARKER gpu sample_00711 2.3s queued=16
+MARKER [574/892] sample_00695 status=ok enr=6.598 shell1=6.484 n_sheet=86899 cpu=20.7s elapsed=1880s rate=3.27s/vol eta=17min
+MARKER gpu sample_00712 2.3s queued=16
+MARKER [575/892] sample_00696 status=ok enr=10.491 shell1=10.934 n_sheet=197708 cpu=19.7s elapsed=1883s rate=3.27s/vol eta=17min
+MARKER gpu sample_00713 2.4s queued=16
+MARKER [576/892] sample_00697 status=ok enr=8.368 shell1=8.735 n_sheet=167432 cpu=31.6s elapsed=1885s rate=3.27s/vol eta=17min
+MARKER gpu sample_00714 2.4s queued=16
+MARKER [577/892] sample_00698 status=ok enr=7.212 shell1=6.911 n_sheet=167925 cpu=21.9s elapsed=1888s rate=3.27s/vol eta=17min
+MARKER gpu sample_00715 2.4s queued=16
+MARKER [578/892] sample_00699 status=ok enr=7.047 shell1=7.262 n_sheet=244649 cpu=26.0s elapsed=1891s rate=3.27s/vol eta=17min
+MARKER gpu sample_00716 2.3s queued=16
+MARKER [579/892] sample_00700 status=ok enr=9.085 shell1=9.672 n_sheet=223618 cpu=28.5s elapsed=1894s rate=3.27s/vol eta=17min
+MARKER gpu sample_00718 2.5s queued=16
+MARKER [580/892] sample_00701 status=ok enr=7.764 shell1=8.638 n_sheet=92866 cpu=10.0s elapsed=1897s rate=3.27s/vol eta=17min
+MARKER gpu sample_00719 2.3s queued=16
+MARKER [581/892] sample_00702 status=ok enr=13.288 shell1=12.602 n_sheet=98503 cpu=20.3s elapsed=1899s rate=3.27s/vol eta=17min
+MARKER gpu sample_00722 2.4s queued=16
+MARKER [582/892] sample_00704 status=ok enr=8.036 shell1=9.742 n_sheet=46247 cpu=16.7s elapsed=1902s rate=3.27s/vol eta=17min
+MARKER gpu sample_00723 2.5s queued=16
+MARKER [583/892] sample_00705 status=ok enr=5.343 shell1=6.653 n_sheet=142159 cpu=22.0s elapsed=1905s rate=3.27s/vol eta=17min
+MARKER gpu sample_00724 2.3s queued=16
+MARKER [584/892] sample_00706 status=ok enr=5.498 shell1=6.973 n_sheet=66136 cpu=33.9s elapsed=1907s rate=3.27s/vol eta=17min
+MARKER gpu sample_00725 2.4s queued=16
+MARKER [585/892] sample_00707 status=ok enr=6.599 shell1=7.194 n_sheet=233571 cpu=28.5s elapsed=1910s rate=3.26s/vol eta=17min
+MARKER gpu sample_00726 2.3s queued=16
+MARKER [586/892] sample_00708 status=ok enr=12.731 shell1=13.017 n_sheet=168000 cpu=36.7s elapsed=1913s rate=3.26s/vol eta=17min
+MARKER gpu sample_00727 2.3s queued=16
+MARKER [587/892] sample_00709 status=ok enr=8.03 shell1=9.338 n_sheet=159400 cpu=27.3s elapsed=1915s rate=3.26s/vol eta=17min
+MARKER gpu sample_00728 2.4s queued=16
+MARKER [588/892] sample_00710 status=ok enr=7.405 shell1=9.064 n_sheet=68151 cpu=25.2s elapsed=1918s rate=3.26s/vol eta=17min
+MARKER gpu sample_00729 2.4s queued=16
+MARKER [589/892] sample_00711 status=ok enr=6.362 shell1=7.917 n_sheet=18179 cpu=25.6s elapsed=1921s rate=3.26s/vol eta=16min
+MARKER gpu sample_00730 2.5s queued=16
+MARKER [590/892] sample_00712 status=ok enr=13.04 shell1=12.807 n_sheet=189144 cpu=38.6s elapsed=1923s rate=3.26s/vol eta=16min
+MARKER gpu sample_00731 2.4s queued=16
+MARKER [591/892] sample_00713 status=ok enr=13.355 shell1=14.466 n_sheet=168180 cpu=41.5s elapsed=1927s rate=3.26s/vol eta=16min
+MARKER gpu sample_00733 2.5s queued=16
+MARKER [592/892] sample_00714 status=ok enr=9.864 shell1=10.095 n_sheet=156770 cpu=29.5s elapsed=1930s rate=3.26s/vol eta=16min
+MARKER gpu sample_00734 2.4s queued=16
+MARKER [593/892] sample_00715 status=ok enr=16.787 shell1=16.363 n_sheet=53449 cpu=19.2s elapsed=1933s rate=3.26s/vol eta=16min
+MARKER gpu sample_00735 2.3s queued=16
+MARKER [594/892] sample_00716 status=ok enr=19.185 shell1=18.917 n_sheet=137069 cpu=33.0s elapsed=1936s rate=3.26s/vol eta=16min
+MARKER gpu sample_00736 2.3s queued=16
+MARKER [595/892] sample_00718 status=ok enr=7.156 shell1=7.344 n_sheet=52672 cpu=30.1s elapsed=1938s rate=3.26s/vol eta=16min
+MARKER gpu sample_00738 2.5s queued=16
+MARKER [596/892] sample_00719 status=ok enr=8.718 shell1=8.48 n_sheet=237935 cpu=26.2s elapsed=1941s rate=3.26s/vol eta=16min
+MARKER gpu sample_00739 2.4s queued=16
+MARKER [597/892] sample_00722 status=ok enr=9.616 shell1=9.964 n_sheet=53640 cpu=19.5s elapsed=1944s rate=3.26s/vol eta=16min
+MARKER gpu sample_00740 2.4s queued=16
+MARKER [598/892] sample_00723 status=ok enr=11.868 shell1=13.456 n_sheet=106971 cpu=22.7s elapsed=1947s rate=3.26s/vol eta=16min
+MARKER gpu sample_00741 2.3s queued=16
+MARKER [599/892] sample_00724 status=ok enr=12.589 shell1=14.233 n_sheet=181447 cpu=32.0s elapsed=1953s rate=3.26s/vol eta=16min
+MARKER gpu sample_00742 2.3s queued=16
+MARKER [600/892] sample_00725 status=ok enr=9.96 shell1=11.133 n_sheet=37043 cpu=16.4s elapsed=1956s rate=3.26s/vol eta=16min
+MARKER gpu sample_00743 2.5s queued=16
+MARKER [601/892] sample_00726 status=ok enr=5.639 shell1=6.223 n_sheet=118105 cpu=28.8s elapsed=1959s rate=3.26s/vol eta=16min
+MARKER gpu sample_00744 2.3s queued=16
+MARKER [602/892] sample_00727 status=ok enr=11.245 shell1=11.376 n_sheet=200158 cpu=40.6s elapsed=1968s rate=3.27s/vol eta=16min
+MARKER gpu sample_00745 2.4s queued=16
+MARKER [603/892] sample_00728 status=ok enr=12.303 shell1=12.365 n_sheet=189801 cpu=37.0s elapsed=1971s rate=3.27s/vol eta=16min
+MARKER gpu sample_00746 2.3s queued=16
+MARKER [604/892] sample_00729 status=ok enr=12.136 shell1=12.554 n_sheet=144821 cpu=31.6s elapsed=1974s rate=3.27s/vol eta=16min
+MARKER gpu sample_00747 2.3s queued=16
+MARKER [605/892] sample_00730 status=ok enr=17.705 shell1=20.848 n_sheet=105474 cpu=25.4s elapsed=1976s rate=3.27s/vol eta=16min
+MARKER gpu sample_00748 2.4s queued=16
+MARKER [606/892] sample_00731 status=ok enr=13.479 shell1=13.36 n_sheet=102538 cpu=24.8s elapsed=1979s rate=3.27s/vol eta=16min
+MARKER gpu sample_00749 2.3s queued=16
+MARKER [607/892] sample_00733 status=ok enr=6.723 shell1=7.363 n_sheet=20553 cpu=19.0s elapsed=1982s rate=3.27s/vol eta=16min
+MARKER gpu sample_00750 2.3s queued=16
+MARKER [608/892] sample_00734 status=ok enr=6.745 shell1=6.75 n_sheet=81744 cpu=23.7s elapsed=1985s rate=3.26s/vol eta=15min
+MARKER gpu sample_00752 2.4s queued=16
+MARKER [609/892] sample_00735 status=ok enr=5.956 shell1=6.155 n_sheet=205411 cpu=25.5s elapsed=1987s rate=3.26s/vol eta=15min
+MARKER gpu sample_00753 2.3s queued=16
+MARKER [610/892] sample_00736 status=ok enr=8.233 shell1=9.938 n_sheet=51163 cpu=15.1s elapsed=1990s rate=3.26s/vol eta=15min
+MARKER gpu sample_00754 2.4s queued=16
+MARKER [611/892] sample_00738 status=ok enr=6.953 shell1=6.763 n_sheet=20989 cpu=22.2s elapsed=1993s rate=3.26s/vol eta=15min
+MARKER gpu sample_00755 2.3s queued=16
+MARKER [612/892] sample_00739 status=ok enr=10.39 shell1=11.032 n_sheet=117006 cpu=25.6s elapsed=1995s rate=3.26s/vol eta=15min
+MARKER gpu sample_00756 2.4s queued=16
+MARKER [613/892] sample_00740 status=ok enr=10.403 shell1=10.804 n_sheet=149880 cpu=33.7s elapsed=2000s rate=3.26s/vol eta=15min
+MARKER gpu sample_00757 2.4s queued=16
+MARKER [614/892] sample_00741 status=ok enr=9.677 shell1=9.173 n_sheet=228378 cpu=32.9s elapsed=2003s rate=3.26s/vol eta=15min
+MARKER gpu sample_00758 2.4s queued=16
+MARKER [615/892] sample_00742 status=ok enr=10.646 shell1=10.551 n_sheet=195147 cpu=23.9s elapsed=2006s rate=3.26s/vol eta=15min
+MARKER gpu sample_00759 2.3s queued=16
+MARKER [616/892] sample_00743 status=ok enr=9.611 shell1=9.733 n_sheet=136001 cpu=29.4s elapsed=2009s rate=3.26s/vol eta=15min
+MARKER gpu sample_00761 2.4s queued=16
+MARKER [617/892] sample_00744 status=ok enr=9.098 shell1=11.287 n_sheet=118398 cpu=30.2s elapsed=2011s rate=3.26s/vol eta=15min
+MARKER gpu sample_00762 2.3s queued=16
+MARKER [618/892] sample_00745 status=ok enr=12.912 shell1=14.872 n_sheet=153968 cpu=31.8s elapsed=2014s rate=3.26s/vol eta=15min
+MARKER gpu sample_00764 2.4s queued=16
+MARKER [619/892] sample_00746 status=ok enr=7.629 shell1=7.408 n_sheet=214162 cpu=41.2s elapsed=2026s rate=3.27s/vol eta=15min
+MARKER gpu sample_00766 2.4s queued=16
+MARKER [620/892] sample_00747 status=ok enr=5.765 shell1=6.086 n_sheet=100731 cpu=38.3s elapsed=2030s rate=3.27s/vol eta=15min
+MARKER gpu sample_00767 2.3s queued=16
+MARKER [621/892] sample_00748 status=ok enr=6.416 shell1=7.448 n_sheet=184883 cpu=34.3s elapsed=2033s rate=3.27s/vol eta=15min
+MARKER gpu sample_00768 2.3s queued=16
+MARKER [622/892] sample_00749 status=ok enr=8.583 shell1=10.49 n_sheet=245772 cpu=45.8s elapsed=2046s rate=3.29s/vol eta=15min
+MARKER gpu sample_00769 2.4s queued=16
+MARKER [623/892] sample_00750 status=ok enr=7.446 shell1=7.656 n_sheet=278990 cpu=32.8s elapsed=2049s rate=3.29s/vol eta=15min
+MARKER gpu sample_00770 2.5s queued=16
+MARKER [624/892] sample_00752 status=ok enr=6.302 shell1=7.829 n_sheet=240054 cpu=39.0s elapsed=2052s rate=3.29s/vol eta=15min
+MARKER gpu sample_00771 2.4s queued=16
+MARKER [625/892] sample_00753 status=ok enr=8.19 shell1=8.461 n_sheet=229379 cpu=40.2s elapsed=2055s rate=3.29s/vol eta=15min
+MARKER gpu sample_00772 2.4s queued=16
+MARKER [626/892] sample_00754 status=ok enr=10.503 shell1=10.453 n_sheet=210494 cpu=34.5s elapsed=2058s rate=3.29s/vol eta=15min
+MARKER gpu sample_00773 2.3s queued=16
+MARKER [627/892] sample_00755 status=ok enr=7.798 shell1=7.825 n_sheet=198957 cpu=27.9s elapsed=2061s rate=3.29s/vol eta=15min
+MARKER gpu sample_00774 2.5s queued=16
+MARKER [628/892] sample_00756 status=ok enr=9.546 shell1=10.589 n_sheet=221427 cpu=33.3s elapsed=2064s rate=3.29s/vol eta=14min
+MARKER gpu sample_00776 2.4s queued=16
+MARKER [629/892] sample_00757 status=ok enr=15.955 shell1=19.627 n_sheet=123098 cpu=29.3s elapsed=2067s rate=3.29s/vol eta=14min
+MARKER gpu sample_00777 2.4s queued=16
+MARKER [630/892] sample_00758 status=ok enr=13.539 shell1=13.712 n_sheet=82378 cpu=21.4s elapsed=2070s rate=3.29s/vol eta=14min
+MARKER gpu sample_00778 2.4s queued=16
+MARKER [631/892] sample_00759 status=ok enr=11.254 shell1=10.922 n_sheet=226734 cpu=46.9s elapsed=2092s rate=3.31s/vol eta=14min
+MARKER gpu sample_00779 2.4s queued=16
+MARKER [632/892] sample_00761 status=ok enr=16.984 shell1=18.11 n_sheet=144429 cpu=34.8s elapsed=2095s rate=3.31s/vol eta=14min
+MARKER gpu sample_00780 2.4s queued=16
+MARKER [633/892] sample_00762 status=ok enr=8.192 shell1=8.855 n_sheet=75791 cpu=19.4s elapsed=2097s rate=3.31s/vol eta=14min
+MARKER gpu sample_00781 2.5s queued=16
+MARKER [634/892] sample_00764 status=ok enr=9.613 shell1=10.321 n_sheet=163698 cpu=29.5s elapsed=2100s rate=3.31s/vol eta=14min
+MARKER gpu sample_00782 2.3s queued=16
+MARKER [635/892] sample_00766 status=ok enr=19.324 shell1=21.524 n_sheet=119068 cpu=36.4s elapsed=2103s rate=3.31s/vol eta=14min
+MARKER gpu sample_00783 2.4s queued=16
+MARKER [636/892] sample_00767 status=ok enr=10.507 shell1=12.734 n_sheet=187264 cpu=30.1s elapsed=2106s rate=3.31s/vol eta=14min
+MARKER gpu sample_00784 2.4s queued=16
+MARKER [637/892] sample_00768 status=ok enr=5.659 shell1=5.782 n_sheet=140604 cpu=42.1s elapsed=2109s rate=3.31s/vol eta=14min
+MARKER gpu sample_00785 2.5s queued=16
+MARKER [638/892] sample_00769 status=ok enr=13.001 shell1=13.295 n_sheet=184361 cpu=42.4s elapsed=2112s rate=3.31s/vol eta=14min
+MARKER gpu sample_00786 2.4s queued=16
+MARKER [639/892] sample_00770 status=ok enr=15.558 shell1=15.844 n_sheet=149184 cpu=34.5s elapsed=2114s rate=3.31s/vol eta=14min
+MARKER gpu sample_00787 2.4s queued=16
+MARKER [640/892] sample_00771 status=ok enr=9.837 shell1=11.139 n_sheet=182118 cpu=29.2s elapsed=2117s rate=3.31s/vol eta=14min
+MARKER gpu sample_00789 2.4s queued=16
+MARKER [641/892] sample_00772 status=ok enr=6.319 shell1=6.383 n_sheet=119056 cpu=22.2s elapsed=2120s rate=3.31s/vol eta=14min
+MARKER gpu sample_00790 2.6s queued=16
+MARKER [642/892] sample_00773 status=ok enr=7.205 shell1=7.101 n_sheet=66684 cpu=22.4s elapsed=2123s rate=3.31s/vol eta=14min
+MARKER gpu sample_00791 2.3s queued=16
+MARKER [643/892] sample_00774 status=ok enr=7.868 shell1=8.103 n_sheet=171024 cpu=28.6s elapsed=2125s rate=3.31s/vol eta=14min
+MARKER gpu sample_00792 2.4s queued=16
+MARKER [644/892] sample_00776 status=ok enr=12.279 shell1=12.476 n_sheet=102155 cpu=27.9s elapsed=2128s rate=3.30s/vol eta=14min
+MARKER gpu sample_00793 2.4s queued=16
+MARKER [645/892] sample_00777 status=ok enr=11.496 shell1=11.204 n_sheet=161824 cpu=25.3s elapsed=2131s rate=3.30s/vol eta=14min
+MARKER gpu sample_00794 2.4s queued=16
+MARKER [646/892] sample_00778 status=ok enr=7.579 shell1=8.365 n_sheet=251963 cpu=43.7s elapsed=2145s rate=3.32s/vol eta=14min
+MARKER gpu sample_00795 2.5s queued=16
+MARKER [647/892] sample_00779 status=ok enr=6.507 shell1=6.887 n_sheet=194552 cpu=25.6s elapsed=2148s rate=3.32s/vol eta=14min
+MARKER gpu sample_00796 2.5s queued=16
+MARKER [648/892] sample_00780 status=ok enr=11.857 shell1=14.711 n_sheet=180950 cpu=40.5s elapsed=2151s rate=3.32s/vol eta=13min
+MARKER gpu sample_00797 2.5s queued=16
+MARKER [649/892] sample_00781 status=ok enr=14.17 shell1=15.533 n_sheet=70610 cpu=29.1s elapsed=2154s rate=3.32s/vol eta=13min
+MARKER gpu sample_00798 2.6s queued=16
+MARKER [650/892] sample_00782 status=ok enr=5.884 shell1=5.494 n_sheet=70888 cpu=37.4s elapsed=2157s rate=3.32s/vol eta=13min
+MARKER gpu sample_00799 2.4s queued=16
+MARKER [651/892] sample_00783 status=ok enr=8.265 shell1=8.566 n_sheet=150807 cpu=28.2s elapsed=2160s rate=3.32s/vol eta=13min
+MARKER gpu sample_00800 2.6s queued=16
+MARKER [652/892] sample_00784 status=ok enr=10.54 shell1=13.926 n_sheet=62932 cpu=21.6s elapsed=2163s rate=3.32s/vol eta=13min
+MARKER gpu sample_00801 2.3s queued=16
+MARKER [653/892] sample_00785 status=ok enr=8.508 shell1=8.956 n_sheet=237184 cpu=34.3s elapsed=2165s rate=3.32s/vol eta=13min
+MARKER gpu sample_00802 2.6s queued=16
+MARKER [654/892] sample_00786 status=ok enr=11.742 shell1=12.375 n_sheet=203234 cpu=48.7s elapsed=2177s rate=3.33s/vol eta=13min
+MARKER gpu sample_00803 2.3s queued=16
+MARKER [655/892] sample_00787 status=ok enr=10.577 shell1=11.264 n_sheet=225485 cpu=35.6s elapsed=2180s rate=3.33s/vol eta=13min
+MARKER gpu sample_00804 2.4s queued=16
+MARKER [656/892] sample_00789 status=ok enr=16.922 shell1=18.526 n_sheet=113396 cpu=23.2s elapsed=2183s rate=3.33s/vol eta=13min
+MARKER gpu sample_00805 2.3s queued=16
+MARKER [657/892] sample_00790 status=ok enr=12.181 shell1=12.086 n_sheet=208219 cpu=51.5s elapsed=2195s rate=3.34s/vol eta=13min
+MARKER gpu sample_00806 2.4s queued=16
+MARKER [658/892] sample_00791 status=ok enr=12.462 shell1=12.009 n_sheet=182325 cpu=42.2s elapsed=2198s rate=3.34s/vol eta=13min
+MARKER gpu sample_00807 2.3s queued=16
+MARKER [659/892] sample_00792 status=ok enr=15.156 shell1=15.523 n_sheet=83675 cpu=21.4s elapsed=2201s rate=3.34s/vol eta=13min
+MARKER gpu sample_00808 2.3s queued=16
+MARKER [660/892] sample_00793 status=ok enr=15.064 shell1=16.072 n_sheet=162478 cpu=39.4s elapsed=2204s rate=3.34s/vol eta=13min
+MARKER gpu sample_00809 2.3s queued=16
+MARKER [661/892] sample_00794 status=ok enr=7.229 shell1=7.585 n_sheet=7939 cpu=12.1s elapsed=2206s rate=3.34s/vol eta=13min
+MARKER gpu sample_00811 2.3s queued=16
+MARKER [662/892] sample_00795 status=ok enr=14.505 shell1=15.878 n_sheet=54045 cpu=11.9s elapsed=2209s rate=3.34s/vol eta=13min
+MARKER gpu sample_00812 2.4s queued=16
+MARKER [663/892] sample_00796 status=ok enr=10.795 shell1=13.043 n_sheet=85438 cpu=23.8s elapsed=2212s rate=3.34s/vol eta=13min
+MARKER gpu sample_00813 2.3s queued=16
+MARKER [664/892] sample_00797 status=ok enr=10.315 shell1=10.081 n_sheet=56295 cpu=27.0s elapsed=2214s rate=3.34s/vol eta=13min
+MARKER gpu sample_00814 2.4s queued=16
+MARKER [665/892] sample_00798 status=ok enr=10.26 shell1=10.18 n_sheet=114108 cpu=28.4s elapsed=2217s rate=3.33s/vol eta=13min
+MARKER gpu sample_00815 2.2s queued=16
+MARKER [666/892] sample_00799 status=ok enr=20.323 shell1=22.145 n_sheet=99462 cpu=24.0s elapsed=2220s rate=3.33s/vol eta=13min
+MARKER gpu sample_00816 2.4s queued=16
+MARKER [667/892] sample_00800 status=ok enr=6.889 shell1=8.261 n_sheet=95582 cpu=13.6s elapsed=2223s rate=3.33s/vol eta=12min
+MARKER gpu sample_00817 2.3s queued=16
+MARKER [668/892] sample_00801 status=ok enr=14.978 shell1=18.055 n_sheet=148927 cpu=26.4s elapsed=2225s rate=3.33s/vol eta=12min
+MARKER gpu sample_00818 2.4s queued=16
+MARKER [669/892] sample_00802 status=ok enr=7.508 shell1=8.849 n_sheet=176975 cpu=23.1s elapsed=2228s rate=3.33s/vol eta=12min
+MARKER gpu sample_00819 2.5s queued=16
+MARKER [670/892] sample_00803 status=ok enr=9.752 shell1=10.09 n_sheet=66363 cpu=16.6s elapsed=2231s rate=3.33s/vol eta=12min
+MARKER gpu sample_00820 2.4s queued=16
+MARKER [671/892] sample_00804 status=ok enr=6.093 shell1=6.812 n_sheet=90488 cpu=11.7s elapsed=2234s rate=3.33s/vol eta=12min
+MARKER gpu sample_00821 2.4s queued=16
+MARKER [672/892] sample_00805 status=ok enr=10.894 shell1=11.319 n_sheet=131570 cpu=23.2s elapsed=2236s rate=3.33s/vol eta=12min
+MARKER gpu sample_00822 2.5s queued=16
+MARKER [673/892] sample_00806 status=ok enr=10.927 shell1=12.32 n_sheet=28390 cpu=16.4s elapsed=2239s rate=3.33s/vol eta=12min
+MARKER gpu sample_00823 2.3s queued=16
+MARKER [674/892] sample_00807 status=ok enr=11.471 shell1=11.701 n_sheet=159766 cpu=30.7s elapsed=2242s rate=3.33s/vol eta=12min
+MARKER gpu sample_00824 2.6s queued=16
+MARKER [675/892] sample_00808 status=ok enr=4.124 shell1=3.943 n_sheet=266610 cpu=44.9s elapsed=2249s rate=3.33s/vol eta=12min
+MARKER gpu sample_00826 2.5s queued=16
+MARKER [676/892] sample_00809 status=ok enr=4.469 shell1=4.623 n_sheet=287384 cpu=52.6s elapsed=2259s rate=3.34s/vol eta=12min
+MARKER gpu sample_00827 2.3s queued=16
+MARKER [677/892] sample_00811 status=ok enr=11.14 shell1=11.592 n_sheet=200340 cpu=39.3s elapsed=2261s rate=3.34s/vol eta=12min
+MARKER gpu sample_00828 2.3s queued=16
+MARKER [678/892] sample_00812 status=ok enr=6.242 shell1=7.813 n_sheet=44602 cpu=16.9s elapsed=2264s rate=3.34s/vol eta=12min
+MARKER gpu sample_00829 2.3s queued=16
+MARKER [679/892] sample_00813 status=ok enr=4.972 shell1=5.0 n_sheet=22282 cpu=17.3s elapsed=2267s rate=3.34s/vol eta=12min
+MARKER gpu sample_00831 2.3s queued=16
+MARKER [680/892] sample_00814 status=ok enr=7.544 shell1=10.171 n_sheet=50871 cpu=27.7s elapsed=2270s rate=3.34s/vol eta=12min
+MARKER gpu sample_00832 2.4s queued=16
+MARKER [681/892] sample_00815 status=ok enr=16.791 shell1=19.562 n_sheet=151026 cpu=32.5s elapsed=2272s rate=3.34s/vol eta=12min
+MARKER gpu sample_00833 2.4s queued=16
+MARKER [682/892] sample_00816 status=ok enr=17.394 shell1=25.076 n_sheet=124616 cpu=28.3s elapsed=2275s rate=3.34s/vol eta=12min
+MARKER gpu sample_00834 2.4s queued=16
+MARKER [683/892] sample_00817 status=ok enr=10.001 shell1=13.181 n_sheet=100171 cpu=17.4s elapsed=2278s rate=3.34s/vol eta=12min
+MARKER gpu sample_00835 2.1s queued=16
+MARKER [684/892] sample_00818 status=ok enr=8.157 shell1=12.568 n_sheet=21323 cpu=20.2s elapsed=2281s rate=3.33s/vol eta=12min
+MARKER gpu sample_00836 2.1s queued=16
+MARKER [685/892] sample_00819 status=ok enr=4.885 shell1=6.208 n_sheet=141206 cpu=17.1s elapsed=2283s rate=3.33s/vol eta=11min
+MARKER gpu sample_00837 2.1s queued=16
+MARKER [686/892] sample_00820 status=ok enr=3.858 shell1=3.815 n_sheet=182141 cpu=21.5s elapsed=2285s rate=3.33s/vol eta=11min
+MARKER gpu sample_00838 2.2s queued=16
+MARKER [687/892] sample_00821 status=ok enr=3.879 shell1=3.862 n_sheet=235763 cpu=26.5s elapsed=2288s rate=3.33s/vol eta=11min
+MARKER gpu sample_00839 2.1s queued=16
+MARKER [688/892] sample_00822 status=ok enr=3.193 shell1=3.024 n_sheet=212076 cpu=28.4s elapsed=2290s rate=3.33s/vol eta=11min
+MARKER gpu sample_00840 2.1s queued=16
+MARKER [689/892] sample_00823 status=ok enr=4.525 shell1=4.123 n_sheet=126237 cpu=23.8s elapsed=2293s rate=3.33s/vol eta=11min
+MARKER gpu sample_00841 2.3s queued=16
+MARKER [690/892] sample_00824 status=ok enr=3.485 shell1=3.146 n_sheet=140979 cpu=32.3s elapsed=2295s rate=3.33s/vol eta=11min
+MARKER gpu sample_00842 2.1s queued=16
+MARKER [691/892] sample_00826 status=ok enr=5.527 shell1=5.84 n_sheet=24546 cpu=13.9s elapsed=2297s rate=3.32s/vol eta=11min
+MARKER gpu sample_00843 2.2s queued=16
+MARKER [692/892] sample_00827 status=ok enr=2.327 shell1=2.341 n_sheet=2877 cpu=16.9s elapsed=2300s rate=3.32s/vol eta=11min
+MARKER gpu sample_00844 2.2s queued=16
+MARKER [693/892] sample_00828 status=ok enr=0.972 shell1=None n_sheet=128 cpu=14.5s elapsed=2302s rate=3.32s/vol eta=11min
+MARKER gpu sample_00845 2.1s queued=16
+MARKER [694/892] sample_00829 status=ok enr=5.005 shell1=5.261 n_sheet=209780 cpu=25.0s elapsed=2305s rate=3.32s/vol eta=11min
+MARKER gpu sample_00846 2.3s queued=16
+MARKER [695/892] sample_00831 status=ok enr=4.827 shell1=5.541 n_sheet=189709 cpu=26.2s elapsed=2307s rate=3.32s/vol eta=11min
+MARKER gpu sample_00848 2.1s queued=16
+MARKER [696/892] sample_00832 status=ok enr=2.234 shell1=2.758 n_sheet=4105 cpu=14.0s elapsed=2310s rate=3.32s/vol eta=11min
+MARKER gpu sample_00850 2.2s queued=16
+MARKER [697/892] sample_00833 status=ok enr=1.682 shell1=2.004 n_sheet=6076 cpu=18.2s elapsed=2312s rate=3.32s/vol eta=11min
+MARKER gpu sample_00851 2.1s queued=16
+MARKER [698/892] sample_00834 status=ok enr=2.707 shell1=2.815 n_sheet=92795 cpu=19.3s elapsed=2315s rate=3.32s/vol eta=11min
+MARKER gpu sample_00852 2.1s queued=16
+MARKER [699/892] sample_00835 status=ok enr=3.431 shell1=3.448 n_sheet=277967 cpu=28.6s elapsed=2317s rate=3.31s/vol eta=11min
+MARKER gpu sample_00853 2.2s queued=16
+MARKER [700/892] sample_00836 status=ok enr=3.643 shell1=3.892 n_sheet=44890 cpu=18.3s elapsed=2320s rate=3.31s/vol eta=11min
+MARKER gpu sample_00854 2.3s queued=16
+MARKER [701/892] sample_00837 status=ok enr=5.908 shell1=6.676 n_sheet=59150 cpu=20.7s elapsed=2322s rate=3.31s/vol eta=11min
+MARKER gpu sample_00856 2.2s queued=16
+MARKER [702/892] sample_00838 status=ok enr=3.977 shell1=4.308 n_sheet=186745 cpu=22.5s elapsed=2324s rate=3.31s/vol eta=10min
+MARKER gpu sample_00857 2.3s queued=16
+MARKER [703/892] sample_00839 status=ok enr=4.716 shell1=4.971 n_sheet=25420 cpu=16.7s elapsed=2327s rate=3.31s/vol eta=10min
+MARKER gpu sample_00858 2.2s queued=16
+MARKER [704/892] sample_00840 status=ok enr=3.897 shell1=4.222 n_sheet=161227 cpu=18.6s elapsed=2329s rate=3.31s/vol eta=10min
+MARKER gpu sample_00859 2.1s queued=16
+MARKER [705/892] sample_00841 status=degenerate enr=None shell1=None n_sheet=0 cpu=10.2s elapsed=2331s rate=3.31s/vol eta=10min
+MARKER gpu sample_00860 2.2s queued=16
+MARKER [706/892] sample_00842 status=ok enr=2.607 shell1=2.72 n_sheet=94040 cpu=20.7s elapsed=2333s rate=3.31s/vol eta=10min
+MARKER gpu sample_00861 2.1s queued=16
+MARKER [707/892] sample_00843 status=ok enr=2.738 shell1=2.715 n_sheet=254258 cpu=23.1s elapsed=2335s rate=3.30s/vol eta=10min
+MARKER gpu sample_00862 2.1s queued=16
+MARKER [708/892] sample_00844 status=ok enr=6.113 shell1=7.491 n_sheet=17439 cpu=16.5s elapsed=2338s rate=3.30s/vol eta=10min
+MARKER gpu sample_00863 2.1s queued=16
+MARKER [709/892] sample_00845 status=ok enr=5.885 shell1=6.237 n_sheet=157758 cpu=25.8s elapsed=2340s rate=3.30s/vol eta=10min
+MARKER gpu sample_00864 2.1s queued=16
+MARKER [710/892] sample_00846 status=ok enr=2.168 shell1=2.355 n_sheet=11114 cpu=15.0s elapsed=2342s rate=3.30s/vol eta=10min
+MARKER gpu sample_00865 2.1s queued=16
+MARKER [711/892] sample_00848 status=ok enr=1.547 shell1=1.449 n_sheet=162477 cpu=17.3s elapsed=2344s rate=3.30s/vol eta=10min
+MARKER gpu sample_00866 2.1s queued=16
+MARKER [712/892] sample_00850 status=ok enr=2.122 shell1=2.018 n_sheet=153828 cpu=25.4s elapsed=2346s rate=3.30s/vol eta=10min
+MARKER gpu sample_00867 2.2s queued=16
+MARKER [713/892] sample_00851 status=ok enr=3.746 shell1=3.779 n_sheet=282740 cpu=25.6s elapsed=2348s rate=3.29s/vol eta=10min
+MARKER gpu sample_00868 2.3s queued=16
+MARKER [714/892] sample_00852 status=ok enr=2.861 shell1=3.005 n_sheet=41876 cpu=24.7s elapsed=2351s rate=3.29s/vol eta=10min
+MARKER gpu sample_00869 2.2s queued=16
+MARKER [715/892] sample_00853 status=ok enr=2.734 shell1=2.638 n_sheet=172070 cpu=22.9s elapsed=2353s rate=3.29s/vol eta=10min
+MARKER gpu sample_00870 2.3s queued=16
+MARKER [716/892] sample_00854 status=ok enr=1.569 shell1=1.491 n_sheet=129273 cpu=15.3s elapsed=2355s rate=3.29s/vol eta=10min
+MARKER gpu sample_00871 2.3s queued=16
+MARKER [717/892] sample_00856 status=ok enr=2.122 shell1=2.113 n_sheet=176430 cpu=23.8s elapsed=2358s rate=3.29s/vol eta=10min
+MARKER gpu sample_00872 2.1s queued=16
+MARKER [718/892] sample_00857 status=ok enr=2.865 shell1=2.839 n_sheet=340036 cpu=61.4s elapsed=2390s rate=3.33s/vol eta=10min
+MARKER gpu sample_00873 2.1s queued=16
+MARKER [719/892] sample_00858 status=ok enr=1.772 shell1=1.807 n_sheet=315203 cpu=45.1s elapsed=2392s rate=3.33s/vol eta=10min
+MARKER gpu sample_00874 2.1s queued=16
+MARKER [720/892] sample_00859 status=ok enr=2.371 shell1=2.487 n_sheet=53992 cpu=24.9s elapsed=2394s rate=3.32s/vol eta=10min
+MARKER gpu sample_00875 2.3s queued=16
+MARKER [721/892] sample_00860 status=ok enr=1.456 shell1=1.449 n_sheet=324004 cpu=39.3s elapsed=2396s rate=3.32s/vol eta=9min
+MARKER gpu sample_00877 2.2s queued=16
+MARKER [722/892] sample_00861 status=ok enr=1.65 shell1=1.529 n_sheet=103004 cpu=29.2s elapsed=2399s rate=3.32s/vol eta=9min
+MARKER gpu sample_00878 2.2s queued=16
+MARKER [723/892] sample_00862 status=ok enr=2.417 shell1=2.343 n_sheet=182808 cpu=28.9s elapsed=2401s rate=3.32s/vol eta=9min
+MARKER gpu sample_00879 2.2s queued=16
+MARKER [724/892] sample_00863 status=ok enr=3.489 shell1=3.537 n_sheet=135141 cpu=27.8s elapsed=2404s rate=3.32s/vol eta=9min
+MARKER gpu sample_00881 2.1s queued=16
+MARKER [725/892] sample_00864 status=ok enr=3.364 shell1=3.37 n_sheet=65673 cpu=21.3s elapsed=2406s rate=3.32s/vol eta=9min
+MARKER gpu sample_00882 2.2s queued=16
+MARKER [726/892] sample_00865 status=ok enr=1.872 shell1=1.833 n_sheet=242765 cpu=28.2s elapsed=2408s rate=3.32s/vol eta=9min
+MARKER gpu sample_00883 2.2s queued=16
+MARKER [727/892] sample_00866 status=ok enr=4.022 shell1=3.862 n_sheet=4055 cpu=15.1s elapsed=2411s rate=3.32s/vol eta=9min
+MARKER gpu sample_00884 2.2s queued=16
+MARKER [728/892] sample_00867 status=ok enr=1.762 shell1=1.774 n_sheet=287630 cpu=43.2s elapsed=2413s rate=3.31s/vol eta=9min
+MARKER gpu sample_00885 2.1s queued=16
+MARKER [729/892] sample_00868 status=ok enr=4.634 shell1=4.867 n_sheet=184258 cpu=31.8s elapsed=2416s rate=3.31s/vol eta=9min
+MARKER gpu sample_00886 2.2s queued=16
+MARKER [730/892] sample_00869 status=ok enr=3.696 shell1=3.566 n_sheet=186643 cpu=30.5s elapsed=2418s rate=3.31s/vol eta=9min
+MARKER gpu sample_00887 2.1s queued=16
+MARKER [731/892] sample_00870 status=ok enr=2.388 shell1=2.217 n_sheet=170423 cpu=25.1s elapsed=2420s rate=3.31s/vol eta=9min
+MARKER gpu sample_00888 2.1s queued=16
+MARKER [732/892] sample_00871 status=ok enr=4.936 shell1=4.877 n_sheet=247555 cpu=40.1s elapsed=2423s rate=3.31s/vol eta=9min
+MARKER gpu sample_00889 2.2s queued=16
+MARKER [733/892] sample_00872 status=ok enr=3.5 shell1=3.365 n_sheet=179277 cpu=26.8s elapsed=2425s rate=3.31s/vol eta=9min
+MARKER gpu sample_00890 2.2s queued=16
+MARKER [734/892] sample_00873 status=ok enr=1.656 shell1=1.654 n_sheet=71905 cpu=18.2s elapsed=2428s rate=3.31s/vol eta=9min
+MARKER gpu sample_00891 2.2s queued=16
+MARKER [735/892] sample_00874 status=ok enr=3.181 shell1=3.199 n_sheet=218255 cpu=28.8s elapsed=2430s rate=3.31s/vol eta=9min
+MARKER gpu sample_00892 2.3s queued=16
+MARKER [736/892] sample_00875 status=ok enr=4.827 shell1=4.731 n_sheet=49839 cpu=19.6s elapsed=2433s rate=3.31s/vol eta=9min
+MARKER gpu sample_00893 2.2s queued=16
+MARKER [737/892] sample_00877 status=ok enr=6.473 shell1=6.625 n_sheet=114339 cpu=20.1s elapsed=2435s rate=3.30s/vol eta=9min
+MARKER gpu sample_00894 2.2s queued=16
+MARKER [738/892] sample_00878 status=ok enr=9.425 shell1=10.778 n_sheet=175379 cpu=36.1s elapsed=2440s rate=3.31s/vol eta=8min
+MARKER gpu sample_00895 2.3s queued=16
+MARKER [739/892] sample_00879 status=ok enr=5.658 shell1=7.079 n_sheet=23712 cpu=22.3s elapsed=2443s rate=3.31s/vol eta=8min
+MARKER gpu sample_00896 2.1s queued=16
+MARKER [740/892] sample_00881 status=ok enr=4.933 shell1=4.978 n_sheet=100016 cpu=8.0s elapsed=2445s rate=3.30s/vol eta=8min
+MARKER gpu sample_00897 2.0s queued=16
+MARKER [741/892] sample_00882 status=ok enr=4.091 shell1=4.138 n_sheet=98237 cpu=8.0s elapsed=2447s rate=3.30s/vol eta=8min
+MARKER gpu sample_00898 2.1s queued=16
+MARKER [742/892] sample_00883 status=ok enr=3.108 shell1=3.324 n_sheet=83933 cpu=7.9s elapsed=2450s rate=3.30s/vol eta=8min
+MARKER gpu sample_00900 2.1s queued=16
+MARKER [743/892] sample_00884 status=ok enr=5.412 shell1=5.672 n_sheet=142304 cpu=10.4s elapsed=2452s rate=3.30s/vol eta=8min
+MARKER gpu sample_00901 2.1s queued=16
+MARKER [744/892] sample_00885 status=ok enr=11.301 shell1=11.503 n_sheet=188671 cpu=19.6s elapsed=2454s rate=3.30s/vol eta=8min
+MARKER gpu sample_00902 2.1s queued=16
+MARKER [745/892] sample_00886 status=ok enr=11.122 shell1=11.588 n_sheet=159603 cpu=22.3s elapsed=2457s rate=3.30s/vol eta=8min
+MARKER gpu sample_00903 2.1s queued=16
+MARKER [746/892] sample_00887 status=ok enr=7.659 shell1=8.138 n_sheet=38568 cpu=19.7s elapsed=2459s rate=3.30s/vol eta=8min
+MARKER gpu sample_00904 2.1s queued=16
+MARKER [747/892] sample_00888 status=ok enr=18.046 shell1=18.337 n_sheet=126877 cpu=20.5s elapsed=2461s rate=3.30s/vol eta=8min
+MARKER gpu sample_00905 2.1s queued=16
+MARKER [748/892] sample_00889 status=ok enr=2.517 shell1=2.332 n_sheet=131653 cpu=14.9s elapsed=2464s rate=3.29s/vol eta=8min
+MARKER gpu sample_00906 2.1s queued=16
+MARKER [749/892] sample_00890 status=ok enr=5.576 shell1=5.379 n_sheet=157024 cpu=21.7s elapsed=2466s rate=3.29s/vol eta=8min
+MARKER gpu sample_00907 2.2s queued=16
+MARKER [750/892] sample_00891 status=ok enr=3.706 shell1=4.174 n_sheet=36439 cpu=11.0s elapsed=2469s rate=3.29s/vol eta=8min
+MARKER gpu sample_00908 2.2s queued=16
+MARKER [751/892] sample_00892 status=ok enr=8.007 shell1=9.421 n_sheet=172723 cpu=28.8s elapsed=2471s rate=3.29s/vol eta=8min
+MARKER gpu sample_00910 2.2s queued=16
+MARKER [752/892] sample_00893 status=ok enr=7.787 shell1=8.371 n_sheet=168244 cpu=25.7s elapsed=2473s rate=3.29s/vol eta=8min
+MARKER gpu sample_00911 2.2s queued=16
+MARKER [753/892] sample_00894 status=ok enr=9.476 shell1=9.127 n_sheet=157080 cpu=33.7s elapsed=2476s rate=3.29s/vol eta=8min
+MARKER gpu sample_00912 2.2s queued=16
+MARKER [754/892] sample_00895 status=ok enr=22.644 shell1=26.59 n_sheet=93480 cpu=31.5s elapsed=2478s rate=3.29s/vol eta=8min
+MARKER gpu sample_00913 2.1s queued=16
+MARKER [755/892] sample_00896 status=ok enr=8.487 shell1=9.948 n_sheet=186772 cpu=29.9s elapsed=2481s rate=3.29s/vol eta=8min
+MARKER gpu sample_00915 2.1s queued=16
+MARKER [756/892] sample_00897 status=ok enr=8.853 shell1=8.894 n_sheet=186838 cpu=29.1s elapsed=2483s rate=3.28s/vol eta=7min
+MARKER gpu sample_00916 2.2s queued=16
+MARKER [757/892] sample_00898 status=ok enr=5.064 shell1=5.219 n_sheet=81609 cpu=13.5s elapsed=2485s rate=3.28s/vol eta=7min
+MARKER gpu sample_00002 2.2s queued=16
+MARKER [758/892] sample_00900 status=ok enr=17.248 shell1=21.206 n_sheet=118150 cpu=25.2s elapsed=2488s rate=3.28s/vol eta=7min
+MARKER gpu sample_00004 2.2s queued=16
+MARKER [759/892] sample_00901 status=ok enr=3.463 shell1=3.48 n_sheet=198966 cpu=23.5s elapsed=2490s rate=3.28s/vol eta=7min
+MARKER gpu sample_00006 2.1s queued=16
+MARKER [760/892] sample_00902 status=ok enr=2.951 shell1=2.757 n_sheet=51880 cpu=21.5s elapsed=2493s rate=3.28s/vol eta=7min
+MARKER gpu sample_00011 2.1s queued=16
+MARKER [761/892] sample_00903 status=ok enr=13.823 shell1=13.93 n_sheet=135898 cpu=31.6s elapsed=2500s rate=3.29s/vol eta=7min
+MARKER gpu sample_00015 2.2s queued=16
+MARKER [762/892] sample_00904 status=ok enr=4.972 shell1=4.827 n_sheet=3701 cpu=14.3s elapsed=2503s rate=3.28s/vol eta=7min
+MARKER gpu sample_00020 2.1s queued=16
+MARKER [763/892] sample_00905 status=ok enr=9.884 shell1=9.414 n_sheet=147197 cpu=27.6s elapsed=2505s rate=3.28s/vol eta=7min
+MARKER gpu sample_00023 2.3s queued=16
+MARKER [764/892] sample_00906 status=ok enr=13.828 shell1=14.935 n_sheet=94822 cpu=18.5s elapsed=2508s rate=3.28s/vol eta=7min
+MARKER gpu sample_00027 2.1s queued=16
+MARKER [765/892] sample_00907 status=ok enr=3.445 shell1=3.409 n_sheet=95246 cpu=11.5s elapsed=2510s rate=3.28s/vol eta=7min
+MARKER gpu sample_00049 2.2s queued=16
+MARKER [766/892] sample_00908 status=ok enr=6.97 shell1=7.255 n_sheet=177582 cpu=25.4s elapsed=2512s rate=3.28s/vol eta=7min
+MARKER gpu sample_00055 2.1s queued=16
+MARKER [767/892] sample_00910 status=ok enr=7.639 shell1=9.191 n_sheet=39944 cpu=14.7s elapsed=2515s rate=3.28s/vol eta=7min
+MARKER gpu sample_00061 2.2s queued=16
+MARKER [768/892] sample_00911 status=ok enr=13.431 shell1=15.394 n_sheet=144184 cpu=24.2s elapsed=2517s rate=3.28s/vol eta=7min
+MARKER gpu sample_00086 2.2s queued=16
+MARKER [769/892] sample_00912 status=ok enr=3.942 shell1=3.945 n_sheet=103786 cpu=19.8s elapsed=2519s rate=3.28s/vol eta=7min
+MARKER gpu sample_00116 2.2s queued=16
+MARKER [770/892] sample_00913 status=ok enr=20.913 shell1=21.459 n_sheet=59982 cpu=21.2s elapsed=2522s rate=3.28s/vol eta=7min
+MARKER gpu sample_00120 2.1s queued=16
+MARKER [771/892] sample_00915 status=ok enr=10.089 shell1=10.924 n_sheet=159397 cpu=21.5s elapsed=2524s rate=3.27s/vol eta=7min
+MARKER gpu sample_00161 2.1s queued=16
+MARKER [772/892] sample_00916 status=ok enr=12.396 shell1=12.107 n_sheet=90966 cpu=19.3s elapsed=2526s rate=3.27s/vol eta=7min
+MARKER gpu sample_00162 2.1s queued=16
+MARKER [773/892] sample_00002 status=ok enr=15.023 shell1=11.68 n_sheet=147999 cpu=25.0s elapsed=2529s rate=3.27s/vol eta=6min
+MARKER gpu sample_00163 2.2s queued=16
+MARKER [774/892] sample_00004 status=ok enr=10.693 shell1=10.957 n_sheet=245300 cpu=43.2s elapsed=2546s rate=3.29s/vol eta=6min
+MARKER gpu sample_00164 2.1s queued=16
+MARKER [775/892] sample_00006 status=ok enr=7.51 shell1=8.116 n_sheet=209421 cpu=30.7s elapsed=2548s rate=3.29s/vol eta=6min
+MARKER gpu sample_00165 2.1s queued=16
+MARKER [776/892] sample_00011 status=ok enr=7.639 shell1=6.693 n_sheet=121150 cpu=24.5s elapsed=2550s rate=3.29s/vol eta=6min
+MARKER gpu sample_00166 2.1s queued=16
+MARKER [777/892] sample_00015 status=ok enr=4.956 shell1=4.725 n_sheet=98310 cpu=14.9s elapsed=2553s rate=3.29s/vol eta=6min
+MARKER gpu sample_00167 2.1s queued=16
+MARKER [778/892] sample_00020 status=ok enr=8.785 shell1=9.072 n_sheet=79429 cpu=20.1s elapsed=2555s rate=3.28s/vol eta=6min
+MARKER gpu sample_00168 2.0s queued=16
+MARKER [779/892] sample_00023 status=ok enr=7.041 shell1=8.429 n_sheet=54044 cpu=11.0s elapsed=2557s rate=3.28s/vol eta=6min
+MARKER gpu sample_00169 2.1s queued=16
+MARKER [780/892] sample_00027 status=ok enr=13.872 shell1=12.568 n_sheet=125640 cpu=18.0s elapsed=2560s rate=3.28s/vol eta=6min
+MARKER gpu sample_00170 2.1s queued=16
+MARKER [781/892] sample_00049 status=ok enr=7.354 shell1=7.352 n_sheet=161060 cpu=23.6s elapsed=2562s rate=3.28s/vol eta=6min
+MARKER gpu sample_00172 2.1s queued=16
+MARKER [782/892] sample_00055 status=ok enr=7.77 shell1=9.585 n_sheet=248851 cpu=26.5s elapsed=2564s rate=3.28s/vol eta=6min
+MARKER gpu sample_00173 2.1s queued=16
+MARKER [783/892] sample_00061 status=ok enr=12.87 shell1=11.609 n_sheet=135258 cpu=24.8s elapsed=2567s rate=3.28s/vol eta=6min
+MARKER gpu sample_00174 2.2s queued=16
+MARKER [784/892] sample_00086 status=ok enr=4.156 shell1=6.543 n_sheet=6579 cpu=9.6s elapsed=2569s rate=3.28s/vol eta=6min
+MARKER gpu sample_00175 2.0s queued=16
+MARKER [785/892] sample_00116 status=ok enr=19.887 shell1=20.749 n_sheet=58073 cpu=22.9s elapsed=2571s rate=3.28s/vol eta=6min
+MARKER gpu sample_00177 2.2s queued=16
+MARKER [786/892] sample_00120 status=ok enr=10.676 shell1=None n_sheet=25 cpu=10.3s elapsed=2574s rate=3.27s/vol eta=6min
+MARKER gpu sample_00178 2.3s queued=16
+MARKER [787/892] sample_00161 status=ok enr=4.775 shell1=4.754 n_sheet=406817 cpu=47.2s elapsed=2585s rate=3.28s/vol eta=6min
+MARKER gpu sample_00179 2.3s queued=16
+MARKER [788/892] sample_00162 status=ok enr=5.922 shell1=5.99 n_sheet=147705 cpu=13.6s elapsed=2587s rate=3.28s/vol eta=6min
+MARKER gpu sample_00180 2.3s queued=16
+MARKER [789/892] sample_00163 status=ok enr=5.272 shell1=5.485 n_sheet=236913 cpu=34.7s elapsed=2590s rate=3.28s/vol eta=6min
+MARKER gpu sample_00181 2.2s queued=16
+MARKER [790/892] sample_00164 status=ok enr=7.949 shell1=7.886 n_sheet=293776 cpu=35.1s elapsed=2592s rate=3.28s/vol eta=6min
+MARKER gpu sample_00183 2.1s queued=16
+MARKER [791/892] sample_00165 status=ok enr=5.876 shell1=5.912 n_sheet=165656 cpu=34.0s elapsed=2595s rate=3.28s/vol eta=6min
+MARKER gpu sample_00184 2.1s queued=16
+MARKER [792/892] sample_00166 status=ok enr=5.247 shell1=5.45 n_sheet=337655 cpu=40.4s elapsed=2597s rate=3.28s/vol eta=5min
+MARKER gpu sample_00185 2.1s queued=16
+MARKER [793/892] sample_00167 status=ok enr=4.882 shell1=5.026 n_sheet=85498 cpu=29.5s elapsed=2599s rate=3.28s/vol eta=5min
+MARKER gpu sample_00187 2.1s queued=16
+MARKER [794/892] sample_00168 status=ok enr=7.099 shell1=8.391 n_sheet=92106 cpu=22.9s elapsed=2602s rate=3.28s/vol eta=5min
+MARKER gpu sample_00188 2.1s queued=16
+MARKER [795/892] sample_00169 status=ok enr=22.744 shell1=26.755 n_sheet=73890 cpu=20.0s elapsed=2604s rate=3.28s/vol eta=5min
+MARKER gpu sample_00189 2.2s queued=16
+MARKER [796/892] sample_00170 status=ok enr=8.867 shell1=10.164 n_sheet=57920 cpu=24.4s elapsed=2606s rate=3.27s/vol eta=5min
+MARKER gpu sample_00191 2.1s queued=16
+MARKER [797/892] sample_00172 status=ok enr=3.853 shell1=4.123 n_sheet=387300 cpu=56.8s elapsed=2637s rate=3.31s/vol eta=5min
+MARKER gpu sample_00192 2.1s queued=16
+MARKER [798/892] sample_00173 status=ok enr=5.608 shell1=5.882 n_sheet=299456 cpu=54.3s elapsed=2639s rate=3.31s/vol eta=5min
+MARKER gpu sample_00193 2.2s queued=16
+MARKER [799/892] sample_00174 status=ok enr=5.871 shell1=6.237 n_sheet=117187 cpu=17.9s elapsed=2641s rate=3.31s/vol eta=5min
+MARKER gpu sample_00194 2.2s queued=16
+MARKER [800/892] sample_00175 status=ok enr=4.382 shell1=4.628 n_sheet=178728 cpu=34.5s elapsed=2644s rate=3.30s/vol eta=5min
+MARKER gpu sample_00196 2.3s queued=16
+MARKER [801/892] sample_00177 status=ok enr=3.432 shell1=3.629 n_sheet=289144 cpu=37.7s elapsed=2646s rate=3.30s/vol eta=5min
+MARKER gpu sample_00197 2.2s queued=16
+MARKER [802/892] sample_00178 status=ok enr=4.592 shell1=4.589 n_sheet=346326 cpu=70.7s elapsed=2656s rate=3.31s/vol eta=5min
+MARKER gpu sample_00198 2.2s queued=16
+MARKER [803/892] sample_00179 status=ok enr=2.972 shell1=3.075 n_sheet=119595 cpu=31.1s elapsed=2658s rate=3.31s/vol eta=5min
+MARKER gpu sample_00199 2.1s queued=16
+MARKER [804/892] sample_00180 status=ok enr=3.684 shell1=4.129 n_sheet=177558 cpu=38.0s elapsed=2661s rate=3.31s/vol eta=5min
+MARKER gpu sample_00200 2.1s queued=16
+MARKER [805/892] sample_00181 status=ok enr=4.938 shell1=5.793 n_sheet=285952 cpu=35.4s elapsed=2663s rate=3.31s/vol eta=5min
+MARKER gpu sample_00201 2.0s queued=16
+MARKER [806/892] sample_00183 status=ok enr=4.224 shell1=4.49 n_sheet=159003 cpu=30.1s elapsed=2665s rate=3.31s/vol eta=5min
+MARKER gpu sample_00202 2.1s queued=16
+MARKER [807/892] sample_00184 status=ok enr=5.364 shell1=5.51 n_sheet=272561 cpu=38.3s elapsed=2667s rate=3.31s/vol eta=5min
+MARKER gpu sample_00203 2.1s queued=16
+MARKER [808/892] sample_00185 status=ok enr=2.55 shell1=2.503 n_sheet=3071 cpu=14.3s elapsed=2670s rate=3.30s/vol eta=5min
+MARKER gpu sample_00204 2.1s queued=16
+MARKER [809/892] sample_00187 status=ok enr=3.399 shell1=3.265 n_sheet=211095 cpu=35.2s elapsed=2672s rate=3.30s/vol eta=5min
+MARKER gpu sample_00205 2.3s queued=16
+MARKER [810/892] sample_00188 status=ok enr=5.241 shell1=5.463 n_sheet=179030 cpu=20.1s elapsed=2674s rate=3.30s/vol eta=5min
+MARKER gpu sample_00206 2.3s queued=16
+MARKER [811/892] sample_00189 status=ok enr=7.284 shell1=8.637 n_sheet=30570 cpu=15.0s elapsed=2677s rate=3.30s/vol eta=4min
+MARKER gpu sample_00208 2.1s queued=16
+MARKER [812/892] sample_00191 status=ok enr=3.633 shell1=3.675 n_sheet=261917 cpu=46.5s elapsed=2685s rate=3.31s/vol eta=4min
+MARKER gpu sample_00209 2.2s queued=16
+MARKER [813/892] sample_00192 status=ok enr=4.422 shell1=4.345 n_sheet=306906 cpu=58.7s elapsed=2698s rate=3.32s/vol eta=4min
+MARKER gpu sample_00210 2.1s queued=16
+MARKER [814/892] sample_00193 status=ok enr=4.646 shell1=4.614 n_sheet=404108 cpu=54.2s elapsed=2703s rate=3.32s/vol eta=4min
+MARKER gpu sample_00211 2.2s queued=16
+MARKER [815/892] sample_00194 status=ok enr=4.009 shell1=3.972 n_sheet=180179 cpu=37.8s elapsed=2706s rate=3.32s/vol eta=4min
+MARKER gpu sample_00213 2.2s queued=16
+MARKER [816/892] sample_00196 status=ok enr=4.462 shell1=4.616 n_sheet=179297 cpu=34.7s elapsed=2708s rate=3.32s/vol eta=4min
+MARKER gpu sample_00214 2.1s queued=16
+MARKER [817/892] sample_00197 status=ok enr=4.404 shell1=5.03 n_sheet=314162 cpu=37.0s elapsed=2710s rate=3.32s/vol eta=4min
+MARKER gpu sample_00215 2.2s queued=16
+MARKER [818/892] sample_00198 status=ok enr=1.112 shell1=1.123 n_sheet=5547 cpu=31.2s elapsed=2713s rate=3.32s/vol eta=4min
+MARKER gpu sample_00216 2.1s queued=16
+MARKER [819/892] sample_00199 status=ok enr=5.445 shell1=5.735 n_sheet=82430 cpu=20.4s elapsed=2715s rate=3.32s/vol eta=4min
+MARKER gpu sample_00217 2.1s queued=16
+MARKER [820/892] sample_00200 status=ok enr=4.301 shell1=4.6 n_sheet=394851 cpu=52.3s elapsed=2738s rate=3.34s/vol eta=4min
+MARKER gpu sample_00218 2.4s queued=16
+MARKER [821/892] sample_00201 status=ok enr=5.231 shell1=5.838 n_sheet=166216 cpu=27.9s elapsed=2740s rate=3.34s/vol eta=4min
+MARKER gpu sample_00219 2.5s queued=16
+MARKER [822/892] sample_00202 status=ok enr=3.38 shell1=3.613 n_sheet=114273 cpu=28.5s elapsed=2743s rate=3.34s/vol eta=4min
+MARKER gpu sample_00220 2.4s queued=16
+MARKER [823/892] sample_00203 status=ok enr=9.133 shell1=9.987 n_sheet=155829 cpu=23.8s elapsed=2746s rate=3.34s/vol eta=4min
+MARKER gpu sample_00221 2.4s queued=16
+MARKER [824/892] sample_00204 status=ok enr=9.55 shell1=10.867 n_sheet=201900 cpu=47.1s elapsed=2748s rate=3.34s/vol eta=4min
+MARKER gpu sample_00222 2.3s queued=16
+MARKER [825/892] sample_00205 status=ok enr=8.643 shell1=8.685 n_sheet=154391 cpu=34.1s elapsed=2751s rate=3.33s/vol eta=4min
+MARKER gpu sample_00224 2.5s queued=16
+MARKER [826/892] sample_00206 status=ok enr=6.131 shell1=6.857 n_sheet=189699 cpu=38.6s elapsed=2754s rate=3.33s/vol eta=4min
+MARKER gpu sample_00225 2.4s queued=16
+MARKER [827/892] sample_00208 status=ok enr=4.15 shell1=4.16 n_sheet=176546 cpu=34.0s elapsed=2757s rate=3.33s/vol eta=4min
+MARKER gpu sample_00226 2.4s queued=16
+MARKER [828/892] sample_00209 status=ok enr=5.063 shell1=5.053 n_sheet=365976 cpu=53.4s elapsed=2768s rate=3.34s/vol eta=4min
+MARKER gpu sample_00227 2.4s queued=16
+MARKER [829/892] sample_00210 status=ok enr=4.526 shell1=4.948 n_sheet=114095 cpu=39.0s elapsed=2771s rate=3.34s/vol eta=4min
+MARKER gpu sample_00229 2.3s queued=16
+MARKER [830/892] sample_00211 status=ok enr=4.147 shell1=4.648 n_sheet=177665 cpu=40.2s elapsed=2774s rate=3.34s/vol eta=3min
+MARKER gpu sample_00231 2.5s queued=16
+MARKER [831/892] sample_00213 status=ok enr=5.453 shell1=5.625 n_sheet=381842 cpu=54.6s elapsed=2782s rate=3.35s/vol eta=3min
+MARKER gpu sample_00357 2.4s queued=16
+MARKER [832/892] sample_00214 status=ok enr=8.063 shell1=8.335 n_sheet=79865 cpu=16.9s elapsed=2785s rate=3.35s/vol eta=3min
+MARKER gpu sample_00361 2.3s queued=16
+MARKER [833/892] sample_00215 status=ok enr=4.747 shell1=5.49 n_sheet=327872 cpu=68.0s elapsed=2805s rate=3.37s/vol eta=3min
+MARKER gpu sample_00367 2.4s queued=16
+MARKER [834/892] sample_00216 status=ok enr=5.45 shell1=6.31 n_sheet=17210 cpu=18.8s elapsed=2808s rate=3.37s/vol eta=3min
+MARKER gpu sample_00382 2.5s queued=16
+MARKER [835/892] sample_00217 status=ok enr=8.659 shell1=8.718 n_sheet=232335 cpu=52.2s elapsed=2811s rate=3.37s/vol eta=3min
+MARKER gpu sample_00387 2.4s queued=16
+MARKER [836/892] sample_00218 status=ok enr=6.296 shell1=6.288 n_sheet=220138 cpu=53.5s elapsed=2814s rate=3.37s/vol eta=3min
+MARKER gpu sample_00448 2.5s queued=16
+MARKER [837/892] sample_00219 status=ok enr=5.611 shell1=5.984 n_sheet=212934 cpu=38.1s elapsed=2817s rate=3.37s/vol eta=3min
+MARKER gpu sample_00450 2.3s queued=16
+MARKER [838/892] sample_00220 status=ok enr=6.1 shell1=6.245 n_sheet=194503 cpu=28.5s elapsed=2819s rate=3.36s/vol eta=3min
+MARKER gpu sample_00451 2.5s queued=16
+MARKER [839/892] sample_00221 status=ok enr=5.01 shell1=5.623 n_sheet=114521 cpu=27.2s elapsed=2822s rate=3.36s/vol eta=3min
+MARKER gpu sample_00460 2.4s queued=16
+MARKER [840/892] sample_00222 status=ok enr=4.934 shell1=4.756 n_sheet=178899 cpu=37.8s elapsed=2825s rate=3.36s/vol eta=3min
+MARKER gpu sample_00473 2.4s queued=16
+MARKER [841/892] sample_00224 status=ok enr=5.237 shell1=5.591 n_sheet=137012 cpu=27.9s elapsed=2827s rate=3.36s/vol eta=3min
+MARKER gpu sample_00506 2.4s queued=16
+MARKER [842/892] sample_00225 status=ok enr=4.017 shell1=4.146 n_sheet=147071 cpu=28.1s elapsed=2830s rate=3.36s/vol eta=3min
+MARKER gpu sample_00514 2.3s queued=16
+MARKER [843/892] sample_00226 status=ok enr=3.526 shell1=3.612 n_sheet=284864 cpu=48.5s elapsed=2835s rate=3.36s/vol eta=3min
+MARKER gpu sample_00516 2.5s queued=16
+MARKER [844/892] sample_00227 status=ok enr=3.787 shell1=3.744 n_sheet=147836 cpu=35.4s elapsed=2838s rate=3.36s/vol eta=3min
+MARKER gpu sample_00545 2.3s queued=16
+MARKER [845/892] sample_00229 status=ok enr=6.158 shell1=7.348 n_sheet=320351 cpu=52.2s elapsed=2847s rate=3.37s/vol eta=3min
+MARKER gpu sample_00548 2.5s queued=16
+MARKER [846/892] sample_00231 status=ok enr=5.482 shell1=5.647 n_sheet=193814 cpu=43.6s elapsed=2850s rate=3.37s/vol eta=3min
+MARKER gpu sample_00553 2.4s queued=16
+MARKER [847/892] sample_00357 status=ok enr=10.78 shell1=11.655 n_sheet=88126 cpu=22.6s elapsed=2852s rate=3.37s/vol eta=3min
+MARKER gpu sample_00556 2.3s queued=16
+MARKER [848/892] sample_00361 status=ok enr=8.203 shell1=9.296 n_sheet=75071 cpu=23.9s elapsed=2855s rate=3.37s/vol eta=2min
+MARKER gpu sample_00557 2.3s queued=16
+MARKER [849/892] sample_00367 status=degenerate enr=None shell1=None n_sheet=0 cpu=7.5s elapsed=2857s rate=3.37s/vol eta=2min
+MARKER gpu sample_00584 2.3s queued=16
+MARKER [850/892] sample_00382 status=ok enr=9.189 shell1=8.6 n_sheet=138858 cpu=18.4s elapsed=2860s rate=3.36s/vol eta=2min
+MARKER gpu sample_00596 2.4s queued=16
+MARKER [851/892] sample_00387 status=ok enr=9.793 shell1=10.19 n_sheet=112935 cpu=19.7s elapsed=2863s rate=3.36s/vol eta=2min
+MARKER gpu sample_00603 2.4s queued=16
+MARKER [852/892] sample_00448 status=ok enr=12.02 shell1=11.696 n_sheet=98604 cpu=27.4s elapsed=2865s rate=3.36s/vol eta=2min
+MARKER gpu sample_00610 2.3s queued=16
+MARKER [853/892] sample_00450 status=ok enr=5.449 shell1=5.677 n_sheet=83941 cpu=34.8s elapsed=2868s rate=3.36s/vol eta=2min
+MARKER gpu sample_00612 2.4s queued=16
+MARKER [854/892] sample_00451 status=ok enr=8.036 shell1=8.542 n_sheet=185355 cpu=37.1s elapsed=2871s rate=3.36s/vol eta=2min
+MARKER gpu sample_00633 2.4s queued=16
+MARKER [855/892] sample_00460 status=ok enr=5.965 shell1=6.239 n_sheet=145156 cpu=22.1s elapsed=2873s rate=3.36s/vol eta=2min
+MARKER gpu sample_00634 2.4s queued=16
+MARKER [856/892] sample_00473 status=ok enr=9.853 shell1=10.913 n_sheet=236357 cpu=44.1s elapsed=2879s rate=3.36s/vol eta=2min
+MARKER gpu sample_00644 2.3s queued=16
+MARKER [857/892] sample_00506 status=ok enr=6.041 shell1=7.207 n_sheet=255259 cpu=19.5s elapsed=2882s rate=3.36s/vol eta=2min
+MARKER gpu sample_00649 2.3s queued=16
+MARKER [858/892] sample_00514 status=ok enr=7.998 shell1=9.759 n_sheet=142884 cpu=8.4s elapsed=2884s rate=3.36s/vol eta=2min
+MARKER gpu sample_00667 2.3s queued=16
+MARKER [859/892] sample_00516 status=ok enr=11.92 shell1=12.108 n_sheet=189992 cpu=14.1s elapsed=2887s rate=3.36s/vol eta=2min
+MARKER gpu sample_00679 2.4s queued=16
+MARKER [860/892] sample_00545 status=ok enr=6.85 shell1=7.533 n_sheet=106271 cpu=27.5s elapsed=2890s rate=3.36s/vol eta=2min
+MARKER gpu sample_00703 2.4s queued=16
+MARKER [861/892] sample_00548 status=ok enr=6.842 shell1=9.391 n_sheet=60572 cpu=25.0s elapsed=2892s rate=3.36s/vol eta=2min
+MARKER gpu sample_00720 2.3s queued=16
+MARKER [862/892] sample_00553 status=ok enr=12.938 shell1=12.52 n_sheet=204699 cpu=22.3s elapsed=2895s rate=3.36s/vol eta=2min
+MARKER gpu sample_00721 2.3s queued=16
+MARKER [863/892] sample_00556 status=ok enr=10.336 shell1=10.345 n_sheet=110962 cpu=17.2s elapsed=2897s rate=3.36s/vol eta=2min
+MARKER gpu sample_00732 2.5s queued=16
+MARKER [864/892] sample_00557 status=ok enr=11.423 shell1=13.324 n_sheet=139931 cpu=22.7s elapsed=2900s rate=3.36s/vol eta=2min
+MARKER gpu sample_00737 2.4s queued=16
+MARKER [865/892] sample_00584 status=degenerate enr=None shell1=None n_sheet=0 cpu=8.9s elapsed=2903s rate=3.36s/vol eta=2min
+MARKER gpu sample_00751 2.5s queued=16
+MARKER [866/892] sample_00596 status=ok enr=5.454 shell1=7.42 n_sheet=47720 cpu=23.6s elapsed=2906s rate=3.36s/vol eta=1min
+MARKER gpu sample_00760 2.4s queued=16
+MARKER [867/892] sample_00603 status=ok enr=11.58 shell1=13.335 n_sheet=86286 cpu=24.2s elapsed=2909s rate=3.36s/vol eta=1min
+MARKER gpu sample_00763 2.3s queued=16
+MARKER [868/892] sample_00610 status=ok enr=9.661 shell1=10.243 n_sheet=236973 cpu=39.6s elapsed=2914s rate=3.36s/vol eta=1min
+MARKER gpu sample_00775 2.4s queued=16
+MARKER [869/892] sample_00612 status=ok enr=10.447 shell1=10.978 n_sheet=172310 cpu=29.6s elapsed=2917s rate=3.36s/vol eta=1min
+MARKER gpu sample_00788 2.4s queued=16
+MARKER [870/892] sample_00633 status=ok enr=9.789 shell1=9.841 n_sheet=72892 cpu=30.2s elapsed=2920s rate=3.36s/vol eta=1min
+MARKER gpu sample_00810 2.4s queued=16
+MARKER [871/892] sample_00634 status=ok enr=9.817 shell1=11.405 n_sheet=219919 cpu=41.9s elapsed=2923s rate=3.36s/vol eta=1min
+MARKER gpu sample_00830 2.6s queued=16
+MARKER [872/892] sample_00644 status=ok enr=15.753 shell1=16.618 n_sheet=53216 cpu=19.7s elapsed=2926s rate=3.35s/vol eta=1min
+MARKER gpu sample_00847 2.3s queued=16
+MARKER [873/892] sample_00649 status=ok enr=17.404 shell1=17.271 n_sheet=140764 cpu=41.9s elapsed=2928s rate=3.35s/vol eta=1min
+MARKER gpu sample_00880 2.4s queued=16
+MARKER [874/892] sample_00667 status=ok enr=7.554 shell1=7.999 n_sheet=201641 cpu=31.4s elapsed=2931s rate=3.35s/vol eta=1min
+MARKER gpu sample_00899 2.5s queued=16
+MARKER [875/892] sample_00679 status=ok enr=4.182 shell1=4.297 n_sheet=107087 cpu=24.6s elapsed=2934s rate=3.35s/vol eta=1min
+MARKER gpu sample_00909 2.3s queued=16
+MARKER [876/892] sample_00703 status=ok enr=9.588 shell1=9.746 n_sheet=238819 cpu=47.5s elapsed=2949s rate=3.37s/vol eta=1min
+MARKER gpu sample_00914 2.4s queued=16
+MARKER [877/892] sample_00720 status=ok enr=4.201 shell1=4.828 n_sheet=2978 cpu=26.8s elapsed=2952s rate=3.37s/vol eta=1min
+MARKER [878/892] sample_00721 status=ok enr=15.058 shell1=19.089 n_sheet=135279 cpu=37.4s elapsed=2952s rate=3.36s/vol eta=1min
+MARKER [879/892] sample_00732 status=ok enr=17.545 shell1=20.18 n_sheet=96368 cpu=30.6s elapsed=2952s rate=3.36s/vol eta=1min
+MARKER [880/892] sample_00737 status=ok enr=11.543 shell1=12.569 n_sheet=72605 cpu=23.5s elapsed=2952s rate=3.35s/vol eta=1min
+MARKER [881/892] sample_00751 status=ok enr=9.984 shell1=10.722 n_sheet=104075 cpu=22.7s elapsed=2952s rate=3.35s/vol eta=1min
+MARKER [882/892] sample_00760 status=ok enr=11.953 shell1=12.112 n_sheet=182703 cpu=37.4s elapsed=2961s rate=3.36s/vol eta=1min
+MARKER [883/892] sample_00763 status=ok enr=13.692 shell1=14.011 n_sheet=104287 cpu=25.1s elapsed=2961s rate=3.35s/vol eta=1min
+MARKER [884/892] sample_00775 status=ok enr=27.903 shell1=31.674 n_sheet=86964 cpu=27.1s elapsed=2961s rate=3.35s/vol eta=0min
+MARKER [885/892] sample_00788 status=ok enr=17.098 shell1=20.547 n_sheet=121060 cpu=21.5s elapsed=2966s rate=3.35s/vol eta=0min
+MARKER [886/892] sample_00810 status=ok enr=12.567 shell1=11.716 n_sheet=161739 cpu=18.8s elapsed=2966s rate=3.35s/vol eta=0min
+MARKER [887/892] sample_00830 status=ok enr=5.768 shell1=6.659 n_sheet=21860 cpu=17.1s elapsed=2966s rate=3.34s/vol eta=0min
+MARKER [888/892] sample_00847 status=ok enr=2.16 shell1=2.1 n_sheet=243445 cpu=22.6s elapsed=2969s rate=3.34s/vol eta=0min
+MARKER [889/892] sample_00880 status=ok enr=4.36 shell1=4.129 n_sheet=195736 cpu=27.3s elapsed=2976s rate=3.35s/vol eta=0min
+MARKER [890/892] sample_00899 status=ok enr=14.435 shell1=13.977 n_sheet=94525 cpu=15.1s elapsed=2976s rate=3.34s/vol eta=0min
+MARKER [891/892] sample_00909 status=ok enr=12.911 shell1=13.315 n_sheet=151548 cpu=16.8s elapsed=2977s rate=3.34s/vol eta=0min
+MARKER [892/892] sample_00914 status=ok enr=9.377 shell1=9.932 n_sheet=144533 cpu=12.4s elapsed=2977s rate=3.34s/vol eta=0min
+MARKER done  892 rows in 2977s

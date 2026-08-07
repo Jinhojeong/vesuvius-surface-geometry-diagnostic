@@ -45,8 +45,10 @@ def div(a, b):
 
 def budget_point(h: dict, budget: float = BUDGET) -> dict:
     """Smallest threshold on the retained histogram grid whose predicted-positive
-    fraction of the SCORED region is at or below `budget`. Convention is ours and is
-    stated so, because his own budget-threshold search is not in the shipped artefacts."""
+    fraction of the SCORED region is at or below `budget`. This is not his rule.
+    surface_bench.py takes the exact 1-budget quantile of the scored probabilities, so
+    it always spends the full budget, while a grid search cannot when one bin holds more
+    than 1-budget of the scored mass. The thresholds agree to within one bin either way."""
     hs = np.asarray(h["hist_scored"], dtype=np.int64)
     hh = np.asarray(h["hist_sheet"], dtype=np.int64)
     n_s, n_sh = int(h["n_scored"]), int(h["n_sheet"])
@@ -165,27 +167,44 @@ def population_block(rows: list[dict], raw_by: dict, tag: str, n_pop: int) -> di
         "n_ok": len(ok),
         "n_no_labelled_sheet": len([r for r in present if r.get("n_sheet") == 0]),
         "n_no_scored_voxels": len([r for r in present if r.get("n_scored") == 0]),
+        # Every median below is over the SAME n_ok rows. Taking each median over
+        # whatever rows happen to define that field would silently move the
+        # denominator between columns of one table: pred_positive_fraction is
+        # defined on volumes with no labelled sheet, recall and precision are not.
+        # The alternative denominators are reported separately, with their n.
+        "median_denominator": "n_ok",
         # the columns his table carries, recomputed with class 2 excluded
-        "median_recall": med([r.get("recall") for r in present]),
-        "median_precision": med([r.get("precision") for r in present]),
-        "median_precision_lift": med([r.get("precision_lift") for r in present]),
-        "median_pred_positive_fraction": med([r.get("pred_positive_fraction") for r in present]),
-        "median_base_rate": med([r.get("base_rate") for r in present]),
-        "median_n_sheet": med([r.get("n_sheet") for r in present]),
-        "median_budget_recall": med([r.get("budget_recall") for r in present]),
-        "median_budget_precision": med([r.get("budget_precision") for r in present]),
-        "median_budget_precision_lift": med([r.get("budget_precision_lift") for r in present]),
-        "median_budget_threshold": med([r.get("budget_threshold") for r in present]),
+        "median_recall": med([r.get("recall") for r in ok]),
+        "median_precision": med([r.get("precision") for r in ok]),
+        "median_precision_lift": med([r.get("precision_lift") for r in ok]),
+        "median_pred_positive_fraction": med([r.get("pred_positive_fraction") for r in ok]),
+        "median_base_rate": med([r.get("base_rate") for r in ok]),
+        "median_n_sheet": med([r.get("n_sheet") for r in ok]),
+        "median_budget_recall": med([r.get("budget_recall") for r in ok]),
+        "median_budget_precision": med([r.get("budget_precision") for r in ok]),
+        "median_budget_precision_lift": med([r.get("budget_precision_lift") for r in ok]),
+        "median_budget_threshold": med([r.get("budget_threshold") for r in ok]),
         "median_recall_by_threshold": {
-            t: med([(r.get("recall_by_threshold") or {}).get(t) for r in present]) for t in GRID},
+            t: med([(r.get("recall_by_threshold") or {}).get(t) for r in ok]) for t in GRID},
         "median_margin_share_of_nonsheet": med(
-            [r.get("margin_share_of_nonsheet") for r in present]),
+            [r.get("margin_share_of_nonsheet") for r in ok]),
+        # his split scores every volume with labelled sheet in the crop, which is a
+        # wider set than n_ok: it also holds the volumes with sheet but nothing
+        # predicted anywhere, where recall is 0.0 and precision does not exist.
+        "n_recall_defined": len([r for r in present if r.get("recall") is not None]),
+        "median_recall_over_recall_defined": med(
+            [r.get("recall") for r in present if r.get("recall") is not None]),
+        "n_pred_positive_fraction_defined": len(
+            [r for r in present if r.get("pred_positive_fraction") is not None]),
+        "median_pred_positive_fraction_over_defined": med(
+            [r.get("pred_positive_fraction") for r in present]),
         "budget_convention": (
             f"budget_* columns threshold each volume so that at most {BUDGET:.2f} of its "
-            "SCORED voxels are predicted positive, searched on a 2000-bin probability "
-            "histogram. This is our convention; his own budget-threshold search is not in "
-            "the shipped artefacts, so treat the budget columns as ours, not as a "
-            "like-for-like replacement of his."),
+            "SCORED voxels are predicted positive. His surface_bench.py takes the exact "
+            f"{1 - BUDGET:.2f} quantile of the scored probabilities; we search a 2000-bin "
+            "probability histogram and take the first bin whose predicted-positive share is "
+            "at or below the budget, so the two thresholds can differ by up to one bin. "
+            "Treat the budget columns as ours rather than as a like-for-like replacement."),
     }
     # the shell / margin / fp-mass blocks, straight from the shipped aggregator.
     # aggregate.summarize assumes at least one status=ok row, so guard rather than

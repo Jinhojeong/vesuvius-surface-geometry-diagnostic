@@ -1403,5 +1403,12 @@
   "at_top": 0.001325,
   "mean": 70.568118,
   "std": 40.942166
+ },
+ "lut_levels_mapped_to_zero": {
+  "median": 62.0,
+  "min": 35,
+  "max": 75,
+  "n_luts": 189,
+  "note": "count of distinct input grey levels each per-volume LUT maps onto 0, computed from histmatch_check.json. This is the number behind the matched arm's zero pile; levels_collapsed_median in confound.json is a different quantity, the total distinct levels lost to the LUT."
  }
 }

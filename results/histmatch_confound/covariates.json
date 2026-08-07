@@ -1,7 +1,7 @@
 {
  "n": 60,
  "cohort": "located60",
- "note": "The point is not the size of any one coefficient. It is that recall is\nuncorrelated with these axes under the checkpoint's own plans normalization and\ncorrelated with them under per-volume z-scoring, so the split reads as a\nproperty of the model on one path and of the intensity on the other.",
+ "note": "The point is not the size of any one coefficient. It is that recall is\nuncorrelated with these axes under the checkpoint's own plans normalization and\nmoves off zero under per-volume z-scoring, though at n=60 only the contrast\ncoefficient clears p 0.05, so the split reads as a\nproperty of the model on one path and of the intensity on the other.",
  "spearman": {
   "A_orig_ctplans": {
    "normalization": "plans CTNormalization",

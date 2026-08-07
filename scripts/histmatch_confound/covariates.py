@@ -8,7 +8,8 @@ Spearman correlations of recall against each covariate under two normalizations.
 
 The point is not the size of any one coefficient. It is that recall is
 uncorrelated with these axes under the checkpoint's own plans normalization and
-correlated with them under per-volume z-scoring, so the split reads as a
+moves off zero under per-volume z-scoring, though at n=60 only the contrast
+coefficient clears p 0.05, so the split reads as a
 property of the model on one path and of the intensity on the other.
 
 Range restriction: the located60 cohort spans a narrower contrast range than the

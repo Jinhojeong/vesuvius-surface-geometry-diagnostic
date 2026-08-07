@@ -17,8 +17,10 @@ own sliding window, which is the path the model card prescribes:
   * nnUNetPredictor.predict_sliding_window_return_logits: patch 192^3, tile_step_size 0.5,
     gaussian importance weighting, mirroring OFF (he passed --disable_tta), fp16 autocast
     (that is nnUNet's own default inference path, not a concession to the 11GB card)
-  * logits averaged, then sigmoid(l1 - l0). Equivalently p1 / (p0 + p1) of the 3-class
-    softmax; the ignore class drops out of the pairwise sigmoid either way.
+  * logits averaged, then sigmoid(l1 - l0), which equals p1 / (p0 + p1) of the softmax.
+    The network has two output heads, not three: nnU-Net's LabelManager treats the
+    label literally named `ignore` in dataset.json as ignore_label, so
+    num_segmentation_heads is 2 and there is no third channel to drop.
 
 Writes one JSON line per volume so an ssh drop costs at most the volume in flight.
 """

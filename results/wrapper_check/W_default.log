@@ -1,0 +1,18 @@
+MARKER start n=16 done=0 mode=crop256 norm=None prenorm=none
+MARKER [1/16] sample_00161 ok [0.7005, 0.5145, 0.305] 36.5s
+MARKER [2/16] sample_00162 ok [0.7043, 0.3965, 0.312] 24.1s
+MARKER [3/16] sample_00163 ok [0.7331, 0.4443, 0.3283] 34.8s
+MARKER [4/16] sample_00164 ok [0.7652, 0.4192, 0.2606] 35.2s
+MARKER [5/16] sample_00165 ok [0.813, 0.5699, 0.2657] 33.0s
+MARKER [6/16] sample_00166 ok [0.8639, 0.6092, 0.287] 37.1s
+MARKER [7/16] sample_00167 ok [0.8725, 0.6231, 0.3238] 32.4s
+MARKER [8/16] sample_00168 ok [0.8277, 0.5603, 0.2227] 25.8s
+MARKER [9/16] sample_00169 ok [0.6904, 0.3587, 0.0997] 25.9s
+MARKER [10/16] sample_00170 ok [0.8212, 0.3904, 0.2497] 27.8s
+MARKER [11/16] sample_00172 ok [0.793, 0.4668, 0.3252] 42.6s
+MARKER [12/16] sample_00173 ok [0.7206, 0.3931, 0.2618] 39.3s
+MARKER [13/16] sample_00174 ok [0.6648, 0.4029, 0.2631] 27.9s
+MARKER [14/16] sample_00175 ok [0.8122, 0.4436, 0.3536] 31.0s
+MARKER [15/16] sample_00177 ok [0.7106, 0.4055, 0.3351] 35.5s
+MARKER [16/16] sample_00178 ok [0.7495, 0.44, 0.2813] 46.6s
+MARKER done

@@ -1,0 +1,132 @@
+{
+ "run_date": "2026-08-07",
+ "host": "100.77.114.122 (RTX 2080 Ti 11GB)",
+ "python": "3.11 (~/Vesuvius/.venv)",
+ "versions": {
+  "vesuvius": "0.2.4",
+  "nnunetv2": "2.8.1",
+  "dynamic-network-architectures": "0.4.4",
+  "torch": "2.6.0+cu124",
+  "zarr": "2.18.7",
+  "numcodecs": "0.15.1",
+  "numpy": "2.4.4",
+  "scipy": "1.17.1",
+  "tifffile": "2026.3.3"
+ },
+ "vesuvius_installed_path": "/home/jinhojeong/Vesuvius/.venv/lib/python3.11/site-packages/vesuvius",
+ "villa_main_fetched": "raw.githubusercontent.com/ScrollPrize/villa/main/vesuvius/src/vesuvius/... on 2026-08-07",
+ "file_lengths": {
+  "inference.py": {
+   "installed_0.2.4": 989,
+   "main": 1380
+  },
+  "volume.py": {
+   "installed_0.2.4": 1247,
+   "main": 1343
+  },
+  "vc_dataset.py": {
+   "installed_0.2.4": 511,
+   "main": 700
+  }
+ },
+ "line_anchors_installed_vs_main": {
+  "inference.py --normalization argparse (default instance_zscore)": {
+   "installed": 815,
+   "main": 1165,
+   "text_identical": true
+  },
+  "inference.py normalization_scheme = self.model_normalization_scheme or self.normalization_scheme": {
+   "installed": 424,
+   "main": 696,
+   "text_identical": true
+  },
+  "inference.py VCDataset(... normalization_scheme=normalization_scheme ...)": {
+   "installed": 455,
+   "main": 727,
+   "note": "neither version passes intensity_props"
+  },
+  "inference.py self.model_normalization_scheme = None (init)": {
+   "installed": 95,
+   "main": 319
+  },
+  "inference.py checkpoint normalization read (train_py path only)": {
+   "installed": 311,
+   "main": 544
+  },
+  "inference.py --bbox argparse": {
+   "installed": null,
+   "main": 1210,
+   "note": "0.2.4 has no --bbox at all"
+  },
+  "volume.py valid_schemes list": {
+   "installed": 175,
+   "main": 227,
+   "note": "main adds percentile_minmax"
+  },
+  "volume.py ct-requires-intensity_props raise": {
+   "installed": "182-185",
+   "main": "234-237"
+  },
+  "volume.py ct normalization implementation": {
+   "installed": "874-884",
+   "main": "970-980"
+  },
+  "vc_dataset.py intensity_props kwarg": {
+   "installed": 40,
+   "main": 42
+  },
+  "vc_dataset.py verbose-only Normalization print": {
+   "installed": 155,
+   "main": 187
+  }
+ },
+ "load_nnunet_model.py": {
+  "initialize_network body identical in installed and main": true,
+  "bug": "exec(fimport {i}) over _kw_requires_import, which holds kwarg NAMES (conv_op, norm_op, dropout_op, nonlin), not module paths",
+  "trainer_path_signature_drift": "villa calls trainer_class.build_network_architecture(arch_class_name, arch_kwargs, req_import, n_in, n_out, enable_deep_supervision) ; nnunetv2 2.8.1 signature is (plans_manager, configuration_manager, n_in, n_out, enable_deep_supervision)"
+ },
+ "checkpoint_keys": [
+  "_best_ema",
+  "current_epoch",
+  "grad_scaler_state",
+  "inference_allowed_mirroring_axes",
+  "init_args",
+  "logging",
+  "network_weights",
+  "optimizer_state",
+  "trainer_name"
+ ],
+ "checkpoint_has_normalization_scheme": false,
+ "checkpoint_has_intensity_properties": false,
+ "plans_declared_normalization": "CTNormalization (2d and 3d_fullres)",
+ "num_segmentation_heads": 2,
+ "note_on_heads": "dataset.json labels are {background:0, surface:1, ignore:2}; nnU-Net LabelManager reads the label literally named ignore as ignore_label, so the network has TWO output heads, not three. villa prints Detected binary segmentation model and writes 2 channels. Our nnUNetPredictor path sees the same 2 channels.",
+ "villa_patch_origins_observed_crop256": [
+  [
+   0,
+   0,
+   0
+  ],
+  [
+   0,
+   0,
+   64
+  ],
+  [
+   0,
+   64,
+   0
+  ],
+  [
+   0,
+   64,
+   64
+  ],
+  [
+   64,
+   0,
+   0
+  ],
+  "...8 total"
+ ]
+}

@@ -1,0 +1,53 @@
+CMD-RC 0
+--- STDOUT ---
+
+--- Initializing Inferer ---
+Initializing Inferer with output_dir: '/mnt/vesuvius/experiments/wrapper_check/work/logits'
+
+--- Starting Inference ---
+Loading model from /mnt/vesuvius/models/surface_m7_nnunet, fold 0
+Starting load_model for /mnt/vesuvius/models/surface_m7_nnunet, fold=0, device=cuda
+WARNING: 'checkpoint_final.pth' not found; using 'checkpoint_best.pth' instead.
+Loading checkpoint: /mnt/vesuvius/models/surface_m7_nnunet/fold_0/checkpoint_best.pth
+Detected binary segmentation model
+Creating output store at: /mnt/vesuvius/experiments/wrapper_check/work/logits/logits_part_0.zarr
+Created zarr array at /mnt/vesuvius/experiments/wrapper_check/work/logits/logits_part_0.zarr with shape (8, 2, 192, 192, 192)
+Creating coordinates store at: /mnt/vesuvius/experiments/wrapper_check/work/logits/coordinates_part_0.zarr
+Created coordinates zarr array at /mnt/vesuvius/experiments/wrapper_check/work/logits/coordinates_part_0.zarr with shape (8, 3)
+
+--- Inference Finished ---
+Output logits saved to: /mnt/vesuvius/experiments/wrapper_check/work/logits/logits_part_0.zarr
+
+--- Inspecting Output Store ---
+Output shape: (8, 2, 192, 192, 192)
+Output dtype: float16
+Output chunks: (1, 2, 192, 192, 192)
+
+--- Empty Patches Report ---
+  Empty Patches Skipped: 0
+  Total Available Positions: 8
+
+--- Inspecting Coordinate Store ---
+Coords shape: (8, 3)
+Coords dtype: int32
+First few coordinates:
+[[ 0  0  0]
+ [ 0  0 64]
+ [ 0 64  0]
+ [ 0 64 64]
+ [64  0  0]]
+
+--- STDERR ---
+[arch shim] built dynamic_network_architectures.architectures.unet.ResidualEncoderUNet via pydoc.locate
+
+Inferring Part 0:   0%|          | 0/8 [00:00<?, ?it/s]
+Inferring Part 0:  12%|█▎        | 1/8 [00:04<00:34,  4.87s/it]
+Inferring Part 0:  25%|██▌       | 2/8 [00:05<00:12,  2.16s/it]
+Inferring Part 0:  38%|███▊      | 3/8 [00:05<00:06,  1.29s/it]
+Inferring Part 0:  50%|█████     | 4/8 [00:05<00:03,  1.13it/s]
+Inferring Part 0:  62%|██████▎   | 5/8 [00:05<00:01,  1.52it/s]
+Inferring Part 0:  75%|███████▌  | 6/8 [00:06<00:01,  1.91it/s]
+Inferring Part 0:  88%|████████▊ | 7/8 [00:06<00:00,  2.30it/s]
+Inferring Part 0: 100%|██████████| 8/8 [00:07<00:00,  1.84it/s]
+Inferring Part 0: 100%|██████████| 8/8 [00:07<00:00,  1.11it/s]
+

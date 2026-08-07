@@ -1,0 +1,44 @@
+[arch shim] built dynamic_network_architectures.architectures.unet.ResidualEncoderUNet via pydoc.locate
+Traceback (most recent call last):
+  File "/home/jinhojeong/Vesuvius/.venv/lib/python3.11/site-packages/vesuvius/data/vc_dataset.py", line 185, in __init__
+    self.volume = Volume(
+                  ^^^^^^^
+  File "/home/jinhojeong/Vesuvius/.venv/lib/python3.11/site-packages/vesuvius/data/volume.py", line 185, in __init__
+    raise ValueError("CT normalization requires intensity_props with keys: 'mean', 'std', 'percentile_00_5', 'percentile_99_5'")
+ValueError: CT normalization requires intensity_props with keys: 'mean', 'std', 'percentile_00_5', 'percentile_99_5'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/jinhojeong/Vesuvius/.venv/lib/python3.11/site-packages/vesuvius/models/run/inference.py", line 786, in infer
+    self._run_inference()
+  File "/home/jinhojeong/Vesuvius/.venv/lib/python3.11/site-packages/vesuvius/models/run/inference.py", line 771, in _run_inference
+    self._create_dataset_and_loader()
+  File "/home/jinhojeong/Vesuvius/.venv/lib/python3.11/site-packages/vesuvius/models/run/inference.py", line 449, in _create_dataset_and_loader
+    self.dataset = VCDataset(
+                   ^^^^^^^^^^
+  File "/home/jinhojeong/Vesuvius/.venv/lib/python3.11/site-packages/vesuvius/data/vc_dataset.py", line 236, in __init__
+    raise ValueError(f"Error initializing Volume: {e}") from e
+ValueError: Error initializing Volume: CT normalization requires intensity_props with keys: 'mean', 'std', 'percentile_00_5', 'percentile_99_5'
+Traceback (most recent call last):
+  File "/home/jinhojeong/Vesuvius/.venv/lib/python3.11/site-packages/vesuvius/models/run/inference.py", line 903, in main
+    logits_path, coords_path = inferer.infer()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: cannot unpack non-iterable NoneType object
+
+--- Initializing Inferer ---
+Initializing Inferer with output_dir: '/tmp/ctcheck/logits2'
+
+--- Starting Inference ---
+Loading model from /mnt/vesuvius/models/surface_m7_nnunet, fold 0
+Starting load_model for /mnt/vesuvius/models/surface_m7_nnunet, fold=0, device=cpu
+WARNING: 'checkpoint_final.pth' not found; using 'checkpoint_best.pth' instead.
+Loading checkpoint: /mnt/vesuvius/models/surface_m7_nnunet/fold_0/checkpoint_best.pth
+Detected binary segmentation model
+ERROR: Failed to initialize Volume within VCDataset.
+  Attempted Volume params: type=zarr, path=/tmp/ctcheck/ct.zarr, scroll=None, seg=None, ...
+An error occurred during inference: Error initializing Volume: CT normalization requires intensity_props with keys: 'mean', 'std', 'percentile_00_5', 'percentile_99_5'
+
+--- Inference Failed ---
+Error: cannot unpack non-iterable NoneType object
+EXITCODE=0

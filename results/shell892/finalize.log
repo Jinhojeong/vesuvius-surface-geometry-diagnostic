@@ -1,0 +1,22 @@
+{
+ "n_rows": 892,
+ "n_present": 892,
+ "n_ok": 853,
+ "n_no_labelled_sheet": 37,
+ "gate_label_side_mismatches": 0,
+ "gate_label_side_checked": 892,
+ "gate_sweep_mismatches": 0,
+ "gate_sweep_checked": 855,
+ "reuse_compared": 120,
+ "reuse_bit_identical": 5,
+ "reuse_label_side_identical": true,
+ "reuse_max_rel_delta": {
+  "n_fp": 0.00088496,
+  "n_pred_scored": 0.00038956,
+  "enrichment": 0.00117786,
+  "shell_1": 0.00079968
+ },
+ "median_recall_all": 0.91935,
+ "median_precision_all": 0.74632
+}
+FINALIZE_EXIT=0

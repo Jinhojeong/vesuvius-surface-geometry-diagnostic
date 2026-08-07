@@ -1,0 +1,530 @@
+{
+ "provenance": {
+  "what_these_rows_are": "CT-normalized rows. Every volume here was normalized with the CTNormalization constants that m7's own plans.json declares for 3d_fullres, not with the villa `vesuvius.predict` wrapper default. The wrapper path and this path disagree, which is the reason the reference table needed replacing rather than retracting.",
+  "checkpoint": {
+   "path": "/mnt/vesuvius/models/surface_m7_nnunet/fold_0/checkpoint_best.pth",
+   "sha256": "17465b77591b794638e671f1a9f79c4cf1e79821f302e6fc235e3725e5da7d7e",
+   "bytes": 820473701,
+   "source": "hf scrollprize/surface_m7_nnunet",
+   "fold": 0,
+   "checkpoint_name": "checkpoint_best.pth"
+  },
+  "geometry": {
+   "volume_shape": [
+    320,
+    320,
+    320
+   ],
+   "centred_block": 256,
+   "TRIM": 64,
+   "scored_crop": "inner 128^3, index 96:224 on each axis",
+   "prediction_mask": "sigmoid(logit1 - logit0) > 0.2",
+   "class_2_excluded": true,
+   "shells": "one-voxel Euclidean shells off the labelled sheet, k = 1..5",
+   "num_segmentation_heads": 2,
+   "note": "nnU-Net's LabelManager treats the label literally named `ignore` in dataset.json as ignore_label, so the network has two heads, not three, and there is no third channel to drop."
+  },
+  "normalization": {
+   "scheme": [
+    "CTNormalization"
+   ],
+   "clip": [
+    0.0,
+    212.0
+   ],
+   "mean": 87.54424285888672,
+   "std": 47.74376678466797,
+   "why": "these are global dataset-fingerprint constants, not per-image statistics, so cropping the 256^3 block before normalising cannot change them; that is what makes crop-then-normalise equivalent to normalise-then-crop here",
+   "patch_size": [
+    192,
+    192,
+    192
+   ],
+   "tile_step_size": 0.5,
+   "use_gaussian": true,
+   "use_mirroring": false,
+   "autocast": "fp16, nnUNet's own default inference path"
+  },
+  "code": {
+   "run892.py": {
+    "path": "/mnt/vesuvius/experiments/shell892/run892.py",
+    "sha256": "72863755a0e353c6b659eee768c86feb2f89aa9aff7cd8a4e3cbdcc78a3dd126"
+   },
+   "run_shells.py": {
+    "path": "/mnt/vesuvius/experiments/shell_split/gen/run_shells.py",
+    "sha256": "2c6cb0ab5ad92033e6366979f46fa8a3f939f054bcfd94ec5d0ebe5d8f0b2213"
+   },
+   "geom.py": {
+    "path": "/mnt/vesuvius/experiments/shell_split/gen/geom.py",
+    "sha256": "1bda88c5b5bdb39300a1864159688075ef63c89c9eaf030756336512912b905c"
+   },
+   "aggregate.py": {
+    "path": "/mnt/vesuvius/experiments/shell892/aggregate.py",
+    "sha256": "a7758b53be8bc39c2e672b57f370bf8f1340111cf441ab6f00ee02c223f4b3ed"
+   },
+   "finalize.py": {
+    "path": "/mnt/vesuvius/experiments/shell892/finalize.py",
+    "sha256": "dd203493fb7040c7b5ce764087a09c4e4580ccf5d324dd0a2e7b173a183f7b89"
+   },
+   "repo_commit": "9213bf19f320847619e85e62f602992ea0cec2bc",
+   "commit_note": "shell_split/ is untracked in the benchmark repo at this commit, so the file sha256 above is the binding identifier, not the commit",
+   "geom_constants_verified": "geom.py is byte-identical to the copy that produced control_his60 and control_nonloc60 apart from a docstring; run_shells.py likewise. TRIM=64, SIZE=256, THRESH=0.2, SIGMA=1.0 in all copies."
+  },
+  "environment": {
+   "python": "3.11.15",
+   "nnunetv2": "2.8.1",
+   "torch": "2.6.0+cu124",
+   "numpy": "2.4.4",
+   "scipy": "1.17.1",
+   "gpu": "NVIDIA GeForce RTX 2080 Ti"
+  },
+  "cohort": {
+   "source": "/mnt/vesuvius/kaggle892/groups892.json",
+   "located": "groups located + intersecting + iou1",
+   "n_located": 189,
+   "n_nonlocated": 703
+  },
+  "pred_on_empty_ct": {
+   "predicted_positive_fraction": 0.0,
+   "max_probability": 0.000384,
+   "note": "one forward pass on an all-zero 320^3 volume"
+  }
+ },
+ "populations": {
+  "all": {
+   "tag": "all public volumes",
+   "n_population": 892,
+   "n_rows": 892,
+   "n_rows_present": 892,
+   "n_missing": 0,
+   "n_ok": 853,
+   "n_no_labelled_sheet": 37,
+   "n_no_scored_voxels": 32,
+   "median_recall": 0.91935,
+   "median_precision": 0.74632,
+   "median_precision_lift": 5.93975,
+   "median_pred_positive_fraction": 0.15331,
+   "median_base_rate": 0.12432,
+   "median_n_sheet": 124544.0,
+   "median_budget_recall": 0.79707,
+   "median_budget_precision": 0.81396,
+   "median_budget_precision_lift": 6.644,
+   "median_budget_threshold": 0.72225,
+   "median_recall_by_threshold": {
+    "0.05": 0.96893,
+    "0.10": 0.94676,
+    "0.20": 0.91935,
+    "0.30": 0.90073,
+    "0.50": 0.87055,
+    "0.70": 0.82953
+   },
+   "median_margin_share_of_nonsheet": 0.06389,
+   "budget_convention": "budget_* columns threshold each volume so that at most 0.12 of its SCORED voxels are predicted positive, searched on a 2000-bin probability histogram. This is our convention; his own budget-threshold search is not in the shipped artefacts, so treat the budget columns as ours, not as a like-for-like replacement of his.",
+   "shell_blocks": {
+    "tag": "all public volumes",
+    "n_rows": 892,
+    "n_ok": 853,
+    "shell_enrichment_median": {
+     "shell_1": 9.0805,
+     "shell_2": 1.392,
+     "shell_3": 0.15,
+     "shell_4": 0.013,
+     "shell_5": 0.002
+    },
+    "shell_enrichment_n": {
+     "shell_1": 850,
+     "shell_2": 851,
+     "shell_3": 851,
+     "shell_4": 850,
+     "shell_5": 850
+    },
+    "obs_over_pred": {
+     "n": 757,
+     "median": 0.8193,
+     "mean": 4.5318,
+     "q10": 0.1891,
+     "q90": 3.8541,
+     "frac_above_1": 0.4227,
+     "wilcoxon_stat": 141215.0,
+     "wilcoxon_p": 0.7101843435492945
+    },
+    "margin_enrichment": {
+     "median": 8.368,
+     "q10": 4.229,
+     "q90": 14.81,
+     "frac_above_1": 0.9988,
+     "median_fp_share_in_margin": 0.5456,
+     "median_margin_share_of_nonsheet": 0.0641
+    },
+    "fp_load": {
+     "median_fp_frac_of_scored": 0.0374,
+     "median_fp_frac_of_nonsheet_scored": 0.043,
+     "pooled_fp_frac_of_scored": 0.04145,
+     "pooled_fp_frac_of_nonsheet_scored": 0.04684,
+     "median_recall": 0.9194,
+     "median_precision": 0.7463,
+     "median_base_rate": 0.1247
+    },
+    "fp_mass_share_by_shell": {
+     "per_volume_median_pct": [
+      84.16,
+      13.56,
+      1.73,
+      0.11,
+      0.02
+     ],
+     "pooled_pct": [
+      70.32,
+      17.05,
+      6.0,
+      1.94,
+      1.24
+     ],
+     "per_volume_median_pct_beyond5": 0.0,
+     "pooled_pct_beyond5": 3.45
+    },
+    "beyond_k_shares": {
+     "beyond2": {
+      "vol_share_per_volume_median_pct": 81.24,
+      "vol_share_pooled_pct": 83.03,
+      "fp_share_per_volume_median_pct": 1.984,
+      "fp_share_pooled_pct": 12.628
+     },
+     "beyond3": {
+      "vol_share_per_volume_median_pct": 69.36,
+      "vol_share_pooled_pct": 72.46,
+      "fp_share_per_volume_median_pct": 0.178,
+      "fp_share_pooled_pct": 6.629
+     },
+     "beyond4": {
+      "vol_share_per_volume_median_pct": 61.29,
+      "vol_share_pooled_pct": 64.7,
+      "fp_share_per_volume_median_pct": 0.029,
+      "fp_share_pooled_pct": 4.692
+     }
+    },
+    "shell_vol_share": {
+     "per_volume_median_pct": [
+      9.08,
+      9.65,
+      11.76,
+      8.54,
+      8.84
+     ],
+     "pooled_pct": [
+      8.29,
+      8.67,
+      10.57,
+      7.76,
+      8.46
+     ]
+    }
+   }
+  },
+  "located": {
+   "tag": "located population",
+   "n_population": 189,
+   "n_rows": 189,
+   "n_rows_present": 189,
+   "n_missing": 0,
+   "n_ok": 174,
+   "n_no_labelled_sheet": 15,
+   "n_no_scored_voxels": 12,
+   "median_recall": 0.91398,
+   "median_precision": 0.69352,
+   "median_precision_lift": 4.02871,
+   "median_pred_positive_fraction": 0.20988,
+   "median_base_rate": 0.15993,
+   "median_n_sheet": 147723.0,
+   "median_budget_recall": 0.61578,
+   "median_budget_precision": 0.84487,
+   "median_budget_precision_lift": 5.13693,
+   "median_budget_threshold": 0.871,
+   "median_recall_by_threshold": {
+    "0.05": 0.9703,
+    "0.10": 0.94716,
+    "0.20": 0.91398,
+    "0.30": 0.88896,
+    "0.50": 0.84372,
+    "0.70": 0.78619
+   },
+   "median_margin_share_of_nonsheet": 0.08455,
+   "budget_convention": "budget_* columns threshold each volume so that at most 0.12 of its SCORED voxels are predicted positive, searched on a 2000-bin probability histogram. This is our convention; his own budget-threshold search is not in the shipped artefacts, so treat the budget columns as ours, not as a like-for-like replacement of his.",
+   "shell_blocks": {
+    "tag": "located population",
+    "n_rows": 189,
+    "n_ok": 174,
+    "shell_enrichment_median": {
+     "shell_1": 5.7985,
+     "shell_2": 1.4375,
+     "shell_3": 0.254,
+     "shell_4": 0.0485,
+     "shell_5": 0.011
+    },
+    "shell_enrichment_n": {
+     "shell_1": 174,
+     "shell_2": 174,
+     "shell_3": 174,
+     "shell_4": 174,
+     "shell_5": 174
+    },
+    "obs_over_pred": {
+     "n": 172,
+     "median": 0.9393,
+     "mean": 1.8633,
+     "q10": 0.2421,
+     "q90": 3.1207,
+     "frac_above_1": 0.4477,
+     "wilcoxon_stat": 6688.0,
+     "wilcoxon_p": 0.2508519729078056
+    },
+    "margin_enrichment": {
+     "median": 5.489,
+     "q10": 3.386,
+     "q90": 9.391,
+     "frac_above_1": 1.0,
+     "median_fp_share_in_margin": 0.4694,
+     "median_margin_share_of_nonsheet": 0.0846
+    },
+    "fp_load": {
+     "median_fp_frac_of_scored": 0.0637,
+     "median_fp_frac_of_nonsheet_scored": 0.0786,
+     "pooled_fp_frac_of_scored": 0.07041,
+     "pooled_fp_frac_of_nonsheet_scored": 0.08273,
+     "median_recall": 0.914,
+     "median_precision": 0.6935,
+     "median_base_rate": 0.1631
+    },
+    "fp_mass_share_by_shell": {
+     "per_volume_median_pct": [
+      76.96,
+      17.89,
+      3.57,
+      0.52,
+      0.12
+     ],
+     "pooled_pct": [
+      62.79,
+      19.63,
+      8.74,
+      3.26,
+      2.34
+     ],
+     "per_volume_median_pct_beyond5": 0.02,
+     "pooled_pct_beyond5": 3.25
+    },
+    "beyond_k_shares": {
+     "beyond2": {
+      "vol_share_per_volume_median_pct": 74.1,
+      "vol_share_pooled_pct": 77.1,
+      "fp_share_per_volume_median_pct": 4.4,
+      "fp_share_pooled_pct": 17.587
+     },
+     "beyond3": {
+      "vol_share_per_volume_median_pct": 58.97,
+      "vol_share_pooled_pct": 63.09,
+      "fp_share_per_volume_median_pct": 0.85,
+      "fp_share_pooled_pct": 8.851
+     },
+     "beyond4": {
+      "vol_share_per_volume_median_pct": 46.94,
+      "vol_share_pooled_pct": 52.87,
+      "fp_share_per_volume_median_pct": 0.166,
+      "fp_share_pooled_pct": 5.594
+     }
+    },
+    "shell_vol_share": {
+     "per_volume_median_pct": [
+      12.38,
+      13.14,
+      15.55,
+      10.97,
+      10.48
+     ],
+     "pooled_pct": [
+      11.23,
+      11.67,
+      14.01,
+      10.21,
+      10.75
+     ]
+    }
+   }
+  },
+  "nonlocated": {
+   "tag": "nonlocated population",
+   "n_population": 703,
+   "n_rows": 703,
+   "n_rows_present": 703,
+   "n_missing": 0,
+   "n_ok": 679,
+   "n_no_labelled_sheet": 22,
+   "n_no_scored_voxels": 20,
+   "median_recall": 0.9201,
+   "median_precision": 0.75589,
+   "median_precision_lift": 6.40846,
+   "median_pred_positive_fraction": 0.14286,
+   "median_base_rate": 0.11693,
+   "median_n_sheet": 120117.0,
+   "median_budget_recall": 0.83367,
+   "median_budget_precision": 0.79926,
+   "median_budget_precision_lift": 6.9477,
+   "median_budget_threshold": 0.624,
+   "median_recall_by_threshold": {
+    "0.05": 0.96852,
+    "0.10": 0.94675,
+    "0.20": 0.9201,
+    "0.30": 0.90328,
+    "0.50": 0.87334,
+    "0.70": 0.83436
+   },
+   "median_margin_share_of_nonsheet": 0.06109,
+   "budget_convention": "budget_* columns threshold each volume so that at most 0.12 of its SCORED voxels are predicted positive, searched on a 2000-bin probability histogram. This is our convention; his own budget-threshold search is not in the shipped artefacts, so treat the budget columns as ours, not as a like-for-like replacement of his.",
+   "shell_blocks": {
+    "tag": "nonlocated population",
+    "n_rows": 703,
+    "n_ok": 679,
+    "shell_enrichment_median": {
+     "shell_1": 9.9105,
+     "shell_2": 1.388,
+     "shell_3": 0.126,
+     "shell_4": 0.009,
+     "shell_5": 0.001
+    },
+    "shell_enrichment_n": {
+     "shell_1": 676,
+     "shell_2": 677,
+     "shell_3": 677,
+     "shell_4": 676,
+     "shell_5": 676
+    },
+    "obs_over_pred": {
+     "n": 585,
+     "median": 0.7984,
+     "mean": 5.3164,
+     "q10": 0.167,
+     "q90": 4.1334,
+     "frac_above_1": 0.4154,
+     "wilcoxon_stat": 84932.0,
+     "wilcoxon_p": 0.8505657598463348
+    },
+    "margin_enrichment": {
+     "median": 9.179,
+     "q10": 4.932,
+     "q90": 15.966,
+     "frac_above_1": 0.9985,
+     "median_fp_share_in_margin": 0.5545,
+     "median_margin_share_of_nonsheet": 0.0611
+    },
+    "fp_load": {
+     "median_fp_frac_of_scored": 0.0337,
+     "median_fp_frac_of_nonsheet_scored": 0.038,
+     "pooled_fp_frac_of_scored": 0.03452,
+     "pooled_fp_frac_of_nonsheet_scored": 0.03867,
+     "median_recall": 0.9201,
+     "median_precision": 0.7559,
+     "median_base_rate": 0.1172
+    },
+    "fp_mass_share_by_shell": {
+     "per_volume_median_pct": [
+      85.14,
+      12.95,
+      1.41,
+      0.07,
+      0.01
+     ],
+     "pooled_pct": [
+      74.0,
+      15.79,
+      4.66,
+      1.29,
+      0.7
+     ],
+     "per_volume_median_pct_beyond5": 0.0,
+     "pooled_pct_beyond5": 3.55
+    },
+    "beyond_k_shares": {
+     "beyond2": {
+      "vol_share_per_volume_median_pct": 82.73,
+      "vol_share_pooled_pct": 84.39,
+      "fp_share_per_volume_median_pct": 1.662,
+      "fp_share_pooled_pct": 10.21
+     },
+     "beyond3": {
+      "vol_share_per_volume_median_pct": 71.62,
+      "vol_share_pooled_pct": 74.6,
+      "fp_share_per_volume_median_pct": 0.099,
+      "fp_share_pooled_pct": 5.546
+     },
+     "beyond4": {
+      "vol_share_per_volume_median_pct": 63.53,
+      "vol_share_pooled_pct": 67.39,
+      "fp_share_per_volume_median_pct": 0.013,
+      "fp_share_pooled_pct": 4.251
+     }
+    },
+    "shell_vol_share": {
+     "per_volume_median_pct": [
+      8.46,
+      8.8,
+      11.06,
+      8.02,
+      8.46
+     ],
+     "pooled_pct": [
+      7.62,
+      7.99,
+      9.79,
+      7.21,
+      7.93
+     ]
+    }
+   }
+  }
+ },
+ "gates": {
+  "reuse_of_120_controls": {
+   "n_compared": 120,
+   "n_bit_identical": 5,
+   "label_side_identical": true,
+   "worst": [],
+   "note": "The 120 volumes already scored in control_his60/control_nonloc60 were re-run inside this pass rather than pasted in. Every label-side quantity is identical. The prediction-side counts move by ~1e-4 relative, which is run-to-run nondeterminism of fp16 sliding-window inference (cuDNN algorithm selection and non-deterministic accumulation), not a difference in code or geometry. Shipping one homogeneous run avoids putting that seam through the table.",
+   "max_rel_delta": {
+    "n_fp": 0.00088496,
+    "n_pred_scored": 0.00038956,
+    "enrichment": 0.00117786,
+    "shell_1": 0.00079968
+   },
+   "median_rel_delta": {
+    "n_fp": 5.879e-05,
+    "n_pred_scored": 1.988e-05,
+    "enrichment": 0.0,
+    "shell_1": 0.0
+   }
+  },
+  "label_side_vs_label_geometry_892": {
+   "n_checked": 892,
+   "n_mismatch": 0,
+   "fields": [
+    "n_sheet",
+    "n_scored",
+    "n_nonsheet_scored",
+    "base_rate",
+    "shell_vox",
+    "beyond2_vox",
+    "beyond3_vox",
+    "beyond4_vox"
+   ],
+   "mismatches": [],
+   "margin_note": "margin_share_of_nonsheet is not in label_geometry_892.jsonl, which is labels-only; the margin band needs the CT (a Hessian across-sheet step). It is checked instead for internal consistency against n_margin_scored / n_nonsheet_scored, and against the 120 control rows in the reuse gate.",
+   "margin_internal_consistency_failures": []
+  },
+  "threshold_sweep_vs_scorer": {
+   "n_checked": 855,
+   "n_mismatch": 0,
+   "mismatches": [],
+   "what": "recall_by_threshold['0.20'] and precision_by_threshold['0.20'] are computed from the retained probability volume, independently of analyse()/descriptives(). They must equal the recall and precision derived from the shipped scorer's counts."
+  }
+ },
+ "legend": "Every quantity is measured on the inner 128^3 scored crop with label class 2 (ignore) excluded. recall = TP / n_sheet, precision = TP / n_pred_scored, pred_positive_fraction = n_pred_scored / n_scored, base_rate = n_sheet / n_scored, all at threshold 0.2. Volumes with no labelled sheet in the crop keep a row with null endpoints and a reason."
+}

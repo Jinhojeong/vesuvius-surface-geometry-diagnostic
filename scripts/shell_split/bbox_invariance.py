@@ -4,9 +4,12 @@ Run the same checkpoint over a restricted box and over the whole volume, then co
 the two on the region they share. This isolates one alternative explanation for our
 divergence from a published run, namely that our restricted box is what makes our
 numbers look the way they do.
-If our 256-box path agrees with our full-320 path on the inner 128^3, our
-geometry has no box bug and the readout is not where a disagreement with his numbers
-can be coming from.
+What came back, over n=3 volumes. The aggregate endpoints move by at most 0.01 between the
+two paths, recall and precision alike, while the thresholded masks agree only at Dice 0.923
+to 0.942. So the summary statistics this study reports are stable to how much context the
+sliding window is given, and the mask itself is patch-grid sensitive at the several-percent
+Dice level. Read that as a bound on the aggregates, not as a claim that the two paths emit
+the same voxels.
 """
 import json, sys, time
 from pathlib import Path

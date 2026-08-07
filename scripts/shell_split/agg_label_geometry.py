@@ -11,11 +11,13 @@ nl60 = set(json.loads(Path("/mnt/vesuvius/experiments/shell_split/nonlocated60.j
 def pop(r):
     return "located" if g.get(r["sample"]) in ("located", "intersecting", "iou1") else "nonlocated"
 
-def summ(sel, tag):
-    sel = [r for r in sel if r.get("shell_vox") and r["n_nonsheet_scored"] > 0]
-    if not sel: return {"tag": tag, "n": 0}
+def summ(pop, tag):
+    sel = [r for r in pop if r.get("shell_vox") and r["n_nonsheet_scored"] > 0]
+    head = {"tag": tag, "n_population": len(pop), "n_scored": len(sel),
+            "n_excluded_no_sheet": len(pop) - len(sel)}
+    if not sel: return head
     ns = np.array([r["n_nonsheet_scored"] for r in sel], float)
-    o = {"tag": tag, "n": len(sel)}
+    o = dict(head)
     for k in (1, 2, 3, 4):
         v = np.array([r[f"beyond{k}_vox"] for r in sel], float)
         o[f"beyond{k}_vol_share_pct"] = {
@@ -27,15 +29,18 @@ def summ(sel, tag):
         "pooled": [round(float(sv[:, i].sum() / ns.sum()) * 100, 2) for i in range(5)]}
     o["median_base_rate"] = round(float(np.median([r["n_sheet"] / r["n_scored"] for r in sel])), 4)
     o["median_sheet_voxels"] = int(np.median([r["n_sheet"] for r in sel]))
-    o["n_with_no_sheet"] = sum(1 for r in rows if r in sel and r["n_sheet"] == 0)
     return o
 
 out = {
-    "all892": summ(rows, "all 892"),
-    "located189": summ([r for r in rows if pop(r) == "located"], "located 189"),
-    "nonlocated703": summ([r for r in rows if pop(r) == "nonlocated"], "nonlocated 703"),
-    "his60": summ([r for r in rows if r["sample"] in his60], "his cohort 60"),
-    "nonlocated60": summ([r for r in rows if r["sample"] in nl60], "extension draw 60"),
+    "legend": ("n_population is how many volumes the label carries, n_scored is how many of "
+               "them have labelled sheet inside the centred crop, and every figure in the "
+               "block is over n_scored. The excluded volumes are exactly the ones with no "
+               "sheet in the crop, where the shell geometry is undefined."),
+    "all": summ(rows, "all public volumes"),
+    "located": summ([r for r in rows if pop(r) == "located"], "located population"),
+    "nonlocated": summ([r for r in rows if pop(r) == "nonlocated"], "nonlocated population"),
+    "his60": summ([r for r in rows if r["sample"] in his60], "his cohort"),
+    "nonlocated_draw60": summ([r for r in rows if r["sample"] in nl60], "extension draw"),
     "degenerate": {"n_no_sheet_all892": sum(1 for r in rows if r["n_sheet"] == 0),
                    "n_no_sheet_nonlocated": sum(1 for r in rows if pop(r) == "nonlocated" and r["n_sheet"] == 0),
                    "n_no_sheet_in_draw60": sum(1 for r in rows if r["sample"] in nl60 and r["n_sheet"] == 0),

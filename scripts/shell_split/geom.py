@@ -1,8 +1,15 @@
-"""Label-side geometry: exact re-implementation of TAUIL-Abd-Elilah's margin and shell
-definitions (thin_labels.across_sheet_dirs + margin_relabel.relabel_margin +
-m7_margin_fp.distance_profile / analyse), read out of recon_repro @ 9afa412.
+"""Label-side geometry, transcribed from TAUIL-Abd-Elilah's margin and shell definitions
+(thin_labels.across_sheet_dirs + margin_relabel.relabel_margin +
+m7_margin_fp.distance_profile / analyse), read out of vesuvius-repro @ 9afa412.
 
 Nothing here touches the model. Everything is a function of (CT, labels) only.
+
+Third-party code notice
+-----------------------
+The four functions below are his, not mine. They are reproduced under the MIT licence of
+https://github.com/TAUIL-Abd-Elilah/vesuvius-repro, Copyright (c) 2026 TAUIL Abd Elillah.
+The full licence text and the per-function provenance are in THIRD_PARTY.md at the root of
+this repository. `descriptives` at the bottom of this file is mine and is not in his code.
 """
 from __future__ import annotations
 import numpy as np

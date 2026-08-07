@@ -1,7 +1,10 @@
 {
- "all892": {
-  "tag": "all 892",
-  "n": 855,
+ "legend": "n_population is how many volumes the label carries, n_scored is how many of them have labelled sheet inside the centred crop, and every figure in the block is over n_scored. The excluded volumes are exactly the ones with no sheet in the crop, where the shell geometry is undefined.",
+ "all": {
+  "tag": "all public volumes",
+  "n_population": 892,
+  "n_scored": 855,
+  "n_excluded_no_sheet": 37,
   "beyond1_vol_share_pct": {
    "per_volume_median": 90.92,
    "pooled": 91.71
@@ -35,12 +38,13 @@
    ]
   },
   "median_base_rate": 0.1247,
-  "median_sheet_voxels": 131570,
-  "n_with_no_sheet": 0
+  "median_sheet_voxels": 131570
  },
- "located189": {
-  "tag": "located 189",
-  "n": 174,
+ "located": {
+  "tag": "located population",
+  "n_population": 189,
+  "n_scored": 174,
+  "n_excluded_no_sheet": 15,
   "beyond1_vol_share_pct": {
    "per_volume_median": 87.62,
    "pooled": 88.77
@@ -74,12 +78,13 @@
    ]
   },
   "median_base_rate": 0.1631,
-  "median_sheet_voxels": 160139,
-  "n_with_no_sheet": 0
+  "median_sheet_voxels": 160139
  },
- "nonlocated703": {
-  "tag": "nonlocated 703",
-  "n": 681,
+ "nonlocated": {
+  "tag": "nonlocated population",
+  "n_population": 703,
+  "n_scored": 681,
+  "n_excluded_no_sheet": 22,
   "beyond1_vol_share_pct": {
    "per_volume_median": 91.55,
    "pooled": 92.38
@@ -113,12 +118,13 @@
    ]
   },
   "median_base_rate": 0.117,
-  "median_sheet_voxels": 123816,
-  "n_with_no_sheet": 0
+  "median_sheet_voxels": 123816
  },
  "his60": {
-  "tag": "his cohort 60",
-  "n": 60,
+  "tag": "his cohort",
+  "n_population": 60,
+  "n_scored": 60,
+  "n_excluded_no_sheet": 0,
   "beyond1_vol_share_pct": {
    "per_volume_median": 85.43,
    "pooled": 86.51
@@ -152,12 +158,13 @@
    ]
   },
   "median_base_rate": 0.1863,
-  "median_sheet_voxels": 179163,
-  "n_with_no_sheet": 0
+  "median_sheet_voxels": 179163
  },
- "nonlocated60": {
-  "tag": "extension draw 60",
-  "n": 58,
+ "nonlocated_draw60": {
+  "tag": "extension draw",
+  "n_population": 60,
+  "n_scored": 58,
+  "n_excluded_no_sheet": 2,
   "beyond1_vol_share_pct": {
    "per_volume_median": 91.68,
    "pooled": 92.27
@@ -191,8 +198,7 @@
    ]
   },
   "median_base_rate": 0.1137,
-  "median_sheet_voxels": 123395,
-  "n_with_no_sheet": 0
+  "median_sheet_voxels": 123395
  },
  "degenerate": {
   "n_no_sheet_all892": 37,

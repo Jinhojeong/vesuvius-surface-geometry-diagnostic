@@ -23,7 +23,7 @@
    "ours_median": 0.2462
   }
  },
- "reading": "identical label side, both recall and precision higher in ours on every volume: a broken scoring geometry cannot raise both at once, a degraded prediction can lower both at once",
+ "reading": "identical label side, both recall and precision higher in ours on every volume. Note the argument in the reverse direction is not sound, since a misregistration lowers both, so this ranks explanations rather than settling them; the matched-operating-point rescore is what does that. A degraded prediction can lower both at once",
  "rows": [
   {
    "sample": "sample_00161",

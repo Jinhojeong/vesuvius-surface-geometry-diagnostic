@@ -2,9 +2,10 @@
 
 Tolerance and why it is what it is
 ----------------------------------
-We are not reproducing his inference stack bit for bit and never could: he drives villa's
-`vesuvius.predict` wrapper under a Windows conda env, we drive nnUNetv2 2.8.1's own
-sliding window. Patch placement, blend weights and fp16 rounding all differ a little, so
+We are not reproducing his inference stack bit for bit and never could. His committed
+m7_margin_fp.py shells out to villa's `vesuvius.predict` and then to
+`vesuvius.models.run.blending`, we drive nnUNetv2 2.8.1's own sliding window directly.
+Patch placement, blend weights and fp16 rounding all differ a little, so
 an exact match is not the bar. The bar is that the statistic his control rests on comes
 out the same to a precision that still separates the two hypotheses that control was
 built to separate: a STEP at shell 1 versus a SMOOTH DECAY.

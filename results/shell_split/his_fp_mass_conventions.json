@@ -1,4 +1,5 @@
 {
+ "n_volumes": 60,
  "his_implied_fp_mass_share_pct": {
   "per_volume_median": [
    41.7,
@@ -7,7 +8,12 @@
    6.79,
    3.48
   ],
-  "per_volume_median_shell4_plus_5": 10.28,
+  "per_volume_median_shells_4_plus_5": 10.32,
+  "per_volume_median_beyond_shell3": 12.04,
+  "per_volume_q1_q3_beyond_shell3": [
+   7.04,
+   17.98
+  ],
   "fp_weighted_pooled": [
    41.25,
    27.18,
@@ -15,12 +21,9 @@
    6.66,
    3.81
   ],
-  "fp_weighted_pooled_shell4_plus_5": 10.48,
-  "fp_weighted_pooled_beyond_shell3_remainder": 14.29,
-  "SUM_OF_MEDIANS_remainder_NOT_a_median": 13.76,
-  "per_volume_median_beyond_shell3": 12.04,
-  "per_volume_median_shells_4_plus_5": 10.32,
-  "note": "CORRECTED 2026-08-07: the field formerly named per_volume_median_beyond_shell3_remainder was 100 minus a sum of medians, which is not a median of anything. The true per-volume median beyond shell 3 is 12.04 (q1 7.04, q3 17.98, n=60) and shells 4+5 give 10.32, so his stated 11 sits between the two readings and holds."
+  "fp_weighted_pooled_shells_4_plus_5": 10.48,
+  "fp_weighted_pooled_beyond_shell3": 14.29,
+  "note": "His quoted 11 percent for the region past shell 3 sits between the two readings of his own rows, 10.32 for shells 4 and 5 together and 12.04 for everything past shell 3, so it holds. Both are per-volume medians, formed on each volume and reduced afterwards. Subtracting the first three shell medians from 100 instead gives 13.76, which is not a median of anything, so it is not reported here."
  },
  "his_quoted": [
   42,

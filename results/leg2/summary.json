@@ -1,0 +1,192 @@
+{
+ "what_this_is": "Leg-2 range check. surface_recto_3dunet over the 892 public volumes at TAUIL's geometry, under the checkpoint's own declared z-score normalisation, one 256^3 forward pass per volume. Scored on the inner 128^3 with label class 2 excluded, the same voxels leg 1 used.",
+ "provenance": {
+  "checkpoint": "/mnt/vesuvius/models/surface_recto_3dunet/checkpoint_inference_ready.pth",
+  "normalization_scheme": "zscore, intensity_properties empty, so CT normalisation is not defined for this checkpoint",
+  "patch": [
+   256,
+   256,
+   256
+  ],
+  "geometry": "centred 256^3 block, TRIM=64, inner 128^3, class 2 excluded",
+  "nbin": 2000,
+  "note": "geometry cross-checked against leg 1 row by row on n_sheet and n_scored; see gates.label_side_vs_leg1"
+ },
+ "populations": {
+  "all": {
+   "tag": "all 892",
+   "n_rows": 892,
+   "n_ok": 855,
+   "median_denominator": "n_ok",
+   "median_auc": 0.63137,
+   "frac_auc_above_0.5": 0.8854,
+   "median_dice_best": 0.30305,
+   "median_dice_best_threshold": 0.298,
+   "median_precision_ceiling": 0.2546,
+   "median_base_rate": 0.1247,
+   "median_p_sheet_minus_p_scored": 0.07815,
+   "pooled": {
+    "auc": 0.6619816577696505,
+    "pooled_dice_best": 0.2662405762560971,
+    "pooled_dice_best_threshold": 0.302,
+    "pooled_recall_at_best": 0.6708941529851661,
+    "pooled_precision_at_best": 0.16607282128248696,
+    "pooled_dice_at_0.50": 0.24654994666567046,
+    "pooled_base_rate": 0.11521706111897229
+   },
+   "matched_budget_0.12": {
+    "n": 855,
+    "median_budget_recall": 0.18625,
+    "median_budget_precision": 0.20499,
+    "median_budget_precision_lift": 1.55523,
+    "frac_lift_at_or_above_2.0": 0.3205,
+    "registered_floor": "his preregistered leg-2 floor was lift >= 2.0x at matched budget; 1.0x is chance by construction"
+   },
+   "at_threshold_0.20": {
+    "n": 855,
+    "median_recall": 0.80868,
+    "median_precision": 0.16266,
+    "median_precision_lift": 1.24643,
+    "median_pred_positive_fraction": 0.59604
+   },
+   "median_dice_by_threshold": {
+    "0.05": 0.24865,
+    "0.10": 0.25853,
+    "0.20": 0.26848,
+    "0.30": 0.27282,
+    "0.50": 0.24257,
+    "0.70": 0.10584
+   }
+  },
+  "located": {
+   "tag": "located population",
+   "n_rows": 189,
+   "n_ok": 174,
+   "median_denominator": "n_ok",
+   "median_auc": 0.55589,
+   "frac_auc_above_0.5": 0.8448,
+   "median_dice_best": 0.31209,
+   "median_dice_best_threshold": 0.15625,
+   "median_precision_ceiling": 0.24083,
+   "median_base_rate": 0.16306,
+   "median_p_sheet_minus_p_scored": 0.02798,
+   "pooled": {
+    "auc": 0.5843591566046286,
+    "pooled_dice_best": 0.28148448952058674,
+    "pooled_dice_best_threshold": 0.1895,
+    "pooled_recall_at_best": 0.7779103106209061,
+    "pooled_precision_at_best": 0.17183039955256388,
+    "pooled_dice_at_0.50": 0.21758353434863903,
+    "pooled_base_rate": 0.14886693165370338
+   },
+   "matched_budget_0.12": {
+    "n": 174,
+    "median_budget_recall": 0.14386,
+    "median_budget_precision": 0.20319,
+    "median_budget_precision_lift": 1.20387,
+    "frac_lift_at_or_above_2.0": 0.1322,
+    "registered_floor": "his preregistered leg-2 floor was lift >= 2.0x at matched budget; 1.0x is chance by construction"
+   },
+   "at_threshold_0.20": {
+    "n": 174,
+    "median_recall": 0.77702,
+    "median_precision": 0.18212,
+    "median_precision_lift": 1.09373,
+    "median_pred_positive_fraction": 0.6761
+   },
+   "median_dice_by_threshold": {
+    "0.05": 0.28811,
+    "0.10": 0.29282,
+    "0.20": 0.28982,
+    "0.30": 0.27902,
+    "0.50": 0.2087,
+    "0.70": 0.01228
+   }
+  },
+  "nonlocated": {
+   "tag": "non-located population",
+   "n_rows": 703,
+   "n_ok": 681,
+   "median_denominator": "n_ok",
+   "median_auc": 0.65713,
+   "frac_auc_above_0.5": 0.8957,
+   "median_dice_best": 0.30047,
+   "median_dice_best_threshold": 0.3335,
+   "median_precision_ceiling": 0.25712,
+   "median_base_rate": 0.11701,
+   "median_p_sheet_minus_p_scored": 0.10197,
+   "pooled": {
+    "auc": 0.6810466373243725,
+    "pooled_dice_best": 0.2641076542313512,
+    "pooled_dice_best_threshold": 0.3695,
+    "pooled_recall_at_best": 0.6144447363365014,
+    "pooled_precision_at_best": 0.16820337496694737,
+    "pooled_dice_at_0.50": 0.2533797762709324,
+    "pooled_base_rate": 0.10717538093626786
+   },
+   "matched_budget_0.12": {
+    "n": 681,
+    "median_budget_recall": 0.20181,
+    "median_budget_precision": 0.2057,
+    "median_budget_precision_lift": 1.68531,
+    "frac_lift_at_or_above_2.0": 0.3686,
+    "registered_floor": "his preregistered leg-2 floor was lift >= 2.0x at matched budget; 1.0x is chance by construction"
+   },
+   "at_threshold_0.20": {
+    "n": 681,
+    "median_recall": 0.8174,
+    "median_precision": 0.15986,
+    "median_precision_lift": 1.31551,
+    "median_pred_positive_fraction": 0.57146
+   },
+   "median_dice_by_threshold": {
+    "0.05": 0.24308,
+    "0.10": 0.25457,
+    "0.20": 0.2642,
+    "0.30": 0.27145,
+    "0.50": 0.24942,
+    "0.70": 0.14119
+   }
+  }
+ },
+ "leg1_m7_same_estimators": {
+  "tag": "m7, from its own retained histograms, same volumes",
+  "n": 853,
+  "median_auc": 0.98713,
+  "median_dice_best": 0.83335,
+  "median_precision_ceiling": 0.99606,
+  "pooled": {
+   "auc": 0.9800895492429278,
+   "pooled_dice_best": 0.8021750025776005,
+   "pooled_dice_best_threshold": 0.529,
+   "pooled_recall_at_best": 0.8309858802634369,
+   "pooled_precision_at_best": 0.7752949688158749,
+   "pooled_dice_at_0.50": 0.8021109938025116,
+   "pooled_base_rate": 0.11521747168028112
+  }
+ },
+ "paired_leg1_minus_leg2": {
+  "what": "m7 minus surface_recto_3dunet, per volume, positive means m7 is higher",
+  "n_pairs": 853,
+  "median_delta_auc": 0.33954,
+  "median_delta_dice_best": 0.52668,
+  "n_leg1_auc_higher": 850,
+  "n_leg1_dice_higher": 850
+ },
+ "gates": {
+  "label_side_vs_leg1": {
+   "n_checked": 892,
+   "fields": [
+    "n_sheet",
+    "n_scored"
+   ],
+   "n_mismatch": 0,
+   "mismatches": [],
+   "what": "the two legs must see the same voxels, or no per-volume comparison between them is meaningful"
+  },
+  "sweep_vs_histogram": {
+   "what": "predicted-positive count at 0.50 from the histogram against the exact count, per volume",
+   "max_rel_delta": 0.00558659
+  }
+ }
+}

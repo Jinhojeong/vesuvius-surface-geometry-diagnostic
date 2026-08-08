@@ -1,0 +1,54 @@
+{
+ "leg1_m7_same_estimators": {
+  "tag": "m7, from its own retained histograms, same volumes",
+  "n": 853,
+  "median_auc": 0.98713,
+  "median_dice_best": 0.83335,
+  "median_precision_ceiling": 0.99606,
+  "pooled": {
+   "auc": 0.9800895492429278,
+   "pooled_dice_best": 0.8021750025776005,
+   "pooled_dice_best_threshold": 0.529,
+   "pooled_recall_at_best": 0.8309858802634369,
+   "pooled_precision_at_best": 0.7752949688158749,
+   "pooled_dice_at_0.50": 0.8021109938025116,
+   "pooled_base_rate": 0.11521747168028112
+  }
+ },
+ "paired_leg1_minus_leg2": {
+  "what": "m7 minus surface_recto_3dunet, per volume, positive means m7 is higher",
+  "n_pairs": 853,
+  "median_delta_auc": 0.33954,
+  "median_delta_dice_best": 0.52668,
+  "n_leg1_auc_higher": 850,
+  "n_leg1_dice_higher": 850
+ },
+ "gates": {
+  "label_side_vs_leg1": {
+   "n_checked": 892,
+   "fields": [
+    "n_sheet",
+    "n_scored"
+   ],
+   "n_mismatch": 0,
+   "mismatches": [],
+   "what": "the two legs must see the same voxels, or no per-volume comparison between them is meaningful"
+  },
+  "sweep_vs_histogram": {
+   "what": "predicted-positive count at 0.50 from the histogram against the exact count, per volume",
+   "max_rel_delta": 0.00558659
+  }
+ }
+}
+
+all: n_ok=855 auc=0.63137 frac_auc>0.5=0.8854 dice_best=0.30305 prec_ceiling=0.2546 base=0.1247 sep=0.07815
+   pooled: {"auc": 0.6619816577696505, "pooled_dice_best": 0.2662405762560971, "pooled_dice_best_threshold": 0.302, "pooled_recall_at_best": 0.6708941529851661, "pooled_precision_at_best": 0.16607282128248696, "pooled_dice_at_0.50": 0.24654994666567046, "pooled_base_rate": 0.11521706111897229}
+   dice by threshold: {"0.05": 0.24865, "0.10": 0.25853, "0.20": 0.26848, "0.30": 0.27282, "0.50": 0.24257, "0.70": 0.10584}
+
+located: n_ok=174 auc=0.55589 frac_auc>0.5=0.8448 dice_best=0.31209 prec_ceiling=0.24083 base=0.16306 sep=0.02798
+   pooled: {"auc": 0.5843591566046286, "pooled_dice_best": 0.28148448952058674, "pooled_dice_best_threshold": 0.1895, "pooled_recall_at_best": 0.7779103106209061, "pooled_precision_at_best": 0.17183039955256388, "pooled_dice_at_0.50": 0.21758353434863903, "pooled_base_rate": 0.14886693165370338}
+   dice by threshold: {"0.05": 0.28811, "0.10": 0.29282, "0.20": 0.28982, "0.30": 0.27902, "0.50": 0.2087, "0.70": 0.01228}
+
+nonlocated: n_ok=681 auc=0.65713 frac_auc>0.5=0.8957 dice_best=0.30047 prec_ceiling=0.25712 base=0.11701 sep=0.10197
+   pooled: {"auc": 0.6810466373243725, "pooled_dice_best": 0.2641076542313512, "pooled_dice_best_threshold": 0.3695, "pooled_recall_at_best": 0.6144447363365014, "pooled_precision_at_best": 0.16820337496694737, "pooled_dice_at_0.50": 0.2533797762709324, "pooled_base_rate": 0.10717538093626786}
+   dice by threshold: {"0.05": 0.24308, "0.10": 0.25457, "0.20": 0.2642, "0.30": 0.27145, "0.50": 0.24942, "0.70": 0.14119}

@@ -1,0 +1,88 @@
+Using 3D operations based on patch_size [256, 256, 256]
+Using 3D convolutions (nn.Conv3d)
+Using 3D normalization (nn.InstanceNorm3d)
+--- Partial autoconfiguration: using provided features_per_stage ---
+Using provided features_per_stage: [32, 64, 128, 256, 320, 320, 320]
+Detected 7 stages from features_per_stage
+Patch size adjusted from [256, 256, 256] to (256, 256, 256) to ensure divisibility by pooling factors [64 64 64]
+Using provided n_blocks_per_stage: [1, 3, 4, 6, 6, 6, 6]
+Task 'surface' configured with separate decoder (2 channels)
+NetworkFromConfig initialized with final configuration:
+  model_name: ps256_bs2_msr_default
+  basic_encoder_block: BasicBlockD
+  basic_decoder_block: ConvBlock
+  bottleneck_block: BasicBlockD
+  features_per_stage: [32, 64, 128, 256, 320, 320, 320]
+  num_stages: 7
+  n_blocks_per_stage: [1, 3, 4, 6, 6, 6, 6]
+  n_conv_per_stage_decoder: [1, 1, 1, 1, 1, 1]
+  kernel_sizes: [[3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3], [3, 3, 3]]
+  pool_op_kernel_sizes: [[1, 1, 1], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2]]
+  conv_op: Conv3d
+  conv_bias: True
+  norm_op: InstanceNorm3d
+  norm_op_kwargs: {'affine': True, 'eps': 1e-05}
+  dropout_op: None
+  dropout_op_kwargs: None
+  nonlin: LeakyReLU
+  nonlin_kwargs: {'inplace': True, 'negative_slope': 0.01}
+  strides: [[1, 1, 1], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2], [2, 2, 2]]
+  return_skips: True
+  do_stem: True
+  stem_channels: 32
+  bottleneck_channels: None
+  stochastic_depth_p: 0.0
+  squeeze_excitation: True
+  squeeze_excitation_reduction_ratio: 0.0625
+  squeeze_excitation_type: scse
+  squeeze_excitation_add_maxpool: False
+  pool_type: conv
+  op_dims: 3
+  patch_size: (256, 256, 256)
+  batch_size: 2
+  in_channels: 1
+  autoconfigure: False
+  targets: {'surface': {'valid_patch_value': 1, 'activation': 'none', 'ignore_label': 2, 'losses': [{'name': 'MedialSurfaceRecall', 'weight': 1.0}], 'out_channels': 2}}
+  separate_decoders: True
+  num_pool_per_axis: [6, 6, 6]
+  must_be_divisible_by: [64 64 64]
+MARKER init ok  todo=892  already=0
+MARKER model patch=[256, 256, 256] ps_used=256 norm=zscore intensity_properties={}
+MARKER geom SIZE=256 TRIM=64 grid=(0.05, 0.1, 0.2, 0.3, 0.5, 0.7) nbin=2000
+MARKER pred_on_empty_ct=0.01547891 max_p=0.691445
+MARKER progress 25/892  0.3min  eta 11.4min
+MARKER progress 50/892  0.7min  eta 11.2min
+MARKER progress 75/892  1.0min  eta 10.9min
+MARKER progress 100/892  1.4min  eta 10.9min
+MARKER progress 125/892  1.7min  eta 10.6min
+MARKER progress 150/892  2.1min  eta 10.2min
+MARKER progress 175/892  2.4min  eta 9.9min
+MARKER progress 200/892  2.8min  eta 9.6min
+MARKER progress 225/892  3.1min  eta 9.3min
+MARKER progress 250/892  3.5min  eta 8.9min
+MARKER progress 275/892  3.8min  eta 8.6min
+MARKER progress 300/892  4.2min  eta 8.2min
+MARKER progress 325/892  4.5min  eta 7.9min
+MARKER progress 350/892  4.8min  eta 7.5min
+MARKER progress 375/892  5.2min  eta 7.2min
+MARKER progress 400/892  5.5min  eta 6.8min
+MARKER progress 425/892  5.9min  eta 6.5min
+MARKER progress 450/892  6.2min  eta 6.1min
+MARKER progress 475/892  6.6min  eta 5.8min
+MARKER progress 500/892  7.0min  eta 5.5min
+MARKER progress 525/892  7.4min  eta 5.1min
+MARKER progress 550/892  7.7min  eta 4.8min
+MARKER progress 575/892  8.1min  eta 4.5min
+MARKER progress 600/892  8.5min  eta 4.1min
+MARKER progress 625/892  8.9min  eta 3.8min
+MARKER progress 650/892  9.3min  eta 3.4min
+MARKER progress 675/892  9.7min  eta 3.1min
+MARKER progress 700/892  10.0min  eta 2.7min
+MARKER progress 725/892  10.4min  eta 2.4min
+MARKER progress 750/892  10.7min  eta 2.0min
+MARKER progress 775/892  11.1min  eta 1.7min
+MARKER progress 800/892  11.4min  eta 1.3min
+MARKER progress 825/892  11.8min  eta 1.0min
+MARKER progress 850/892  12.1min  eta 0.6min
+MARKER progress 875/892  12.5min  eta 0.2min
+MARKER STATUS=DONE

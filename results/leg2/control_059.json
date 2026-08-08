@@ -1,0 +1,33 @@
+{
+ "what": "two-sided harness control on the 80 Dataset059 patches, same predict-and-score path as the 892 run",
+ "july_reference": {
+  "surface_recto_3dunet": "pooled dice 0.23, precision ceiling ~0.22",
+  "surface_recto_059_redo": "pooled dice 0.81 @th0.4"
+ },
+ "measured": {
+  "surface_recto_3dunet": {
+   "n_patches": 80,
+   "pooled_auc": 0.6549679565321819,
+   "pooled_dice_best": 0.3282446226023282,
+   "pooled_dice_best_threshold": 0.225,
+   "pooled_dice_at_0.40": 0.30686370753487496,
+   "pooled_dice_at_0.50": 0.26413606341933926,
+   "pooled_precision_ceiling_at_recall_05": 0.2909277219987078,
+   "pooled_base_rate": 0.15449302836647416,
+   "median_auc": 0.63572,
+   "median_dice_best": 0.33175
+  },
+  "surface_recto_059_redo": {
+   "n_patches": 80,
+   "pooled_auc": 0.9444777546420476,
+   "pooled_dice_best": 0.7960304880538811,
+   "pooled_dice_best_threshold": 0.439,
+   "pooled_dice_at_0.40": 0.7952388194650725,
+   "pooled_dice_at_0.50": 0.7803190810218527,
+   "pooled_precision_ceiling_at_recall_05": 0.9814460053688775,
+   "pooled_base_rate": 0.15449302836647416,
+   "median_auc": 0.94828,
+   "median_dice_best": 0.8089
+  }
+ }
+}

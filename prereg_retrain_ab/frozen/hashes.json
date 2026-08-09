@@ -19,5 +19,12 @@
   "train_arm.py": "7976becbfb5c41fc91d85bbfe1c1e41e03856f89a7886ec7943d6c6f0784f4d6",
   "instrument.py": "e2b8dd75e984a6d97bb32f35e7df0dbdc0541bb99fb43929ef8ddbd8418173c4"
  },
- "v1_tree_manifest_of_manifests": "316197425e627a4acebf93a12eb83f838b66fe11fb692ebfdaabaca4862f79f1"
+ "v1_tree_manifest_of_manifests": "316197425e627a4acebf93a12eb83f838b66fe11fb692ebfdaabaca4862f79f1",
+ "amendments_post_freeze": {
+  "instrument.py": {
+   "frozen_sha256": "e2b8dd75e984a6d97bb32f35e7df0dbdc0541bb99fb43929ef8ddbd8418173c4",
+   "amended_sha256": "1dfedf8d2991228807f2c3fece380d06f1471caf2e92b1930693c53a6436bf99",
+   "reason": "model-mode crash on edge eval tiles: CT cache is zero-padded to (256,512,512) but labels keep the true tile shape, so the scored boolean index failed. Fix crops the cached CT back to the label shape before prediction. Oracle numbers are unaffected (oracle mode never reads CT). No threshold, endpoint or site definition changed."
+  }
+ }
 }

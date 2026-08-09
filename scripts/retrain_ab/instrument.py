@@ -183,6 +183,10 @@ def main() -> None:
                 p = boundary_target(d["labels"].astype(np.int32)).astype(np.float32)
         else:
             ct = np.load(AB / "evalct" / f"{name}.npy")
+            # edge tiles are smaller than the standard block and the CT cache
+            # is zero-padded to it; crop back to the label shape or the scored
+            # boolean index breaks (post-freeze amendment, recorded in hashes)
+            ct = ct[:l2.shape[0], :l2.shape[1], :l2.shape[2]]
             p = predict_tile(net, ct, mean, std)
         hists += np.histogram(p[scored], bins=NBIN, range=(0.0, 1.0))[0]
         n_scored += int(scored.sum())

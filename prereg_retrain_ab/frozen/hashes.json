@@ -1,0 +1,23 @@
+{
+ "init_checkpoint": {
+  "path": "/mnt/vesuvius/experiments/FT191/ckpt_ft_full.pth",
+  "sha256": "8183f2d4c6c45edd68846deaf69bb8b85d50a91ead21365937aa5f6049579428"
+ },
+ "v2_manifest": {
+  "path": "/mnt/vesuvius/kaggle_p1218_repair_v2/MANIFEST.sha256",
+  "sha256": "989ca5bf099c76b85b0220013d91d58629883bf9a2544eb5705a40e24abae7b6"
+ },
+ "scripts": {
+  "day1_freeze.py": "cfffd500999afd3e443ae7fb369076362ef9b5903d9db1aeb21679054565b833",
+  "day2_targets_crops.py": "7e3af718493d4ece022034a3189bd9ce48456cdd5245db04d33a38dd829be554",
+  "day3_prefetch.py": "5359112173c69b00a425fe59cd185d59b6871489eafaa3cfb261d548f57cae3e",
+  "day3c_target_cache.py": "3c00a753618168d662de44f56a351b6bc63e32d9439984cfafdadde0e05cf644",
+  "day4_evalct.py": "546329b6aa67bb118e3cbd3e6c6fc21631a1b9c96b3637b7a61044e726ec546e",
+  "day5a_background.py": "abf4f3fff254885a1e2284fcdb17b7ecc711fd39a208a9c7aaed7d5f033ac5e0",
+  "day5b.py": "9d134c21bda66f75c361dc9dad2aa4f6bf7abaa042e47543120a74838b57af86",
+  "trainsplit.py": "d1daaaf88c5b109ba2d250e8a5d809216dcf0d986894baff91e9e2b0f0a281b6",
+  "train_arm.py": "7976becbfb5c41fc91d85bbfe1c1e41e03856f89a7886ec7943d6c6f0784f4d6",
+  "instrument.py": "e2b8dd75e984a6d97bb32f35e7df0dbdc0541bb99fb43929ef8ddbd8418173c4"
+ },
+ "v1_tree_manifest_of_manifests": "316197425e627a4acebf93a12eb83f838b66fe11fb692ebfdaabaca4862f79f1"
+}

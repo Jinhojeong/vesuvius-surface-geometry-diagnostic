@@ -1,0 +1,248 @@
+{
+ "n_checked": 20,
+ "n_fail": 0,
+ "median_flips": 24100.0,
+ "median_flip_share_of_b2": 0.24854817505828192,
+ "rows": [
+  {
+   "tile": "z10080_tile_y1344_x1344",
+   "corner": [
+    96,
+    293,
+    252
+   ],
+   "mask_identical": true,
+   "boundary_flips": 63741,
+   "voxels_reassigned": 135560,
+   "b2_positives": 161330
+  },
+  {
+   "tile": "z6944_tile_y2240_x1344",
+   "corner": [
+    96,
+    153,
+    285
+   ],
+   "mask_identical": true,
+   "boundary_flips": 22084,
+   "voxels_reassigned": 51560,
+   "b2_positives": 72989
+  },
+  {
+   "tile": "z8736_tile_y1792_x448",
+   "corner": [
+    0,
+    75,
+    148
+   ],
+   "mask_identical": true,
+   "boundary_flips": 12268,
+   "voxels_reassigned": 30715,
+   "b2_positives": 60558
+  },
+  {
+   "tile": "z7616_tile_y1792_x3136",
+   "corner": [
+    0,
+    80,
+    79
+   ],
+   "mask_identical": true,
+   "boundary_flips": 32282,
+   "voxels_reassigned": 73913,
+   "b2_positives": 98604
+  },
+  {
+   "tile": "z7840_tile_y1344_x896",
+   "corner": [
+    55,
+    289,
+    85
+   ],
+   "mask_identical": true,
+   "boundary_flips": 13389,
+   "voxels_reassigned": 34456,
+   "b2_positives": 64175
+  },
+  {
+   "tile": "z2016_tile_y1344_x2240",
+   "corner": [
+    0,
+    152,
+    14
+   ],
+   "mask_identical": true,
+   "boundary_flips": 11594,
+   "voxels_reassigned": 29711,
+   "b2_positives": 58221
+  },
+  {
+   "tile": "z2912_tile_y1344_x1792",
+   "corner": [
+    96,
+    212,
+    252
+   ],
+   "mask_identical": true,
+   "boundary_flips": 42682,
+   "voxels_reassigned": 88354,
+   "b2_positives": 253844
+  },
+  {
+   "tile": "z6720_tile_y1792_x1344",
+   "corner": [
+    0,
+    147,
+    0
+   ],
+   "mask_identical": true,
+   "boundary_flips": 16367,
+   "voxels_reassigned": 34618,
+   "b2_positives": 66295
+  },
+  {
+   "tile": "z9184_tile_y2240_x1344",
+   "corner": [
+    90,
+    54,
+    54
+   ],
+   "mask_identical": true,
+   "boundary_flips": 67951,
+   "voxels_reassigned": 132568,
+   "b2_positives": 141293
+  },
+  {
+   "tile": "z9632_tile_y1344_x2688",
+   "corner": [
+    47,
+    352,
+    198
+   ],
+   "mask_identical": true,
+   "boundary_flips": 15196,
+   "voxels_reassigned": 40484,
+   "b2_positives": 68996
+  },
+  {
+   "tile": "z4032_tile_y1792_x896",
+   "corner": [
+    84,
+    0,
+    344
+   ],
+   "mask_identical": true,
+   "boundary_flips": 57717,
+   "voxels_reassigned": 117797,
+   "b2_positives": 148937
+  },
+  {
+   "tile": "z2912_tile_y1792_x448",
+   "corner": [
+    96,
+    78,
+    103
+   ],
+   "mask_identical": true,
+   "boundary_flips": 13415,
+   "voxels_reassigned": 33378,
+   "b2_positives": 60841
+  },
+  {
+   "tile": "z7840_tile_y1792_x1344",
+   "corner": [
+    0,
+    200,
+    49
+   ],
+   "mask_identical": true,
+   "boundary_flips": 27949,
+   "voxels_reassigned": 62718,
+   "b2_positives": 78827
+  },
+  {
+   "tile": "z2912_tile_y1792_x448",
+   "corner": [
+    0,
+    8,
+    187
+   ],
+   "mask_identical": true,
+   "boundary_flips": 7203,
+   "voxels_reassigned": 17327,
+   "b2_positives": 56186
+  },
+  {
+   "tile": "z5824_tile_y1792_x1792",
+   "corner": [
+    80,
+    218,
+    101
+   ],
+   "mask_identical": true,
+   "boundary_flips": 2813,
+   "voxels_reassigned": 6224,
+   "b2_positives": 48466
+  },
+  {
+   "tile": "z1120_tile_y1344_x2240",
+   "corner": [
+    0,
+    308,
+    227
+   ],
+   "mask_identical": true,
+   "boundary_flips": 45751,
+   "voxels_reassigned": 100379,
+   "b2_positives": 117463
+  },
+  {
+   "tile": "z2912_tile_y1792_x1344",
+   "corner": [
+    95,
+    204,
+    352
+   ],
+   "mask_identical": true,
+   "boundary_flips": 56250,
+   "voxels_reassigned": 127210,
+   "b2_positives": 161697
+  },
+  {
+   "tile": "z2688_tile_y1792_x1792",
+   "corner": [
+    5,
+    0,
+    0
+   ],
+   "mask_identical": true,
+   "boundary_flips": 22595,
+   "voxels_reassigned": 51417,
+   "b2_positives": 101992
+  },
+  {
+   "tile": "z8736_tile_y1344_x896",
+   "corner": [
+    0,
+    7,
+    94
+   ],
+   "mask_identical": true,
+   "boundary_flips": 25605,
+   "voxels_reassigned": 56421,
+   "b2_positives": 102332
+  },
+  {
+   "tile": "z2688_tile_y1792_x2688",
+   "corner": [
+    96,
+    0,
+    116
+   ],
+   "mask_identical": true,
+   "boundary_flips": 59016,
+   "voxels_reassigned": 126455,
+   "b2_positives": 149373
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "tiles": {
+  "eval": 200,
+  "train": 588,
+  "heldout_nontrain": 450
+ },
+ "decisions_all_tiles": {
+  "OUT_OF_BOUNDS": 209332,
+  "TOO_LARGE": 15081,
+  "NO_NEIGHBOURS": 14922,
+  "NO_OPPOSITE_ANCHORS": 74554,
+  "ONE_SIDED": 214865,
+  "SPLIT": 109309,
+  "FLAG_LOW_MARGIN": 5569,
+  "TOO_FEW_ASSIGNED": 516
+ },
+ "eval_SPLIT_available": 16543,
+ "eval_ONE_SIDED_available": 32337,
+ "primary_frozen": 5000,
+ "onesided_frozen": 2000,
+ "offset_frozen": 5000
+}

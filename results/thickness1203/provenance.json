@@ -1,0 +1,36 @@
+{
+ "what": "PHerc1203 thickness zone map for use as a predeclared secondary stratum, per villa #191 comment 5241945617",
+ "input_labels": "labels1203_L1.tar, 7jycwjmbfn-eng/pherc0139-physical-audit release v1.0",
+ "input_tar_sha256": "32a09f6081342b0f015b258ec577d0296ff23a55892af9785689d8a55bff344c",
+ "label_grid": "lo volume 20250820131727, level 1 (18.724 um voxels)",
+ "origin_l1": [
+  3936,
+  0,
+  0
+ ],
+ "label_shape": [
+  2016,
+  3456,
+  3456
+ ],
+ "cell_vox": 96,
+ "cell_um": 1797.504,
+ "zone_grid_shape": [
+  21,
+  36,
+  36
+ ],
+ "rays_per_cell": 24,
+ "probe": {
+  "K": 41,
+  "step_vox": 0.75,
+  "runs_touching_probe_end_discarded": true
+ },
+ "global_median_run_vox": 2.25,
+ "thick_factor": 1.6,
+ "fused_signature": "run thickness >= 1.6 x global median AND exactly one centerline segment crossed; a resolved double sheet crosses two",
+ "boundary_poor_carried": "per-cell voxel share of bit 16, reported alongside rather than filtered",
+ "sampling": "24 rays per 96^3 cell at md5-hash-selected material voxels, no RNG",
+ "n_runs_total": 140831,
+ "output_sha256": "f1025f47f1d2991614f7b979b0d403d41a737bc95bd9cca76b51da87926a0d67"
+}

@@ -26,11 +26,12 @@
   "step_vox": 0.75,
   "runs_touching_probe_end_discarded": true
  },
- "global_median_run_vox": 2.25,
+ "read_path": "zarr blosc decode (v2); supersedes retracted v1 raw chunk-byte read",
+ "global_median_run_vox": 9.75,
  "thick_factor": 1.6,
  "fused_signature": "run thickness >= 1.6 x global median AND exactly one centerline segment crossed; a resolved double sheet crosses two",
  "boundary_poor_carried": "per-cell voxel share of bit 16, reported alongside rather than filtered",
  "sampling": "24 rays per 96^3 cell at md5-hash-selected material voxels, no RNG",
- "n_runs_total": 140831,
- "output_sha256": "f1025f47f1d2991614f7b979b0d403d41a737bc95bd9cca76b51da87926a0d67"
+ "n_runs_total": 47898,
+ "output_sha256": "835a7cd0bacb3327d1522bffe1251f4dbd80951e5f5e62570e3d67f5f710a966"
 }

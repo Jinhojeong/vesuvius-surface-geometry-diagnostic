@@ -39,28 +39,17 @@ RAYS_PER_CELL = 24
 THICK_F = 1.6
 
 
+_ZARR = None
+
+
 def read_slab(z0, z1, meta):
-    ch = meta["chunks"][0]
-    sh = meta["shape"]
-    out = np.zeros((z1 - z0, sh[1], sh[2]), np.uint8)
-    for cz in range(z0 // ch, (z1 - 1) // ch + 1):
-        for cy in range(sh[1] // ch + (sh[1] % ch > 0)):
-            for cx in range(sh[2] // ch + (sh[2] % ch > 0)):
-                f = SRC / str(cz) / str(cy) / str(cx)
-                if not f.is_file():
-                    continue
-                a = np.frombuffer(f.read_bytes(), np.uint8)
-                blk = np.zeros((ch, ch, ch), np.uint8)
-                blk.ravel()[:a.size] = a
-                zs, ze = cz * ch, min((cz + 1) * ch, sh[0])
-                s0, s1 = max(zs, z0), min(ze, z1)
-                if s0 >= s1:
-                    continue
-                out[s0 - z0:s1 - z0, cy * ch:min((cy + 1) * ch, sh[1]),
-                    cx * ch:min((cx + 1) * ch, sh[2])] = \
-                    blk[s0 - zs:s1 - zs, :min(ch, sh[1] - cy * ch),
-                        :min(ch, sh[2] - cx * ch)]
-    return out
+    # v2: decode through zarr. v1 copied raw chunk-file bytes into the label
+    # planes, but the store is blosc-zstd, so v1 measured compression noise.
+    global _ZARR
+    if _ZARR is None:
+        import zarr
+        _ZARR = zarr.open(str(SRC), mode="r")
+    return np.asarray(_ZARR[z0:z1])
 
 
 def cell_normals(mask, zlo, zhi, ys, xs, w=12):
@@ -131,6 +120,12 @@ def main() -> None:
         cen = (slab & 4) > 0
         bp = (slab & 16) > 0
         va = (slab & 1) > 0
+        nv_, nm_ = int(va.sum()), int(mat.sum())
+        if nv_ > 1_000_000:
+            r = nm_ / nv_
+            assert 0.3 < r <= 1.0, (
+                f"slab {zc}: material/valid {r:.3f} outside label band, "
+                f"read path broken (noise reads ~1.0 with mat~=valid~=bpoor)")
         for yc in range(ncy):
             for xc in range(ncx):
                 ys, xs = yc * CELL, xc * CELL
@@ -197,6 +192,8 @@ def main() -> None:
         "rays_per_cell": RAYS_PER_CELL,
         "probe": {"K": K, "step_vox": STEP,
                   "runs_touching_probe_end_discarded": True},
+        "read_path": "zarr blosc decode (v2); supersedes retracted "
+                     "v1 raw chunk-byte read",
         "global_median_run_vox": med,
         "thick_factor": THICK_F,
         "fused_signature": "run thickness >= 1.6 x global median AND exactly "

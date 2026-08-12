@@ -16,7 +16,10 @@ SMOKE = "/mnt/vesuvius/hazard_zarr_smoke"
 FIELD = SMOKE + "/m7_normals_L1.zarr"
 PLACE = "/mnt/vesuvius/vcbuild/demo_out/placement"
 
-offs = json.load(open(SMOKE + "/offseeds_placement.json"))
+import os
+_V2 = SMOKE + "/offseeds_placement_v2.json"
+offs = json.load(open(_V2 if os.path.exists(_V2) else
+                      SMOKE + "/offseeds_placement.json"))
 arrs = {n: zarr.open_array(os.path.join(FIELD, n, "1"), mode="r") for n in "xyz"}
 
 rows, all_written = [], True

@@ -114,4 +114,32 @@ after, following the retrain A/B practice.
 
 ## AMENDMENTS
 
-(none)
+### Amendment 1 (2026-08-12, before any run was launched)
+
+The design section stated "No new direction fields are needed because
+off-seeds sit in the same regions." That premise was false and the mandatory
+pre-launch coverage check caught it: the direction fields were built with a
+256-voxel write window around the ORIGINAL seeds, not around the tiles, and
+five of the eight frozen off-seeds fall outside that window (Chebyshev
+distances to their original seeds 292 to 411; measurement in
+demo_out/placement/field_extent_check.json). Zero of the 80 runs had
+started.
+
+Change: build direction-field regions with the same builder and parameters
+(make_direction_field.py, radius 256, band 6.0, sigma 1.0) centered on the
+seven unique off-seed positions before running. The frozen off-seed rule,
+the emitted seed list (offseeds_placement.json, sha256
+b07e905b6dee57c7cc2fec5a755cb099a2357d887933d5c8bbad56ec481290dc), the
+arms, endpoints, analysis and buckets are unchanged. This choice preserves
+the off-seed semantics (distance from clusters up to 411 voxels) and the
+on/off symmetry, since every on-seed likewise grows in a field centered on
+itself. The alternative, reselecting off-seeds inside the existing windows,
+would have confined them to a 96-to-256 ring around the clusters where a
+growing patch reaches the cluster mid-run and blurs the off condition.
+
+Two disclosures recorded with this amendment. First, sites s2 and s4 share a
+tile and the deterministic rule therefore gave them the identical off-seed
+point; their off cells are independent replicate sets at the same
+configuration, and the leave-one-site-out table covers their coupling.
+Second, PREREGISTRATION.md sha256 before this amendment:
+7dd5c387410f9af35980af5d3518ccb21369064f4ae0dd76bc36780bbbb6c967.

@@ -1,0 +1,10 @@
+o0 z4032/tile_y1344_x448 L1 (4240,1584,752) m7 255 minCheb 109 rule 96 cand 5454
+o1 z224/tile_y1792_x1344 L1 (432,1840,1392) m7 255 minCheb 107 rule 96 cand 18
+o2 z0/tile_y448_x3136 L1 (160,512,3488) m7 255 minCheb 145 rule 96 cand 3419
+o3 z11200/tile_y448_x2240 L1 (11264,544,2672) m7 255 minCheb 134 rule 96 cand 1309
+o4 z0/tile_y448_x3136 L1 (160,512,3488) m7 255 minCheb 145 rule 96 cand 3419
+o5 z9184/tile_y1792_x3136 L1 (9376,2016,3280) m7 255 minCheb 103 rule 96 cand 6410
+o6 z224/tile_y1792_x2240 L1 (304,2016,2704) m7 255 minCheb 146 rule 96 cand 3695
+o7 z672/tile_y2240_x2240 L1 (768,2288,2672) m7 255 minCheb 257 rule 96 cand 5758
+
+wrote 8 off-seeds

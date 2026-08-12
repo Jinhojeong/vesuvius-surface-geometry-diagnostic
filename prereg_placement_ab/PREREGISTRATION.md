@@ -168,3 +168,30 @@ frozen and nudged seed lists both ship in the results record.
 
 PREREGISTRATION.md sha256 before this amendment:
 e48811c04c4796948ce154555063fa75d651bee97d1b312bad06eafba05137f7.
+
+### Amendment 3 (2026-08-12, after the runs, before the amended analysis ran)
+
+The scored off cells carry essentially zero on-sheet rays, 5 of about
+16,000 sampled, and the measured cause is not the scorer. Every off-seed
+sits in label-void space. Occupancy of the repaired label volume in a
+49-cube around each of the eight off-seeds is 0.000, the label at every
+off-seed voxel is 0, and 100 percent of sampled off-run quads have no label
+within 12 voxels, against 40 percent within 4 voxels for the matched on
+run. The m7 prediction carries surface at all eight points, so these are
+regions where the prediction exists and the labels do not, the
+label-incompleteness population my July QC measured. The census clusters
+that anchor the on-seeds are detected in the labels, so the frozen 96-voxel
+exclusion systematically pushed off-seeds into unlabeled space. One further
+measured fact bounds the off arms, the hazard volume reads full confidence
+at every off-seed and everywhere within 64 voxels of one, so A and B
+present identical local inputs at the off cells.
+
+Change: label-referenced endpoints, frac_double, the on-sheet guardrail,
+per-thousand and thickness ratios, are unmeasurable at cells with zero
+on-sheet rays and are reported with raw counters and no test. The primary
+endpoint, area, is unaffected and its analysis runs as frozen. The
+secondary and guardrail entries in the outcome buckets therefore read
+through the primary alone, and this limitation ships in the results record.
+
+PREREGISTRATION.md sha256 before this amendment:
+f4be9d78ddd126375397673efecb0e9c1ae48c07bccb8da51e810843d5390c2c.

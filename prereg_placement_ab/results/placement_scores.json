@@ -1,0 +1,4662 @@
+{
+ "generated": "2026-08-12 20:17:27",
+ "params": {
+  "near_r": 6.0,
+  "ray_samples": 2000,
+  "scorer": "score_ab.score_run (powered-identical)",
+  "design": "8 off-seeds (offseeds_placement.json, prereg_placement_ab @ 8531276, Amendment 1 @ 083f424) x 2 arms (A=field only, B=field+p1218_conf_v2_amp4.zarr) x 5 fresh reps"
+ },
+ "n_runs": 80,
+ "missing": [],
+ "runs": [
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o0_z4032_tile_y1344_x448/A_r1/out",
+   "n_valid_quads": 1761,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 677099.4960777849,
+   "max_gen": 21,
+   "elapsed_time_s": 1.337330564,
+   "bbox_l0_xyz": [
+    [
+     1351.8876953125,
+     2721.859130859375,
+     8022.83642578125
+    ],
+    [
+     1710.9124755859375,
+     3698.193359375,
+     9001.4580078125
+    ]
+   ],
+   "seed": [
+    1506.0,
+    3170.0,
+    8480.0
+   ],
+   "crossing": {
+    "n_quads": 1761,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 3346,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 145.74,
+    "seconds": 0.3
+   },
+   "ray": {
+    "n_sampled": 1598,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1598,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 1.4
+   },
+   "site": "o0_z4032_tile_y1344_x448",
+   "site_idx": 0,
+   "arm": "A",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o0_z4032_tile_y1344_x448/A_r2/out",
+   "n_valid_quads": 1762,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 677602.6745095205,
+   "max_gen": 21,
+   "elapsed_time_s": 1.49560775,
+   "bbox_l0_xyz": [
+    [
+     1360.111083984375,
+     2697.52294921875,
+     7993.8935546875
+    ],
+    [
+     1687.9150390625,
+     3696.379638671875,
+     8968.91015625
+    ]
+   ],
+   "seed": [
+    1506.0,
+    3170.0,
+    8480.0
+   ],
+   "crossing": {
+    "n_quads": 1762,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 3346,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 134.08,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1599,
+    "n_on_sheet": 0,
+    "n_no_tile": 6,
+    "n_no_owner": 6,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1593,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o0_z4032_tile_y1344_x448",
+   "site_idx": 0,
+   "arm": "A",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o0_z4032_tile_y1344_x448/A_r3/out",
+   "n_valid_quads": 1761,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 673593.9925847233,
+   "max_gen": 21,
+   "elapsed_time_s": 1.354398852,
+   "bbox_l0_xyz": [
+    [
+     1482.264892578125,
+     2742.73291015625,
+     8010.18603515625
+    ],
+    [
+     1709.1239013671875,
+     3696.802490234375,
+     9008.349609375
+    ]
+   ],
+   "seed": [
+    1506.0,
+    3170.0,
+    8480.0
+   ],
+   "crossing": {
+    "n_quads": 1761,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 3346,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 125.14,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1598,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1598,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o0_z4032_tile_y1344_x448",
+   "site_idx": 0,
+   "arm": "A",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o0_z4032_tile_y1344_x448/A_r4/out",
+   "n_valid_quads": 1760,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 673652.5728311695,
+   "max_gen": 21,
+   "elapsed_time_s": 1.081294002,
+   "bbox_l0_xyz": [
+    [
+     1503.4466552734375,
+     2735.821533203125,
+     8029.0
+    ],
+    [
+     1705.4305419921875,
+     3694.093505859375,
+     8890.662109375
+    ]
+   ],
+   "seed": [
+    1506.0,
+    3170.0,
+    8480.0
+   ],
+   "crossing": {
+    "n_quads": 1760,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 2583,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 124.21,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1598,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1598,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o0_z4032_tile_y1344_x448",
+   "site_idx": 0,
+   "arm": "A",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o0_z4032_tile_y1344_x448/A_r5/out",
+   "n_valid_quads": 1761,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 679185.88626784,
+   "max_gen": 21,
+   "elapsed_time_s": 0.98399224,
+   "bbox_l0_xyz": [
+    [
+     1339.0,
+     2684.131103515625,
+     8015.85595703125
+    ],
+    [
+     1707.7562255859375,
+     3697.650390625,
+     8986.802734375
+    ]
+   ],
+   "seed": [
+    1506.0,
+    3170.0,
+    8480.0
+   ],
+   "crossing": {
+    "n_quads": 1761,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 3346,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 151.51,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1598,
+    "n_on_sheet": 0,
+    "n_no_tile": 9,
+    "n_no_owner": 9,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1589,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o0_z4032_tile_y1344_x448",
+   "site_idx": 0,
+   "arm": "A",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o0_z4032_tile_y1344_x448/B_r1/out",
+   "n_valid_quads": 1760,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 672440.1808765739,
+   "max_gen": 21,
+   "elapsed_time_s": 1.793364031,
+   "bbox_l0_xyz": [
+    [
+     1505.0008544921875,
+     2721.811279296875,
+     8019.49951171875
+    ],
+    [
+     1715.6510009765625,
+     3694.114990234375,
+     8935.142578125
+    ]
+   ],
+   "seed": [
+    1506.0,
+    3170.0,
+    8480.0
+   ],
+   "crossing": {
+    "n_quads": 1760,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 2583,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 118.59,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1598,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1598,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o0_z4032_tile_y1344_x448",
+   "site_idx": 0,
+   "arm": "B",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o0_z4032_tile_y1344_x448/B_r2/out",
+   "n_valid_quads": 1762,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 677761.0495447257,
+   "max_gen": 21,
+   "elapsed_time_s": 1.273839546,
+   "bbox_l0_xyz": [
+    [
+     1351.724853515625,
+     2695.8642578125,
+     8035.1328125
+    ],
+    [
+     1708.6434326171875,
+     3697.30419921875,
+     8989.8232421875
+    ]
+   ],
+   "seed": [
+    1506.0,
+    3170.0,
+    8480.0
+   ],
+   "crossing": {
+    "n_quads": 1762,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 3346,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 146.55,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1599,
+    "n_on_sheet": 0,
+    "n_no_tile": 14,
+    "n_no_owner": 14,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1585,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o0_z4032_tile_y1344_x448",
+   "site_idx": 0,
+   "arm": "B",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o0_z4032_tile_y1344_x448/B_r3/out",
+   "n_valid_quads": 1761,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 677409.8375986365,
+   "max_gen": 21,
+   "elapsed_time_s": 1.823586208,
+   "bbox_l0_xyz": [
+    [
+     1345.4705810546875,
+     2695.068359375,
+     8035.66357421875
+    ],
+    [
+     1709.8719482421875,
+     3697.60888671875,
+     8978.296875
+    ]
+   ],
+   "seed": [
+    1506.0,
+    3170.0,
+    8480.0
+   ],
+   "crossing": {
+    "n_quads": 1761,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 3346,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 153.63,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1598,
+    "n_on_sheet": 0,
+    "n_no_tile": 13,
+    "n_no_owner": 13,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1585,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o0_z4032_tile_y1344_x448",
+   "site_idx": 0,
+   "arm": "B",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o0_z4032_tile_y1344_x448/B_r4/out",
+   "n_valid_quads": 1759,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 674810.2601267226,
+   "max_gen": 21,
+   "elapsed_time_s": 1.096351775,
+   "bbox_l0_xyz": [
+    [
+     1480.7041015625,
+     2745.40771484375,
+     8010.4423828125
+    ],
+    [
+     1727.933349609375,
+     3696.5771484375,
+     9007.1337890625
+    ]
+   ],
+   "seed": [
+    1506.0,
+    3170.0,
+    8480.0
+   ],
+   "crossing": {
+    "n_quads": 1759,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 3346,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 132.75,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1597,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1597,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o0_z4032_tile_y1344_x448",
+   "site_idx": 0,
+   "arm": "B",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o0_z4032_tile_y1344_x448/B_r5/out",
+   "n_valid_quads": 1760,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 675552.5990370881,
+   "max_gen": 21,
+   "elapsed_time_s": 1.160800915,
+   "bbox_l0_xyz": [
+    [
+     1490.69677734375,
+     2696.60546875,
+     8041.9521484375
+    ],
+    [
+     1721.259765625,
+     3693.940185546875,
+     8904.609375
+    ]
+   ],
+   "seed": [
+    1506.0,
+    3170.0,
+    8480.0
+   ],
+   "crossing": {
+    "n_quads": 1760,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 2583,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 126.19,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1598,
+    "n_on_sheet": 0,
+    "n_no_tile": 2,
+    "n_no_owner": 2,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1596,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o0_z4032_tile_y1344_x448",
+   "site_idx": 0,
+   "arm": "B",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o1_z224_tile_y1792_x1344/A_r1/out",
+   "n_valid_quads": 2859,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1110037.3383919015,
+   "max_gen": 27,
+   "elapsed_time_s": 2.227484017,
+   "bbox_l0_xyz": [
+    [
+     2252.076416015625,
+     3149.424072265625,
+     861.6691284179688
+    ],
+    [
+     3129.31201171875,
+     4210.57470703125,
+     1228.2674560546875
+    ]
+   ],
+   "seed": [
+    2784.0,
+    3680.0,
+    864.0
+   ],
+   "crossing": {
+    "n_quads": 2859,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 1838,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 148.63,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 318,
+    "n_no_owner": 318,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1682,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.5
+   },
+   "site": "o1_z224_tile_y1792_x1344",
+   "site_idx": 1,
+   "arm": "A",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o1_z224_tile_y1792_x1344/A_r2/out",
+   "n_valid_quads": 2866,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1112688.5481729838,
+   "max_gen": 27,
+   "elapsed_time_s": 11.978901699,
+   "bbox_l0_xyz": [
+    [
+     2252.579345703125,
+     3148.054443359375,
+     856.3457641601562
+    ],
+    [
+     3064.23291015625,
+     4211.15771484375,
+     1271.5335693359375
+    ]
+   ],
+   "seed": [
+    2784.0,
+    3680.0,
+    864.0
+   ],
+   "crossing": {
+    "n_quads": 2866,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 1838,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 145.91,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 316,
+    "n_no_owner": 316,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1684,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.5
+   },
+   "site": "o1_z224_tile_y1792_x1344",
+   "site_idx": 1,
+   "arm": "A",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o1_z224_tile_y1792_x1344/A_r3/out",
+   "n_valid_quads": 2496,
+   "grid_shape": [
+    54,
+    54
+   ],
+   "area_vx2": 981436.2163189282,
+   "max_gen": 25,
+   "elapsed_time_s": 2.567397827,
+   "bbox_l0_xyz": [
+    [
+     2290.490478515625,
+     3156.162109375,
+     861.4874877929688
+    ],
+    [
+     3282.264404296875,
+     4170.81103515625,
+     1080.775634765625
+    ]
+   ],
+   "seed": [
+    2784.0,
+    3680.0,
+    864.0
+   ],
+   "crossing": {
+    "n_quads": 2496,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 1838,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 130.96,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 349,
+    "n_no_owner": 349,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1651,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.1
+   },
+   "site": "o1_z224_tile_y1792_x1344",
+   "site_idx": 1,
+   "arm": "A",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o1_z224_tile_y1792_x1344/A_r4/out",
+   "n_valid_quads": 2700,
+   "grid_shape": [
+    56,
+    56
+   ],
+   "area_vx2": 1070411.6504258183,
+   "max_gen": 26,
+   "elapsed_time_s": 3.441042034,
+   "bbox_l0_xyz": [
+    [
+     2266.679443359375,
+     3149.80224609375,
+     862.04736328125
+    ],
+    [
+     3294.99365234375,
+     4197.97509765625,
+     1048.618408203125
+    ]
+   ],
+   "seed": [
+    2784.0,
+    3680.0,
+    864.0
+   ],
+   "crossing": {
+    "n_quads": 2700,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 1838,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 128.5,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 372,
+    "n_no_owner": 372,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1628,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.1
+   },
+   "site": "o1_z224_tile_y1792_x1344",
+   "site_idx": 1,
+   "arm": "A",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o1_z224_tile_y1792_x1344/A_r5/out",
+   "n_valid_quads": 2861,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1115010.5887866388,
+   "max_gen": 27,
+   "elapsed_time_s": 6.300486577,
+   "bbox_l0_xyz": [
+    [
+     2252.03662109375,
+     3148.524658203125,
+     792.899658203125
+    ],
+    [
+     3185.052490234375,
+     4210.26904296875,
+     1240.295654296875
+    ]
+   ],
+   "seed": [
+    2784.0,
+    3680.0,
+    864.0
+   ],
+   "crossing": {
+    "n_quads": 2861,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 1838,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 138.71,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 271,
+    "n_no_owner": 271,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1729,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.5
+   },
+   "site": "o1_z224_tile_y1792_x1344",
+   "site_idx": 1,
+   "arm": "A",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o1_z224_tile_y1792_x1344/B_r1/out",
+   "n_valid_quads": 2702,
+   "grid_shape": [
+    56,
+    56
+   ],
+   "area_vx2": 1045249.395421199,
+   "max_gen": 26,
+   "elapsed_time_s": 3.890052402,
+   "bbox_l0_xyz": [
+    [
+     2264.91748046875,
+     3154.78466796875,
+     855.0827026367188
+    ],
+    [
+     2857.3359375,
+     4194.41162109375,
+     1281.6239013671875
+    ]
+   ],
+   "seed": [
+    2784.0,
+    3680.0,
+    864.0
+   ],
+   "crossing": {
+    "n_quads": 2702,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 1838,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 143.31,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 330,
+    "n_no_owner": 330,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1670,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.5
+   },
+   "site": "o1_z224_tile_y1792_x1344",
+   "site_idx": 1,
+   "arm": "B",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o1_z224_tile_y1792_x1344/B_r2/out",
+   "n_valid_quads": 2841,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1099318.8093738365,
+   "max_gen": 27,
+   "elapsed_time_s": 11.670623663,
+   "bbox_l0_xyz": [
+    [
+     2252.475341796875,
+     3154.950927734375,
+     838.4130249023438
+    ],
+    [
+     3309.639404296875,
+     4211.2666015625,
+     1010.3236694335938
+    ]
+   ],
+   "seed": [
+    2784.0,
+    3680.0,
+    864.0
+   ],
+   "crossing": {
+    "n_quads": 2841,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 1838,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 118.24,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 291,
+    "n_no_owner": 291,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1709,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.2
+   },
+   "site": "o1_z224_tile_y1792_x1344",
+   "site_idx": 1,
+   "arm": "B",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o1_z224_tile_y1792_x1344/B_r3/out",
+   "n_valid_quads": 2850,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1096729.8339114261,
+   "max_gen": 27,
+   "elapsed_time_s": 2.144222842,
+   "bbox_l0_xyz": [
+    [
+     2252.2138671875,
+     3148.80126953125,
+     857.9111328125
+    ],
+    [
+     2864.999267578125,
+     4210.685546875,
+     1161.954833984375
+    ]
+   ],
+   "seed": [
+    2784.0,
+    3680.0,
+    864.0
+   ],
+   "crossing": {
+    "n_quads": 2850,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 1838,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 141.35,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 332,
+    "n_no_owner": 332,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1668,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.5
+   },
+   "site": "o1_z224_tile_y1792_x1344",
+   "site_idx": 1,
+   "arm": "B",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o1_z224_tile_y1792_x1344/B_r4/out",
+   "n_valid_quads": 2850,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1117051.3688858673,
+   "max_gen": 27,
+   "elapsed_time_s": 2.535500326,
+   "bbox_l0_xyz": [
+    [
+     2252.12890625,
+     3148.259033203125,
+     860.9805297851562
+    ],
+    [
+     3053.534912109375,
+     4211.52880859375,
+     1271.7421875
+    ]
+   ],
+   "seed": [
+    2784.0,
+    3680.0,
+    864.0
+   ],
+   "crossing": {
+    "n_quads": 2850,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 1838,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 145.15,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 354,
+    "n_no_owner": 354,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1646,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.5
+   },
+   "site": "o1_z224_tile_y1792_x1344",
+   "site_idx": 1,
+   "arm": "B",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o1_z224_tile_y1792_x1344/B_r5/out",
+   "n_valid_quads": 2873,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1121392.1502662862,
+   "max_gen": 27,
+   "elapsed_time_s": 9.973688517,
+   "bbox_l0_xyz": [
+    [
+     2252.755126953125,
+     3148.173583984375,
+     855.6455688476562
+    ],
+    [
+     3302.444091796875,
+     4211.6806640625,
+     1369.41796875
+    ]
+   ],
+   "seed": [
+    2784.0,
+    3680.0,
+    864.0
+   ],
+   "crossing": {
+    "n_quads": 2873,
+    "n_census_tiles": 10,
+    "n_clusters_considered": 3653,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 131.97,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 263,
+    "n_no_owner": 263,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1737,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.5
+   },
+   "site": "o1_z224_tile_y1792_x1344",
+   "site_idx": 1,
+   "arm": "B",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o2_z0_tile_y448_x3136/A_r1/out",
+   "n_valid_quads": 1598,
+   "grid_shape": [
+    44,
+    44
+   ],
+   "area_vx2": 611933.5796711065,
+   "max_gen": 20,
+   "elapsed_time_s": 4.377898517,
+   "bbox_l0_xyz": [
+    [
+     6587.26513671875,
+     755.6700439453125,
+     -13.163931846618652
+    ],
+    [
+     7282.77734375,
+     1430.338134765625,
+     387.000732421875
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 1598,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 201.77,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1443,
+    "n_on_sheet": 0,
+    "n_no_tile": 382,
+    "n_no_owner": 382,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1061,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.6
+   },
+   "site": "o2_z0_tile_y448_x3136",
+   "site_idx": 2,
+   "arm": "A",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o2_z0_tile_y448_x3136/A_r2/out",
+   "n_valid_quads": 1597,
+   "grid_shape": [
+    44,
+    44
+   ],
+   "area_vx2": 614570.3779831431,
+   "max_gen": 20,
+   "elapsed_time_s": 6.930952168,
+   "bbox_l0_xyz": [
+    [
+     6581.80224609375,
+     758.7179565429688,
+     -11.809629440307617
+    ],
+    [
+     7236.7841796875,
+     1428.5894775390625,
+     382.98748779296875
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 1597,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 198.15,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1443,
+    "n_on_sheet": 0,
+    "n_no_tile": 332,
+    "n_no_owner": 332,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1111,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o2_z0_tile_y448_x3136",
+   "site_idx": 2,
+   "arm": "A",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o2_z0_tile_y448_x3136/A_r3/out",
+   "n_valid_quads": 2114,
+   "grid_shape": [
+    50,
+    50
+   ],
+   "area_vx2": 829260.071130629,
+   "max_gen": 23,
+   "elapsed_time_s": 9.839389825,
+   "bbox_l0_xyz": [
+    [
+     6524.396484375,
+     709.2620849609375,
+     -17.79707908630371
+    ],
+    [
+     7353.09423828125,
+     1482.330810546875,
+     386.6112365722656
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 2114,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 188.66,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1935,
+    "n_on_sheet": 0,
+    "n_no_tile": 430,
+    "n_no_owner": 430,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1505,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o2_z0_tile_y448_x3136",
+   "site_idx": 2,
+   "arm": "A",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o2_z0_tile_y448_x3136/A_r4/out",
+   "n_valid_quads": 1760,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 675620.5020328005,
+   "max_gen": 21,
+   "elapsed_time_s": 1.406566729,
+   "bbox_l0_xyz": [
+    [
+     6565.720703125,
+     816.695556640625,
+     -14.422194480895996
+    ],
+    [
+     7336.72119140625,
+     1450.0604248046875,
+     380.0684509277344
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 1760,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 194.35,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1598,
+    "n_on_sheet": 0,
+    "n_no_tile": 269,
+    "n_no_owner": 269,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1329,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o2_z0_tile_y448_x3136",
+   "site_idx": 2,
+   "arm": "A",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o2_z0_tile_y448_x3136/A_r5/out",
+   "n_valid_quads": 1598,
+   "grid_shape": [
+    44,
+    44
+   ],
+   "area_vx2": 613922.145854488,
+   "max_gen": 20,
+   "elapsed_time_s": 3.2926758,
+   "bbox_l0_xyz": [
+    [
+     6585.67529296875,
+     755.7008056640625,
+     -10.019095420837402
+    ],
+    [
+     7263.57470703125,
+     1429.4527587890625,
+     385.5954284667969
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 1598,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 199.35,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1443,
+    "n_on_sheet": 0,
+    "n_no_tile": 349,
+    "n_no_owner": 349,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1094,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o2_z0_tile_y448_x3136",
+   "site_idx": 2,
+   "arm": "A",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o2_z0_tile_y448_x3136/B_r1/out",
+   "n_valid_quads": 2300,
+   "grid_shape": [
+    52,
+    52
+   ],
+   "area_vx2": 891214.6641929918,
+   "max_gen": 24,
+   "elapsed_time_s": 1.729906961,
+   "bbox_l0_xyz": [
+    [
+     6502.17041015625,
+     645.8448486328125,
+     -17.919347763061523
+    ],
+    [
+     7405.7314453125,
+     1506.1561279296875,
+     382.64227294921875
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 2300,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 204.85,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 700,
+    "n_no_owner": 700,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1300,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o2_z0_tile_y448_x3136",
+   "site_idx": 2,
+   "arm": "B",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o2_z0_tile_y448_x3136/B_r2/out",
+   "n_valid_quads": 1597,
+   "grid_shape": [
+    44,
+    44
+   ],
+   "area_vx2": 610093.7100195041,
+   "max_gen": 20,
+   "elapsed_time_s": 1.204888022,
+   "bbox_l0_xyz": [
+    [
+     6587.201171875,
+     834.9373779296875,
+     -11.482104301452637
+    ],
+    [
+     7196.37255859375,
+     1429.663330078125,
+     385.4942626953125
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 1597,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 183.71,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1442,
+    "n_on_sheet": 0,
+    "n_no_tile": 193,
+    "n_no_owner": 193,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1249,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o2_z0_tile_y448_x3136",
+   "site_idx": 2,
+   "arm": "B",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o2_z0_tile_y448_x3136/B_r3/out",
+   "n_valid_quads": 1597,
+   "grid_shape": [
+    44,
+    44
+   ],
+   "area_vx2": 610388.9482700696,
+   "max_gen": 20,
+   "elapsed_time_s": 1.003490317,
+   "bbox_l0_xyz": [
+    [
+     6582.23486328125,
+     836.1592407226562,
+     -5.919537544250488
+    ],
+    [
+     7252.67236328125,
+     1430.0677490234375,
+     379.7262878417969
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 1597,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 189.07,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1443,
+    "n_on_sheet": 0,
+    "n_no_tile": 216,
+    "n_no_owner": 216,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1227,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o2_z0_tile_y448_x3136",
+   "site_idx": 2,
+   "arm": "B",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o2_z0_tile_y448_x3136/B_r4/out",
+   "n_valid_quads": 1931,
+   "grid_shape": [
+    48,
+    48
+   ],
+   "area_vx2": 746515.1268411337,
+   "max_gen": 22,
+   "elapsed_time_s": 1.201984187,
+   "bbox_l0_xyz": [
+    [
+     6547.20263671875,
+     670.3538208007812,
+     -16.98218536376953
+    ],
+    [
+     7358.1328125,
+     1469.403076171875,
+     379.9084777832031
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 1931,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 195.48,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1760,
+    "n_on_sheet": 0,
+    "n_no_tile": 407,
+    "n_no_owner": 407,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1353,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o2_z0_tile_y448_x3136",
+   "site_idx": 2,
+   "arm": "B",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o2_z0_tile_y448_x3136/B_r5/out",
+   "n_valid_quads": 1596,
+   "grid_shape": [
+    44,
+    44
+   ],
+   "area_vx2": 612818.0379537154,
+   "max_gen": 20,
+   "elapsed_time_s": 1.232326001,
+   "bbox_l0_xyz": [
+    [
+     6585.8486328125,
+     709.35498046875,
+     -11.92934799194336
+    ],
+    [
+     7208.2158203125,
+     1428.9830322265625,
+     389.5446472167969
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 1596,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 188.65,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1442,
+    "n_on_sheet": 0,
+    "n_no_tile": 240,
+    "n_no_owner": 240,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1202,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o2_z0_tile_y448_x3136",
+   "site_idx": 2,
+   "arm": "B",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o3_z11200_tile_y448_x2240/A_r1/out",
+   "n_valid_quads": 3355,
+   "grid_shape": [
+    62,
+    62
+   ],
+   "area_vx2": 1338104.8089048897,
+   "max_gen": 29,
+   "elapsed_time_s": 2.406084182,
+   "bbox_l0_xyz": [
+    [
+     4834.2333984375,
+     703.5641479492188,
+     22045.828125
+    ],
+    [
+     5764.0888671875,
+     1593.5009765625,
+     23042.828125
+    ]
+   ],
+   "seed": [
+    5364.0,
+    1070.0,
+    22544.0
+   ],
+   "crossing": {
+    "n_quads": 3355,
+    "n_census_tiles": 4,
+    "n_clusters_considered": 980,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 180.49,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 830,
+    "n_no_owner": 830,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1170,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 1.8
+   },
+   "site": "o3_z11200_tile_y448_x2240",
+   "site_idx": 3,
+   "arm": "A",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o3_z11200_tile_y448_x2240/A_r2/out",
+   "n_valid_quads": 2497,
+   "grid_shape": [
+    54,
+    54
+   ],
+   "area_vx2": 995035.8100689065,
+   "max_gen": 25,
+   "elapsed_time_s": 1.821336038,
+   "bbox_l0_xyz": [
+    [
+     4840.13916015625,
+     751.9659423828125,
+     22212.783203125
+    ],
+    [
+     5598.9912109375,
+     1596.31298828125,
+     22931.546875
+    ]
+   ],
+   "seed": [
+    5364.0,
+    1070.0,
+    22544.0
+   ],
+   "crossing": {
+    "n_quads": 2497,
+    "n_census_tiles": 4,
+    "n_clusters_considered": 980,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 166.09,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 565,
+    "n_no_owner": 565,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1435,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 1.4
+   },
+   "site": "o3_z11200_tile_y448_x2240",
+   "site_idx": 3,
+   "arm": "A",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o3_z11200_tile_y448_x2240/A_r3/out",
+   "n_valid_quads": 3833,
+   "grid_shape": [
+    66,
+    66
+   ],
+   "area_vx2": 1516738.8365919997,
+   "max_gen": 31,
+   "elapsed_time_s": 3.42888357,
+   "bbox_l0_xyz": [
+    [
+     4832.9375,
+     544.0132446289062,
+     22019.611328125
+    ],
+    [
+     5763.12158203125,
+     1593.6285400390625,
+     23034.45703125
+    ]
+   ],
+   "seed": [
+    5364.0,
+    1070.0,
+    22544.0
+   ],
+   "crossing": {
+    "n_quads": 3833,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 1315,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 175.63,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 820,
+    "n_no_owner": 820,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1180,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.6
+   },
+   "site": "o3_z11200_tile_y448_x2240",
+   "site_idx": 3,
+   "arm": "A",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o3_z11200_tile_y448_x2240/A_r4/out",
+   "n_valid_quads": 3598,
+   "grid_shape": [
+    64,
+    64
+   ],
+   "area_vx2": 1411057.9929651804,
+   "max_gen": 30,
+   "elapsed_time_s": 1.953885564,
+   "bbox_l0_xyz": [
+    [
+     4837.8515625,
+     696.5560302734375,
+     22074.4296875
+    ],
+    [
+     5375.1875,
+     1572.137451171875,
+     23009.10546875
+    ]
+   ],
+   "seed": [
+    5364.0,
+    1070.0,
+    22544.0
+   ],
+   "crossing": {
+    "n_quads": 3598,
+    "n_census_tiles": 4,
+    "n_clusters_considered": 980,
+    "n_quads_near": 1,
+    "frac_quads_near": 0.0003,
+    "n_clusters_hit": 1,
+    "mean_ratio_of_near": 1.714,
+    "mean_min_dist": 147.08,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 2,
+    "n_no_tile": 439,
+    "n_no_owner": 439,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1559,
+    "mean_thickness_ratio": 2.0,
+    "median_thickness_ratio": 2.0,
+    "frac_double": 0.5,
+    "n_double": 1,
+    "frac_double_ci95": [
+     0.0945,
+     0.9055
+    ],
+    "seconds": 1.4
+   },
+   "site": "o3_z11200_tile_y448_x2240",
+   "site_idx": 3,
+   "arm": "A",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o3_z11200_tile_y448_x2240/A_r5/out",
+   "n_valid_quads": 2496,
+   "grid_shape": [
+    54,
+    54
+   ],
+   "area_vx2": 991992.7896938426,
+   "max_gen": 25,
+   "elapsed_time_s": 3.349542191,
+   "bbox_l0_xyz": [
+    [
+     4837.89697265625,
+     747.034423828125,
+     22166.62109375
+    ],
+    [
+     5695.6376953125,
+     1515.947021484375,
+     22926.919921875
+    ]
+   ],
+   "seed": [
+    5364.0,
+    1070.0,
+    22544.0
+   ],
+   "crossing": {
+    "n_quads": 2496,
+    "n_census_tiles": 4,
+    "n_clusters_considered": 980,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 187.03,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 785,
+    "n_no_owner": 785,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1215,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.6
+   },
+   "site": "o3_z11200_tile_y448_x2240",
+   "site_idx": 3,
+   "arm": "A",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o3_z11200_tile_y448_x2240/B_r1/out",
+   "n_valid_quads": 3359,
+   "grid_shape": [
+    62,
+    62
+   ],
+   "area_vx2": 1341104.4082326242,
+   "max_gen": 29,
+   "elapsed_time_s": 2.609361643,
+   "bbox_l0_xyz": [
+    [
+     4834.9931640625,
+     734.026611328125,
+     22052.4296875
+    ],
+    [
+     5680.85546875,
+     1553.2515869140625,
+     23035.669921875
+    ]
+   ],
+   "seed": [
+    5364.0,
+    1070.0,
+    22544.0
+   ],
+   "crossing": {
+    "n_quads": 3359,
+    "n_census_tiles": 4,
+    "n_clusters_considered": 980,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 170.89,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 728,
+    "n_no_owner": 728,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1272,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 1.4
+   },
+   "site": "o3_z11200_tile_y448_x2240",
+   "site_idx": 3,
+   "arm": "B",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o3_z11200_tile_y448_x2240/B_r2/out",
+   "n_valid_quads": 2913,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1161429.2688326002,
+   "max_gen": 27,
+   "elapsed_time_s": 2.343605514,
+   "bbox_l0_xyz": [
+    [
+     4839.28564453125,
+     718.963134765625,
+     22131.482421875
+    ],
+    [
+     5596.62451171875,
+     1579.3291015625,
+     22963.650390625
+    ]
+   ],
+   "seed": [
+    5364.0,
+    1070.0,
+    22544.0
+   ],
+   "crossing": {
+    "n_quads": 2913,
+    "n_census_tiles": 4,
+    "n_clusters_considered": 980,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 168.47,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 623,
+    "n_no_owner": 623,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1377,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.6
+   },
+   "site": "o3_z11200_tile_y448_x2240",
+   "site_idx": 3,
+   "arm": "B",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o3_z11200_tile_y448_x2240/B_r3/out",
+   "n_valid_quads": 1762,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 687721.0384904586,
+   "max_gen": 21,
+   "elapsed_time_s": 1.468356783,
+   "bbox_l0_xyz": [
+    [
+     5046.06640625,
+     763.8767700195312,
+     22033.75390625
+    ],
+    [
+     5405.1669921875,
+     1594.254150390625,
+     22948.830078125
+    ]
+   ],
+   "seed": [
+    5364.0,
+    1070.0,
+    22544.0
+   ],
+   "crossing": {
+    "n_quads": 1762,
+    "n_census_tiles": 4,
+    "n_clusters_considered": 980,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 171.9,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1599,
+    "n_on_sheet": 0,
+    "n_no_tile": 250,
+    "n_no_owner": 250,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1349,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 1.4
+   },
+   "site": "o3_z11200_tile_y448_x2240",
+   "site_idx": 3,
+   "arm": "B",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o3_z11200_tile_y448_x2240/B_r4/out",
+   "n_valid_quads": 3132,
+   "grid_shape": [
+    60,
+    60
+   ],
+   "area_vx2": 1247310.6751205123,
+   "max_gen": 28,
+   "elapsed_time_s": 1.986427558,
+   "bbox_l0_xyz": [
+    [
+     4875.72021484375,
+     707.5944213867188,
+     22019.05859375
+    ],
+    [
+     5753.45166015625,
+     1555.56591796875,
+     22895.146484375
+    ]
+   ],
+   "seed": [
+    5364.0,
+    1070.0,
+    22544.0
+   ],
+   "crossing": {
+    "n_quads": 3132,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 1315,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 182.3,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 808,
+    "n_no_owner": 808,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1192,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.6
+   },
+   "site": "o3_z11200_tile_y448_x2240",
+   "site_idx": 3,
+   "arm": "B",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o3_z11200_tile_y448_x2240/B_r5/out",
+   "n_valid_quads": 3135,
+   "grid_shape": [
+    60,
+    60
+   ],
+   "area_vx2": 1259146.932092849,
+   "max_gen": 28,
+   "elapsed_time_s": 2.046399574,
+   "bbox_l0_xyz": [
+    [
+     4837.8037109375,
+     718.5255126953125,
+     22091.7265625
+    ],
+    [
+     5758.130859375,
+     1535.441650390625,
+     23051.8515625
+    ]
+   ],
+   "seed": [
+    5364.0,
+    1070.0,
+    22544.0
+   ],
+   "crossing": {
+    "n_quads": 3135,
+    "n_census_tiles": 4,
+    "n_clusters_considered": 980,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 180.21,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 837,
+    "n_no_owner": 837,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1163,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 1.7
+   },
+   "site": "o3_z11200_tile_y448_x2240",
+   "site_idx": 3,
+   "arm": "B",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o4_z0_tile_y448_x3136/A_r1/out",
+   "n_valid_quads": 1295,
+   "grid_shape": [
+    40,
+    40
+   ],
+   "area_vx2": 494352.12139216857,
+   "max_gen": 18,
+   "elapsed_time_s": 1.195328821,
+   "bbox_l0_xyz": [
+    [
+     6627.9765625,
+     806.1190795898438,
+     -8.532233238220215
+    ],
+    [
+     7206.64892578125,
+     1389.713134765625,
+     382.5205993652344
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 1295,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 187.92,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1156,
+    "n_on_sheet": 0,
+    "n_no_tile": 95,
+    "n_no_owner": 95,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1061,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.5
+   },
+   "site": "o4_z0_tile_y448_x3136",
+   "site_idx": 4,
+   "arm": "A",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o4_z0_tile_y448_x3136/A_r2/out",
+   "n_valid_quads": 2114,
+   "grid_shape": [
+    50,
+    50
+   ],
+   "area_vx2": 817226.1587300604,
+   "max_gen": 23,
+   "elapsed_time_s": 1.655128322,
+   "bbox_l0_xyz": [
+    [
+     6524.3740234375,
+     768.2435913085938,
+     -15.9956636428833
+    ],
+    [
+     7395.5341796875,
+     1488.86083984375,
+     383.35052490234375
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 2114,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 199.46,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1935,
+    "n_on_sheet": 0,
+    "n_no_tile": 547,
+    "n_no_owner": 547,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1388,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o4_z0_tile_y448_x3136",
+   "site_idx": 4,
+   "arm": "A",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o4_z0_tile_y448_x3136/A_r3/out",
+   "n_valid_quads": 2290,
+   "grid_shape": [
+    52,
+    52
+   ],
+   "area_vx2": 893776.5114045275,
+   "max_gen": 24,
+   "elapsed_time_s": 3.095968031,
+   "bbox_l0_xyz": [
+    [
+     6503.1767578125,
+     579.7416381835938,
+     -18.089914321899414
+    ],
+    [
+     7325.74951171875,
+     1508.91943359375,
+     384.26068115234375
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 2290,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 186.61,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 475,
+    "n_no_owner": 475,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1525,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.3
+   },
+   "site": "o4_z0_tile_y448_x3136",
+   "site_idx": 4,
+   "arm": "A",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o4_z0_tile_y448_x3136/A_r4/out",
+   "n_valid_quads": 2110,
+   "grid_shape": [
+    50,
+    50
+   ],
+   "area_vx2": 815512.1150395625,
+   "max_gen": 23,
+   "elapsed_time_s": 3.964306269,
+   "bbox_l0_xyz": [
+    [
+     6516.671875,
+     627.0123901367188,
+     -17.755218505859375
+    ],
+    [
+     7374.3095703125,
+     1482.9625244140625,
+     384.39202880859375
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 2110,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 203.71,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1930,
+    "n_on_sheet": 0,
+    "n_no_tile": 605,
+    "n_no_owner": 605,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1325,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.3
+   },
+   "site": "o4_z0_tile_y448_x3136",
+   "site_idx": 4,
+   "arm": "A",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o4_z0_tile_y448_x3136/A_r5/out",
+   "n_valid_quads": 1596,
+   "grid_shape": [
+    44,
+    44
+   ],
+   "area_vx2": 614120.3945910961,
+   "max_gen": 20,
+   "elapsed_time_s": 1.125720392,
+   "bbox_l0_xyz": [
+    [
+     6586.3359375,
+     741.4428100585938,
+     -13.675293922424316
+    ],
+    [
+     7265.681640625,
+     1430.6756591796875,
+     384.1650390625
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 1596,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 196.0,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1441,
+    "n_on_sheet": 0,
+    "n_no_tile": 324,
+    "n_no_owner": 324,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1117,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o4_z0_tile_y448_x3136",
+   "site_idx": 4,
+   "arm": "A",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o4_z0_tile_y448_x3136/B_r1/out",
+   "n_valid_quads": 1932,
+   "grid_shape": [
+    48,
+    48
+   ],
+   "area_vx2": 745113.3979061054,
+   "max_gen": 22,
+   "elapsed_time_s": 3.241602896,
+   "bbox_l0_xyz": [
+    [
+     6545.5498046875,
+     633.1024780273438,
+     -18.851125717163086
+    ],
+    [
+     7354.38916015625,
+     1469.1927490234375,
+     386.9892883300781
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 1932,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 201.96,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1761,
+    "n_on_sheet": 0,
+    "n_no_tile": 536,
+    "n_no_owner": 536,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1225,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o4_z0_tile_y448_x3136",
+   "site_idx": 4,
+   "arm": "B",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o4_z0_tile_y448_x3136/B_r2/out",
+   "n_valid_quads": 1934,
+   "grid_shape": [
+    48,
+    48
+   ],
+   "area_vx2": 749762.756698618,
+   "max_gen": 22,
+   "elapsed_time_s": 2.993922197,
+   "bbox_l0_xyz": [
+    [
+     6539.0458984375,
+     641.543212890625,
+     -21.043729782104492
+    ],
+    [
+     7329.744140625,
+     1468.1456298828125,
+     380.43316650390625
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 1934,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 193.55,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1763,
+    "n_on_sheet": 0,
+    "n_no_tile": 386,
+    "n_no_owner": 386,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1377,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o4_z0_tile_y448_x3136",
+   "site_idx": 4,
+   "arm": "B",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o4_z0_tile_y448_x3136/B_r3/out",
+   "n_valid_quads": 2112,
+   "grid_shape": [
+    50,
+    50
+   ],
+   "area_vx2": 817423.4578771315,
+   "max_gen": 23,
+   "elapsed_time_s": 3.405852037,
+   "bbox_l0_xyz": [
+    [
+     6520.59423828125,
+     620.4868774414062,
+     -18.906770706176758
+    ],
+    [
+     7384.49560546875,
+     1485.560302734375,
+     380.2481689453125
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 2112,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 204.02,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1932,
+    "n_on_sheet": 0,
+    "n_no_tile": 603,
+    "n_no_owner": 603,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1329,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o4_z0_tile_y448_x3136",
+   "site_idx": 4,
+   "arm": "B",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o4_z0_tile_y448_x3136/B_r4/out",
+   "n_valid_quads": 1763,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 677646.9594120842,
+   "max_gen": 21,
+   "elapsed_time_s": 2.976247557,
+   "bbox_l0_xyz": [
+    [
+     6563.130859375,
+     716.8857421875,
+     -12.722445487976074
+    ],
+    [
+     7335.6025390625,
+     1447.426025390625,
+     380.89422607421875
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 1763,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 197.02,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1600,
+    "n_on_sheet": 0,
+    "n_no_tile": 313,
+    "n_no_owner": 313,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1287,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o4_z0_tile_y448_x3136",
+   "site_idx": 4,
+   "arm": "B",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o4_z0_tile_y448_x3136/B_r5/out",
+   "n_valid_quads": 2112,
+   "grid_shape": [
+    50,
+    50
+   ],
+   "area_vx2": 816370.9668090298,
+   "max_gen": 23,
+   "elapsed_time_s": 1.794469398,
+   "bbox_l0_xyz": [
+    [
+     6523.56884765625,
+     669.590576171875,
+     -17.048078536987305
+    ],
+    [
+     7290.6484375,
+     1487.771240234375,
+     383.182373046875
+    ]
+   ],
+   "seed": [
+    6978.0,
+    1040.0,
+    372.0
+   ],
+   "crossing": {
+    "n_quads": 2112,
+    "n_census_tiles": 1,
+    "n_clusters_considered": 87,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 185.2,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1932,
+    "n_on_sheet": 0,
+    "n_no_tile": 372,
+    "n_no_owner": 372,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 1560,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 0.2
+   },
+   "site": "o4_z0_tile_y448_x3136",
+   "site_idx": 4,
+   "arm": "B",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o5_z9184_tile_y1792_x3136/A_r1/out",
+   "n_valid_quads": 2703,
+   "grid_shape": [
+    56,
+    56
+   ],
+   "area_vx2": 1056387.763913549,
+   "max_gen": 26,
+   "elapsed_time_s": 3.093656715,
+   "bbox_l0_xyz": [
+    [
+     6109.33984375,
+     3530.4921875,
+     18225.7734375
+    ],
+    [
+     6772.54736328125,
+     4414.29345703125,
+     19211.962890625
+    ]
+   ],
+   "seed": [
+    6560.0,
+    4032.0,
+    18752.0
+   ],
+   "crossing": {
+    "n_quads": 2703,
+    "n_census_tiles": 12,
+    "n_clusters_considered": 5624,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 134.86,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 361,
+    "n_no_owner": 0,
+    "n_owner_no_data": 361,
+    "n_off_sheet": 1639,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.8
+   },
+   "site": "o5_z9184_tile_y1792_x3136",
+   "site_idx": 5,
+   "arm": "A",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o5_z9184_tile_y1792_x3136/A_r2/out",
+   "n_valid_quads": 2112,
+   "grid_shape": [
+    50,
+    50
+   ],
+   "area_vx2": 816403.271193342,
+   "max_gen": 23,
+   "elapsed_time_s": 2.002251991,
+   "bbox_l0_xyz": [
+    [
+     6167.8623046875,
+     3526.1162109375,
+     18225.50390625
+    ],
+    [
+     6687.93408203125,
+     4280.5712890625,
+     19127.0
+    ]
+   ],
+   "seed": [
+    6560.0,
+    4032.0,
+    18752.0
+   ],
+   "crossing": {
+    "n_quads": 2112,
+    "n_census_tiles": 12,
+    "n_clusters_considered": 5624,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 119.11,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1934,
+    "n_on_sheet": 0,
+    "n_no_tile": 390,
+    "n_no_owner": 0,
+    "n_owner_no_data": 390,
+    "n_off_sheet": 1544,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.8
+   },
+   "site": "o5_z9184_tile_y1792_x3136",
+   "site_idx": 5,
+   "arm": "A",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o5_z9184_tile_y1792_x3136/A_r3/out",
+   "n_valid_quads": 1933,
+   "grid_shape": [
+    48,
+    48
+   ],
+   "area_vx2": 749864.6710770003,
+   "max_gen": 22,
+   "elapsed_time_s": 1.781426934,
+   "bbox_l0_xyz": [
+    [
+     6171.802734375,
+     3549.86474609375,
+     18227.212890625
+    ],
+    [
+     6745.4111328125,
+     4275.90380859375,
+     19077.876953125
+    ]
+   ],
+   "seed": [
+    6560.0,
+    4032.0,
+    18752.0
+   ],
+   "crossing": {
+    "n_quads": 1933,
+    "n_census_tiles": 12,
+    "n_clusters_considered": 5624,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 122.25,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1763,
+    "n_on_sheet": 0,
+    "n_no_tile": 332,
+    "n_no_owner": 0,
+    "n_owner_no_data": 332,
+    "n_off_sheet": 1431,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.4
+   },
+   "site": "o5_z9184_tile_y1792_x3136",
+   "site_idx": 5,
+   "arm": "A",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o5_z9184_tile_y1792_x3136/A_r4/out",
+   "n_valid_quads": 1935,
+   "grid_shape": [
+    48,
+    48
+   ],
+   "area_vx2": 752273.7366638999,
+   "max_gen": 22,
+   "elapsed_time_s": 1.679119295,
+   "bbox_l0_xyz": [
+    [
+     6052.94091796875,
+     3610.7744140625,
+     18223.359375
+    ],
+    [
+     6729.22021484375,
+     4205.13525390625,
+     19147.236328125
+    ]
+   ],
+   "seed": [
+    6560.0,
+    4032.0,
+    18752.0
+   ],
+   "crossing": {
+    "n_quads": 1935,
+    "n_census_tiles": 12,
+    "n_clusters_considered": 5624,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 116.33,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1764,
+    "n_on_sheet": 2,
+    "n_no_tile": 392,
+    "n_no_owner": 0,
+    "n_owner_no_data": 392,
+    "n_off_sheet": 1370,
+    "mean_thickness_ratio": 1.0,
+    "median_thickness_ratio": 1.0,
+    "frac_double": 0.0,
+    "n_double": 0,
+    "frac_double_ci95": [
+     0.0,
+     0.6576
+    ],
+    "seconds": 2.7
+   },
+   "site": "o5_z9184_tile_y1792_x3136",
+   "site_idx": 5,
+   "arm": "A",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o5_z9184_tile_y1792_x3136/A_r5/out",
+   "n_valid_quads": 2113,
+   "grid_shape": [
+    50,
+    50
+   ],
+   "area_vx2": 823728.9222207866,
+   "max_gen": 23,
+   "elapsed_time_s": 1.921451912,
+   "bbox_l0_xyz": [
+    [
+     6211.65673828125,
+     3568.849609375,
+     18224.392578125
+    ],
+    [
+     6744.98779296875,
+     4361.93212890625,
+     19160.72265625
+    ]
+   ],
+   "seed": [
+    6560.0,
+    4032.0,
+    18752.0
+   ],
+   "crossing": {
+    "n_quads": 2113,
+    "n_census_tiles": 12,
+    "n_clusters_considered": 5624,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 125.95,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1934,
+    "n_on_sheet": 0,
+    "n_no_tile": 421,
+    "n_no_owner": 0,
+    "n_owner_no_data": 421,
+    "n_off_sheet": 1513,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.8
+   },
+   "site": "o5_z9184_tile_y1792_x3136",
+   "site_idx": 5,
+   "arm": "A",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o5_z9184_tile_y1792_x3136/B_r1/out",
+   "n_valid_quads": 1934,
+   "grid_shape": [
+    48,
+    48
+   ],
+   "area_vx2": 754657.9658747354,
+   "max_gen": 22,
+   "elapsed_time_s": 2.151696562,
+   "bbox_l0_xyz": [
+    [
+     6157.00048828125,
+     3625.478759765625,
+     18223.703125
+    ],
+    [
+     6749.62939453125,
+     4344.78564453125,
+     19206.15234375
+    ]
+   ],
+   "seed": [
+    6560.0,
+    4032.0,
+    18752.0
+   ],
+   "crossing": {
+    "n_quads": 1934,
+    "n_census_tiles": 12,
+    "n_clusters_considered": 5624,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 126.4,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1763,
+    "n_on_sheet": 0,
+    "n_no_tile": 433,
+    "n_no_owner": 0,
+    "n_owner_no_data": 433,
+    "n_off_sheet": 1330,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.4
+   },
+   "site": "o5_z9184_tile_y1792_x3136",
+   "site_idx": 5,
+   "arm": "B",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o5_z9184_tile_y1792_x3136/B_r2/out",
+   "n_valid_quads": 1763,
+   "grid_shape": [
+    46,
+    46
+   ],
+   "area_vx2": 681864.9725891718,
+   "max_gen": 21,
+   "elapsed_time_s": 1.10020494,
+   "bbox_l0_xyz": [
+    [
+     6184.71630859375,
+     3508.65673828125,
+     18226.154296875
+    ],
+    [
+     6724.76708984375,
+     4272.4833984375,
+     19205.9296875
+    ]
+   ],
+   "seed": [
+    6560.0,
+    4032.0,
+    18752.0
+   ],
+   "crossing": {
+    "n_quads": 1763,
+    "n_census_tiles": 12,
+    "n_clusters_considered": 5624,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 125.86,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1600,
+    "n_on_sheet": 0,
+    "n_no_tile": 389,
+    "n_no_owner": 0,
+    "n_owner_no_data": 389,
+    "n_off_sheet": 1211,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.4
+   },
+   "site": "o5_z9184_tile_y1792_x3136",
+   "site_idx": 5,
+   "arm": "B",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o5_z9184_tile_y1792_x3136/B_r3/out",
+   "n_valid_quads": 2112,
+   "grid_shape": [
+    50,
+    50
+   ],
+   "area_vx2": 834698.4000827146,
+   "max_gen": 23,
+   "elapsed_time_s": 4.278516891,
+   "bbox_l0_xyz": [
+    [
+     6163.80322265625,
+     3598.8974609375,
+     18229.658203125
+    ],
+    [
+     6782.1376953125,
+     4313.107421875,
+     19185.5
+    ]
+   ],
+   "seed": [
+    6560.0,
+    4032.0,
+    18752.0
+   ],
+   "crossing": {
+    "n_quads": 2112,
+    "n_census_tiles": 12,
+    "n_clusters_considered": 5624,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 131.04,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1934,
+    "n_on_sheet": 0,
+    "n_no_tile": 425,
+    "n_no_owner": 0,
+    "n_owner_no_data": 425,
+    "n_off_sheet": 1509,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.4
+   },
+   "site": "o5_z9184_tile_y1792_x3136",
+   "site_idx": 5,
+   "arm": "B",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o5_z9184_tile_y1792_x3136/B_r4/out",
+   "n_valid_quads": 2112,
+   "grid_shape": [
+    50,
+    50
+   ],
+   "area_vx2": 824213.9557444756,
+   "max_gen": 23,
+   "elapsed_time_s": 2.02720038,
+   "bbox_l0_xyz": [
+    [
+     6162.87939453125,
+     3567.78515625,
+     18228.1875
+    ],
+    [
+     6735.59716796875,
+     4342.0537109375,
+     19151.765625
+    ]
+   ],
+   "seed": [
+    6560.0,
+    4032.0,
+    18752.0
+   ],
+   "crossing": {
+    "n_quads": 2112,
+    "n_census_tiles": 12,
+    "n_clusters_considered": 5624,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 130.95,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1934,
+    "n_on_sheet": 0,
+    "n_no_tile": 448,
+    "n_no_owner": 0,
+    "n_owner_no_data": 448,
+    "n_off_sheet": 1486,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.4
+   },
+   "site": "o5_z9184_tile_y1792_x3136",
+   "site_idx": 5,
+   "arm": "B",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o5_z9184_tile_y1792_x3136/B_r5/out",
+   "n_valid_quads": 1935,
+   "grid_shape": [
+    48,
+    48
+   ],
+   "area_vx2": 749923.753206542,
+   "max_gen": 22,
+   "elapsed_time_s": 1.577662842,
+   "bbox_l0_xyz": [
+    [
+     6192.14794921875,
+     3602.964111328125,
+     18231.1015625
+    ],
+    [
+     6726.00146484375,
+     4278.26513671875,
+     19211.048828125
+    ]
+   ],
+   "seed": [
+    6560.0,
+    4032.0,
+    18752.0
+   ],
+   "crossing": {
+    "n_quads": 1935,
+    "n_census_tiles": 12,
+    "n_clusters_considered": 5624,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 128.63,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 1764,
+    "n_on_sheet": 0,
+    "n_no_tile": 448,
+    "n_no_owner": 0,
+    "n_owner_no_data": 448,
+    "n_off_sheet": 1316,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.0
+   },
+   "site": "o5_z9184_tile_y1792_x3136",
+   "site_idx": 5,
+   "arm": "B",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o6_z224_tile_y1792_x2240/A_r1/out",
+   "n_valid_quads": 2827,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1085651.5582231698,
+   "max_gen": 27,
+   "elapsed_time_s": 2.5161859,
+   "bbox_l0_xyz": [
+    [
+     4876.13623046875,
+     4011.82666015625,
+     370.8038330078125
+    ],
+    [
+     5939.5234375,
+     4338.03125,
+     1139.880615234375
+    ]
+   ],
+   "seed": [
+    5408.0,
+    4032.0,
+    608.0
+   ],
+   "crossing": {
+    "n_quads": 2827,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 669,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 146.69,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 2000,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.5
+   },
+   "site": "o6_z224_tile_y1792_x2240",
+   "site_idx": 6,
+   "arm": "A",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o6_z224_tile_y1792_x2240/A_r2/out",
+   "n_valid_quads": 2848,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1098073.983266508,
+   "max_gen": 27,
+   "elapsed_time_s": 2.506747764,
+   "bbox_l0_xyz": [
+    [
+     4877.8173828125,
+     3939.10302734375,
+     371.34588623046875
+    ],
+    [
+     5939.84130859375,
+     4338.51904296875,
+     1139.826171875
+    ]
+   ],
+   "seed": [
+    5408.0,
+    4032.0,
+    608.0
+   ],
+   "crossing": {
+    "n_quads": 2848,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 669,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 148.4,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 2000,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.5
+   },
+   "site": "o6_z224_tile_y1792_x2240",
+   "site_idx": 6,
+   "arm": "A",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o6_z224_tile_y1792_x2240/A_r3/out",
+   "n_valid_quads": 2827,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1087088.433120808,
+   "max_gen": 27,
+   "elapsed_time_s": 2.1206245,
+   "bbox_l0_xyz": [
+    [
+     4876.1337890625,
+     4023.69091796875,
+     359.0
+    ],
+    [
+     5940.01318359375,
+     4349.748046875,
+     1139.6640625
+    ]
+   ],
+   "seed": [
+    5408.0,
+    4032.0,
+    608.0
+   ],
+   "crossing": {
+    "n_quads": 2827,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 669,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 146.31,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 2000,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.5
+   },
+   "site": "o6_z224_tile_y1792_x2240",
+   "site_idx": 6,
+   "arm": "A",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o6_z224_tile_y1792_x2240/A_r4/out",
+   "n_valid_quads": 2829,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1088356.917089359,
+   "max_gen": 27,
+   "elapsed_time_s": 2.61973637,
+   "bbox_l0_xyz": [
+    [
+     4876.6796875,
+     3987.076416015625,
+     371.5713195800781
+    ],
+    [
+     5939.68359375,
+     4279.8720703125,
+     1139.69189453125
+    ]
+   ],
+   "seed": [
+    5408.0,
+    4032.0,
+    608.0
+   ],
+   "crossing": {
+    "n_quads": 2829,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 669,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 146.98,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 2000,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.5
+   },
+   "site": "o6_z224_tile_y1792_x2240",
+   "site_idx": 6,
+   "arm": "A",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o6_z224_tile_y1792_x2240/A_r5/out",
+   "n_valid_quads": 2854,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1104428.1923574794,
+   "max_gen": 27,
+   "elapsed_time_s": 2.993598061,
+   "bbox_l0_xyz": [
+    [
+     4878.93408203125,
+     3901.39208984375,
+     365.0955810546875
+    ],
+    [
+     5939.931640625,
+     4310.8125,
+     1139.81787109375
+    ]
+   ],
+   "seed": [
+    5408.0,
+    4032.0,
+    608.0
+   ],
+   "crossing": {
+    "n_quads": 2854,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 669,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 148.34,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 2000,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.5
+   },
+   "site": "o6_z224_tile_y1792_x2240",
+   "site_idx": 6,
+   "arm": "A",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o6_z224_tile_y1792_x2240/B_r1/out",
+   "n_valid_quads": 2861,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1107067.1251244566,
+   "max_gen": 27,
+   "elapsed_time_s": 3.328068095,
+   "bbox_l0_xyz": [
+    [
+     4878.89697265625,
+     3900.257080078125,
+     370.1404724121094
+    ],
+    [
+     5939.7744140625,
+     4339.96923828125,
+     1139.896240234375
+    ]
+   ],
+   "seed": [
+    5408.0,
+    4032.0,
+    608.0
+   ],
+   "crossing": {
+    "n_quads": 2861,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 669,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 148.98,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 2000,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.4
+   },
+   "site": "o6_z224_tile_y1792_x2240",
+   "site_idx": 6,
+   "arm": "B",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o6_z224_tile_y1792_x2240/B_r2/out",
+   "n_valid_quads": 2846,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1099945.339085009,
+   "max_gen": 27,
+   "elapsed_time_s": 3.72651542,
+   "bbox_l0_xyz": [
+    [
+     4879.72802734375,
+     3922.905029296875,
+     372.7987365722656
+    ],
+    [
+     5939.64794921875,
+     4329.4873046875,
+     1139.77978515625
+    ]
+   ],
+   "seed": [
+    5408.0,
+    4032.0,
+    608.0
+   ],
+   "crossing": {
+    "n_quads": 2846,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 669,
+    "n_quads_near": 1,
+    "frac_quads_near": 0.0004,
+    "n_clusters_hit": 1,
+    "mean_ratio_of_near": 3.062,
+    "mean_min_dist": 147.65,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 2000,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.5
+   },
+   "site": "o6_z224_tile_y1792_x2240",
+   "site_idx": 6,
+   "arm": "B",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o6_z224_tile_y1792_x2240/B_r3/out",
+   "n_valid_quads": 2836,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1092817.1975493738,
+   "max_gen": 27,
+   "elapsed_time_s": 2.667983697,
+   "bbox_l0_xyz": [
+    [
+     4876.7060546875,
+     4013.496826171875,
+     374.8589782714844
+    ],
+    [
+     5939.71435546875,
+     4270.0927734375,
+     1139.720703125
+    ]
+   ],
+   "seed": [
+    5408.0,
+    4032.0,
+    608.0
+   ],
+   "crossing": {
+    "n_quads": 2836,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 669,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 147.03,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 2000,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.4
+   },
+   "site": "o6_z224_tile_y1792_x2240",
+   "site_idx": 6,
+   "arm": "B",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o6_z224_tile_y1792_x2240/B_r4/out",
+   "n_valid_quads": 2853,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1102282.0341753084,
+   "max_gen": 27,
+   "elapsed_time_s": 3.037370743,
+   "bbox_l0_xyz": [
+    [
+     4879.12060546875,
+     3901.472412109375,
+     369.8077392578125
+    ],
+    [
+     5939.88623046875,
+     4318.5712890625,
+     1139.905517578125
+    ]
+   ],
+   "seed": [
+    5408.0,
+    4032.0,
+    608.0
+   ],
+   "crossing": {
+    "n_quads": 2853,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 669,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 149.08,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 2000,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.4
+   },
+   "site": "o6_z224_tile_y1792_x2240",
+   "site_idx": 6,
+   "arm": "B",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o6_z224_tile_y1792_x2240/B_r5/out",
+   "n_valid_quads": 2824,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1082240.641635801,
+   "max_gen": 27,
+   "elapsed_time_s": 2.271165827,
+   "bbox_l0_xyz": [
+    [
+     4876.43505859375,
+     4020.337158203125,
+     371.9311218261719
+    ],
+    [
+     5939.830078125,
+     4288.0263671875,
+     1139.7816162109375
+    ]
+   ],
+   "seed": [
+    5408.0,
+    4032.0,
+    608.0
+   ],
+   "crossing": {
+    "n_quads": 2824,
+    "n_census_tiles": 6,
+    "n_clusters_considered": 669,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 146.7,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 0,
+    "n_no_owner": 0,
+    "n_owner_no_data": 0,
+    "n_off_sheet": 2000,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.4
+   },
+   "site": "o6_z224_tile_y1792_x2240",
+   "site_idx": 6,
+   "arm": "B",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o7_z672_tile_y2240_x2240/A_r1/out",
+   "n_valid_quads": 2499,
+   "grid_shape": [
+    54,
+    54
+   ],
+   "area_vx2": 971957.6841072976,
+   "max_gen": 25,
+   "elapsed_time_s": 2.139257102,
+   "bbox_l0_xyz": [
+    [
+     4962.6298828125,
+     4091.0400390625,
+     1297.8270263671875
+    ],
+    [
+     5641.45654296875,
+     4986.40087890625,
+     2056.2705078125
+    ]
+   ],
+   "seed": [
+    5344.0,
+    4576.0,
+    1536.0
+   ],
+   "crossing": {
+    "n_quads": 2499,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 1701,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 215.98,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 490,
+    "n_no_owner": 397,
+    "n_owner_no_data": 93,
+    "n_off_sheet": 1510,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 1.3
+   },
+   "site": "o7_z672_tile_y2240_x2240",
+   "site_idx": 7,
+   "arm": "A",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o7_z672_tile_y2240_x2240/A_r2/out",
+   "n_valid_quads": 2701,
+   "grid_shape": [
+    56,
+    56
+   ],
+   "area_vx2": 1056913.1637784543,
+   "max_gen": 26,
+   "elapsed_time_s": 2.617407949,
+   "bbox_l0_xyz": [
+    [
+     4896.1328125,
+     4044.9462890625,
+     1291.3404541015625
+    ],
+    [
+     5816.72216796875,
+     5018.76416015625,
+     1845.1407470703125
+    ]
+   ],
+   "seed": [
+    5344.0,
+    4576.0,
+    1536.0
+   ],
+   "crossing": {
+    "n_quads": 2701,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 1701,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 250.66,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 837,
+    "n_no_owner": 726,
+    "n_owner_no_data": 111,
+    "n_off_sheet": 1163,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 1.3
+   },
+   "site": "o7_z672_tile_y2240_x2240",
+   "site_idx": 7,
+   "arm": "A",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o7_z672_tile_y2240_x2240/A_r3/out",
+   "n_valid_quads": 2702,
+   "grid_shape": [
+    56,
+    56
+   ],
+   "area_vx2": 1052784.8932807404,
+   "max_gen": 26,
+   "elapsed_time_s": 2.02513038,
+   "bbox_l0_xyz": [
+    [
+     4994.50537109375,
+     4065.694580078125,
+     1165.297607421875
+    ],
+    [
+     5820.447265625,
+     5075.69775390625,
+     2062.0283203125
+    ]
+   ],
+   "seed": [
+    5344.0,
+    4576.0,
+    1536.0
+   ],
+   "crossing": {
+    "n_quads": 2702,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 1701,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 242.54,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 840,
+    "n_no_owner": 646,
+    "n_owner_no_data": 194,
+    "n_off_sheet": 1160,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 1.3
+   },
+   "site": "o7_z672_tile_y2240_x2240",
+   "site_idx": 7,
+   "arm": "A",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o7_z672_tile_y2240_x2240/A_r4/out",
+   "n_valid_quads": 2499,
+   "grid_shape": [
+    54,
+    54
+   ],
+   "area_vx2": 976575.3528078388,
+   "max_gen": 25,
+   "elapsed_time_s": 1.989804772,
+   "bbox_l0_xyz": [
+    [
+     4975.51806640625,
+     4085.81201171875,
+     1254.606689453125
+    ],
+    [
+     5593.92919921875,
+     4999.255859375,
+     2062.15966796875
+    ]
+   ],
+   "seed": [
+    5344.0,
+    4576.0,
+    1536.0
+   ],
+   "crossing": {
+    "n_quads": 2499,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 1701,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 201.63,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 298,
+    "n_no_owner": 179,
+    "n_owner_no_data": 119,
+    "n_off_sheet": 1702,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.0
+   },
+   "site": "o7_z672_tile_y2240_x2240",
+   "site_idx": 7,
+   "arm": "A",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o7_z672_tile_y2240_x2240/A_r5/out",
+   "n_valid_quads": 3134,
+   "grid_shape": [
+    60,
+    60
+   ],
+   "area_vx2": 1236893.8909703712,
+   "max_gen": 28,
+   "elapsed_time_s": 3.714248348,
+   "bbox_l0_xyz": [
+    [
+     4859.14013671875,
+     4055.612060546875,
+     1205.2080078125
+    ],
+    [
+     5612.47265625,
+     5099.6767578125,
+     2062.789306640625
+    ]
+   ],
+   "seed": [
+    5344.0,
+    4576.0,
+    1536.0
+   ],
+   "crossing": {
+    "n_quads": 3134,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 1701,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 216.35,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 502,
+    "n_no_owner": 296,
+    "n_owner_no_data": 206,
+    "n_off_sheet": 1498,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 2.0
+   },
+   "site": "o7_z672_tile_y2240_x2240",
+   "site_idx": 7,
+   "arm": "A",
+   "rep": 5
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o7_z672_tile_y2240_x2240/B_r1/out",
+   "n_valid_quads": 2901,
+   "grid_shape": [
+    58,
+    58
+   ],
+   "area_vx2": 1127960.5088482413,
+   "max_gen": 27,
+   "elapsed_time_s": 1786533301.2469602,
+   "bbox_l0_xyz": [
+    [
+     4892.064453125,
+     4048.6591796875,
+     1247.30322265625
+    ],
+    [
+     5583.89208984375,
+     5056.00048828125,
+     2065.83056640625
+    ]
+   ],
+   "seed": [
+    5344.0,
+    4576.0,
+    1536.0
+   ],
+   "crossing": {
+    "n_quads": 2901,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 1701,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 208.99,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 423,
+    "n_no_owner": 265,
+    "n_owner_no_data": 158,
+    "n_off_sheet": 1577,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 1.7
+   },
+   "site": "o7_z672_tile_y2240_x2240",
+   "site_idx": 7,
+   "arm": "B",
+   "rep": 1
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o7_z672_tile_y2240_x2240/B_r2/out",
+   "n_valid_quads": 2702,
+   "grid_shape": [
+    56,
+    56
+   ],
+   "area_vx2": 1068254.4949722867,
+   "max_gen": 26,
+   "elapsed_time_s": 2.676284195,
+   "bbox_l0_xyz": [
+    [
+     4944.69677734375,
+     4090.29736328125,
+     1253.6861572265625
+    ],
+    [
+     5656.892578125,
+     5023.06591796875,
+     2066.599609375
+    ]
+   ],
+   "seed": [
+    5344.0,
+    4576.0,
+    1536.0
+   ],
+   "crossing": {
+    "n_quads": 2702,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 1701,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 209.7,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 443,
+    "n_no_owner": 348,
+    "n_owner_no_data": 95,
+    "n_off_sheet": 1557,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 1.7
+   },
+   "site": "o7_z672_tile_y2240_x2240",
+   "site_idx": 7,
+   "arm": "B",
+   "rep": 2
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o7_z672_tile_y2240_x2240/B_r3/out",
+   "n_valid_quads": 2696,
+   "grid_shape": [
+    56,
+    56
+   ],
+   "area_vx2": 1061100.9987259794,
+   "max_gen": 26,
+   "elapsed_time_s": 1.940502288,
+   "bbox_l0_xyz": [
+    [
+     4823.59912109375,
+     4108.8994140625,
+     1208.3948974609375
+    ],
+    [
+     5641.88134765625,
+     4922.60498046875,
+     2065.13427734375
+    ]
+   ],
+   "seed": [
+    5344.0,
+    4576.0,
+    1536.0
+   ],
+   "crossing": {
+    "n_quads": 2696,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 1701,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 203.65,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 476,
+    "n_no_owner": 350,
+    "n_owner_no_data": 126,
+    "n_off_sheet": 1524,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 1.7
+   },
+   "site": "o7_z672_tile_y2240_x2240",
+   "site_idx": 7,
+   "arm": "B",
+   "rep": 3
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o7_z672_tile_y2240_x2240/B_r4/out",
+   "n_valid_quads": 2696,
+   "grid_shape": [
+    56,
+    56
+   ],
+   "area_vx2": 1044667.2603432153,
+   "max_gen": 26,
+   "elapsed_time_s": 2.392812971,
+   "bbox_l0_xyz": [
+    [
+     4922.63330078125,
+     4064.833251953125,
+     1256.9320068359375
+    ],
+    [
+     5411.26025390625,
+     5007.50048828125,
+     2065.616943359375
+    ]
+   ],
+   "seed": [
+    5344.0,
+    4576.0,
+    1536.0
+   ],
+   "crossing": {
+    "n_quads": 2696,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 1701,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 184.43,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 3,
+    "n_no_tile": 133,
+    "n_no_owner": 0,
+    "n_owner_no_data": 133,
+    "n_off_sheet": 1864,
+    "mean_thickness_ratio": 1.381,
+    "median_thickness_ratio": 1.286,
+    "frac_double": 0.3333,
+    "n_double": 1,
+    "frac_double_ci95": [
+     0.0615,
+     0.7923
+    ],
+    "seconds": 2.0
+   },
+   "site": "o7_z672_tile_y2240_x2240",
+   "site_idx": 7,
+   "arm": "B",
+   "rep": 4
+  },
+  {
+   "found": true,
+   "dir": "/mnt/vesuvius/vcbuild/demo_out/placement/o7_z672_tile_y2240_x2240/B_r5/out",
+   "n_valid_quads": 2497,
+   "grid_shape": [
+    54,
+    54
+   ],
+   "area_vx2": 979265.9605033251,
+   "max_gen": 25,
+   "elapsed_time_s": 2.396161459,
+   "bbox_l0_xyz": [
+    [
+     4967.07763671875,
+     4115.39990234375,
+     1224.85693359375
+    ],
+    [
+     5641.60009765625,
+     5041.80517578125,
+     2061.825927734375
+    ]
+   ],
+   "seed": [
+    5344.0,
+    4576.0,
+    1536.0
+   ],
+   "crossing": {
+    "n_quads": 2497,
+    "n_census_tiles": 8,
+    "n_clusters_considered": 1701,
+    "n_quads_near": 0,
+    "frac_quads_near": 0.0,
+    "n_clusters_hit": 0,
+    "mean_ratio_of_near": null,
+    "mean_min_dist": 217.42,
+    "seconds": 0.0
+   },
+   "ray": {
+    "n_sampled": 2000,
+    "n_on_sheet": 0,
+    "n_no_tile": 508,
+    "n_no_owner": 346,
+    "n_owner_no_data": 162,
+    "n_off_sheet": 1492,
+    "mean_thickness_ratio": null,
+    "median_thickness_ratio": null,
+    "frac_double": null,
+    "n_double": 0,
+    "frac_double_ci95": null,
+    "seconds": 1.7
+   },
+   "site": "o7_z672_tile_y2240_x2240",
+   "site_idx": 7,
+   "arm": "B",
+   "rep": 5
+  }
+ ]
+}

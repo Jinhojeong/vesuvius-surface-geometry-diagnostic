@@ -1,0 +1,144 @@
+{
+ "generated": "2026-08-12 20:09:55",
+ "amendment": "prereg_placement_ab @ 083f424 Amendment 1",
+ "check": "off-seed voxel reads back a written unit vector",
+ "all_written": true,
+ "seeds": [
+  {
+   "site_idx": 0,
+   "off_L1_zyx": [
+    4240,
+    1585,
+    753
+   ],
+   "field_u8_xyz": [
+    255,
+    128,
+    128
+   ],
+   "written": true,
+   "norm_decoded": 1.0,
+   "unit_vector": true,
+   "written_frac_pm16": 0.3636
+  },
+  {
+   "site_idx": 1,
+   "off_L1_zyx": [
+    432,
+    1840,
+    1392
+   ],
+   "field_u8_xyz": [
+    128,
+    128,
+    1
+   ],
+   "written": true,
+   "norm_decoded": 1.0,
+   "unit_vector": true,
+   "written_frac_pm16": 0.3636
+  },
+  {
+   "site_idx": 2,
+   "off_L1_zyx": [
+    186,
+    520,
+    3489
+   ],
+   "field_u8_xyz": [
+    128,
+    128,
+    255
+   ],
+   "written": true,
+   "norm_decoded": 1.0,
+   "unit_vector": true,
+   "written_frac_pm16": 0.3636
+  },
+  {
+   "site_idx": 3,
+   "off_L1_zyx": [
+    11272,
+    535,
+    2682
+   ],
+   "field_u8_xyz": [
+    255,
+    128,
+    128
+   ],
+   "written": true,
+   "norm_decoded": 1.0,
+   "unit_vector": true,
+   "written_frac_pm16": 0.3636
+  },
+  {
+   "site_idx": 4,
+   "off_L1_zyx": [
+    186,
+    520,
+    3489
+   ],
+   "field_u8_xyz": [
+    128,
+    128,
+    255
+   ],
+   "written": true,
+   "norm_decoded": 1.0,
+   "unit_vector": true,
+   "written_frac_pm16": 0.3636
+  },
+  {
+   "site_idx": 5,
+   "off_L1_zyx": [
+    9376,
+    2016,
+    3280
+   ],
+   "field_u8_xyz": [
+    128,
+    128,
+    1
+   ],
+   "written": true,
+   "norm_decoded": 1.0,
+   "unit_vector": true,
+   "written_frac_pm16": 0.4099
+  },
+  {
+   "site_idx": 6,
+   "off_L1_zyx": [
+    304,
+    2016,
+    2704
+   ],
+   "field_u8_xyz": [
+    128,
+    1,
+    128
+   ],
+   "written": true,
+   "norm_decoded": 1.0,
+   "unit_vector": true,
+   "written_frac_pm16": 0.3636
+  },
+  {
+   "site_idx": 7,
+   "off_L1_zyx": [
+    768,
+    2288,
+    2672
+   ],
+   "field_u8_xyz": [
+    128,
+    128,
+    1
+   ],
+   "written": true,
+   "norm_decoded": 1.0,
+   "unit_vector": true,
+   "written_frac_pm16": 0.4298
+  }
+ ]
+}

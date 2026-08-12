@@ -1,0 +1,266 @@
+{
+ "generated": "2026-08-12 15:07:38",
+ "prereg": "prereg_placement_ab/PREREGISTRATION.md @ 8531276",
+ "status": "BLOCKED_BEFORE_RUNS",
+ "reason": "5 of 8 off-seeds lie outside every built direction-field region cube (fields were built radius 256 L1 around the ORIGINAL seeds; the frozen off-seed rule constrains distance to census cluster centroids, not to the original seed). Field at those seeds decodes to the zero vector (inert). No GrowPatch runs were launched.",
+ "field_build": {
+  "radius_L1": 256,
+  "band": 6.0,
+  "sigma": 1.0,
+  "margin": 16,
+  "regions_built": 16
+ },
+ "selection_script_sha256": "7d44c33393cb1ef995b245770a436ecfced3419765972bac74c1a1b33f9daaf0",
+ "offseeds_json_sha256": "b07e905b6dee57c7cc2fec5a755cb099a2357d887933d5c8bbad56ec481290dc",
+ "archived_powered_scores_sha256_verified": "fd9deb2c3b7a3e3f0e5e55b258a5c3230b3ce845cb66e7d24425596472a65876",
+ "off_seeds": [
+  {
+   "site_idx": 0,
+   "slab": "z4032",
+   "tile": "tile_y1344_x448",
+   "off_L1_zyx": [
+    4240,
+    1584,
+    752
+   ],
+   "orig_L1_zyx": [
+    4232,
+    1766,
+    912
+   ],
+   "m7": 255,
+   "dist_rule": 96,
+   "min_chebyshev_to_cluster": 109,
+   "cheb_to_orig_seed": 182,
+   "cheb_to_nearest_built_region": 182,
+   "inside_own_region_cube_r256": true,
+   "inside_any_built_region_cube": true,
+   "field_u8_at_voxel_xyz": [
+    128,
+    128,
+    128
+   ],
+   "field_written_at_voxel": false,
+   "nearest_written_voxel_cheb_within16": 1,
+   "written_frac_pm16": 0.3636,
+   "runbbox_overlap_with_own_region": 0.4362
+  },
+  {
+   "site_idx": 1,
+   "slab": "z224",
+   "tile": "tile_y1792_x1344",
+   "off_L1_zyx": [
+    432,
+    1840,
+    1392
+   ],
+   "orig_L1_zyx": [
+    296,
+    1910,
+    1803
+   ],
+   "m7": 255,
+   "dist_rule": 96,
+   "min_chebyshev_to_cluster": 107,
+   "cheb_to_orig_seed": 411,
+   "cheb_to_nearest_built_region": 411,
+   "inside_own_region_cube_r256": false,
+   "inside_any_built_region_cube": false,
+   "field_u8_at_voxel_xyz": [
+    128,
+    128,
+    128
+   ],
+   "field_written_at_voxel": false,
+   "nearest_written_voxel_cheb_within16": null,
+   "written_frac_pm16": 0.0,
+   "runbbox_overlap_with_own_region": 0.1251
+  },
+  {
+   "site_idx": 2,
+   "slab": "z0",
+   "tile": "tile_y448_x3136",
+   "off_L1_zyx": [
+    160,
+    512,
+    3488
+   ],
+   "orig_L1_zyx": [
+    79,
+    829,
+    3263
+   ],
+   "m7": 255,
+   "dist_rule": 96,
+   "min_chebyshev_to_cluster": 145,
+   "cheb_to_orig_seed": 317,
+   "cheb_to_nearest_built_region": 317,
+   "inside_own_region_cube_r256": false,
+   "inside_any_built_region_cube": false,
+   "field_u8_at_voxel_xyz": [
+    128,
+    128,
+    128
+   ],
+   "field_written_at_voxel": false,
+   "nearest_written_voxel_cheb_within16": null,
+   "written_frac_pm16": 0.0,
+   "runbbox_overlap_with_own_region": 0.1797
+  },
+  {
+   "site_idx": 3,
+   "slab": "z11200",
+   "tile": "tile_y448_x2240",
+   "off_L1_zyx": [
+    11264,
+    544,
+    2672
+   ],
+   "orig_L1_zyx": [
+    11293,
+    772,
+    2380
+   ],
+   "m7": 255,
+   "dist_rule": 96,
+   "min_chebyshev_to_cluster": 134,
+   "cheb_to_orig_seed": 292,
+   "cheb_to_nearest_built_region": 292,
+   "inside_own_region_cube_r256": false,
+   "inside_any_built_region_cube": false,
+   "field_u8_at_voxel_xyz": [
+    128,
+    128,
+    128
+   ],
+   "field_written_at_voxel": false,
+   "nearest_written_voxel_cheb_within16": null,
+   "written_frac_pm16": 0.0,
+   "runbbox_overlap_with_own_region": 0.2248
+  },
+  {
+   "site_idx": 4,
+   "slab": "z0",
+   "tile": "tile_y448_x3136",
+   "off_L1_zyx": [
+    160,
+    512,
+    3488
+   ],
+   "orig_L1_zyx": [
+    78,
+    844,
+    3215
+   ],
+   "m7": 255,
+   "dist_rule": 96,
+   "min_chebyshev_to_cluster": 145,
+   "cheb_to_orig_seed": 332,
+   "cheb_to_nearest_built_region": 317,
+   "inside_own_region_cube_r256": false,
+   "inside_any_built_region_cube": false,
+   "field_u8_at_voxel_xyz": [
+    128,
+    128,
+    128
+   ],
+   "field_written_at_voxel": false,
+   "nearest_written_voxel_cheb_within16": null,
+   "written_frac_pm16": 0.0,
+   "runbbox_overlap_with_own_region": 0.1378
+  },
+  {
+   "site_idx": 5,
+   "slab": "z9184",
+   "tile": "tile_y1792_x3136",
+   "off_L1_zyx": [
+    9376,
+    2016,
+    3280
+   ],
+   "orig_L1_zyx": [
+    9269,
+    1876,
+    3188
+   ],
+   "m7": 255,
+   "dist_rule": 96,
+   "min_chebyshev_to_cluster": 103,
+   "cheb_to_orig_seed": 140,
+   "cheb_to_nearest_built_region": 140,
+   "inside_own_region_cube_r256": true,
+   "inside_any_built_region_cube": true,
+   "field_u8_at_voxel_xyz": [
+    128,
+    128,
+    1
+   ],
+   "field_written_at_voxel": true,
+   "nearest_written_voxel_cheb_within16": 0,
+   "written_frac_pm16": 0.4099,
+   "runbbox_overlap_with_own_region": 0.4715
+  },
+  {
+   "site_idx": 6,
+   "slab": "z224",
+   "tile": "tile_y1792_x2240",
+   "off_L1_zyx": [
+    304,
+    2016,
+    2704
+   ],
+   "orig_L1_zyx": [
+    303,
+    2186,
+    2457
+   ],
+   "m7": 255,
+   "dist_rule": 96,
+   "min_chebyshev_to_cluster": 146,
+   "cheb_to_orig_seed": 247,
+   "cheb_to_nearest_built_region": 247,
+   "inside_own_region_cube_r256": true,
+   "inside_any_built_region_cube": true,
+   "field_u8_at_voxel_xyz": [
+    128,
+    1,
+    128
+   ],
+   "field_written_at_voxel": true,
+   "nearest_written_voxel_cheb_within16": 0,
+   "written_frac_pm16": 0.2755,
+   "runbbox_overlap_with_own_region": 0.3451
+  },
+  {
+   "site_idx": 7,
+   "slab": "z672",
+   "tile": "tile_y2240_x2240",
+   "off_L1_zyx": [
+    768,
+    2288,
+    2672
+   ],
+   "orig_L1_zyx": [
+    791,
+    2329,
+    2318
+   ],
+   "m7": 255,
+   "dist_rule": 96,
+   "min_chebyshev_to_cluster": 257,
+   "cheb_to_orig_seed": 354,
+   "cheb_to_nearest_built_region": 354,
+   "inside_own_region_cube_r256": false,
+   "inside_any_built_region_cube": false,
+   "field_u8_at_voxel_xyz": [
+    128,
+    128,
+    128
+   ],
+   "field_written_at_voxel": false,
+   "nearest_written_voxel_cheb_within16": null,
+   "written_frac_pm16": 0.0,
+   "runbbox_overlap_with_own_region": 0.2711
+  }
+ ]
+}

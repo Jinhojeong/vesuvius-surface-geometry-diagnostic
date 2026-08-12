@@ -1,0 +1,162 @@
+[
+ {
+  "slab": "z4032",
+  "tile": "tile_y1344_x448",
+  "z": 208,
+  "y": 240,
+  "x": 304,
+  "gz": 4240,
+  "gy": 1584,
+  "gx": 752,
+  "seed_L0": [
+   8480,
+   3168,
+   1504
+  ],
+  "m7": 255,
+  "dist_rule": 96,
+  "n_candidates": 5454,
+  "n_m7_checked": 2,
+  "min_chebyshev_to_cluster": 109
+ },
+ {
+  "slab": "z224",
+  "tile": "tile_y1792_x1344",
+  "z": 208,
+  "y": 48,
+  "x": 48,
+  "gz": 432,
+  "gy": 1840,
+  "gx": 1392,
+  "seed_L0": [
+   864,
+   3680,
+   2784
+  ],
+  "m7": 255,
+  "dist_rule": 96,
+  "n_candidates": 18,
+  "n_m7_checked": 10,
+  "min_chebyshev_to_cluster": 107
+ },
+ {
+  "slab": "z0",
+  "tile": "tile_y448_x3136",
+  "z": 160,
+  "y": 64,
+  "x": 352,
+  "gz": 160,
+  "gy": 512,
+  "gx": 3488,
+  "seed_L0": [
+   320,
+   1024,
+   6976
+  ],
+  "m7": 255,
+  "dist_rule": 96,
+  "n_candidates": 3419,
+  "n_m7_checked": 2,
+  "min_chebyshev_to_cluster": 145
+ },
+ {
+  "slab": "z11200",
+  "tile": "tile_y448_x2240",
+  "z": 64,
+  "y": 96,
+  "x": 432,
+  "gz": 11264,
+  "gy": 544,
+  "gx": 2672,
+  "seed_L0": [
+   22528,
+   1088,
+   5344
+  ],
+  "m7": 255,
+  "dist_rule": 96,
+  "n_candidates": 1309,
+  "n_m7_checked": 1,
+  "min_chebyshev_to_cluster": 134
+ },
+ {
+  "slab": "z0",
+  "tile": "tile_y448_x3136",
+  "z": 160,
+  "y": 64,
+  "x": 352,
+  "gz": 160,
+  "gy": 512,
+  "gx": 3488,
+  "seed_L0": [
+   320,
+   1024,
+   6976
+  ],
+  "m7": 255,
+  "dist_rule": 96,
+  "n_candidates": 3419,
+  "n_m7_checked": 2,
+  "min_chebyshev_to_cluster": 145
+ },
+ {
+  "slab": "z9184",
+  "tile": "tile_y1792_x3136",
+  "z": 192,
+  "y": 224,
+  "x": 144,
+  "gz": 9376,
+  "gy": 2016,
+  "gx": 3280,
+  "seed_L0": [
+   18752,
+   4032,
+   6560
+  ],
+  "m7": 255,
+  "dist_rule": 96,
+  "n_candidates": 6410,
+  "n_m7_checked": 10,
+  "min_chebyshev_to_cluster": 103
+ },
+ {
+  "slab": "z224",
+  "tile": "tile_y1792_x2240",
+  "z": 80,
+  "y": 224,
+  "x": 464,
+  "gz": 304,
+  "gy": 2016,
+  "gx": 2704,
+  "seed_L0": [
+   608,
+   4032,
+   5408
+  ],
+  "m7": 255,
+  "dist_rule": 96,
+  "n_candidates": 3695,
+  "n_m7_checked": 4,
+  "min_chebyshev_to_cluster": 146
+ },
+ {
+  "slab": "z672",
+  "tile": "tile_y2240_x2240",
+  "z": 96,
+  "y": 48,
+  "x": 432,
+  "gz": 768,
+  "gy": 2288,
+  "gx": 2672,
+  "seed_L0": [
+   1536,
+   4576,
+   5344
+  ],
+  "m7": 255,
+  "dist_rule": 96,
+  "n_candidates": 5758,
+  "n_m7_checked": 17,
+  "min_chebyshev_to_cluster": 257
+ }
+]

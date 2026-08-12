@@ -176,25 +176,45 @@ def main():
         s_on, s_off = on_sites[i], off_sites[i]
         row = {"on_site": s_on, "off_site": s_off}
         for ep in EP:
-            ba_on = on_cells[(s_on, "B")][ep] - on_cells[(s_on, "A")][ep]
-            ba_off = off_cells[(s_off, "B")][ep] - off_cells[(s_off, "A")][ep]
-            row[ep] = {"ba_on": ba_on, "ba_off": ba_off, "dd": ba_on - ba_off}
+            bon, aon = on_cells[(s_on, "B")][ep], on_cells[(s_on, "A")][ep]
+            boff = off_cells[(s_off, "B")][ep]
+            aoff = off_cells[(s_off, "A")][ep]
+            ba_on = None if (bon is None or aon is None) else bon - aon
+            ba_off = None if (boff is None or aoff is None) else boff - aoff
+            dd_v = (None if (ba_on is None or ba_off is None)
+                    else ba_on - ba_off)
+            row[ep] = {"ba_on": ba_on, "ba_off": ba_off, "dd": dd_v}
         per_site[i] = row
 
     dd = {ep: [per_site[i][ep]["dd"] for i in range(8)] for ep in EP}
     ba_off = {ep: [per_site[i][ep]["ba_off"] for i in range(8)] for ep in EP}
     ba_on = {ep: [per_site[i][ep]["ba_on"] for i in range(8)] for ep in EP}
 
+    def testable(vals):
+        return all(v is not None for v in vals)
+
+    WHY = ("unmeasurable per Amendment 3: off cells carry zero on-sheet "
+           "rays because every off-seed sits in label-void space, so "
+           "label-referenced endpoints cannot be computed there")
+
+    def unmeasurable(vals):
+        return {"status": "unmeasurable",
+                "n_missing_sites": sum(1 for v in vals if v is None),
+                "reason": WHY}
+
+    def tt(vals, fn, *a):
+        return fn(vals, *a) if testable(vals) else unmeasurable(vals)
+
     primary = one_sided(dd["area"], "+")
-    secondary = one_sided(dd["dbl"], "-")
-    guardrail = paired_two_sided(dd["on_sheet"])
+    secondary = tt(dd["dbl"], one_sided, "-")
+    guardrail = tt(dd["on_sheet"], paired_two_sided)
     # reported, not tested
-    reported_near = paired_two_sided(dd["near"])
-    reported_per1000 = paired_two_sided(dd["per1000"])
+    reported_near = tt(dd["near"], paired_two_sided)
+    reported_per1000 = tt(dd["per1000"], paired_two_sided)
 
     # off-seed (B-A) itself with CI per endpoint (reported, not tested)
-    off_ba = {ep: paired_two_sided(ba_off[ep]) for ep in EP}
-    on_ba = {ep: paired_two_sided(ba_on[ep]) for ep in EP}
+    off_ba = {ep: tt(ba_off[ep], paired_two_sided) for ep in EP}
+    on_ba = {ep: tt(ba_on[ep], paired_two_sided) for ep in EP}
 
     # LOO for the primary (one-sided p, df 6), s2/s4 drops explicit
     loo = {}
@@ -206,8 +226,9 @@ def main():
 
     # frozen buckets
     primary_ok = primary["p_one_sided"] < 0.05
-    secondary_ok = secondary["p_one_sided"] < 0.05
-    off_area_mean = off_ba["area"]["mean_diff"]
+    secondary_ok = (secondary.get("status") != "unmeasurable"
+                    and secondary["p_one_sided"] < 0.05)
+    off_area_mean = off_ba["area"].get("mean_diff")
     on_area_mean = on_ba["area"]["mean_diff"]
     if primary_ok and secondary_ok:
         bucket, blabel = 1, ("placement confirmed on both endpoints")
@@ -221,7 +242,8 @@ def main():
                              "thread")
     else:
         bucket, blabel = 4, ("underpowered no-verdict, disclosed as such")
-    guard_flag = guardrail["p"] < 0.05
+    guard_flag = (guardrail.get("status") != "unmeasurable"
+                  and guardrail["p"] < 0.05)
 
     field_verify = None
     fv_path = os.path.join(PLACE, "field_verify.json")
@@ -258,6 +280,19 @@ def main():
         "reported_near_dd": reported_near,
         "reported_per1000_dd": reported_per1000,
         "off_seed_ba": off_ba,
+        "amendment3_structural_finding": {
+            "summary": "all 8 off-seeds sit in label-void space; "
+                       "label-referenced endpoints unmeasurable at off "
+                       "cells",
+            "label_occupancy_pm24_at_offseeds": "0.000 at 8 of 8",
+            "label_at_offseed_voxel": "0 at 8 of 8",
+            "off_quads_no_label_within_12vox": "100 percent of sampled "
+                                               "(on-run control: 40 "
+                                               "percent within 4)",
+            "hazard_conf_at_offseeds_pm64": "255 everywhere (no basin in "
+                                            "reach of the seed core)",
+            "on_sheet_rays_off_total": "5 of ~16,000 sampled",
+        },
         "on_seed_ba_archived": on_ba,
         "loo_primary": loo,
         "loo_primary_p_range": loo_range,
@@ -268,10 +303,10 @@ def main():
 
     # ------------------------------------------------------------- markdown
     def fk(x):
-        return "%.0fk" % (x / 1000.0)
+        return "n/a" if x is None else "%.0fk" % (x / 1000.0)
 
     def pp(x):
-        return "%+.2fpp" % (x * 100.0)
+        return "n/a" if x is None else "%+.2fpp" % (x * 100.0)
 
     L = []
     L.append("# Placement A/B: seed-placement test of the hazard-weight effect")
@@ -335,44 +370,65 @@ def main():
                  fk(primary["ci95"][0]), fk(primary["ci95"][1]),
                  "CONFIRMS" if primary_ok else "fails"))
     L.append("")
-    L.append("SECONDARY frac_double DD (H1 < 0, one-sided, declared "
-             "underpowered): mean %s, t=%.2f, one-sided p=%.4f, 95%% CI "
-             "[%s, %s] -> %s" % (
-                 pp(secondary["mean_diff"]), secondary["t"],
-                 secondary["p_one_sided"], pp(secondary["ci95"][0]),
-                 pp(secondary["ci95"][1]),
-                 "agrees (p<0.05)" if secondary_ok else "inconclusive"))
+    if secondary.get("status") == "unmeasurable":
+        L.append("SECONDARY frac_double DD: UNMEASURABLE per Amendment 3 "
+                 "(off cells carry zero on-sheet rays; %d of 8 sites "
+                 "missing)." % secondary["n_missing_sites"])
+    else:
+        L.append("SECONDARY frac_double DD (H1 < 0, one-sided, declared "
+                 "underpowered): mean %s, t=%.2f, one-sided p=%.4f, 95%% CI "
+                 "[%s, %s] -> %s" % (
+                     pp(secondary["mean_diff"]), secondary["t"],
+                     secondary["p_one_sided"], pp(secondary["ci95"][0]),
+                     pp(secondary["ci95"][1]),
+                     "agrees (p<0.05)" if secondary_ok else "inconclusive"))
     L.append("")
-    L.append("GUARDRAIL on_sheet_rate DD (two-sided): mean %s, t=%.2f, "
-             "p=%.4f, 95%% CI [%s, %s] -> %s" % (
-                 pp(guardrail["mean_diff"]), guardrail["t"], guardrail["p"],
-                 pp(guardrail["ci95"][0]), pp(guardrail["ci95"][1]),
-                 "FLAGGED (endpoints possibly denominator-driven)"
-                 if guard_flag else "not flagged"))
+    if guardrail.get("status") == "unmeasurable":
+        L.append("GUARDRAIL on_sheet_rate DD: UNMEASURABLE per Amendment 3 "
+                 "(same cause).")
+    else:
+        L.append("GUARDRAIL on_sheet_rate DD (two-sided): mean %s, t=%.2f, "
+                 "p=%.4f, 95%% CI [%s, %s] -> %s" % (
+                     pp(guardrail["mean_diff"]), guardrail["t"],
+                     guardrail["p"], pp(guardrail["ci95"][0]),
+                     pp(guardrail["ci95"][1]),
+                     "FLAGGED (endpoints possibly denominator-driven)"
+                     if guard_flag else "not flagged"))
     L.append("")
-    L.append("Reported, not tested: crossing frac_quads_near DD mean %s "
-             "(95%% CI [%s, %s]); per-1000-quads DD mean %.2f "
-             "(95%% CI [%.2f, %.2f])." % (
-                 pp(reported_near["mean_diff"]), pp(reported_near["ci95"][0]),
-                 pp(reported_near["ci95"][1]), reported_per1000["mean_diff"],
-                 reported_per1000["ci95"][0], reported_per1000["ci95"][1]))
+    def _stat(d, key="mean_diff"):
+        return None if d.get("status") == "unmeasurable" else d[key]
+
+    if reported_near.get("status") == "unmeasurable" or             reported_per1000.get("status") == "unmeasurable":
+        L.append("Reported, not tested: crossing DD %s; per-1000 DD %s "
+                 "(unmeasurable entries per Amendment 3)." % (
+                     pp(_stat(reported_near)),
+                     "n/a" if _stat(reported_per1000) is None
+                     else "%.2f" % _stat(reported_per1000)))
+    else:
+        L.append("Reported, not tested: crossing frac_quads_near DD mean %s "
+                 "(95%% CI [%s, %s]); per-1000-quads DD mean %.2f "
+                 "(95%% CI [%.2f, %.2f])." % (
+                     pp(reported_near["mean_diff"]),
+                     pp(reported_near["ci95"][0]),
+                     pp(reported_near["ci95"][1]),
+                     reported_per1000["mean_diff"],
+                     reported_per1000["ci95"][0],
+                     reported_per1000["ci95"][1]))
     L.append("")
     L.append("## Off-seed (B-A) itself (mechanism predicts near zero)")
     L.append("")
     L.append("| endpoint | mean | 95% CI |")
     L.append("|---|---|---|")
-    L.append("| area_vx2 | %s | [%s, %s] |" % (
-        fk(off_ba["area"]["mean_diff"]),
-        fk(off_ba["area"]["ci95"][0]), fk(off_ba["area"]["ci95"][1])))
-    L.append("| frac_double | %s | [%s, %s] |" % (
-        pp(off_ba["dbl"]["mean_diff"]),
-        pp(off_ba["dbl"]["ci95"][0]), pp(off_ba["dbl"]["ci95"][1])))
-    L.append("| on_sheet | %s | [%s, %s] |" % (
-        pp(off_ba["on_sheet"]["mean_diff"]),
-        pp(off_ba["on_sheet"]["ci95"][0]), pp(off_ba["on_sheet"]["ci95"][1])))
-    L.append("| crossing near | %s | [%s, %s] |" % (
-        pp(off_ba["near"]["mean_diff"]),
-        pp(off_ba["near"]["ci95"][0]), pp(off_ba["near"]["ci95"][1])))
+    def row(name, d, f):
+        if d.get("status") == "unmeasurable":
+            return "| %s | unmeasurable (Amendment 3) | n/a |" % name
+        return "| %s | %s | [%s, %s] |" % (
+            name, f(d["mean_diff"]), f(d["ci95"][0]), f(d["ci95"][1]))
+
+    L.append(row("area_vx2", off_ba["area"], fk))
+    L.append(row("frac_double", off_ba["dbl"], pp))
+    L.append(row("on_sheet", off_ba["on_sheet"], pp))
+    L.append(row("crossing near", off_ba["near"], pp))
     L.append("")
     L.append("Archived on-seed (B-A) area mean %s; off-seed point estimate "
              "is %.1f%% of it." % (
@@ -398,9 +454,11 @@ def main():
         " Guardrail flag reported alongside." if guard_flag else ""))
     L.append("")
     open(os.path.join(PLACE, "RESULTS.md"), "w").write("\n".join(L))
+    gtxt = ("unmeasurable" if guardrail.get("status") == "unmeasurable"
+            else "%.4f" % guardrail["p"])
     print("wrote RESULTS.json + RESULTS.md; bucket %d; primary one-sided "
-          "p=%.5f; guardrail p=%.4f%s"
-          % (bucket, primary["p_one_sided"], guardrail["p"],
+          "p=%.5f; guardrail p=%s%s"
+          % (bucket, primary["p_one_sided"], gtxt,
              " GUARDRAIL FLAG" if guard_flag else ""))
 
 

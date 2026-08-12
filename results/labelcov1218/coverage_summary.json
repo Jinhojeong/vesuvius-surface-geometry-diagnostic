@@ -1,0 +1,622 @@
+{
+ "status": "ok",
+ "date": "2026-08-12 22:09:12",
+ "method": {
+  "m7_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1218/representations/predictions/surfaces/20250521120456-surface-20260413222639-surface-m7-L0-th0.2.zarr",
+  "m7_level": 1,
+  "grid_shape": [
+   11624,
+   3797,
+   3797
+  ],
+  "window_tile_local": {
+   "z": [
+    64,
+    192
+   ],
+   "y": [
+    192,
+    320
+   ],
+   "x": [
+    192,
+    320
+   ]
+  },
+  "pred_threshold": 128,
+  "near_chebyshev": 4,
+  "note": "One fixed 128^3 center window per tile, clamped at the grid boundary; not a whole-volume integral. Near-window-edge labels outside the window are not seen by the dilation."
+ },
+ "n_tiles_total": 1321,
+ "n_tiles_ok": 1321,
+ "n_tiles_failed": 0,
+ "n_tiles_other": 0,
+ "n_tiles_clamped": 17,
+ "pooled": {
+  "n_windows": 1321,
+  "n_vox": 2740535296,
+  "n_pred": 734603544,
+  "n_lab": 332211571,
+  "n_pred_and_lab": 332211571,
+  "n_pred_near_lab": 334353155,
+  "P_label_given_pred": 0.4522324643181956,
+  "P_label_near4_given_pred": 0.45514775654281353,
+  "P_pred_given_label": 1.0
+ },
+ "tile_distribution": {
+  "min_pred": 1000,
+  "n_tiles": 1233,
+  "coverage_near4_deciles_p0_to_p100": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0509,
+   0.974,
+   0.9964,
+   0.9991,
+   0.9996,
+   0.9999,
+   1.0
+  ],
+  "n_below_0.1": 514,
+  "n_0.1_to_0.5": 35,
+  "n_0.5_to_0.9": 23,
+  "n_above_0.9": 661
+ },
+ "z_bands_low_coverage": [
+  {
+   "z_lo": 128.0,
+   "z_hi": 1264.8,
+   "n_tiles": 158,
+   "n_low_cov": 93,
+   "frac_low": 0.5886,
+   "median_cov_near4": 0.0345
+  },
+  {
+   "z_lo": 1264.8,
+   "z_hi": 2401.6,
+   "n_tiles": 109,
+   "n_low_cov": 30,
+   "frac_low": 0.2752,
+   "median_cov_near4": 0.9983
+  },
+  {
+   "z_lo": 2401.6,
+   "z_hi": 3538.4,
+   "n_tiles": 132,
+   "n_low_cov": 49,
+   "frac_low": 0.3712,
+   "median_cov_near4": 0.9969
+  },
+  {
+   "z_lo": 3538.4,
+   "z_hi": 4675.2,
+   "n_tiles": 131,
+   "n_low_cov": 54,
+   "frac_low": 0.4122,
+   "median_cov_near4": 0.9799
+  },
+  {
+   "z_lo": 4675.2,
+   "z_hi": 5812.0,
+   "n_tiles": 96,
+   "n_low_cov": 29,
+   "frac_low": 0.3021,
+   "median_cov_near4": 0.9857
+  },
+  {
+   "z_lo": 5812.0,
+   "z_hi": 6948.8,
+   "n_tiles": 90,
+   "n_low_cov": 33,
+   "frac_low": 0.3667,
+   "median_cov_near4": 0.9737
+  },
+  {
+   "z_lo": 6948.8,
+   "z_hi": 8085.6,
+   "n_tiles": 97,
+   "n_low_cov": 30,
+   "frac_low": 0.3093,
+   "median_cov_near4": 0.9895
+  },
+  {
+   "z_lo": 8085.6,
+   "z_hi": 9222.4,
+   "n_tiles": 111,
+   "n_low_cov": 54,
+   "frac_low": 0.4865,
+   "median_cov_near4": 0.2823
+  },
+  {
+   "z_lo": 9222.4,
+   "z_hi": 10359.2,
+   "n_tiles": 134,
+   "n_low_cov": 43,
+   "frac_low": 0.3209,
+   "median_cov_near4": 0.9953
+  },
+  {
+   "z_lo": 10359.2,
+   "z_hi": 11496.0,
+   "n_tiles": 175,
+   "n_low_cov": 99,
+   "frac_low": 0.5657,
+   "median_cov_near4": 0.0
+  }
+ ],
+ "radial_bands_low_coverage_axis_approx_volume_center": [
+  {
+   "r_lo": 211.4,
+   "r_hi": 761.3,
+   "n_tiles": 402,
+   "n_low_cov": 54,
+   "frac_low": 0.1343
+  },
+  {
+   "r_lo": 761.3,
+   "r_hi": 1087.3,
+   "n_tiles": 374,
+   "n_low_cov": 130,
+   "frac_low": 0.3476
+  },
+  {
+   "r_lo": 1087.3,
+   "r_hi": 2030.9,
+   "n_tiles": 457,
+   "n_low_cov": 330,
+   "frac_low": 0.7221
+  }
+ ],
+ "anchors": [
+  {
+   "kind": "on_seed",
+   "slab": "z4032",
+   "tile": "tile_y1344_x448",
+   "g_L1": [
+    4232,
+    1766,
+    912
+   ],
+   "tile_center_window_coverage_near4": 0.0,
+   "tile_center_window_n_pred": 1425408,
+   "point_window": {
+    "lo": [
+     4168,
+     1702,
+     848
+    ],
+    "hi": [
+     4288,
+     1830,
+     960
+    ],
+    "n_pred": 490461,
+    "n_lab": 488265,
+    "coverage_strict": 0.995523,
+    "coverage_near4": 0.997665
+   }
+  },
+  {
+   "kind": "on_seed",
+   "slab": "z224",
+   "tile": "tile_y1792_x1344",
+   "g_L1": [
+    296,
+    1910,
+    1803
+   ],
+   "tile_center_window_coverage_near4": 0.961607,
+   "tile_center_window_n_pred": 72253,
+   "point_window": {
+    "lo": [
+     232,
+     1846,
+     1739
+    ],
+    "hi": [
+     360,
+     1974,
+     1856
+    ],
+    "n_pred": 675620,
+    "n_lab": 625779,
+    "coverage_strict": 0.926229,
+    "coverage_near4": 0.997176
+   }
+  },
+  {
+   "kind": "on_seed",
+   "slab": "z0",
+   "tile": "tile_y448_x3136",
+   "g_L1": [
+    79,
+    829,
+    3263
+   ],
+   "tile_center_window_coverage_near4": 0.015829,
+   "tile_center_window_n_pred": 799117,
+   "point_window": {
+    "lo": [
+     15,
+     765,
+     3199
+    ],
+    "hi": [
+     143,
+     893,
+     3327
+    ],
+    "n_pred": 43834,
+    "n_lab": 43336,
+    "coverage_strict": 0.988639,
+    "coverage_near4": 0.999817
+   }
+  },
+  {
+   "kind": "on_seed",
+   "slab": "z11200",
+   "tile": "tile_y448_x2240",
+   "g_L1": [
+    11293,
+    772,
+    2380
+   ],
+   "tile_center_window_coverage_near4": 0.281322,
+   "tile_center_window_n_pred": 160350,
+   "point_window": {
+    "lo": [
+     11229,
+     708,
+     2316
+    ],
+    "hi": [
+     11357,
+     836,
+     2444
+    ],
+    "n_pred": 109703,
+    "n_lab": 103239,
+    "coverage_strict": 0.941077,
+    "coverage_near4": 0.994376
+   }
+  },
+  {
+   "kind": "on_seed",
+   "slab": "z0",
+   "tile": "tile_y448_x3136",
+   "g_L1": [
+    78,
+    844,
+    3215
+   ],
+   "tile_center_window_coverage_near4": 0.015829,
+   "tile_center_window_n_pred": 799117,
+   "point_window": {
+    "lo": [
+     14,
+     780,
+     3151
+    ],
+    "hi": [
+     142,
+     908,
+     3279
+    ],
+    "n_pred": 43945,
+    "n_lab": 42915,
+    "coverage_strict": 0.976562,
+    "coverage_near4": 0.995358
+   }
+  },
+  {
+   "kind": "on_seed",
+   "slab": "z9184",
+   "tile": "tile_y1792_x3136",
+   "g_L1": [
+    9269,
+    1876,
+    3188
+   ],
+   "tile_center_window_coverage_near4": 0.0,
+   "tile_center_window_n_pred": 524288,
+   "point_window": {
+    "lo": [
+     9205,
+     1812,
+     3136
+    ],
+    "hi": [
+     9333,
+     1940,
+     3252
+    ],
+    "n_pred": 425609,
+    "n_lab": 422494,
+    "coverage_strict": 0.992681,
+    "coverage_near4": 0.997777
+   }
+  },
+  {
+   "kind": "on_seed",
+   "slab": "z224",
+   "tile": "tile_y1792_x2240",
+   "g_L1": [
+    303,
+    2186,
+    2457
+   ],
+   "tile_center_window_coverage_near4": 0.0,
+   "tile_center_window_n_pred": 655360,
+   "point_window": {
+    "lo": [
+     239,
+     2122,
+     2393
+    ],
+    "hi": [
+     367,
+     2250,
+     2521
+    ],
+    "n_pred": 575623,
+    "n_lab": 524932,
+    "coverage_strict": 0.911937,
+    "coverage_near4": 0.997583
+   }
+  },
+  {
+   "kind": "on_seed",
+   "slab": "z672",
+   "tile": "tile_y2240_x2240",
+   "g_L1": [
+    791,
+    2329,
+    2318
+   ],
+   "tile_center_window_coverage_near4": 0.0,
+   "tile_center_window_n_pred": 917504,
+   "point_window": {
+    "lo": [
+     727,
+     2265,
+     2254
+    ],
+    "hi": [
+     855,
+     2393,
+     2382
+    ],
+    "n_pred": 647443,
+    "n_lab": 640810,
+    "coverage_strict": 0.989755,
+    "coverage_near4": 0.992375
+   }
+  },
+  {
+   "kind": "off_seed",
+   "slab": "z4032",
+   "tile": "tile_y1344_x448",
+   "g_L1": [
+    4240,
+    1585,
+    753
+   ],
+   "tile_center_window_coverage_near4": 0.0,
+   "tile_center_window_n_pred": 1425408,
+   "point_window": {
+    "lo": [
+     4176,
+     1521,
+     689
+    ],
+    "hi": [
+     4288,
+     1649,
+     817
+    ],
+    "n_pred": 1003520,
+    "n_lab": 0,
+    "coverage_strict": 0.0,
+    "coverage_near4": 0.0
+   }
+  },
+  {
+   "kind": "off_seed",
+   "slab": "z224",
+   "tile": "tile_y1792_x1344",
+   "g_L1": [
+    432,
+    1840,
+    1392
+   ],
+   "tile_center_window_coverage_near4": 0.961607,
+   "tile_center_window_n_pred": 72253,
+   "point_window": {
+    "lo": [
+     368,
+     1792,
+     1344
+    ],
+    "hi": [
+     480,
+     1904,
+     1456
+    ],
+    "n_pred": 442663,
+    "n_lab": 8,
+    "coverage_strict": 1.8e-05,
+    "coverage_near4": 2.5e-05
+   }
+  },
+  {
+   "kind": "off_seed",
+   "slab": "z0",
+   "tile": "tile_y448_x3136",
+   "g_L1": [
+    186,
+    520,
+    3489
+   ],
+   "tile_center_window_coverage_near4": 0.015829,
+   "tile_center_window_n_pred": 799117,
+   "point_window": {
+    "lo": [
+     122,
+     456,
+     3425
+    ],
+    "hi": [
+     250,
+     584,
+     3553
+    ],
+    "n_pred": 964653,
+    "n_lab": 0,
+    "coverage_strict": 0.0,
+    "coverage_near4": 0.0
+   }
+  },
+  {
+   "kind": "off_seed",
+   "slab": "z11200",
+   "tile": "tile_y448_x2240",
+   "g_L1": [
+    11272,
+    535,
+    2682
+   ],
+   "tile_center_window_coverage_near4": 0.281322,
+   "tile_center_window_n_pred": 160350,
+   "point_window": {
+    "lo": [
+     11208,
+     471,
+     2618
+    ],
+    "hi": [
+     11336,
+     599,
+     2746
+    ],
+    "n_pred": 933837,
+    "n_lab": 0,
+    "coverage_strict": 0.0,
+    "coverage_near4": 0.0
+   }
+  },
+  {
+   "kind": "off_seed",
+   "slab": "z0",
+   "tile": "tile_y448_x3136",
+   "g_L1": [
+    186,
+    520,
+    3489
+   ],
+   "tile_center_window_coverage_near4": 0.015829,
+   "tile_center_window_n_pred": 799117,
+   "point_window": {
+    "lo": [
+     122,
+     456,
+     3425
+    ],
+    "hi": [
+     250,
+     584,
+     3553
+    ],
+    "n_pred": 964653,
+    "n_lab": 0,
+    "coverage_strict": 0.0,
+    "coverage_near4": 0.0
+   }
+  },
+  {
+   "kind": "off_seed",
+   "slab": "z9184",
+   "tile": "tile_y1792_x3136",
+   "g_L1": [
+    9376,
+    2016,
+    3280
+   ],
+   "tile_center_window_coverage_near4": 0.0,
+   "tile_center_window_n_pred": 524288,
+   "point_window": {
+    "lo": [
+     9312,
+     1952,
+     3216
+    ],
+    "hi": [
+     9440,
+     2080,
+     3344
+    ],
+    "n_pred": 1051768,
+    "n_lab": 0,
+    "coverage_strict": 0.0,
+    "coverage_near4": 0.0
+   }
+  },
+  {
+   "kind": "off_seed",
+   "slab": "z224",
+   "tile": "tile_y1792_x2240",
+   "g_L1": [
+    304,
+    2016,
+    2704
+   ],
+   "tile_center_window_coverage_near4": 0.0,
+   "tile_center_window_n_pred": 655360,
+   "point_window": {
+    "lo": [
+     240,
+     1952,
+     2640
+    ],
+    "hi": [
+     368,
+     2080,
+     2752
+    ],
+    "n_pred": 917504,
+    "n_lab": 0,
+    "coverage_strict": 0.0,
+    "coverage_near4": 0.0
+   }
+  },
+  {
+   "kind": "off_seed",
+   "slab": "z672",
+   "tile": "tile_y2240_x2240",
+   "g_L1": [
+    768,
+    2288,
+    2672
+   ],
+   "tile_center_window_coverage_near4": 0.0,
+   "tile_center_window_n_pred": 917504,
+   "point_window": {
+    "lo": [
+     704,
+     2240,
+     2608
+    ],
+    "hi": [
+     832,
+     2352,
+     2736
+    ],
+    "n_pred": 573440,
+    "n_lab": 0,
+    "coverage_strict": 0.0,
+    "coverage_near4": 0.0
+   }
+  }
+ ]
+}

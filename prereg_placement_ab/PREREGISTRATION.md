@@ -143,3 +143,28 @@ point; their off cells are independent replicate sets at the same
 configuration, and the leave-one-site-out table covers their coupling.
 Second, PREREGISTRATION.md sha256 before this amendment:
 7dd5c387410f9af35980af5d3518ccb21369064f4ae0dd76bc36780bbbb6c967.
+
+### Amendment 2 (2026-08-12, before any run was launched)
+
+After the Amendment 1 field builds, the mandatory voxel check failed on
+four of eight sites (o0, o2, o3, o4): the exact off-seed voxel reads
+unwritten. Measured cause: the field writes a band of six voxels around the
+prediction surface level set, and these points sit deep inside thick
+predicted mass, so the m7 value at the voxel is 255 while the band does not
+reach it. Every original on-seed reads a written vector, so an unwritten
+off-seed would break the on/off comparability condition, not just a
+convenience.
+
+Change, the nudge rule: an off-seed whose voxel is unwritten moves to the
+field-written voxel at minimal Chebyshev distance from the frozen point,
+preferring voxels with m7 prediction value at or above 128 within that
+minimal shell, ties broken by the md5 hash of "nudge:z:y:x". The 96-voxel
+cluster-distance rule is re-verified at the nudged point and the run stops
+if it fails. Measured nudges: o0 moves 1 voxel, o3 moves 10, o2 and o4
+(shared point) move 26; the smallest re-verified cluster distance after
+nudging cannot fall below 109 minus 1, 134 minus 10, and 145 minus 26, all
+above 96. Arms, endpoints, analysis and buckets remain unchanged. The
+frozen and nudged seed lists both ship in the results record.
+
+PREREGISTRATION.md sha256 before this amendment:
+e48811c04c4796948ce154555063fa75d651bee97d1b312bad06eafba05137f7.

@@ -146,3 +146,7 @@ with CT chunk existence first; same mechanism as the halo reported
 upstream in villa #1114 (blend overreach past the mask boundary), for
 which PHerc1218 was independently measured at 50.2% voxel phantoms in
 that thread.
+
+## render_1218_support_mask.png (1170x1600)
+
+Surfaces traced on PHerc1218 from the m7 prediction, before and after CT-support masking (villa PR #1156, branch `progress/ct-support-mask-1114`), rendered through the standard `vc_render_tifxyz` with ABF++ flattening at level 1, scale 0.5, auto-crop. Three seeds, one row each, original m7 on the left and support-masked m7 on the right, same seed and tracing parameters in both arms. Seeds were picked deterministically on CT-supported prediction 4 to 32 voxels from the phantom halo (rule and coordinates in results/p8_support_mask/r1_seeds.json). The dark regions are where the traced mesh carries no CT under it, so the render has nothing to sample; their extent tracks the measured unsupported-quad fraction printed in each title, 34.1 and 43.5 percent on seeds 0 and 1 against 1.5 percent on seed 2. Masking moved 95 to 98 percent of quads by more than 8 voxels (median 24 to 123), so the two arms are genuinely different surfaces, while the unsupported fraction barely moves, which is the visual form of the finding that output masking changes the trace without confining it to CT support. Supports the claims in results/p8_support_mask and the villa 1114 thread.

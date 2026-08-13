@@ -1,0 +1,35 @@
+{
+ "region": {
+  "win": "z10528/tile_y2240_x448.npz",
+  "cube_lo_l1": [
+   10624,
+   2464,
+   672
+  ],
+  "phantom": 2970104,
+  "supported": 32688,
+  "slab": 10
+ },
+ "tag": "r1",
+ "bounds_l0": [
+  [
+   20544,
+   4224,
+   768
+  ],
+  [
+   22080,
+   5760,
+   2112
+  ]
+ ],
+ "chunks_pred": 214,
+ "chunks_ct": 126,
+ "mask_stats": {
+  "nonzero_voxels_before": 593795529,
+  "nonzero_voxels_after": 170750087,
+  "nonzero_voxels_removed": 423045442,
+  "phantom_fraction_before": 0.712442956100466,
+  "scope": "all_nonzero_input_predictions"
+ }
+}

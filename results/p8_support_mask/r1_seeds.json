@@ -1,0 +1,36 @@
+{
+ "rule": "supported m7 positive 4-32 L0 vox from the phantom halo, local supported mass >=120 samples, rank by local mass then md5, min sep 256 L0",
+ "n_cand": 61,
+ "picked": [
+  {
+   "l0": [
+    21312,
+    4394,
+    1490
+   ],
+   "dist_to_phantom_vox": 27,
+   "local_supported": 404,
+   "key": "7596842b7b6b3f2415ce702d07857615"
+  },
+  {
+   "l0": [
+    20672,
+    4384,
+    1294
+   ],
+   "dist_to_phantom_vox": 20,
+   "local_supported": 245,
+   "key": "ac2ffe0704c72b227e74608c08b59c58"
+  },
+  {
+   "l0": [
+    21056,
+    4388,
+    2000
+   ],
+   "dist_to_phantom_vox": 22,
+   "local_supported": 242,
+   "key": "61421e37b75b9b9994066d77aecea16c"
+  }
+ ]
+}

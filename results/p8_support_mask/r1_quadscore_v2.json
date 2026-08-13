@@ -1,0 +1,41 @@
+[
+ {
+  "seed": 0,
+  "before": {
+   "quads_in_region": 1954,
+   "unsupported_frac": 0.3408,
+   "on_positive_frac": 0.284
+  },
+  "after": {
+   "quads_in_region": 1921,
+   "unsupported_frac": 0.3342,
+   "on_positive_frac": 0.2119
+  }
+ },
+ {
+  "seed": 1,
+  "before": {
+   "quads_in_region": 1854,
+   "unsupported_frac": 0.4353,
+   "on_positive_frac": 0.2309
+  },
+  "after": {
+   "quads_in_region": 1828,
+   "unsupported_frac": 0.3917,
+   "on_positive_frac": 0.2117
+  }
+ },
+ {
+  "seed": 2,
+  "before": {
+   "quads_in_region": 1151,
+   "unsupported_frac": 0.0148,
+   "on_positive_frac": 0.2928
+  },
+  "after": {
+   "quads_in_region": 1260,
+   "unsupported_frac": 0.0183,
+   "on_positive_frac": 0.296
+  }
+ }
+]

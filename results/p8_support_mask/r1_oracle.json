@@ -1,0 +1,8 @@
+{
+ "tag": "r1",
+ "tiles_overlapping": 18,
+ "labeled_voxels_L1": 34345863,
+ "labeled_and_m7pos_before": 34345863,
+ "labeled_positives_REMOVED": 953,
+ "all_positives_removed_in_sampled_grid": 55723948
+}

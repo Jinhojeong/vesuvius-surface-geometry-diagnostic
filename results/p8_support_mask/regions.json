@@ -1,0 +1,50 @@
+{
+ "rule": "masked_empty, phantom>=20000 and supported>=5000 in window+128 skirt at L1, rank by phantom, distinct z-slab",
+ "picked": [
+  {
+   "win": "z448/tile_y1792_x896.npz",
+   "cube_lo_l1": [
+    544,
+    1984,
+    1088
+   ],
+   "phantom": 3207711,
+   "supported": 36808,
+   "slab": 0
+  },
+  {
+   "win": "z10528/tile_y2240_x448.npz",
+   "cube_lo_l1": [
+    10624,
+    2464,
+    672
+   ],
+   "phantom": 2970104,
+   "supported": 32688,
+   "slab": 10
+  },
+  {
+   "win": "z10976/tile_y448_x896.npz",
+   "cube_lo_l1": [
+    11072,
+    672,
+    1088
+   ],
+   "phantom": 2619983,
+   "supported": 12279,
+   "slab": 11
+  },
+  {
+   "win": "z1344/tile_y1792_x0.npz",
+   "cube_lo_l1": [
+    1440,
+    1984,
+    192
+   ],
+   "phantom": 2537302,
+   "supported": 23132,
+   "slab": 1
+  }
+ ],
+ "n_candidates": 20
+}

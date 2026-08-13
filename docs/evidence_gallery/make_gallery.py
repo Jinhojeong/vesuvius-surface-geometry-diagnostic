@@ -579,10 +579,187 @@ def fig6():
     }
 
 
+# ---------------------------------------------------------------- FIG 7
+VOIDCT = "/mnt/vesuvius/voidct1218"
+M7L1_CACHE = "/mnt/vesuvius/hazard_zarr_smoke/m7L1_cache"
+M71218 = ("https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1218/"
+          "representations/predictions/surfaces/"
+          "20250521120456-surface-20260413222639-surface-m7-L0-th0.2.zarr")
+LIST1218 = ("https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/"
+            "?list-type=2&prefix=PHerc1218/volumes/"
+            "20250521120456-8.640um-1.2m-116keV-masked.zarr/1/")
+
+
+def fig7():
+    """m7 predictions beyond masked-CT support: one axial plane + the counts.
+
+    Plane choice: z=10208 (L1) lies inside the 64-cube of the masked_empty
+    void window z10080/tile_y896_x2688 (cube_lo 10176/1088/2880) and inside
+    the control cube of z10080/tile_y1344_x1792 (10176/1568/1984), both from
+    voidct1218/windows_class.csv, so supported and unsupported m7 mass share
+    one plane. CT chunk existence comes from a live S3 key listing of the
+    masked volume's L1 array at chunk-z 79 (z 10112..10240); m7 positives
+    are the stored L1 voxels (>= 128) of the same plane, read through the
+    coverage run's local chunk cache (absent zarr chunks decode as fill 0).
+    """
+    import urllib.request
+    from xml.etree import ElementTree
+
+    sys.path.insert(0, "/mnt/vesuvius/overlap_step2")
+    from zarr_http import RemoteZarrLevel
+
+    ZP = 10208
+    m7 = RemoteZarrLevel(M71218, 1, cache_dir=M7L1_CACHE)
+    nz_, ny, nx = m7.shape
+    assert 0 <= ZP < nz_
+    ccz = ZP // 128
+    gy, gx = -(-ny // 128), -(-nx // 128)
+
+    # CT L1 chunk existence at chunk-z ccz (single-list-request slab)
+    exist = np.zeros((gy, gx), bool)
+    n_keys, n_req, token = 0, 0, None
+    while True:
+        url = LIST1218 + f"{ccz}/&max-keys=1000"
+        if token:
+            import urllib.parse
+            url += "&continuation-token=" + urllib.parse.quote(token)
+        req = urllib.request.Request(url, headers={"User-Agent": "gallery-fig7"})
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            tree = ElementTree.fromstring(resp.read())
+        n_req += 1
+        ns = {"s3": tree.tag.split("}")[0].strip("{")}
+        for k in tree.findall(".//s3:Contents/s3:Key", ns):
+            parts = k.text.rsplit("/", 3)[-3:]  # cz/cy/cx
+            cz_, cy_, cx_ = (int(p) for p in parts)
+            if cz_ == ccz:
+                exist[cy_, cx_] = True
+                n_keys += 1
+        trunc = tree.find("s3:IsTruncated", ns)
+        if trunc is None or trunc.text != "true":
+            break
+        token = tree.find("s3:NextContinuationToken", ns).text
+
+    # stored m7 positives on the plane (cache-backed chunk reads)
+    plane = m7.read_crop((ZP, 0, 0), (ZP + 1, ny, nx))[0]
+    pos = plane >= 128
+    ex_px = np.repeat(np.repeat(exist, 128, 0), 128, 1)[:ny, :nx]
+    p_all = int(pos.sum())
+    p_abs = int((pos & ~ex_px).sum())
+
+    # panel A image: existence background + positive density in red
+    ds = 8
+    hh, ww = ny // ds, nx // ds
+    bg = np.where(ex_px, 0.72, 0.13).astype(np.float32)
+    bgd = bg[:hh * ds, :ww * ds].reshape(hh, ds, ww, ds).mean((1, 3))
+    dens = pos[:hh * ds, :ww * ds].astype(np.float32) \
+        .reshape(hh, ds, ww, ds).mean((1, 3))
+    rgb = np.repeat(bgd[..., None], 3, -1)
+    a = np.clip(dens * 4.0, 0, 1)[..., None]
+    rgb = rgb * (1 - a) + np.array([0.95, 0.30, 0.08], np.float32) * a
+
+    # pool numbers measured by voidct1218/analyze_final.py
+    S = json.load(open(f"{VOIDCT}/summary.json"))
+
+    def find_key(obj, key):
+        if isinstance(obj, dict):
+            if key in obj:
+                return obj[key]
+            for v in obj.values():
+                r = find_key(v, key)
+                if r is not None:
+                    return r
+        return None
+
+    pce = find_key(S, "pool_chunk_existence")
+    grp = [
+        ("overall", pce["total_m7_pos"], pce["m7_pos_on_absent_ct_chunks"],
+         pce["frac_on_absent"]),
+        ("void windows\n(cov < 0.1)", pce["void_windows(cov<0.1)"]["pos"],
+         pce["void_windows(cov<0.1)"]["on_absent"],
+         pce["void_windows(cov<0.1)"]["frac"]),
+        ("control windows\n(cov > 0.98)",
+         pce["control_windows(cov>0.98)"]["pos"],
+         pce["control_windows(cov>0.98)"]["on_absent"],
+         pce["control_windows(cov>0.98)"]["frac"]),
+    ]
+
+    fig, axes = plt.subplots(1, 2, figsize=(14.0, 7.8), dpi=100,
+                             gridspec_kw={"width_ratios": [1.12, 1.0]})
+    ax = axes[0]
+    ax.imshow(rgb, interpolation="nearest",
+              extent=(0, ww * ds, hh * ds, 0))
+    boxes = []
+    with open(f"{VOIDCT}/windows_class.csv") as fh:
+        for r in csv.DictReader(fh):
+            cz0 = int(r["cube_lo_z"])
+            if not (cz0 <= ZP < cz0 + 64):
+                continue
+            if r["cls"] == "masked_empty":
+                boxes.append((r["path"], "yellow", int(r["cube_lo_y"]),
+                              int(r["cube_lo_x"])))
+            elif r["group"] == "control":
+                boxes.append((r["path"], "cyan", int(r["cube_lo_y"]),
+                              int(r["cube_lo_x"])))
+    for _, col, by, bx in boxes:
+        ax.add_patch(Rectangle((bx, by), 64, 64, fill=False,
+                               edgecolor=col, lw=1.2))
+    ax.set_title(f"A. axial plane z={ZP} (L1): stored m7 positives vs "
+                 "CT chunk existence", fontsize=9)
+    ax.set_xlabel("light gray = 128^3 CT chunk stored in the masked volume "
+                  "(S3 listing), dark = no chunk object (zarr fill 0)\n"
+                  "red = stored m7-positive density (L1, >= 128, 8x box "
+                  "mean); yellow = masked_empty void cube, cyan = control\n"
+                  f"cube; this plane: {100 * p_abs / p_all:.1f}% of "
+                  f"{p_all:,} positives sit on absent chunks", fontsize=7.5)
+    clean(ax)
+
+    ax = axes[1]
+    xs_ = np.arange(len(grp))
+    w = 0.38
+    ax.bar(xs_ - w / 2, [(p - a_) / 1e6 for _, p, a_, _ in grp], w,
+           color="0.55", label="on present CT chunks")
+    ax.bar(xs_ + w / 2, [a_ / 1e6 for _, p, a_, _ in grp], w,
+           color=(0.86, 0.30, 0.25), label="on absent CT chunks")
+    for i, (_, p, a_, f) in enumerate(grp):
+        ax.annotate(f"{100 * f:.1f}%\nabsent", (xs_[i] + w / 2, a_ / 1e6),
+                    textcoords="offset points", xytext=(0, 4),
+                    ha="center", fontsize=8)
+    ax.set_xticks(xs_)
+    ax.set_xticklabels([g for g, *_ in grp], fontsize=8)
+    ax.set_ylabel("m7-positive voxels (millions, L1)", fontsize=8)
+    ax.set_ylim(0, max(p for _, p, _, _ in grp) / 1e6 * 1.18)
+    ax.legend(fontsize=8, frameon=False)
+    ax.tick_params(labelsize=7)
+    ax.set_title("B. pool counts: m7 positives on present vs absent CT "
+                 "chunks", fontsize=9)
+    ax.set_xlabel("1,174-window pool, chunk-granular "
+                  "(voidct1218/summary.json pool_chunk_existence); absent = "
+                  "128^3 CT chunk\nwith no stored object in the canonical "
+                  "masked volume of the same timestamp", fontsize=7.5)
+    fig.suptitle("PHerc1218 m7 surface prediction beyond masked-CT support: "
+                 f"{100 * pce['frac_on_absent']:.1f}% of pool positives sit "
+                 "in CT chunks absent from the masked volume", fontsize=10)
+    fig.tight_layout(rect=(0, 0, 1, 0.97))
+    p = f"{OUT}/m7_beyond_support.png"
+    fig.savefig(p)
+    plt.close(fig)
+    summary["fig7"] = {
+        "path": p, "plane_z": ZP, "ct_chunk_z": ccz,
+        "s3_list_requests": n_req, "ct_chunks_in_slab": n_keys,
+        "plane_pos": p_all, "plane_pos_on_absent": p_abs,
+        "plane_frac_absent": round(p_abs / max(p_all, 1), 4),
+        "boxes": [{"path": b[0], "color": b[1]} for b in boxes],
+        "pool": {g.replace("\n", " "): {"pos": p_, "on_absent": a_,
+                                        "frac": f}
+                 for g, p_, a_, f in grp},
+    }
+
+
 # ---------------------------------------------------------------- run + verify
 def main():
-    todo = sys.argv[1:] or ["fig1", "fig2", "fig3", "fig4", "fig5", "fig6"]
-    for fn in (fig1, fig2, fig3, fig4, fig5, fig6):
+    todo = sys.argv[1:] or ["fig1", "fig2", "fig3", "fig4", "fig5", "fig6",
+                            "fig7"]
+    for fn in (fig1, fig2, fig3, fig4, fig5, fig6, fig7):
         if fn.__name__ not in todo:
             continue
         try:

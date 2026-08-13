@@ -117,3 +117,32 @@ voxels, conf 0.157, pass 2 OOB recovery, id 410 -> 398/377), and crop
 4 -> 63/8). Supports the public claim that the repair machinery transfers
 to a second scroll with measured rates, 7,812 split sites checked, 42.5%
 ray-validated, pooled thick-column share 96.1% before to 93.7% after.
+
+## m7_beyond_support.png (1400x780)
+
+The published PHerc1218 m7 surface prediction stores large positive
+regions where the canonical masked CT volume of the same timestamp
+(20250521120456) has no data at all. Panel A is axial plane z=10208 (L1):
+the background is the chunk-existence map of the masked volume's level-1
+array at chunk-z 79, from a single live S3 key listing (264 of 900 grid
+cells stored; light gray = 128^3 chunk object present, dark = no object,
+zarr fill 0), and the stored m7-positive voxels of the same plane (level
+1, >= 128, read through the coverage run's chunk cache at
+`/mnt/vesuvius/hazard_zarr_smoke/m7L1_cache`) are overlaid in red as an
+8x box-mean density. The interior spiral sits on gray (supported); the
+solid red halo ring sits on dark (no CT data): 36.8% of this plane's
+1,627,432 positives are on absent chunks. The yellow box is the
+masked_empty void cube z10080/tile_y896_x2688 and the cyan box the
+control cube z10080/tile_y1344_x1792, both from
+`/mnt/vesuvius/voidct1218/windows_class.csv`. Panel B gives the pool
+counts from `/mnt/vesuvius/voidct1218/summary.json`
+(pool_chunk_existence): of 730.4M m7-positive voxels across the
+1,174-window pool, 46.5% sit in CT chunks absent from the masked volume;
+void windows (coverage_near4 < 0.1) are at 85.4%, control windows
+(> 0.98) at exactly 0.0%. Supports the claim that the published m7
+predictions extend well beyond the masked volume's support, so any
+consumer (tracer, mesh extraction, statistics) should intersect them
+with CT chunk existence first; same mechanism as the halo reported
+upstream in villa #1114 (blend overreach past the mask boundary), for
+which PHerc1218 was independently measured at 50.2% voxel phantoms in
+that thread.

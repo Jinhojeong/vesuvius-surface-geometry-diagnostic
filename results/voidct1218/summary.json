@@ -1,0 +1,491 @@
+{
+ "status": "ok",
+ "date": "2026-08-13 10:08:30",
+ "ct_url": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc1218/volumes/20250521120456-8.640um-1.2m-116keV-masked.zarr",
+ "m7_url": "https://vesuvius-challenge-open-data.s3.amazonaws.com/PHerc1218/representations/predictions/surfaces/20250521120456-surface-20260413222639-surface-m7-L0-th0.2.zarr",
+ "level": 1,
+ "sanity_check": {
+  "window": "z0/tile_y1344_x1344.npz",
+  "cube_lo": [
+   64,
+   1568,
+   1568
+  ],
+  "n_unique_values": 180,
+  "std": 64.34959690163915,
+  "mean": 32.11698913574219,
+  "percentiles_1_10_25_50_75_90_99": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   162.0,
+   176.0
+  ],
+  "verdict": "ok"
+ },
+ "selection_rule": {
+  "pool": "coverage_tiles.csv status==ok, clamped==0, n_pred>=100000",
+  "void": "coverage_near4 < 0.1, target 60",
+  "control": "coverage_near4 > 0.98, target 30",
+  "stratification": "sort by (z-band decile, radial third, path), take every k-th (k = n_cands // n_target)",
+  "z_range": [
+   128.0,
+   11496.0
+  ],
+  "radial_tercile_edges": [
+   667.9135423091824,
+   1087.2775634583838
+  ],
+  "cube_rule": "64-cube inside the 128-window placed in a single 128 CT chunk: per axis lo = w+32 if aligned else (b-64 if b-w>=64 else b), b = next 128 multiple",
+  "n_void_candidates": 493,
+  "n_ctrl_candidates": 592,
+  "selected_void": [
+   "z0/tile_y1792_x1344.npz",
+   "z672/tile_y1344_x1344.npz",
+   "z0/tile_y896_x1344.npz",
+   "z448/tile_y1792_x896.npz",
+   "z0/tile_y0_x1344.npz",
+   "z0/tile_y2240_x448.npz",
+   "z0/tile_y3136_x1792.npz",
+   "z0/tile_y448_x2240.npz",
+   "z1120/tile_y1792_x0.npz",
+   "z448/tile_y1792_x448.npz",
+   "z896/tile_y896_x448.npz",
+   "z1792/tile_y2240_x1344.npz",
+   "z1344/tile_y1792_x0.npz",
+   "z1792/tile_y896_x448.npz",
+   "z2464/tile_y896_x1344.npz",
+   "z2912/tile_y896_x1344.npz",
+   "z3360/tile_y896_x1344.npz",
+   "z2688/tile_y1344_x0.npz",
+   "z2912/tile_y2240_x448.npz",
+   "z3136/tile_y2688_x1344.npz",
+   "z3584/tile_y2688_x1792.npz",
+   "z4032/tile_y896_x1344.npz",
+   "z4256/tile_y896_x896.npz",
+   "z3584/tile_y2240_x448.npz",
+   "z4032/tile_y1344_x448.npz",
+   "z4256/tile_y1792_x3136.npz",
+   "z4480/tile_y1792_x3136.npz",
+   "z4928/tile_y2240_x896.npz",
+   "z4704/tile_y2240_x2688.npz",
+   "z5152/tile_y1344_x2688.npz",
+   "z5600/tile_y1344_x2688.npz",
+   "z6048/tile_y1344_x2240.npz",
+   "z5824/tile_y1792_x448.npz",
+   "z6272/tile_y1792_x448.npz",
+   "z6720/tile_y1344_x2688.npz",
+   "z7616/tile_y2240_x1344.npz",
+   "z6944/tile_y2240_x2688.npz",
+   "z7392/tile_y1792_x448.npz",
+   "z7840/tile_y1792_x3136.npz",
+   "z8064/tile_y2240_x2240.npz",
+   "z8512/tile_y896_x1344.npz",
+   "z8960/tile_y2240_x1344.npz",
+   "z8064/tile_y1792_x3136.npz",
+   "z8512/tile_y1344_x448.npz",
+   "z8736/tile_y2240_x0.npz",
+   "z9184/tile_y2240_x896.npz",
+   "z9856/tile_y896_x1792.npz",
+   "z10080/tile_y896_x2688.npz",
+   "z9408/tile_y1344_x0.npz",
+   "z9632/tile_y2240_x0.npz",
+   "z9856/tile_y896_x2688.npz",
+   "z11368/tile_y2240_x1792.npz",
+   "z10976/tile_y1344_x2240.npz",
+   "z11368/tile_y2240_x2240.npz",
+   "z10304/tile_y1792_x0.npz",
+   "z10528/tile_y2240_x448.npz",
+   "z10752/tile_y448_x2240.npz",
+   "z10976/tile_y448_x896.npz",
+   "z11368/tile_y1344_x2688.npz",
+   "z11368/tile_y2688_x0.npz"
+  ],
+  "selected_control": [
+   "z0/tile_y1344_x1344.npz",
+   "z0/tile_y1792_x2688.npz",
+   "z0/tile_y1792_x0.npz",
+   "z1792/tile_y1792_x1344.npz",
+   "z1344/tile_y896_x1792.npz",
+   "z2016/tile_y896_x1792.npz",
+   "z2464/tile_y1344_x1344.npz",
+   "z3136/tile_y1344_x1792.npz",
+   "z2688/tile_y1344_x896.npz",
+   "z3360/tile_y1344_x2240.npz",
+   "z3584/tile_y1344_x1344.npz",
+   "z4256/tile_y1344_x1792.npz",
+   "z3808/tile_y1792_x2688.npz",
+   "z4480/tile_y1344_x2240.npz",
+   "z5152/tile_y1344_x1344.npz",
+   "z4704/tile_y2240_x1344.npz",
+   "z5376/tile_y2240_x448.npz",
+   "z6720/tile_y1344_x1344.npz",
+   "z6496/tile_y2240_x2240.npz",
+   "z7392/tile_y1344_x1792.npz",
+   "z6944/tile_y2240_x896.npz",
+   "z7392/tile_y2240_x448.npz",
+   "z8736/tile_y1344_x1344.npz",
+   "z8512/tile_y1792_x896.npz",
+   "z10080/tile_y1344_x1792.npz",
+   "z9632/tile_y1792_x1344.npz",
+   "z9184/tile_y1344_x896.npz",
+   "z9856/tile_y1792_x2688.npz",
+   "z9856/tile_y1792_x448.npz",
+   "z11368/tile_y1792_x1792.npz"
+  ]
+ },
+ "n_windows_done": 90,
+ "n_failed": 0,
+ "download_bytes": {
+  "ct": 100663483,
+  "m7": 0
+ },
+ "runtime_s": 72.0,
+ "analysis": {
+  "rule": {
+   "masked_empty": "zfrac_pos >= 0.9",
+   "papyrus_like": "zfrac_pos <= 0.5 and |nzmean_pos - 122.0| <= 2.0*13.3",
+   "ambiguous": "otherwise",
+   "probe": "64-cube if n_pos >= 500, else rescue: the CT chunk-overlap region of the window with most m7 positives",
+   "note": "In this masked volume air and case are zeroed and fully empty chunks are absent (404 -> fill 0), so CT==0 means 'no material in the canonical masked reconstruction'. zfrac_pos is the fraction of m7-positive voxels on CT==0."
+  },
+  "control_reference": {
+   "labeled_window_nzmeans_mean": 122.0,
+   "labeled_window_nzmeans_sd": 13.3,
+   "labeled_zfrac_max": 0.0,
+   "unlab_in_control_nzmean_mean": 118.0,
+   "unlab_in_control_nzmean_sd": 27.5,
+   "n_unlab_windows_used": 24
+  },
+  "void_classification_counts": {
+   "papyrus_like": 5,
+   "ambiguous": 2,
+   "masked_empty": 53
+  },
+  "void_by_zband": {
+   "0": {
+    "papyrus_like": 5,
+    "ambiguous": 1,
+    "masked_empty": 5
+   },
+   "1": {
+    "masked_empty": 3
+   },
+   "2": {
+    "masked_empty": 6
+   },
+   "3": {
+    "masked_empty": 6,
+    "ambiguous": 1
+   },
+   "4": {
+    "masked_empty": 4
+   },
+   "5": {
+    "masked_empty": 4
+   },
+   "6": {
+    "masked_empty": 4
+   },
+   "7": {
+    "masked_empty": 6
+   },
+   "8": {
+    "masked_empty": 6
+   },
+   "9": {
+    "masked_empty": 9
+   }
+  },
+  "void_by_radial_third": {
+   "0": {
+    "papyrus_like": 1,
+    "masked_empty": 2
+   },
+   "1": {
+    "papyrus_like": 1,
+    "masked_empty": 17,
+    "ambiguous": 1
+   },
+   "2": {
+    "papyrus_like": 3,
+    "ambiguous": 1,
+    "masked_empty": 34
+   }
+  },
+  "examples": {
+   "masked_empty": [
+    {
+     "path": "z10080/tile_y896_x2688.npz",
+     "window_lo_zyx": [
+      10144,
+      1088,
+      2880
+     ],
+     "cube_lo_zyx": [
+      10176,
+      1088,
+      2880
+     ],
+     "zband": 8,
+     "rthird": 2,
+     "n_pos_probe": 219808,
+     "zfrac_pos": 1.0,
+     "nzmean_pos": "",
+     "rescue": 0
+    },
+    {
+     "path": "z10304/tile_y1792_x0.npz",
+     "window_lo_zyx": [
+      10368,
+      1984,
+      192
+     ],
+     "cube_lo_zyx": [
+      10400,
+      1984,
+      192
+     ],
+     "zband": 9,
+     "rthird": 2,
+     "n_pos_probe": 257234,
+     "zfrac_pos": 1.0,
+     "nzmean_pos": "",
+     "rescue": 0
+    },
+    {
+     "path": "z10528/tile_y2240_x448.npz",
+     "window_lo_zyx": [
+      10592,
+      2432,
+      640
+     ],
+     "cube_lo_zyx": [
+      10624,
+      2464,
+      672
+     ],
+     "zband": 9,
+     "rthird": 2,
+     "n_pos_probe": 36768,
+     "zfrac_pos": 1.0,
+     "nzmean_pos": "",
+     "rescue": 0
+    },
+    {
+     "path": "z10752/tile_y448_x2240.npz",
+     "window_lo_zyx": [
+      10816,
+      640,
+      2432
+     ],
+     "cube_lo_zyx": [
+      10816,
+      672,
+      2464
+     ],
+     "zband": 9,
+     "rthird": 2,
+     "n_pos_probe": 20160,
+     "zfrac_pos": 1.0,
+     "nzmean_pos": "",
+     "rescue": 0
+    },
+    {
+     "path": "z10976/tile_y1344_x2240.npz",
+     "window_lo_zyx": [
+      11040,
+      1536,
+      2432
+     ],
+     "cube_lo_zyx": [
+      11072,
+      1568,
+      2464
+     ],
+     "zband": 9,
+     "rthird": 1,
+     "n_pos_probe": 379136,
+     "zfrac_pos": 1.0,
+     "nzmean_pos": "",
+     "rescue": 1
+    }
+   ],
+   "papyrus_like": [
+    {
+     "path": "z0/tile_y0_x1344.npz",
+     "window_lo_zyx": [
+      64,
+      192,
+      1536
+     ],
+     "cube_lo_zyx": [
+      64,
+      192,
+      1568
+     ],
+     "zband": 0,
+     "rthird": 2,
+     "n_pos_probe": 6252,
+     "zfrac_pos": 0.0,
+     "nzmean_pos": 113.3,
+     "rescue": 0
+    },
+    {
+     "path": "z0/tile_y1792_x1344.npz",
+     "window_lo_zyx": [
+      64,
+      1984,
+      1536
+     ],
+     "cube_lo_zyx": [
+      64,
+      1984,
+      1568
+     ],
+     "zband": 0,
+     "rthird": 0,
+     "n_pos_probe": 1592,
+     "zfrac_pos": 0.0,
+     "nzmean_pos": 106.6,
+     "rescue": 0
+    },
+    {
+     "path": "z0/tile_y3136_x1792.npz",
+     "window_lo_zyx": [
+      64,
+      3328,
+      1984
+     ],
+     "cube_lo_zyx": [
+      64,
+      3360,
+      1984
+     ],
+     "zband": 0,
+     "rthird": 2,
+     "n_pos_probe": 9228,
+     "zfrac_pos": 0.0011,
+     "nzmean_pos": 106.9,
+     "rescue": 0
+    },
+    {
+     "path": "z0/tile_y448_x2240.npz",
+     "window_lo_zyx": [
+      64,
+      640,
+      2432
+     ],
+     "cube_lo_zyx": [
+      64,
+      672,
+      2464
+     ],
+     "zband": 0,
+     "rthird": 2,
+     "n_pos_probe": 10533,
+     "zfrac_pos": 0.0028,
+     "nzmean_pos": 111.7,
+     "rescue": 0
+    },
+    {
+     "path": "z0/tile_y896_x1344.npz",
+     "window_lo_zyx": [
+      64,
+      1088,
+      1536
+     ],
+     "cube_lo_zyx": [
+      64,
+      1088,
+      1568
+     ],
+     "zband": 0,
+     "rthird": 1,
+     "n_pos_probe": 10420,
+     "zfrac_pos": 0.018,
+     "nzmean_pos": 98.9,
+     "rescue": 0
+    }
+   ],
+   "ambiguous": [
+    {
+     "path": "z0/tile_y2240_x448.npz",
+     "window_lo_zyx": [
+      64,
+      2432,
+      640
+     ],
+     "cube_lo_zyx": [
+      64,
+      2464,
+      672
+     ],
+     "zband": 0,
+     "rthird": 2,
+     "n_pos_probe": 1604,
+     "zfrac_pos": 0.0,
+     "nzmean_pos": 92.8,
+     "rescue": 0
+    },
+    {
+     "path": "z3584/tile_y2688_x1792.npz",
+     "window_lo_zyx": [
+      3648,
+      2880,
+      1984
+     ],
+     "cube_lo_zyx": [
+      3648,
+      2880,
+      1984
+     ],
+     "zband": 3,
+     "rthird": 1,
+     "n_pos_probe": 864,
+     "zfrac_pos": 0.3148,
+     "nzmean_pos": 70.5,
+     "rescue": 0
+    }
+   ],
+   "no_positives_in_probe": []
+  },
+  "pool_chunk_existence": {
+   "n_windows": 1174,
+   "s3_list_requests": 19,
+   "n_ct_chunks_existing_L1": 18757,
+   "total_m7_pos": 730426664,
+   "m7_pos_on_absent_ct_chunks": 339338681,
+   "frac_on_absent": 0.4646,
+   "void_windows(cov<0.1)": {
+    "n": 493,
+    "pos": 392462323,
+    "on_absent": 335137737,
+    "frac": 0.8539
+   },
+   "control_windows(cov>0.98)": {
+    "n": 592,
+    "pos": 316246733,
+    "on_absent": 0,
+    "frac": 0.0
+   },
+   "mid_windows(0.1..0.98)": {
+    "n": 89,
+    "pos": 21717608,
+    "on_absent": 4200944,
+    "frac": 0.1934
+   }
+  },
+  "rescue_windows": 16,
+  "extra_ct_download_bytes": 8388608,
+  "analysis_runtime_s": 57.5,
+  "limitations": [
+   "Intensity is a partial discriminant, not ground truth: dense case material or minerals can mimic papyrus intensity, and the papyrus_like class only says the CT there is consistent with sheet material, not that a sheet is truly present.",
+   "The volume is the canonical masked reconstruction; if the masking pipeline itself removed real faint papyrus, this method inherits that miss and would call it masked_empty.",
+   "One 64-cube (or one chunk-overlap) probes each 128-window, not the whole window; the pool chunk-existence pass is chunk-granular (absent chunks only), so its fraction is a lower bound on positives without CT support.",
+   "Windows are tile-center samples from the coverage run, not a whole-volume integral."
+  ]
+ }
+}

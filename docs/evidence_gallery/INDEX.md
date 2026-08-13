@@ -90,3 +90,30 @@ from its cluster while still on m7-predicted material. Supports the claim
 that the A/B contrast compares labeled sheet structure against
 label-void space at matched sites, so placement, not label content, is the
 variable under test.
+
+## repair_0332_before_after.png (1300x1900)
+
+Three ray-validated fused-sheet splits from the PHerc0332 full repair run
+(v1, frozen v2.0 constants), one row per site, before on the left and after
+on the right. Before panels show the original separation crops
+`/mnt/vesuvius/pilot0332/vesuvius-sheet-tools/output/sheets_scroll3_L1_c*.npy`
+with the fused instance in red and all other labels gray. After panels show
+the same axial slice and 160^2 crop (clamped at crop edges) reassembled
+from the crop's own retiled 256-blocks under
+`/mnt/vesuvius/p0332_repair_v1/blocks_repaired` (the run keeps no per-crop
+repaired npy), with the two split ids in blue and orange. Site selection:
+all SPLIT records in `/mnt/vesuvius/p5_pilot0332/full/crops/*.json`, sorted
+by applied voxels (`assigned_A+assigned_B`) descending, at most one site
+per crop, source npy and the needed after-blocks required present, both
+split ids covering at least 20 px of the fused region on the rendered
+slice, and the run's ray check passing at the site. The crop records store
+only per-pass validation counts, not per-site flags, so the ray check
+(`ids_in_run` from `full_run.py`, at least 2 ids in the normal run after
+repair; no RNG involved) was recomputed per candidate site. The three picks
+are crop 1152-1152-704 (site z=1177 y=1161 x=524, 7041 voxels, conf 0.237,
+pass 1, id 97 -> 92/102), crop 3840-1152-1152 (z=4047 y=941 x=1365, 6526
+voxels, conf 0.157, pass 2 OOB recovery, id 410 -> 398/377), and crop
+3840-704-1600 (z=3618 y=563 x=1414, 6525 voxels, conf 0.109, pass 1, id
+4 -> 63/8). Supports the public claim that the repair machinery transfers
+to a second scroll with measured rates, 7,812 split sites checked, 42.5%
+ray-validated, pooled thick-column share 96.1% before to 93.7% after.

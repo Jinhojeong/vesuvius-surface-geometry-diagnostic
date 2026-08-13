@@ -424,10 +424,165 @@ def fig5():
     summary["fig5"] = {"path": p, "panels": fracs}
 
 
+# ---------------------------------------------------------------- FIG 6
+FULL0332 = "/mnt/vesuvius/p5_pilot0332/full"
+BLOCKS0332 = "/mnt/vesuvius/p0332_repair_v1/blocks_repaired"
+
+
+def fig6():
+    """PHerc0332 full repair (v1): before/after at 3 ray-validated splits.
+
+    The per-crop records (crops/<tag>.json) store per-site SPLIT recs but
+    only per-pass validation COUNTS, no per-site flag, so the run's own ray
+    check (ids_in_run from full_run.py, >= 2 ids in the normal run after
+    repair) is recomputed here per candidate site, on the original crop npy
+    (mask, normals) with the repaired array reassembled from the crop's own
+    retiled 256-blocks. No RNG is involved; this reproduces the run's check.
+    """
+    sys.path.insert(0, FULL0332)
+    import full_run as FR
+
+    recs = []
+    for name in sorted(os.listdir(os.path.join(FULL0332, "crops"))):
+        if not name.endswith(".json"):
+            continue
+        r = json.load(open(os.path.join(FULL0332, "crops", name)))
+        for rec in r["repairs"]:
+            recs.append({
+                "tag": r["tag"], "centre": r["centre"], "origin": r["origin"],
+                "site": rec["site"], "g": rec["g"], "pass": rec["pass"],
+                "L": rec["L"], "A": rec["A"], "B": rec["B"],
+                "conf": rec["conf"],
+                "applied": rec["assigned_A"] + rec["assigned_B"],
+            })
+    recs.sort(key=lambda r: (-r["applied"], r["tag"],
+                             r["site"][0], r["site"][1], r["site"][2]))
+
+    def block_path(origin, bz, by, bx):
+        return os.path.join(BLOCKS0332, f"z{origin[0] + bz:05d}",
+                            f"y{origin[1] + by:05d}_x{origin[2] + bx:05d}.npz")
+
+    def blocks_for(zr, yr, xr):
+        out = set()
+        for z in (zr[0], zr[1] - 1):
+            for y in (yr[0], yr[1] - 1):
+                for x in (xr[0], xr[1] - 1):
+                    out.add((z // 256 * 256, y // 256 * 256, x // 256 * 256))
+        return out
+
+    h = 80
+    chosen, used, checked = [], set(), 0
+    cache_tag, cache = None, None
+    for r in recs:
+        if len(chosen) == 3:
+            break
+        if r["tag"] in used:
+            continue
+        lz, ly, lx = r["site"]
+        cy0, cy1 = max(0, ly - h), min(512, ly + h)
+        cx0, cx1 = max(0, lx - h), min(512, lx + h)
+        need = (blocks_for((lz, lz + 1), (cy0, cy1), (cx0, cx1))
+                | blocks_for((max(0, lz - 9), min(512, lz + 10)),
+                             (max(0, ly - 9), min(512, ly + 10)),
+                             (max(0, lx - 9), min(512, lx + 10))))
+        npy = os.path.join(
+            SHEETS, "sheets_scroll3_L1_c{}-{}-{}.npy".format(*r["centre"]))
+        if not os.path.exists(npy) or \
+                not all(os.path.exists(block_path(r["origin"], *b))
+                        for b in need):
+            continue
+        checked += 1
+        s_before = np.asarray(np.load(npy, mmap_mode="r")[lz]).copy()
+        s_after = np.zeros_like(s_before)
+        zblk = lz // 256 * 256
+        for (bz, by, bx) in sorted(b for b in need if b[0] == zblk):
+            with np.load(block_path(r["origin"], bz, by, bx)) as f:
+                s_after[by:by + 256, bx:bx + 256] = f["labels"][lz - bz]
+        c3 = s_before[cy0:cy1, cx0:cx1]
+        c4 = s_after[cy0:cy1, cx0:cx1]
+        region = c3 == r["L"]
+        if (c4[region] == r["A"]).sum() < 20 or \
+                (c4[region] == r["B"]).sum() < 20:
+            continue  # not a visually meaningful split on this slice
+        # recompute the run's per-site ray validation
+        if cache_tag != r["tag"]:
+            cache = None
+            LAB = np.load(npy).astype(np.int32)
+            mask = LAB > 0
+            maskf = mask.astype(np.float32)
+            nrm = FR.normals_of(mask)
+            out = LAB.copy()
+            for bz in (0, 256):
+                for by in (0, 256):
+                    for bx in (0, 256):
+                        p = block_path(r["origin"], bz, by, bx)
+                        if os.path.exists(p):
+                            with np.load(p) as f:
+                                out[bz:bz + 256, by:by + 256,
+                                    bx:bx + 256] = f["labels"]
+            cache_tag, cache = r["tag"], (maskf, nrm, out)
+            del LAB, mask
+        maskf, nrm, out = cache
+        after_ids = FR.ids_in_run(out, maskf, nrm, (lz, ly, lx))
+        if after_ids is None or len(after_ids) < 2:
+            continue
+        used.add(r["tag"])
+        chosen.append(dict(r, c3=c3, c4=c4, crop=(cy0, cy1, cx0, cx1),
+                           after_ids=sorted(int(i) for i in after_ids)))
+    cache = None
+    if len(chosen) < 3:
+        raise RuntimeError(f"only {len(chosen)} usable split sites found")
+
+    fig, axes = plt.subplots(3, 2, figsize=(13.0, 19.0), dpi=100)
+    for i, site in enumerate(chosen):
+        cy0, cy1, cx0, cx1 = site["crop"]
+        c3, c4 = site["c3"], site["c4"]
+        gz, gy, gx = site["g"]
+        img = np.zeros(c3.shape + (3,), np.float32)
+        img[c3 > 0] = (0.42, 0.42, 0.42)
+        img[c3 == site["L"]] = (0.86, 0.30, 0.25)
+        ax = axes[i, 0]
+        ax.imshow(img, interpolation="nearest")
+        cross(ax, site["site"][2] - cx0, site["site"][1] - cy0)
+        ax.set_title(f"before (separation labels)  site {i+1}: "
+                     f"crop {site['tag']}", fontsize=9)
+        ax.set_xlabel(f"fused instance id {site['L']} (red), axial slice "
+                      f"z={gz} (L1), crop {c3.shape[1]}x{c3.shape[0]} at "
+                      f"y={gy} x={gx}", fontsize=7.5)
+        clean(ax)
+        img = np.zeros(c4.shape + (3,), np.float32)
+        img[c4 > 0] = (0.42, 0.42, 0.42)
+        img[c4 == site["A"]] = (0.25, 0.51, 0.77)
+        img[c4 == site["B"]] = (0.95, 0.61, 0.19)
+        ax = axes[i, 1]
+        ax.imshow(img, interpolation="nearest")
+        cross(ax, site["site"][2] - cx0, site["site"][1] - cy0)
+        ax.set_title("after (0332 repair v1, frozen v2.0 constants)",
+                     fontsize=9)
+        ax.set_xlabel(f"split ids {site['A']} (blue) / {site['B']} (orange), "
+                      f"applied voxels {site['applied']}, conf "
+                      f"{site['conf']:.3f}, pass {site['pass']}, "
+                      f"ray-validated (recomputed)", fontsize=7.5)
+        clean(ax)
+    fig.suptitle("PHerc0332 full repair (v1, frozen v2.0 constants): "
+                 "fused-sheet sites before/after (3 ray-validated splits, "
+                 "largest applied-voxel counts)", fontsize=10)
+    fig.tight_layout(rect=(0, 0, 1, 0.985))
+    p = f"{OUT}/repair_0332_before_after.png"
+    fig.savefig(p)
+    plt.close(fig)
+    summary["fig6"] = {
+        "path": p, "n_candidates_checked": checked,
+        "sites": [{k: s[k] for k in ("tag", "site", "g", "pass", "L", "A",
+                                     "B", "conf", "applied", "after_ids")}
+                  for s in chosen],
+    }
+
+
 # ---------------------------------------------------------------- run + verify
 def main():
-    todo = sys.argv[1:] or ["fig1", "fig2", "fig3", "fig4", "fig5"]
-    for fn in (fig1, fig2, fig3, fig4, fig5):
+    todo = sys.argv[1:] or ["fig1", "fig2", "fig3", "fig4", "fig5", "fig6"]
+    for fn in (fig1, fig2, fig3, fig4, fig5, fig6):
         if fn.__name__ not in todo:
             continue
         try:

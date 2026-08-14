@@ -1,0 +1,65 @@
+{
+ "rule": "keep quads with CT>0 at their position, then 3x3 binary opening to drop isolated survivors; measured on P8 r1 traces, both arms, quads inside the built support region",
+ "rows": [
+  {
+   "seed": 0,
+   "arm": "before",
+   "quads_in_region": 1954,
+   "supported_frac_before": 0.6592,
+   "retained_frac": 0.653,
+   "supported_frac_after_rule": 1.0,
+   "removed_mean_edge_dist": 6.42,
+   "kept_mean_edge_dist": 12.57
+  },
+  {
+   "seed": 0,
+   "arm": "after",
+   "quads_in_region": 1921,
+   "supported_frac_before": 0.6658,
+   "retained_frac": 0.6601,
+   "supported_frac_after_rule": 1.0,
+   "removed_mean_edge_dist": 5.66,
+   "kept_mean_edge_dist": 12.51
+  },
+  {
+   "seed": 1,
+   "arm": "before",
+   "quads_in_region": 1854,
+   "supported_frac_before": 0.5647,
+   "retained_frac": 0.5631,
+   "supported_frac_after_rule": 1.0,
+   "removed_mean_edge_dist": 6.68,
+   "kept_mean_edge_dist": 13.44
+  },
+  {
+   "seed": 1,
+   "arm": "after",
+   "quads_in_region": 1828,
+   "supported_frac_before": 0.6083,
+   "retained_frac": 0.5979,
+   "supported_frac_after_rule": 1.0,
+   "removed_mean_edge_dist": 6.65,
+   "kept_mean_edge_dist": 12.66
+  },
+  {
+   "seed": 2,
+   "arm": "before",
+   "quads_in_region": 1151,
+   "supported_frac_before": 0.9852,
+   "retained_frac": 0.9739,
+   "supported_frac_after_rule": 1.0,
+   "removed_mean_edge_dist": 2.47,
+   "kept_mean_edge_dist": 11.38
+  },
+  {
+   "seed": 2,
+   "arm": "after",
+   "quads_in_region": 1260,
+   "supported_frac_before": 0.9817,
+   "retained_frac": 0.9714,
+   "supported_frac_after_rule": 1.0,
+   "removed_mean_edge_dist": 1.4,
+   "kept_mean_edge_dist": 11.1
+  }
+ ]
+}

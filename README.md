@@ -1,10 +1,43 @@
-# Geometry-stratified diagnostic for Vesuvius surface models
+# Geometry diagnostics and label repair for Vesuvius surface models
 
-Quantifies **where and how much** Herculaneum-scroll surface-detection models
-degrade in curved and compressed regions, using the public
+Measurements, preregistered experiments and repaired labels for Herculaneum
+scroll surfaces, all on real scroll data. The work runs in the open on
+[ScrollPrize/villa#191](https://github.com/ScrollPrize/villa/issues/191),
+[#193](https://github.com/ScrollPrize/villa/issues/193) and
+[#1114](https://github.com/ScrollPrize/villa/issues/1114), and every number
+below has a commit and a script behind it.
+
+## August 2026 in one page
+
+Pictures first, since several of these are easier to see than to read. The
+full gallery with sources and selection rules is in
+[docs/evidence_gallery](docs/evidence_gallery/INDEX.md).
+
+| what | where |
+|---|---|
+| PHerc1218 fused-sheet repair, before and after on three validated sites | [figure](docs/evidence_gallery/repair_1218_before_after.png) |
+| Surfaces traced on PHerc1218 before and after CT-support masking, flattened through the standard renderer | [figure](docs/evidence_gallery/render_1218_support_mask.png) · [data](results/p8_support_mask) |
+| Labels cover 45.2 percent of the m7 predicted surface, and the void is structured | [figure](docs/evidence_gallery/labelcov_1218_map.png) · [data](results/labelcov1218) |
+| Nearly half of m7 positives sit beyond masked-CT support (villa #1114) | [figure](docs/evidence_gallery/m7_beyond_support.png) · [data](results/voidct1218) |
+| PHerc0332 sheet separation on real CT, second scroll | [figure](docs/evidence_gallery/separation_0332_slices.png) · [data](results/repair0332) |
+| PHerc1203 thickness zone map, regenerated after a self-caught read bug | [figure](docs/evidence_gallery/thickness1203_v2_map.png) · [data](results/thickness1203) |
+| Preregistered placement A/B, off-seeds sit in label-void space | [figure](docs/evidence_gallery/placement_offseed_context.png) · [data](prereg_placement_ab) |
+
+Two experiments were frozen in public before they ran, and both are published
+as they came out. [prereg_retrain_ab](prereg_retrain_ab) asked whether
+fine-tuning on repaired labels moves held-out weld separation and returned a
+null with a tight interval. [prereg_placement_ab](prereg_placement_ab) asked
+whether the hazard field's growth effect requires seeding on the flagged
+cluster and returned a clean positive, plus three amendments recorded with the
+hash of the document each amended.
+
+## The original diagnostic (July 2026)
+
+Quantifies **where and how much** surface-detection models degrade in curved
+and compressed regions, using the public
 `Dataset059_s1_s4_s5_patches_frangiedt` ground truth (200 random patches,
 seed-fixed) and two public baselines. Posted to
-[ScrollPrize/villa#191](https://github.com/ScrollPrize/villa/issues/191#issuecomment-4930879524).
+[villa#191](https://github.com/ScrollPrize/villa/issues/191#issuecomment-4930879524).
 
 ## Headline results
 

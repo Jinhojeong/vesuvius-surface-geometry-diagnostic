@@ -15,6 +15,7 @@ full gallery with sources and selection rules is in
 
 | what | where |
 |---|---|
+| The census as a GrowPatch weight volume: same seed, with and without, traced and flattened | [figure](docs/evidence_gallery/render_1218_hazard_ab.png) · [data](results/growpatch16) |
 | PHerc1218 fused-sheet repair, before and after on three validated sites | [figure](docs/evidence_gallery/repair_1218_before_after.png) |
 | Surfaces traced on PHerc1218 before and after CT-support masking, flattened through the standard renderer | [figure](docs/evidence_gallery/render_1218_support_mask.png) · [data](results/p8_support_mask) |
 | Labels cover 45.2 percent of the m7 predicted surface, and the void is structured | [figure](docs/evidence_gallery/labelcov_1218_map.png) · [data](results/labelcov1218) |

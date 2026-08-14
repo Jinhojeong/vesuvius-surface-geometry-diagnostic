@@ -1,0 +1,44 @@
+[
+ {
+  "seed": 0,
+  "base_quads": 2883,
+  "rule_quads": 9,
+  "base_in": 1921,
+  "rule_in": 9,
+  "base_supported_frac": 0.6658,
+  "rule_supported_frac": 1.0,
+  "base_area": 1112281,
+  "rule_area": 1611,
+  "posthoc_retained": 0.6601,
+  "atsource_retained_vs_base": 0.0047,
+  "rejects_logged": 10
+ },
+ {
+  "seed": 1,
+  "base_quads": 2865,
+  "rule_quads": 13,
+  "base_in": 1828,
+  "rule_in": 13,
+  "base_supported_frac": 0.6083,
+  "rule_supported_frac": 1.0,
+  "base_area": 1101884,
+  "rule_area": 2416,
+  "posthoc_retained": 0.5979,
+  "atsource_retained_vs_base": 0.0071,
+  "rejects_logged": 16
+ },
+ {
+  "seed": 2,
+  "base_quads": 2872,
+  "rule_quads": 9,
+  "base_in": 1260,
+  "rule_in": 9,
+  "base_supported_frac": 0.9817,
+  "rule_supported_frac": 1.0,
+  "base_area": 1106455,
+  "rule_area": 1208,
+  "posthoc_retained": 0.9714,
+  "atsource_retained_vs_base": 0.0071,
+  "rejects_logged": 10
+ }
+]

@@ -46,5 +46,41 @@
    "slab": 1
   }
  ],
- "n_candidates": 20
+ "n_candidates": 20,
+ "controls": [
+  {
+   "win": "z3360/tile_y1344_x2240.npz",
+   "cube_lo_l1": [
+    3456,
+    1568,
+    2464
+   ],
+   "phantom": 0,
+   "supported": 116899,
+   "slab": 3
+  },
+  {
+   "win": "z3136/tile_y1344_x1792.npz",
+   "cube_lo_l1": [
+    3232,
+    1568,
+    1984
+   ],
+   "phantom": 0,
+   "supported": 110703,
+   "slab": 3
+  },
+  {
+   "win": "z2016/tile_y896_x1792.npz",
+   "cube_lo_l1": [
+    2112,
+    1088,
+    1984
+   ],
+   "phantom": 0,
+   "supported": 97585,
+   "slab": 2
+  }
+ ],
+ "control_rule": "cls=control windows ranked by labeled positive count, top 3 distinct"
 }

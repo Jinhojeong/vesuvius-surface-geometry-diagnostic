@@ -1,0 +1,50 @@
+[
+ {
+  "tag": "r1",
+  "win": "z10528/tile_y2240_x448.npz",
+  "phantom_frac": 0.7124,
+  "removed": 423045442,
+  "before": 593795529,
+  "lab": 34345863,
+  "corner_lost": 953,
+  "inspected": 953,
+  "fully_lost": 19,
+  "no_ct_block": 0
+ },
+ {
+  "tag": "c0",
+  "win": "z3360/tile_y1344_x2240.npz",
+  "phantom_frac": 0.2494,
+  "removed": 106802416,
+  "before": 428294350,
+  "lab": 64454104,
+  "corner_lost": 2552,
+  "inspected": 1963,
+  "fully_lost": 56,
+  "no_ct_block": 0
+ },
+ {
+  "tag": "c1",
+  "win": "z3136/tile_y1344_x1792.npz",
+  "phantom_frac": 0.0003,
+  "removed": 123491,
+  "before": 475944417,
+  "lab": 95280076,
+  "corner_lost": 658,
+  "inspected": 658,
+  "fully_lost": 17,
+  "no_ct_block": 0
+ },
+ {
+  "tag": "c2",
+  "win": "z2016/tile_y896_x1792.npz",
+  "phantom_frac": 0.1903,
+  "removed": 69656311,
+  "before": 365963924,
+  "lab": 57785245,
+  "corner_lost": 2904,
+  "inspected": 2231,
+  "fully_lost": 134,
+  "no_ct_block": 0
+ }
+]

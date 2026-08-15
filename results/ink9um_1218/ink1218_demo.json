@@ -1,0 +1,90 @@
+{
+ "segment": "demo_out/powered/s1_z224_tile_y1792_x1344/B_r1 (hazard-weighted trace)",
+ "render": "native 8.64um, 28 slices, vc_render_tifxyz --tif-output, stack (28,1041,1041), valid frac 0.427",
+ "checkpoints": "scrollprize/ink_9um hybrid_3d2d seeds 42/43 steps 20k/75k",
+ "note": "compatibility demo only; no letter claims; response may track surface condition",
+ "per_run": [
+  {
+   "ckpt": "s1B_seed42_020000",
+   "direction": "fwd",
+   "mean": 0.471,
+   "sd": 0.1556,
+   "frac_gt05_rescaled": 0.441
+  },
+  {
+   "ckpt": "s1B_seed42_020000",
+   "direction": "rev",
+   "mean": 0.4586,
+   "sd": 0.1474,
+   "frac_gt05_rescaled": 0.3861
+  },
+  {
+   "ckpt": "s1B_seed42_075k",
+   "direction": "fwd",
+   "mean": 0.395,
+   "sd": 0.1443,
+   "frac_gt05_rescaled": 0.2246
+  },
+  {
+   "ckpt": "s1B_seed42_075k",
+   "direction": "rev",
+   "mean": 0.3532,
+   "sd": 0.1095,
+   "frac_gt05_rescaled": 0.1211
+  },
+  {
+   "ckpt": "s1B_seed43_020000",
+   "direction": "fwd",
+   "mean": 0.3851,
+   "sd": 0.1137,
+   "frac_gt05_rescaled": 0.1762
+  },
+  {
+   "ckpt": "s1B_seed43_020000",
+   "direction": "rev",
+   "mean": 0.3822,
+   "sd": 0.1041,
+   "frac_gt05_rescaled": 0.1586
+  },
+  {
+   "ckpt": "s1B_seed43_075000",
+   "direction": "fwd",
+   "mean": 0.4231,
+   "sd": 0.1457,
+   "frac_gt05_rescaled": 0.2925
+  },
+  {
+   "ckpt": "s1B_seed43_075000",
+   "direction": "rev",
+   "mean": 0.4093,
+   "sd": 0.1284,
+   "frac_gt05_rescaled": 0.2413
+  }
+ ],
+ "fwd_cross_correlation": [
+  [
+   1.0,
+   0.462,
+   0.621,
+   0.523
+  ],
+  [
+   0.462,
+   1.0,
+   0.419,
+   0.481
+  ],
+  [
+   0.621,
+   0.419,
+   1.0,
+   0.553
+  ],
+  [
+   0.523,
+   0.481,
+   0.553,
+   1.0
+  ]
+ ]
+}

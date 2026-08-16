@@ -1,0 +1,180 @@
+{
+  "configuration": {
+    "block_rows": 256,
+    "margin_voxels": 0.0,
+    "max_support_samples": 1024,
+    "minimum_support_fraction": 0.95,
+    "support_sampling": "evenly ranked valid vertices; nearest CT voxel",
+    "support_threshold": 0.0
+  },
+  "gates": [
+    {
+      "message": "required TIFXYZ files are present",
+      "name": "tifxyz_required_files",
+      "observed": {
+        "missing": []
+      },
+      "passed": true,
+      "required": true,
+      "threshold": {
+        "missing": []
+      }
+    },
+    {
+      "message": "metadata is valid",
+      "name": "tifxyz_metadata",
+      "observed": {
+        "scale_xy": [
+          0.05000000074505806,
+          0.05000000074505806
+        ]
+      },
+      "passed": true,
+      "required": true,
+      "threshold": null
+    },
+    {
+      "message": "coordinate arrays match",
+      "name": "tifxyz_coordinate_shapes",
+      "observed": {
+        "x": [
+          58,
+          58
+        ],
+        "y": [
+          58,
+          58
+        ],
+        "z": [
+          58,
+          58
+        ]
+      },
+      "passed": true,
+      "required": true,
+      "threshold": "matching 2D arrays"
+    },
+    {
+      "message": "volume is a 3D z/y/x array",
+      "name": "volume_is_3d",
+      "observed": [
+        23247,
+        7593,
+        7593
+      ],
+      "passed": true,
+      "required": true,
+      "threshold": "positive z/y/x shape"
+    },
+    {
+      "message": "surface has valid vertices",
+      "name": "valid_surface_vertices",
+      "observed": 2872,
+      "passed": true,
+      "required": true,
+      "threshold": "> 0"
+    },
+    {
+      "message": "surface has connected quads",
+      "name": "valid_surface_quads",
+      "observed": 2729,
+      "passed": true,
+      "required": true,
+      "threshold": "> 0"
+    },
+    {
+      "message": "selected coordinates are finite",
+      "name": "finite_selected_coordinates",
+      "observed": 0,
+      "passed": true,
+      "required": true,
+      "threshold": 0
+    },
+    {
+      "message": "all valid coordinates lie inside the volume margin",
+      "name": "coordinates_within_volume",
+      "observed": {
+        "out_of_bounds_count": 0
+      },
+      "passed": true,
+      "required": true,
+      "threshold": {
+        "margin_voxels": 0.0,
+        "out_of_bounds_count": 0
+      }
+    },
+    {
+      "message": "sampled surface points have CT signal support",
+      "name": "sampled_volume_signal_support",
+      "observed": {
+        "sample_count": 1024,
+        "support_fraction": 0.9697265625,
+        "supported_count": 993
+      },
+      "passed": true,
+      "required": true,
+      "threshold": {
+        "absolute_signal_greater_than": 0.0,
+        "minimum_support_fraction": 0.95
+      }
+    }
+  ],
+  "schema_version": 1,
+  "status": "PASS",
+  "summary": {
+    "passed_required_gates": 9,
+    "required_gate_count": 9
+  },
+  "surface": {
+    "coordinate_bounds_xyz": {
+      "x": [
+        1471.9205322265625,
+        2529.873291015625
+      ],
+      "y": [
+        3859.662109375,
+        4916.42333984375
+      ],
+      "z": [
+        20997.2109375,
+        21583.3203125
+      ]
+    },
+    "meta_sha256": "ad418e833bbbe942c722bc0616c8fa46b9902a326d635a9926c4a7ef4650a697",
+    "out_of_bounds_count": 0,
+    "path": "trace/r1_s2_after",
+    "scale_xy": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "selected_nonfinite_count": 0,
+    "stored_shape_yx": [
+      58,
+      58
+    ],
+    "uuid": "r1_s2_after",
+    "valid_quad_count": 2729,
+    "valid_vertex_count": 2872
+  },
+  "volume": {
+    "chunks_zyx": [
+      128,
+      128,
+      128
+    ],
+    "dtype": "uint8",
+    "path": "https://vesuvius-challenge-open-data.s3.us-east-1.amazonaws.com/PHerc1218/volumes/20250521120456-8.640um-1.2m-116keV-masked.zarr",
+    "requested_array_key": "0",
+    "resolved_array_key": "0",
+    "sampled_signal_support": {
+      "sample_count": 1024,
+      "support_fraction": 0.9697265625,
+      "supported_count": 993
+    },
+    "shape_zyx": [
+      23247,
+      7593,
+      7593
+    ]
+  }
+}

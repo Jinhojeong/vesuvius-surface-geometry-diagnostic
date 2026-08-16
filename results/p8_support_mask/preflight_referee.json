@@ -1,0 +1,43 @@
+{
+ "tool": "surface_preflight.py from aviad12g/villa aviad/failclosed-preflight cab9026f",
+ "defaults": "min_support_fraction 0.95, threshold 0.0, 1024 samples",
+ "runs": {
+  "s0": {
+   "support_fraction": 0.4453125,
+   "gate_passed": false
+  },
+  "s1": {
+   "support_fraction": 0.3876953125,
+   "gate_passed": false
+  },
+  "s2": {
+   "support_fraction": 0.4296875,
+   "gate_passed": false
+  },
+  "s2_s3": {
+   "support_fraction": 0.9697265625,
+   "gate_passed": true
+  },
+  "wrongwin": {
+   "support_fraction": 0.0,
+   "gate_passed": false
+  },
+  "thin": {
+   "support_fraction": 0.140625,
+   "gate_passed": false
+  }
+ },
+ "predictions": {
+  "s0": 0.4437,
+  "s1": 0.3879,
+  "s2": 0.4308,
+  "s2_s3": 0.982,
+  "wrongwin": 0.0,
+  "thin": 0.1412
+ },
+ "prediction_basis": "in-window quad share x in-window measured support (exact per-quad classification)",
+ "failclosed_checks": {
+  "nonexistent_path": "PathNotFoundError, FAIL",
+  "bare_array_with_array_key": "ValueError, FAIL"
+ }
+}

@@ -1,0 +1,180 @@
+{
+  "configuration": {
+    "block_rows": 256,
+    "margin_voxels": 0.0,
+    "max_support_samples": 1024,
+    "minimum_support_fraction": 0.95,
+    "support_sampling": "evenly ranked valid vertices; nearest CT voxel",
+    "support_threshold": 0.0
+  },
+  "gates": [
+    {
+      "message": "required TIFXYZ files are present",
+      "name": "tifxyz_required_files",
+      "observed": {
+        "missing": []
+      },
+      "passed": true,
+      "required": true,
+      "threshold": {
+        "missing": []
+      }
+    },
+    {
+      "message": "metadata is valid",
+      "name": "tifxyz_metadata",
+      "observed": {
+        "scale_xy": [
+          0.05000000074505806,
+          0.05000000074505806
+        ]
+      },
+      "passed": true,
+      "required": true,
+      "threshold": null
+    },
+    {
+      "message": "coordinate arrays match",
+      "name": "tifxyz_coordinate_shapes",
+      "observed": {
+        "x": [
+          58,
+          58
+        ],
+        "y": [
+          58,
+          58
+        ],
+        "z": [
+          58,
+          58
+        ]
+      },
+      "passed": true,
+      "required": true,
+      "threshold": "matching 2D arrays"
+    },
+    {
+      "message": "volume is a 3D z/y/x array",
+      "name": "volume_is_3d",
+      "observed": [
+        23247,
+        7593,
+        7593
+      ],
+      "passed": true,
+      "required": true,
+      "threshold": "positive z/y/x shape"
+    },
+    {
+      "message": "surface has valid vertices",
+      "name": "valid_surface_vertices",
+      "observed": 2883,
+      "passed": true,
+      "required": true,
+      "threshold": "> 0"
+    },
+    {
+      "message": "surface has connected quads",
+      "name": "valid_surface_quads",
+      "observed": 2746,
+      "passed": true,
+      "required": true,
+      "threshold": "> 0"
+    },
+    {
+      "message": "selected coordinates are finite",
+      "name": "finite_selected_coordinates",
+      "observed": 0,
+      "passed": true,
+      "required": true,
+      "threshold": 0
+    },
+    {
+      "message": "all valid coordinates lie inside the volume margin",
+      "name": "coordinates_within_volume",
+      "observed": {
+        "out_of_bounds_count": 0
+      },
+      "passed": true,
+      "required": true,
+      "threshold": {
+        "margin_voxels": 0.0,
+        "out_of_bounds_count": 0
+      }
+    },
+    {
+      "message": "sampled surface points lack sufficient CT signal support",
+      "name": "sampled_volume_signal_support",
+      "observed": {
+        "sample_count": 1024,
+        "support_fraction": 0.0,
+        "supported_count": 0
+      },
+      "passed": false,
+      "required": true,
+      "threshold": {
+        "absolute_signal_greater_than": 0.0,
+        "minimum_support_fraction": 0.95
+      }
+    }
+  ],
+  "schema_version": 1,
+  "status": "FAIL",
+  "summary": {
+    "passed_required_gates": 8,
+    "required_gate_count": 9
+  },
+  "surface": {
+    "coordinate_bounds_xyz": {
+      "x": [
+        960.7571411132812,
+        2021.6219482421875
+      ],
+      "y": [
+        3867.99560546875,
+        4922.48193359375
+      ],
+      "z": [
+        21161.1171875,
+        21473.23828125
+      ]
+    },
+    "meta_sha256": "dc7d293cd658bc19dd77d8091899fcb54356219efe57c39fc8b48131a6492f5d",
+    "out_of_bounds_count": 0,
+    "path": "trace/r1_s0_after",
+    "scale_xy": [
+      0.05000000074505806,
+      0.05000000074505806
+    ],
+    "selected_nonfinite_count": 0,
+    "stored_shape_yx": [
+      58,
+      58
+    ],
+    "uuid": "r1_s0_after",
+    "valid_quad_count": 2746,
+    "valid_vertex_count": 2883
+  },
+  "volume": {
+    "chunks_zyx": [
+      192,
+      192,
+      192
+    ],
+    "dtype": "uint8",
+    "path": "c0_support.zarr",
+    "requested_array_key": "0",
+    "resolved_array_key": "0",
+    "sampled_signal_support": {
+      "sample_count": 1024,
+      "support_fraction": 0.0,
+      "supported_count": 0
+    },
+    "shape_zyx": [
+      23247,
+      7593,
+      7593
+    ]
+  }
+}

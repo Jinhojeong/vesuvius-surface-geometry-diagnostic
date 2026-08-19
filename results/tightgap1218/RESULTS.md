@@ -59,17 +59,18 @@ occurs rather than only a sampling nuisance.
 the source blocks are block-local, so a crop spanning blocks needs a
 disambiguated id space; each contributing block is offset by a unique base and
 the split pair is remapped through the base of the site's own block. With that
-done, 213 of 260 contact crops contain both ids the split separated, 3 contain
-one, and 44 contain neither. The 44 are a boundary effect, they sit on a median
-of 4 contributing blocks against 2 for the crops that pass. A first pass
-without the id disambiguation reported 231, and that number was wrong because
-an id from a neighbouring block can collide with the pair; it is superseded
-here.
+done, 209 of 254 contact crops contain both ids the split separated, 3 contain
+one, and 42 contain neither. The 42 are a boundary effect, they sit on a median
+of 4 contributing blocks against 2 for the crops that pass. Two earlier counts
+are superseded. A pass without the id disambiguation reported 231, wrong because
+an id from a neighbouring block can collide with the pair. A later count of 213
+of 260 was also wrong, because six crops left over from a pilot extraction were
+still in the output directory; see the correction below.
 
 **The octant rule is weak and the emptiness field is how to filter.** It only
 asks for 1 percent CT per octant, so a crop with a large empty wedge can pass.
 Measured across the contact arm, median emptiness is 0.0002, the ninetieth
-percentile is 0.29, 20.4 percent of crops are more than a tenth empty and 11.2
+percentile is 0.295, 20.5 percent of crops are more than a tenth empty and 11.4
 percent are more than a quarter empty. The control arm behaves the same way,
 20.0 and 13.3 percent. Consumers wanting full cubes should filter on
 `ct_empty_frac`; the selection rule was not changed after the fact.
@@ -83,3 +84,24 @@ or connected-component definitions by construction. The control arm is a
 re-derivation from labels rather than a leftover census population, per
 amendment 1, so it answers what a single-sheet crop looks like here and not
 what the census declined to flag. One scroll.
+
+## Correction, 2026-08-19
+
+aviad12g audited the published set against this document and found a count
+mismatch: the Kaggle v1 manifest carried 260 contact crops with 17 in the 0 to 2
+band and 63 in the 10 and above band, against the 254 and 14 and 60 recorded
+here. He also named the cause correctly, `p11_crops.py` writes into an output
+directory it does not require to be empty, and the later label and figure passes
+glob everything in it, so six crops from an earlier pilot extraction with a
+different per-band target were carried along. Those six are not members under
+the frozen rule, because the pilot's smaller accepted list changed which later
+sites the overlap exclusion rejected.
+
+Membership was re-derived by replaying the frozen rule in one clean pass
+(`replay_rule.py`, membership_replay.json). The authoritative set is 254 contact
+crops, 14 / 60 / 60 / 60 / 60 by band, plus the 60 controls, and the six orphans
+are listed in that file by name. Kaggle version 2 ships that set with a
+recomputed manifest. Every derived statistic above has been recomputed on the
+254, which moved the both-instances count from 213 of 260 to 209 of 254 and the
+emptiness percentiles slightly. The band table and the gap population are
+unchanged, since the gap measurement never depended on crop membership.

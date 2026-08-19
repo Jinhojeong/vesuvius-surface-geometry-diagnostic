@@ -1,0 +1,38 @@
+{
+ "version": "v2, corrected membership",
+ "authoritative_membership": "single clean pass of the frozen rule; 6 pilot-run files removed",
+ "realised": {
+  "6-10": 60,
+  "4-6": 60,
+  "2-4": 60,
+  "10+": 60,
+  "0-2": 14
+ },
+ "contact": {
+  "n": 254,
+  "both": 209,
+  "one": 3,
+  "neither": 42,
+  "labelled_frac_median": 0.2673
+ },
+ "control": {
+  "n": 60,
+  "labelled_frac_median": 0.2454
+ },
+ "emptiness": {
+  "contact": {
+   "n": 254,
+   "median": 0.0002,
+   "p90": 0.2951,
+   "frac_over_10pct": 0.2047,
+   "frac_over_25pct": 0.1142
+  },
+  "control": {
+   "n": 60,
+   "median": 0.0015,
+   "p90": 0.2908,
+   "frac_over_10pct": 0.2,
+   "frac_over_25pct": 0.1333
+  }
+ }
+}

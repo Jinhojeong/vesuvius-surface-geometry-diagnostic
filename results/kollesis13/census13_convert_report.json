@@ -1,0 +1,13 @@
+{
+ "scanned": 66028,
+ "converted": 49144,
+ "drops": {
+  "z_range": 3820,
+  "dr_too_far": 5657,
+  "ring_unresolved": 7407
+ },
+ "test_1.3_1.6": 14569,
+ "background_ge_1.6": 34575,
+ "test_ratio_median": 1.4,
+ "n_slices_used": 307
+}

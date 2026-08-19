@@ -1,0 +1,155 @@
+{
+ "design": "mass contrast test(1.3-1.6) vs background(>=1.6), census13 pass, label-permutation null at the observed-fitted fence (nperm=2000); W free as edge-drift check",
+ "cuts": {
+  "all": {
+   "n_test": 14569,
+   "n_background": 34575,
+   "W160": {
+    "offset_mm": 26.0,
+    "frac_test": 0.2509437847484385,
+    "frac_background": 0.2466522053506869,
+    "contrast_pp": 0.42915793977515715,
+    "perm_p": 0.168,
+    "null_mean_pp": 0.02480445256464526,
+    "null_sd_pp": 0.41738856865370333
+   },
+   "Wfree": {
+    "W_mm": 120.0,
+    "offset_mm": 114.0,
+    "edge_drift": true,
+    "frac_test": 0.26302422952845084,
+    "frac_background": 0.2500361532899494,
+    "contrast_pp": 1.2988076238501456,
+    "perm_p": 0.0015,
+    "null_mean_pp": -0.017229025049323908,
+    "null_sd_pp": 0.4413458951538695
+   }
+  },
+  "ring_le_38": {
+   "n_test": 12638,
+   "n_background": 30030,
+   "W160": {
+    "offset_mm": 26.0,
+    "frac_test": 0.25075170121854723,
+    "frac_background": 0.24815184815184815,
+    "contrast_pp": 0.2599853066699076,
+    "perm_p": 0.291,
+    "null_mean_pp": 0.008453548877666646,
+    "null_sd_pp": 0.45515368466907574
+   },
+   "Wfree": {
+    "W_mm": 120.0,
+    "offset_mm": 112.0,
+    "edge_drift": true,
+    "frac_test": 0.2619085298306694,
+    "frac_background": 0.255977355977356,
+    "contrast_pp": 0.5931173853313432,
+    "perm_p": 0.102,
+    "null_mean_pp": -0.016132938117429312,
+    "null_sd_pp": 0.45805443255904277
+   }
+  },
+  "ring_le_16": {
+   "n_test": 7754,
+   "n_background": 18973,
+   "W160": {
+    "offset_mm": 84.0,
+    "frac_test": 0.25548104204281663,
+    "frac_background": 0.24123754809466083,
+    "contrast_pp": 1.42434939481558,
+    "perm_p": 0.0065,
+    "null_mean_pp": 0.012347850150087008,
+    "null_sd_pp": 0.5713673574185059
+   },
+   "Wfree": {
+    "W_mm": 121.5,
+    "offset_mm": 94.0,
+    "edge_drift": false,
+    "frac_test": 0.2718596853237039,
+    "frac_background": 0.28609076055447213,
+    "contrast_pp": -1.423107523076822,
+    "perm_p": 0.9905,
+    "null_mean_pp": 0.006361800998692843,
+    "null_sd_pp": 0.6036007412984674
+   }
+  }
+ },
+ "sensitivity_W160": {
+  "joints_assumed": 76,
+  "power_by_clusters_per_joint": {
+   "1": 0.0,
+   "2": 1.0,
+   "3": 1.0,
+   "4": 1.0,
+   "5": 1.0
+  },
+  "floor": "power 1.00 at 2 clusters/joint (152 of 14,569, ~1% of test stratum); 0.00 at 1/joint"
+ },
+ "verdict": "no_lattice_detected",
+ "inputs": {
+  "source": "J's origins_merged.csv + positions_merged.csv.gz @ 7baa930",
+  "census8k_reproduction": "all 491,337 reconvert, 0 drops, 0 ring mismatches, max |ds| 5 um (= 2-decimal rounding of clusters_arc.csv.gz)",
+  "census13_drops_for_J_check": {
+   "z_range": 3820,
+   "dr_too_far": 5657,
+   "ring_unresolved": 7407,
+   "scanned": 66028,
+   "converted": 49144
+  },
+  "independent_origin_recovery_crosscheck": "313 slices fitted from clusters_arc + iyando ray table agree with origins_merged to max 0.077 vox (~1.3 um)"
+ },
+ "refit_checks": {
+  "offsets_W160_by_cut": {
+   "all": 26.0,
+   "ring_le_38": 26.0,
+   "ring_le_16": 84.0
+  },
+  "ring_le_16_W160_refit": {
+   "obs_pp": 1.4134307319135453,
+   "perm_p": 0.0535,
+   "null_mean_pp": 0.4914940699435689,
+   "null_sd_pp": 0.5558865820855801,
+   "nperm": 2000
+  },
+  "all_Wfree_full_refit": {
+   "W_mm": 120.0,
+   "offset_mm": 114.0,
+   "obs_pp": 1.289051471574637,
+   "perm_p": 0.025,
+   "null_mean_pp": 0.5171076901514405,
+   "null_sd_pp": 0.3945947916160381,
+   "nperm": 200,
+   "note": "W=120 = borde de la malla, fuera de 150-170"
+  },
+  "ring_le_16_W160_refit_Jinputs": {
+   "contrast_pp": 1.42434939481558,
+   "p": 0.0555
+  }
+ },
+ "edge_diagnosis": {
+  "w_scan_top5": [
+   68.0,
+   94.0,
+   98.0,
+   120.0,
+   188.0
+  ],
+  "w_scan_max_pp": 1.4273871755056704,
+  "ks_test_vs_bg": {
+   "s": [
+    0.014951777829161794,
+    0.02024513761519103
+   ],
+   "ring": [
+    0.018393541254082657,
+    0.001920641788670964
+   ],
+   "z": [
+    0.04923515381240895,
+    4.940109751576394e-22
+   ]
+  },
+  "reading": "no stable peak, nothing at 150-170; strata differ broadly in z (covariate mismatch), which edge-W with fitted offset exploits"
+ },
+ "verdict_detail": "no_lattice_detected on J's exact inputs: prior-160 arm flat (+0.43pp, p=0.168, upward-biased); free-W drifts to grid edge (fails pre-registered check), residual explained by broad z covariate mismatch (KS p~5e-22), no stable peak in 60-200 sweep; ring<=16 arm dies under refit-offset permutation (p=0.056) with phase inconsistent across cuts (84 vs 26). Concentrated form excluded across 1.3-1.6 down to ~2 clusters/joint at the manufacture prior."
+}

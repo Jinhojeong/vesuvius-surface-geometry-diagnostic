@@ -1,0 +1,197 @@
+{
+ "prereg": "8ceda1e7a0536613",
+ "n_runs": 14,
+ "pos_rate": 0.23157,
+ "seed_spread_f1": {
+  "median": 0.03305,
+  "max": 0.06964
+ },
+ "seed_spread_auc": {
+  "median": 0.03012,
+  "max": 0.05155
+ },
+ "best_single": {
+  "tag": "hybrid_3d2d-seed42-step-020000",
+  "f1": 0.73245,
+  "thr": 0.46,
+  "auc": 0.91787
+ },
+ "f1_range": [
+  0.61062,
+  0.73245
+ ],
+ "auc_range": [
+  0.84504,
+  0.92231
+ ],
+ "rows": [
+  {
+   "tag": "hybrid_3d2d-seed42-step-010000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.64367,
+   "thr_best": 0.52,
+   "auc": 0.87943,
+   "f1_at_05_rescaled": 0.6366,
+   "calling_rate_at_best": 0.24758,
+   "seed": 42,
+   "step": 10000
+  },
+  {
+   "tag": "hybrid_3d2d-seed42-step-020000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.73245,
+   "thr_best": 0.46,
+   "auc": 0.91787,
+   "f1_at_05_rescaled": 0.72735,
+   "calling_rate_at_best": 0.2681,
+   "seed": 42,
+   "step": 20000
+  },
+  {
+   "tag": "hybrid_3d2d-seed42-step-030000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.6798,
+   "thr_best": 0.36,
+   "auc": 0.87191,
+   "f1_at_05_rescaled": 0.6246,
+   "calling_rate_at_best": 0.31662,
+   "seed": 42,
+   "step": 30000
+  },
+  {
+   "tag": "hybrid_3d2d-seed42-step-040000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.6727,
+   "thr_best": 0.34,
+   "auc": 0.87174,
+   "f1_at_05_rescaled": 0.61531,
+   "calling_rate_at_best": 0.31682,
+   "seed": 42,
+   "step": 40000
+  },
+  {
+   "tag": "hybrid_3d2d-seed42-step-050000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.66984,
+   "thr_best": 0.48,
+   "auc": 0.86687,
+   "f1_at_05_rescaled": 0.66859,
+   "calling_rate_at_best": 0.24646,
+   "seed": 42,
+   "step": 50000
+  },
+  {
+   "tag": "hybrid_3d2d-seed42-step-060000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.67528,
+   "thr_best": 0.49,
+   "auc": 0.88116,
+   "f1_at_05_rescaled": 0.67501,
+   "calling_rate_at_best": 0.25743,
+   "seed": 42,
+   "step": 60000
+  },
+  {
+   "tag": "hybrid_3d2d-seed42-step-075000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.66259,
+   "thr_best": 0.36,
+   "auc": 0.88285,
+   "f1_at_05_rescaled": 0.64051,
+   "calling_rate_at_best": 0.30994,
+   "seed": 42,
+   "step": 75000
+  },
+  {
+   "tag": "hybrid_3d2d-seed43-step-010000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.61062,
+   "thr_best": 0.45,
+   "auc": 0.84504,
+   "f1_at_05_rescaled": 0.54758,
+   "calling_rate_at_best": 0.26902,
+   "seed": 43,
+   "step": 10000
+  },
+  {
+   "tag": "hybrid_3d2d-seed43-step-020000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.67193,
+   "thr_best": 0.38,
+   "auc": 0.88775,
+   "f1_at_05_rescaled": 0.60887,
+   "calling_rate_at_best": 0.30572,
+   "seed": 43,
+   "step": 20000
+  },
+  {
+   "tag": "hybrid_3d2d-seed43-step-030000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.69073,
+   "thr_best": 0.52,
+   "auc": 0.89706,
+   "f1_at_05_rescaled": 0.68649,
+   "calling_rate_at_best": 0.25732,
+   "seed": 43,
+   "step": 30000
+  },
+  {
+   "tag": "hybrid_3d2d-seed43-step-040000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.69127,
+   "thr_best": 0.47,
+   "auc": 0.89943,
+   "f1_at_05_rescaled": 0.68737,
+   "calling_rate_at_best": 0.29702,
+   "seed": 43,
+   "step": 40000
+  },
+  {
+   "tag": "hybrid_3d2d-seed43-step-050000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.71858,
+   "thr_best": 0.42,
+   "auc": 0.91842,
+   "f1_at_05_rescaled": 0.70278,
+   "calling_rate_at_best": 0.3014,
+   "seed": 43,
+   "step": 50000
+  },
+  {
+   "tag": "hybrid_3d2d-seed43-step-060000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.69514,
+   "thr_best": 0.43,
+   "auc": 0.89676,
+   "f1_at_05_rescaled": 0.68804,
+   "calling_rate_at_best": 0.27647,
+   "seed": 43,
+   "step": 60000
+  },
+  {
+   "tag": "hybrid_3d2d-seed43-step-075000",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.73223,
+   "thr_best": 0.47,
+   "auc": 0.92231,
+   "f1_at_05_rescaled": 0.72794,
+   "calling_rate_at_best": 0.28568,
+   "seed": 43,
+   "step": 75000
+  }
+ ]
+}

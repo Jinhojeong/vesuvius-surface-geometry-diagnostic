@@ -1,0 +1,118 @@
+{
+ "prereg": "8ceda1e7a0536613",
+ "reference": {
+  "tag": "hybrid_3d2d-seed42-step-020000",
+  "n": 178146,
+  "pos_rate": 0.23157,
+  "f1_best": 0.73245,
+  "thr_best": 0.46,
+  "auc": 0.91787,
+  "f1_at_05_rescaled": 0.72735,
+  "calling_rate_at_best": 0.2681,
+  "seed": 42,
+  "step": 20000
+ },
+ "bar_f1": 0.03305,
+ "bar_auc": 0.03012,
+ "design_corrections": [
+  "w_full and w_c17 were the same window; the checkpoint fixes 17 of 21 (indices 2-18)",
+  "--layer-start/--layer-end can only narrow or shift, not widen past 17",
+  "--direction both writes forward and reverse as two files rather than fusing them"
+ ],
+ "rows": [
+  {
+   "tag": "w_c13",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.49625,
+   "thr_best": 0.3,
+   "auc": 0.75944,
+   "f1_at_05_rescaled": 0.15619,
+   "calling_rate_at_best": 0.36184,
+   "note": "13 of 21, centred"
+  },
+  {
+   "tag": "w_c9",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.44239,
+   "thr_best": 0.28,
+   "auc": 0.68754,
+   "f1_at_05_rescaled": 0.0876,
+   "calling_rate_at_best": 0.45863,
+   "note": "9 centred"
+  },
+  {
+   "tag": "w_c5",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.4163,
+   "thr_best": 0.28,
+   "auc": 0.62538,
+   "f1_at_05_rescaled": 0.02807,
+   "calling_rate_at_best": 0.73104,
+   "note": "5 centred"
+  },
+  {
+   "tag": "s_up0",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.70853,
+   "thr_best": 0.49,
+   "auc": 0.91064,
+   "f1_at_05_rescaled": 0.70848,
+   "calling_rate_at_best": 0.24979,
+   "note": "17 shifted up, 0-16"
+  },
+  {
+   "tag": "s_dn4",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.69378,
+   "thr_best": 0.46,
+   "auc": 0.90644,
+   "f1_at_05_rescaled": 0.68598,
+   "calling_rate_at_best": 0.24006,
+   "note": "17 shifted down, 4-20"
+  },
+  {
+   "tag": "d_rev",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.37607,
+   "thr_best": 0.21,
+   "auc": 0.53827,
+   "f1_at_05_rescaled": 0.03474,
+   "calling_rate_at_best": 0.99985,
+   "note": "reverse only"
+  },
+  {
+   "tag": "d_fused",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.68127,
+   "thr_best": 0.38,
+   "auc": 0.88447,
+   "f1_at_05_rescaled": 0.40161,
+   "calling_rate_at_best": 0.2954,
+   "note": "forward and reverse averaged"
+  },
+  {
+   "tag": "d_max",
+   "n": 178146,
+   "pos_rate": 0.23157,
+   "f1_best": 0.68195,
+   "thr_best": 0.46,
+   "auc": 0.88773,
+   "f1_at_05_rescaled": 0.67337,
+   "calling_rate_at_best": 0.31256,
+   "note": "elementwise max of the two directions"
+  }
+ ],
+ "best": {
+  "tag": "s_up0",
+  "f1": 0.70853,
+  "auc": 0.91064
+ },
+ "verdict": "indistinguishable"
+}

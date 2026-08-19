@@ -1,0 +1,59 @@
+{
+ "inklabels": {
+  "shape": [
+   21,
+   7020,
+   7220
+  ],
+  "dtype": "uint8",
+  "chunks": [
+   21,
+   128,
+   128
+  ]
+ },
+ "supervision_mask": {
+  "shape": [
+   21,
+   7020,
+   7220
+  ],
+  "dtype": "uint8",
+  "chunks": [
+   21,
+   128,
+   128
+  ]
+ },
+ "validation_mask": {
+  "shape": [
+   21,
+   7020,
+   7220
+  ],
+  "dtype": "uint8",
+  "chunks": [
+   21,
+   128,
+   128
+  ]
+ },
+ "validation_bbox": {
+  "lo": [
+   10,
+   4944,
+   1803
+  ],
+  "hi": [
+   11,
+   5425,
+   3955
+  ],
+  "extent": [
+   1,
+   481,
+   2152
+  ],
+  "ink_frac": 0.23157
+ }
+}

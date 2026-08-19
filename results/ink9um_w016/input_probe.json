@@ -1,0 +1,22 @@
+{
+ "level2_shape": [
+  109,
+  7020,
+  7220
+ ],
+ "z_start": 12,
+ "window": [
+  4816,
+  5553,
+  1675,
+  4083
+ ],
+ "input_shape": [
+  21,
+  737,
+  2408
+ ],
+ "annotated_z": 10,
+ "masked_voxels": 178146,
+ "ink_frac": 0.23157
+}

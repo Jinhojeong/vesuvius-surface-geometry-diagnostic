@@ -41,8 +41,12 @@ def best_view(v):
     return cands[int(np.argmax(e))]
 
 
+import os
+AUTH = set(json.load(open(OUT + "/membership_replay.json"))["authoritative"])
 byband = {}
 for f in sorted(glob.glob(OUT + "/crops/*.npz")):
+    if os.path.basename(f)[:-4] not in AUTH:
+        continue
     d = np.load(f, allow_pickle=True)
     if int(d.get("A_id", -1)) < 0:
         continue
@@ -74,7 +78,7 @@ for i in range(2):
     ax.set_xticks([]); ax.set_yticks([])
 
 c = json.load(open(OUT + "/crops_summary.json"))["realised"]
-s = json.load(open(OUT + "/labels_summary.json"))["contact"]
+s = json.load(open("/mnt/vesuvius/kaggle_tightgap1218/CORRECTION_v2.json"))["contact"]
 fig.suptitle("PHerc1218 tight-contact validation set, real CT at level 0\n"
              "crops per band  0-2:%d  2-4:%d  4-6:%d  6-10:%d  10+:%d  control:60   "
              "(%d of %d contact crops carry both split instances; examples drawn at the band median CT emptiness, view chosen to show sheets edge-on)"

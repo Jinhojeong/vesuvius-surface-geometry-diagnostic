@@ -1,0 +1,11 @@
+{
+ "amendment": "a07c2f86f39b3bd8",
+ "accepted": 60,
+ "target": 60,
+ "skipped": {
+  "oob": 546,
+  "octant": 111,
+  "overlap": 52,
+  "thick": 641
+ }
+}

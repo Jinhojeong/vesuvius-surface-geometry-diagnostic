@@ -1,0 +1,16 @@
+{
+ "contact": {
+  "n": 260,
+  "median": 0.0002,
+  "p90": 0.2897,
+  "frac_over_10pct": 0.2038,
+  "frac_over_25pct": 0.1115
+ },
+ "control": {
+  "n": 60,
+  "median": 0.0015,
+  "p90": 0.2908,
+  "frac_over_10pct": 0.2,
+  "frac_over_25pct": 0.1333
+ }
+}

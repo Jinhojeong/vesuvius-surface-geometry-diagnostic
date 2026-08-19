@@ -1,0 +1,17 @@
+{
+ "contact": {
+  "n": 260,
+  "both": 213,
+  "one": 3,
+  "neither": 44,
+  "no_site_block": 0,
+  "multi_block": 232,
+  "labelled_frac_median": 0.2667
+ },
+ "control": {
+  "n": 60,
+  "multi_block": 41,
+  "labelled_frac_median": 0.2454
+ },
+ "note": "ids are block-local in the source, so each contributing block is offset by a unique base inside the crop; A_id and B_id are the split pair remapped through the site block base"
+}

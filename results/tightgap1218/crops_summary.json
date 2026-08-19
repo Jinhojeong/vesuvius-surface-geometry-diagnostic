@@ -1,0 +1,18 @@
+{
+ "prereg": "9d5d71dbaf45ab85",
+ "target_per_band": 60,
+ "realised": {
+  "4-6": 60,
+  "6-10": 60,
+  "2-4": 60,
+  "10+": 60,
+  "0-2": 14
+ },
+ "accepted": 254,
+ "skipped": {
+  "oob": 24,
+  "octant": 15840,
+  "overlap": 679,
+  "read": 0
+ }
+}

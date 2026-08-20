@@ -3,6 +3,14 @@
 Executed against PREREGISTRATION.md (`9d5d71dbaf45ab85`) and AMENDMENT_1.md
 (`a07c2f86f39b3bd8`). Every count below is realised, not targeted.
 
+> **Defect notice, 2026-08-20.** The CT array in every published crop was read
+> from the wrong pyramid level and is not the CT at the crop's own labels. The
+> labels, the gaps and the gap population are unaffected. The crop intensities,
+> the eight-octant acceptance filter and everything downstream of it are.
+> Kaggle versions 1 and 2 should not be used for anything that reads the
+> intensity array. See the third correction at the end of this file.
+
+
 ## Why it exists
 
 Surface-model validation currently runs on data whose sheets are not in
@@ -139,12 +147,67 @@ per-band split below trustworthy rather than merely plausible.
 
 The 0 to 2 band is the only one that exhausted its census population, since the
 other four hit the 60 target and stopped early. So its 95.3 percent octant
-rejection rate is a rate over everything available rather than over a sample,
-and it is the honest form of the claim the wrong number was reaching for. The
-reading does not change. The tightest contacts sit disproportionately in crops
-that reach outside the masked volume.
+rejection rate is a rate over everything available rather than over a sample.
+
+The table is an exact account of what the code did. It is not an account of
+where tight contacts sit, because the octant test it replays ran against the
+wrong CT, which the next section explains. The reading that used to sit here,
+that the tightest contacts reach outside the masked volume, is withdrawn along
+with the filter that suggested it.
 
 AMENDMENT_1.md is left as written. It is hash chained at `a07c2f86f39b3bd8` and
 referenced by `control_summary.json` and `p11_control2.py`, so it is corrected
 here rather than edited. `p11_bandreplay.py` reproduces the table.
+
+## Correction, 2026-08-20, second entry: the CT is from the wrong grid
+
+The repaired instance labels live on the CT's level-1 grid. The repair blocks
+run to z0 11,368 with 256-voxel blocks, an extent of 11,624, which is the
+level-1 array's z extent exactly, and 3,797 matches in y and x the same way.
+`p11_crops.py` and `p11_control2.py` take site coordinates from those level-1
+block names and then open `ct["0"]`, shape 23,247 by 7,593 by 7,593. Every one
+of the 254 contact crops and 60 control crops therefore ships CT from about
+half the true offset. It is a real region of PHerc1218. It is not the region
+its own labels describe.
+
+| | shipped crop CT | CT level 1 at the same indices | CT level 0 over the matching physical box |
+| --- | --- | --- | --- |
+| correlation with the label | 0.11 to 0.19 | 0.46 to 0.65 | 0.46 to 0.65 |
+| fraction of the crop that is zero | 0.0000 to 0.0625 | 0.35 to 0.42 | |
+
+Reading level 0 at doubled indices over a 256 cube and mean-pooling back to 128
+reproduces the level-1 values exactly, which is what fixes level 1 as the
+correct region rather than merely the better-correlated one.
+`p11_gridcheck.py` reproduces the table.
+
+What this invalidates. The `intensity` array in all 314 crops. The eight-octant
+acceptance filter, and so the realised band counts, the per-band rejection
+table above, and the reading that tight contacts sit outside the masked volume.
+The `ct_empty_frac` field, which measures emptiness in the wrong box. Any
+figure or claim that shows or scores CT from these crops.
+
+What survives. The gap population, all 49,295 sites with their band histogram,
+because the gap was measured along label normals in the label volume and never
+touched the CT. The instance and surface labels themselves. The repair the
+labels come from. The membership replay, in the narrow sense that it still
+reproduces which files the code chose.
+
+Two other studies in this repo read the same CT against label-grid coordinates
+and both use level 1 correctly, `labelcov1218/coverage_run.py`, whose comment
+states "label grid == m7 prediction level 1", and `voidct1218/void_ct_run.py`,
+which sets `LEVEL = 1`. So this is a slip in one extraction step rather than a
+mistaken idea about the data, which is the only reason the scope is this
+narrow.
+
+The fix is to read level 1, which puts the CT on the same grid as the labels
+without changing the crop size in label voxels. That changes which sites pass
+the octant filter, so the membership changes and a corrected release is a new
+version rather than a re-upload. Preregistration and amendment for it are
+being written before the extraction runs, and this file will carry the result
+either way.
+
+How it was found. A whole-package audit before the August submission, run
+because the ridge measurement had just turned up an unsourced constant of its
+own. The ridge result that depended on these crops is rewritten in
+results/ridgecentre1218 and its conclusion survives on the corrected CT.
 

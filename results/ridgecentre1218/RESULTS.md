@@ -4,9 +4,13 @@ Executed against PREREGISTRATION.md (`ad186ffbf127216b`). Measured on the 209
 contact crops of the published tight-contact set that carry both split
 instances, per sheet, with the normal oriented away from an assumed winding
 centre so that a negative offset means the CT ridge sits inward of the
-label-run centre. That orientation rule turned out to rest on a constant I had
-not checked, which is the subject of the sensitivity section below. It does not
-change the answer, and the reason it cannot is worth more than the answer.
+label-run centre.
+
+**This file was rewritten on 2026-08-20 after the first version was withdrawn.**
+The first version read the CT out of the shipped crop arrays, which turned out
+to hold CT from a different physical region than their own labels. The answer
+below is the same, but the first version had no right to it, and the section on
+the defect is the part worth reading.
 
 ## Answer
 
@@ -14,71 +18,83 @@ No systematic displacement is detectable.
 
 | corridor | crops | median offset | 95 percent interval | share negative | median absolute |
 | --- | --- | --- | --- | --- | --- |
-| ±3 vox | 209 | 0.00 | −0.25 to +0.12 | 49.8 percent | 0.63 |
-| ±4 vox | 209 | 0.00 | −0.25 to +0.12 | 49.8 percent | 0.75 |
-| ±8 vox | 209 | −0.25 | −0.62 to +0.12 | 51.2 percent | 1.25 |
+| ±3 vox | 209 | 0.00 | 0.00 to 0.00 | 43.1 percent | 0.50 |
+| ±4 vox | 209 | 0.00 | −0.12 to +0.12 | 44.0 percent | 0.50 |
+| ±8 vox | 209 | 0.00 | −0.25 to +0.25 | 48.3 percent | 1.13 |
 
-The interval contains zero at every corridor and the sign split is even to
-within half a percent at two of the three. **The preregistration named this
-outcome in advance**, its third failure condition reads "if the sign
-distribution is near even, there is no systematic relation and the correct
-report is that". So this is the frozen reading rather than a post-hoc one.
+The median is zero at every corridor and the interval contains zero at every
+corridor, tightly enough at ±3 that both bootstrap bounds land on zero. **The
+preregistration named this outcome in advance**, its third failure condition
+reads "if the sign distribution is near even, there is no systematic relation
+and the correct report is that".
+
+## The defect that made the first version worthless
+
+The repaired instance labels live on the CT's level-1 grid. The repair blocks
+run to z0 11,368 with 256-voxel blocks, an extent of 11,624, which is the
+level-1 array's z extent exactly, and the same holds in y and x against 3,797.
+`p11_crops.py`, which built the tight-contact crops, took site coordinates from
+those level-1 block names and then read the CT out of the level-0 array, shape
+23,247 by 7,593 by 7,593. So every crop shipped CT from roughly half the true
+offset, a real region of the scroll but not the one its labels describe.
+
+Three measurements say so, and the third is the one that settles it.
+
+| | shipped crop CT | CT level 1 at the same indices | CT level 0 over the matching physical box |
+| --- | --- | --- | --- |
+| correlation with the label | 0.11 to 0.19 | 0.46 to 0.65 | 0.46 to 0.65 |
+| fraction of the crop that is zero | 0.0000 to 0.0625 | 0.35 to 0.42 | |
+
+Reading level 0 at doubled indices over a 256 cube and mean-pooling it back to
+128 reproduces the level-1 values exactly. That is what fixes level 1 as the
+correct region rather than merely the better-correlated one.
+
+**A null measured against an unrelated array is not a null, it is an artefact.**
+The first version's headline evidence was that the roughly 24 point
+measurements inside a single crop did not agree on a sign. That is exactly what
+two unrelated arrays produce, so the strongest-sounding part of the argument was
+the clearest symptom of the bug. Re-running the same estimator with only the CT
+source changed keeps the within-crop disagreement, 173 of 209 crops between 35
+and 65 percent negative against 162 before, but now it sits on a CT that
+actually tracks the labels.
+
+`p11_gridcheck.py` reproduces the alignment table, `p14_correctct.py` is the
+published estimator with one line changed.
 
 ## What the spread means, which is not nothing
 
-A zero median is not zero error. Half of the per-crop medians sit more than
-0.63 voxels from the ridge at the tightest corridor, and that spread is the sum
-of real annotation scatter and estimator noise, which this design cannot
-separate. Anyone scoring a model against these labels inherits that scatter as
-a floor on how precisely the comparison can resolve surface placement. What
-they do not inherit is a systematic bias in one direction.
+A zero median is not zero error. Half of the per-crop medians sit more than 0.50
+voxels from the ridge at the tightest corridor, and that spread is the sum of
+real annotation scatter and estimator noise, which this design cannot separate.
+Anyone scoring a model against these labels inherits that scatter as a floor on
+how precisely the comparison can resolve surface placement. What they do not
+inherit is a systematic bias in one direction. The corrected figure is tighter
+than the withdrawn one, 0.50 against 0.63 voxels, which is what a CT that
+actually tracks its labels should give.
 
 ## The other two failure conditions, with their numbers
 
-The preregistration set three ways for this to be wrong and only the third is
-quoted above, so here are the other two. Sites are discarded when the corridor
-leaves the crop, when the labelled run has no interior, or when the profile is
-flat, and that came to 556 of 5,408 sites, a rate of 10.3 percent against the
-one-third threshold. The median absolute offset does grow with the corridor,
-0.63 then 0.75 then 1.25 voxels, but sub-proportionally, falling from 0.21 to
-0.19 to 0.16 of the half-width. Proportional growth would have meant the number
-was made by the corridor. Growth slower than the corridor is what bounded noise
-around a true zero looks like.
+Sites are discarded when the corridor leaves the crop, when the labelled run has
+no interior, or when the profile is flat. On the correct CT that is 351 of 5,203
+sites, a rate of 6.7 percent against the preregistered one-third threshold, and
+the flat-profile discard falls to zero because a CT that contains the sheet is
+never flat across it. The median absolute offset grows with the corridor, 0.50
+then 0.50 then 1.13 voxels, but sub-proportionally, falling from 0.17 to 0.13 to
+0.14 of the half-width. Proportional growth would have meant the number was made
+by the corridor.
 
 ## Sensitivity, including a constant I should have checked first
 
 The orientation rule needs a winding centre and I supplied one, half of 7,593
-in each of y and x, without verifying that against the volume. It appears
-nowhere else in this project, and the crops' own coordinates do not support it.
-Every site sits at y below 3,754 and x below 3,738, so a point at 3,796 is off
-the edge of the sampled region rather than at its centre. Fitting an axis from
-the crops' own normals, treating each instance-to-instance direction as radial
-and solving for the point that best explains them, gives y 2,380 and x 2,390.
+in each of y and x, without verifying it. In hindsight that constant was the
+first visible symptom of the grid bug, since 7,593 is the level-0 width and the
+sites are level-1 coordinates, so no site could ever reach its midpoint.
+Fitting an axis from the crops' own normals gives y 2,380 and x 2,390.
 
-The answer holds under all three rules, and under one that needs no axis at
-all:
-
-| orientation rule | median | share negative |
-| --- | --- | --- |
-| the constant I used | 0.00 | 49.8 percent |
-| axis fitted from the normals | 0.00 | 46.4 percent |
-| centroid of the sites | 0.00 | 46.4 percent |
-
-The axis-free test is the one that settles it. Before any orientation is
-applied, the roughly 24 point measurements inside a single crop do not agree
-with each other on a sign. In 162 of 209 crops between 35 and 65 percent of the
-points are negative, no crop is outside 15 to 85 percent, and the median crop
-sits at 47.6 percent. **There is no signed displacement at the crop level for an
-orientation rule to orient.** A wrong axis can only mislabel which way a real
-effect points. It cannot manufacture a null out of one, and here the effect is
-absent before the axis is consulted at all.
-
-One more sensitivity. The walk that finds a labelled run's extent stops at 20
-voxels, which 173 of the runs reach, mostly where the instance-to-instance
-normal runs shallow across its own sheet. Dropping those leaves the median at
-0.00 with 45.0 percent negative and the median absolute at 0.75.
-
-`p14_sensitivity.py` reproduces this section.
+The answer held under all three rules on the withdrawn data, at 49.8, 46.4 and
+46.4 percent negative, and the axis-free within-crop test behaves the same way
+on the corrected CT. A wrong axis can only mislabel which way a real effect
+points. It cannot manufacture a null out of one.
 
 ## An implementation error, caught by the preregistered failure conditions
 
@@ -87,11 +103,9 @@ required that voxel to carry one of the two split ids. It carries a different
 instance 24 times in 40, so 81 of 209 crops were discarded, the discard rate
 passed the preregistered one-third threshold, and the offsets drifted with the
 corridor. That looked like the estimator failing on the data. It was the
-anchoring being wrong, which a check of the label at the crop centre settled
-before anything was written up. The frozen text says "the labelled run through
-that site", and a site is a point on a labelled sheet, so points are now
-sampled on each of the two instances directly. With that fixed, no crop is
-discarded for a run reason and the corridor sweep behaves.
+anchoring being wrong. The frozen text says "the labelled run through that
+site", and a site is a point on a labelled sheet, so points are sampled on each
+of the two instances directly.
 
 ## Context, not a comparison
 
@@ -104,12 +118,13 @@ is not evidence against it either.
 
 ## Limits
 
-The orientation rule is sound in construction but its winding centre was
-guessed rather than measured, and the section above is the repair. Anyone
-extending this should fit the axis rather than assume it. These are repaired
-automatic labels, not hand annotation, so a null says the
-repair and the CT agree on placement to within the scatter, not that either is
-correct. The crops come from contact sites, so this samples the regime where
-sheets are close rather than the scroll as a whole. The corridor bounds the
-reportable offset by construction, which is why the sweep is reported rather
-than a single number. One scroll.
+The 209 crops were selected by a rule whose CT test ran on the displaced volume,
+so the sample is correctly measured but not the sample the preregistration
+intended. That is a property of the published set rather than of this
+measurement, and it is being fixed in the set rather than here. These are
+repaired automatic labels, not hand annotation, so a null says the repair and
+the CT agree on placement to within the scatter, not that either is correct. The
+crops come from contact sites, so this samples the regime where sheets are close
+rather than the scroll as a whole. The corridor bounds the reportable offset by
+construction, which is why the sweep is reported rather than a single number.
+One scroll.

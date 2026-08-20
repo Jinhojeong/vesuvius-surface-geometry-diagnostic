@@ -49,8 +49,11 @@ the CT emptiness of the crop.
 
 **The tightest band is short and the reason is structural.** The frozen rule
 requiring CT in all eight octants removes 15,840 candidate sites overall, and
-it falls hardest at the tight end: of 120 sampled sites under 2 voxels, 117
-fail it and 3 pass. The 0 to 2 band therefore ships 14 crops rather than 60.
+it falls hardest at the tight end. The 0 to 2 band offers 429 candidate sites,
+the octant rule rejects 409 of them and the overlap rule another 6, so the band
+ships 14 crops rather than 60. A pilot figure of 117 rejections in 120 sampled
+sites appeared here and in AMENDMENT_1.md and is superseded, see the second
+correction below.
 The reading is that the tightest contacts sit disproportionately in crops that
 reach outside the masked volume, which is a fact about where tight contact
 occurs rather than only a sampling nuisance.
@@ -105,3 +108,43 @@ recomputed manifest. Every derived statistic above has been recomputed on the
 254, which moved the both-instances count from 213 of 260 to 209 of 254 and the
 emptiness percentiles slightly. The band table and the gap population are
 unchanged, since the gap measurement never depended on crop membership.
+
+## Correction, 2026-08-20
+
+The rejection figure for the tightest band was wrong. This file and
+AMENDMENT_1.md both said that of 120 sampled sites under 2 voxels, 117 failed
+the eight-octant rule and 3 passed, and then concluded that the band therefore
+ships 14 crops. Three passing sites cannot yield fourteen crops, so the
+sentence never followed from its own numbers. The figure traces to no committed
+script and to no line of the extraction log, which is the same unsourced-number
+problem the ridge measurement turned up in its own orientation rule.
+
+The real breakdown is a replay rather than a sample. `p11_crops.py` tests in a
+fixed order, the band target gate then out of bounds then overlap then read then
+octant, and the recorded read failure count is zero. So once the accepted list
+is known, the rejection reason for every census row is fixed by arithmetic and
+needs no CT. The accepted list is the 254 published crops in census order.
+Replaying
+that reproduces the frozen `crops_summary.json` exactly, 254 accepted with
+15,840 octant, 679 overlap and 24 out of bounds, which is what makes the
+per-band split below trustworthy rather than merely plausible.
+
+| band | census sites | accepted | octant | overlap | out of bounds |
+| --- | --- | --- | --- | --- | --- |
+| 0 to 2 | 429 | 14 | 409 | 6 | 0 |
+| 2 to 4 | 5,929 | 60 | 2,154 | 116 | 4 |
+| 4 to 6 | 12,578 | 60 | 4,145 | 181 | 11 |
+| 6 to 10 | 17,545 | 60 | 5,046 | 170 | 9 |
+| 10 and above | 12,814 | 60 | 4,086 | 206 | 0 |
+
+The 0 to 2 band is the only one that exhausted its census population, since the
+other four hit the 60 target and stopped early. So its 95.3 percent octant
+rejection rate is a rate over everything available rather than over a sample,
+and it is the honest form of the claim the wrong number was reaching for. The
+reading does not change. The tightest contacts sit disproportionately in crops
+that reach outside the masked volume.
+
+AMENDMENT_1.md is left as written. It is hash chained at `a07c2f86f39b3bd8` and
+referenced by `control_summary.json` and `p11_control2.py`, so it is corrected
+here rather than edited. `p11_bandreplay.py` reproduces the table.
+

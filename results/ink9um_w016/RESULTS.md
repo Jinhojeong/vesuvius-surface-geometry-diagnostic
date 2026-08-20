@@ -84,11 +84,13 @@ faces, then use that one. Fusing them blind is a five point penalty.
 ## What this adds up to
 
 No inference-time setting tested here beats the best single released checkpoint
-by the preregistered bar. Ensembling is the only arm that improves anything at
-all and it lands just under the bar, while the two settings that look like
-tunables can only lose. The practical guidance that follows is cheap and
-concrete: try several checkpoints because the best one differs by seed, leave
-the depth window alone, and determine direction rather than fusing it.
+by the preregistered bar, on this segment or on either of the other two.
+Ensembling is the only arm that improves anything at all and it lands under the
+bar every time, while the two settings that look like tunables can only lose.
+The practical guidance that follows is cheap and concrete. Try several
+checkpoints, because the best one is a different checkpoint on each of the three
+segments rather than merely differing by seed. Leave the depth window alone, and
+determine direction rather than fusing it.
 
 ## Limits
 

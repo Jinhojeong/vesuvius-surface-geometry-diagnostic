@@ -34,10 +34,9 @@ measurably right rather than merely cautious.
 
 **By the frozen bar this is indistinguishable, not a gain.** The full ensemble's
 +0.0316 F1 sits just under the 0.033 seed spread, and its +0.0150 AUC is half
-the 0.030 AUC spread. What can be said without leaning on the margin is a rank
-statement: the fourteen-model average beats every one of its fourteen members
-on both F1 and AUC. That is worth knowing and it is not the same claim as a
-measured improvement.
+the 0.030 AUC spread. On w016 alone a rank statement also held, the fourteen-model
+average beating every one of its members on both metrics. That statement did not
+survive the other two validation segments, see below.
 
 Ensembling only helps when the members are decent. Averaging the two 10,000
 step checkpoints lands below either seed's best single run.
@@ -100,3 +99,34 @@ arm equally, which is why the bar is the seed spread rather than zero. The input
 is my re-implementation of the documented preprocessing, the public 2.399 um
 volume at XY level 2, centred 84 Z planes, 4x Z mean pooling, so a preprocessing
 difference would move all arms together.
+
+## Replication on the other two validation segments
+
+The label README names three segments carrying a `validation_mask`, the cases
+the released checkpoints report on. Running the same fourteen checkpoints and
+the same fourteen-model average on all three, each scored against its own seed
+spread:
+
+| segment | ink rate | best single | ensemble | difference | that segment's bar | verdict |
+| --- | --- | --- | --- | --- | --- | --- |
+| pherc0139-w016 | 0.232 | 0.7325, seed 42 step 20k | 0.7641 | +0.0316 | 0.0330 | indistinguishable |
+| pherc0814-46527 | 0.373 | 0.7627, seed 43 step 10k | 0.7651 | +0.0025 | 0.0084 | indistinguishable |
+| pherc1667-w029 | 0.230 | 0.7472, seed 43 step 30k | 0.7391 | −0.0080 | 0.0365 | indistinguishable |
+
+**Three of three say indistinguishable, so the null is the finding.** The
+ensemble never clears the bar, and on PHerc1667 it is slightly worse than the
+best single checkpoint.
+
+**One claim from the single-segment run does not replicate.** "The average beats
+every one of its fourteen members" holds on F1 for two of three segments and
+fails on PHerc1667. On AUC it holds three of three. So the threshold-free rank
+statement is the robust one and the F1 version was a one-segment observation
+that should not have been stated as though it were general.
+
+**The guidance that gets stronger is checkpoint choice.** The best checkpoint is
+different on all three segments, seed 42 at step 20k, seed 43 at step 10k, and
+seed 43 at step 30k, spanning both seeds and three widely separated steps. The
+bar itself is segment-dependent too, 0.008 on PHerc0814 against 0.037 on
+PHerc1667, so seed-to-seed stability is not a fixed property of these weights.
+
+Depth window and direction were measured on w016 only and are not re-run here.

@@ -1,0 +1,36 @@
+{
+ "pherc0814-46527": {
+  "input_shape": [
+   21,
+   634,
+   815
+  ],
+  "window": [
+   1496,
+   2130,
+   130,
+   945
+  ],
+  "annotated_z": 10,
+  "masked": 161051,
+  "ink_frac": 0.37334,
+  "material": 0.8355
+ },
+ "pherc1667-w029": {
+  "input_shape": [
+   21,
+   2319,
+   2558
+  ],
+  "window": [
+   2982,
+   5301,
+   4789,
+   7347
+  ],
+  "annotated_z": 10,
+  "masked": 382353,
+  "ink_frac": 0.23024,
+  "material": 0.9589
+ }
+}

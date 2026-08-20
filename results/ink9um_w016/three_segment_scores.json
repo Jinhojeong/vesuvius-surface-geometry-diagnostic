@@ -1,0 +1,77 @@
+{
+ "pherc0139-w016": {
+  "pos_rate": 0.23157,
+  "best_single": {
+   "seed": 42,
+   "step": 20000,
+   "f1": 0.73245,
+   "auc": 0.91787
+  },
+  "f1_range": [
+   0.6106,
+   0.7325
+  ],
+  "bar_f1": 0.03305,
+  "bar_auc": 0.03012,
+  "ensemble": {
+   "f1": 0.76407,
+   "auc": 0.93283,
+   "thr": 0.44
+  },
+  "delta_f1": 0.03162,
+  "delta_auc": 0.01052,
+  "beats_all_f1": true,
+  "beats_all_auc": true,
+  "verdict": "indistinguishable"
+ },
+ "pherc0814-46527": {
+  "pos_rate": 0.37334,
+  "best_single": {
+   "seed": 43,
+   "step": 10000,
+   "f1": 0.76267,
+   "auc": 0.86462
+  },
+  "f1_range": [
+   0.6848,
+   0.7627
+  ],
+  "bar_f1": 0.00836,
+  "bar_auc": 0.01746,
+  "ensemble": {
+   "f1": 0.76513,
+   "auc": 0.8866,
+   "thr": 0.38
+  },
+  "delta_f1": 0.00246,
+  "delta_auc": 0.00195,
+  "beats_all_f1": true,
+  "beats_all_auc": true,
+  "verdict": "indistinguishable"
+ },
+ "pherc1667-w029": {
+  "pos_rate": 0.23024,
+  "best_single": {
+   "seed": 43,
+   "step": 30000,
+   "f1": 0.74717,
+   "auc": 0.91059
+  },
+  "f1_range": [
+   0.6076,
+   0.7472
+  ],
+  "bar_f1": 0.03653,
+  "bar_auc": 0.00731,
+  "ensemble": {
+   "f1": 0.73912,
+   "auc": 0.92157,
+   "thr": 0.47
+  },
+  "delta_f1": -0.00805,
+  "delta_auc": 0.01098,
+  "beats_all_f1": false,
+  "beats_all_auc": true,
+  "verdict": "indistinguishable"
+ }
+}

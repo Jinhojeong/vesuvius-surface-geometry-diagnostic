@@ -32,7 +32,8 @@ and the correct report is that".
 
 The repaired instance labels live on the CT's level-1 grid. The repair blocks
 run to z0 11,368 with 256-voxel blocks, an extent of 11,624, which is the
-level-1 array's z extent exactly, and the same holds in y and x against 3,797.
+level-1 z extent exactly. In y and x the block grid covers 4,096, which spans
+level 1's 3,797 and falls far short of level 0's 7,593.
 `p11_crops.py`, which built the tight-contact crops, took site coordinates from
 those level-1 block names and then read the CT out of the level-0 array, shape
 23,247 by 7,593 by 7,593. So every crop shipped CT from roughly half the true
@@ -41,8 +42,9 @@ offset, a real region of the scroll but not the one its labels describe.
 Two things fix it, and a third that I first reached for does not.
 
 The block arithmetic. The repair blocks run to z0 11,368 with 256-voxel blocks,
-an extent of 11,624, which is the level-1 z extent exactly, and 3,797 matches
-the same way in y and x. No site can reach the midpoint of a 7,593-wide axis.
+an extent of 11,624, which is the
+level-1 z extent exactly. In y and x the block grid covers 4,096, which spans
+level 1's 3,797 and falls far short of level 0's 7,593. No site can reach the midpoint of a 7,593-wide axis.
 
 The supersample identity. Reading level 0 at doubled indices over a 256 cube
 and mean-pooling back to 128 reproduces the level-1 values exactly, so level 1

@@ -155,15 +155,28 @@ wrong CT, which the next section explains. The reading that used to sit here,
 that the tightest contacts reach outside the masked volume, is withdrawn along
 with the filter that suggested it.
 
+A wording correction that applies to AMENDMENT_2 as well. Both that document
+and an earlier draft of this one said 3,797 "matches the same way" in y and x.
+It does not. The block grid is padded to 512 in those axes and covers 4,096,
+which still rules level 0 out and rules level 1 in, but is not the exact match
+the z axis gives. AMENDMENT_2 is hash chained at `f9d57773c715cb65` and is
+corrected here rather than edited, on the same principle as below.
+
 AMENDMENT_1.md is left as written. It is hash chained at `a07c2f86f39b3bd8` and
 referenced by `control_summary.json` and `p11_control2.py`, so it is corrected
 here rather than edited. `p11_bandreplay.py` reproduces the table.
+
+One stale digit worth naming rather than hiding. `CORRECTION_v3.json`, already
+uploaded inside the Kaggle version, says the verification is 18 checks. It is
+19. The file is not worth a 644 MB re-upload for one digit, and it points at
+this repo for the log, which carries the real count.
 
 ## Correction, 2026-08-20, second entry: the CT is from the wrong grid
 
 The repaired instance labels live on the CT's level-1 grid. The repair blocks
 run to z0 11,368 with 256-voxel blocks, an extent of 11,624, which is the
-level-1 array's z extent exactly, and 3,797 matches in y and x the same way.
+level-1 array's z extent exactly. In y and x the block grid covers 4,096,
+which spans level 1's 3,797 and falls far short of level 0's 7,593.
 `p11_crops.py` and `p11_control2.py` take site coordinates from those level-1
 block names and then open `ct["0"]`, shape 23,247 by 7,593 by 7,593. Every one
 of the 254 contact crops and 60 control crops therefore ships CT from about
@@ -173,8 +186,9 @@ its own labels describe.
 Two things fix it, and a third that I first reached for does not.
 
 The block arithmetic. The repair blocks run to z0 11,368 with 256-voxel blocks,
-an extent of 11,624, which is the level-1 z extent exactly, and 3,797 matches
-the same way in y and x. No site can reach the midpoint of a 7,593-wide axis.
+an extent of 11,624, which is the
+level-1 z extent exactly. In y and x the block grid covers 4,096, which spans
+level 1's 3,797 and falls far short of level 0's 7,593. No site can reach the midpoint of a 7,593-wide axis.
 
 The supersample identity. Reading level 0 at doubled indices over a 256 cube
 and mean-pooling back to 128 reproduces the level-1 values exactly, so level 1

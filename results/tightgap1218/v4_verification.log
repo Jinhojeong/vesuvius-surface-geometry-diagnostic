@@ -1,0 +1,44 @@
+=== AMENDMENT_3 conditions ===
+PASS  pair-voxel loss is zero for every crop  | n=268 max 0.000000 mean 0.000000
+PASS  A_id/B_id are built on the authoritative site block (base 1e6)  | 300/300
+PASS  no gap value changed against v3  | 300 gaps, 0 differ
+PASS  no band changed against v3
+PASS  same crop membership as v3  | 300 vs 300
+
+=== alignment, repeated ===
+PASS  CT at the site beats CT shifted 20 or 40 voxels  | 30 of 30
+PASS  mean CT under the label exceeds the background, all 300  | median +6.1, 97.0% positive
+  (raw CT-to-label correlation over ALL 300 crops: median 0.0870  -- emptiness-driven, not an alignment test)
+PASS  crop intensity is byte-identical to CT level 1 at its own site  | 30/30
+
+=== membership, manifest, frozen rules ===
+PASS  contact 300 / control 60  | 300 / 60
+PASS  manifest and disk agree exactly
+PASS  sha256 matches on ALL 360 rows  | 0 mismatches
+PASS  all five bands at 60  | {"6-10": 60, "2-4": 60, "4-6": 60, "10+": 60, "0-2": 60}
+PASS  every gap lies inside its band
+PASS  no two crops overlap by more than a quarter  | 0 pairs
+PASS  contact crops carry every promised array
+PASS  both_instances_present recomputes to the summary  | 263 vs 263
+PASS  id_bases records every contributing block  | median 4 max 8
+
+=== summary ===
+{
+ "contact": 300,
+ "control": 60,
+ "bands": {
+  "6-10": 60,
+  "2-4": 60,
+  "4-6": 60,
+  "10+": 60,
+  "0-2": 60
+ },
+ "both": 263,
+ "one": 5,
+ "neither": 32,
+ "v3_both": 245,
+ "pair_loss_max": 0.0,
+ "ct_corr_median_all": 0.087
+}
+
+ALL CHECKS PASSED

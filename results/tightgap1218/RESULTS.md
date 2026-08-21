@@ -3,6 +3,13 @@
 Executed against PREREGISTRATION.md (`9d5d71dbaf45ab85`) and AMENDMENT_1.md
 (`a07c2f86f39b3bd8`). Every count below is realised, not targeted.
 
+> **Unit correction, 2026-08-21.** The gap is in level-1 voxels of 17.28 um, not
+> the level-0 voxels the preregistration and the band table say. The comparison
+> against another contributor's validation geometry was therefore not
+> like-for-like, and the honest figure is 0.87 percent rather than 12.9 percent.
+> See the fourth correction at the end of this file. The gap values themselves
+> are unchanged.
+>
 > **Defect notice, 2026-08-20.** The CT array in every published crop was read
 > from the wrong pyramid level and is not the CT at the crop's own labels. The
 > labels, the gaps and the gap population are unaffected. The crop intensities,
@@ -266,8 +273,12 @@ volume. That was an artefact of testing emptiness in the wrong place.
 
 AMENDMENT_2 says "if crops from the corrected run still show CT to label
 correlation near 0.1, the grid diagnosis is wrong and the whole repair is
-withdrawn rather than shipped". On the corrected crops that correlation has a
-median of 0.058, so by the frozen text the condition fires.
+withdrawn rather than shipped". Over all 300 corrected crops that correlation
+has a median of 0.087, which is squarely what the frozen text calls near 0.1, so
+the condition fires. An earlier draft of this paragraph said 0.058, which was a
+twelve-crop sample I had already replaced with a thirty-crop one and never
+carried through to the prose. The number to use is the one with no sampling in
+it, and it makes the condition fire harder rather than softer.
 
 I am not withdrawing the repair, and the reason is that the condition itself was
 the wrong test, which the run made visible. Correlation between a crop's CT and
@@ -277,7 +288,8 @@ a fully dense region gives the CT almost nothing to separate sheet from gap by
 absolute intensity. Version 3 selects far denser crops than version 2 did, so
 the same alignment scores lower.
 
-The tests that do measure alignment say the crops are correct. Each crop's
+The tests that do measure alignment say the crops are correct, and they say it
+at every corridor rather than on a sample. Each crop's
 intensity is byte-identical to CT level 1 at its own site, 30 of 30 on a random
 sample. Reading the CT offset by 20 or 40 voxels scores worse than reading it at
 the site on 30 of 30 sampled crops. The mean CT under the label beats the mean
@@ -311,4 +323,89 @@ making it now, because changing a rule on the strength of an outcome I have just
 seen is the thing preregistration exists to prevent. It is reported here, per
 the frozen document's instruction that realised properties are reported rather
 than padded.
+
+## Correction, 2026-08-21, third entry: block overlap was overwriting the split pair
+
+Run against AMENDMENT_3 (`db61e452e4cce9ca`). The repair blocks are 256 by 512
+by 512 on strides of 224 in z and 448 in y and x, so neighbours overlap by 32
+and 64 voxels. The old stitching step let a later block overwrite an earlier one
+with a different base, which could relabel the split pair out of the crop.
+Version 4 writes the site block first and lets every other block fill only
+unwritten voxels.
+
+A second defect surfaced while fixing the first, and the preregistered failure
+condition is what surfaced it. The first corrected run moved the both-instances
+count the wrong way, from 245 down to 236. The cause is that **the site itself
+falls inside more than one block for 76 of the 300 crops**, 66 of them in two
+blocks and 10 in four, again because the blocks overlap. Versions 1 to 3 took
+whichever of those blocks came last in filename order as the one defining A_id
+and B_id. That was an arbitrary choice rather than a rule. Version 4 fixes the
+first block in coordinate order as authoritative and writes it first, so the
+base the ids are built on is also the base that wins the overlaps.
+
+| | version 3 | version 4 |
+| --- | --- | --- |
+| carry both split ids | 245 of 300 | 263 of 300 |
+| carry one | 3 | 5 |
+| carry neither | 52 | 32 |
+| share of the site block's pair voxels lost | mean 10.4 percent, 26 crops over half | zero everywhere |
+
+**AMENDMENT_3 predicted a rise of about 3 and got 18, so its own failure
+condition fires.** The prediction was built on the overwrite defect alone,
+because the site-block ambiguity had not been found when the document was
+frozen. The document is left as written and corrected here, on the same
+principle as the earlier amendments. Its other conditions all hold. No gap value
+changed, no band changed, membership is the same 300 crops, and pair-voxel loss
+is zero for every crop.
+
+## Correction, 2026-08-21, fourth entry: the gap is in level-1 voxels, and the headline comparison was not like-for-like
+
+Rule 2 of the preregistration says the gap is measured "at the site voxel, in
+level-0 voxels", and `p11_gaps.py` repeats it. Both are wrong. The measurement
+walks the normal inside a repaired label block, and those blocks sit on the CT's
+level-1 grid, which is the same fact AMENDMENT_2 established for the crops. The
+values are correct as distances. The unit label was carrying the same wrong
+premise about the grid that rule 4 carried. PHerc1218's CT is 8.640 um at level
+0, so the gap unit is **17.28 um**.
+
+That matters because the set's headline claim compares against another
+contributor's validation geometry, which he reported as a median inter-sheet gap
+of 15.6 voxels with 0.02 percent of near-band positives under 4 voxels. His data
+is Dataset059, cut from Scroll 1, Scroll 4 and Scroll 5. Villa's own
+`vesuvius/src/vesuvius/install/configs/scrolls.yaml` maps all three to 7.91 um
+volumes, and the patch coordinates in the filenames fit those volumes' level-0
+shapes while falling outside the level-1 shapes, so his voxel is **7.91 um**.
+He states no unit anywhere, which is why this went unnoticed.
+
+So "under 4 voxels" meant 31.64 um on his side and 69.12 um on mine. Restated in
+microns on both sides:
+
+| | mine | his |
+| --- | --- | --- |
+| voxel | 17.28 um | 7.91 um |
+| median inter-sheet gap | 121.0 um | 123.4 um |
+| share under 31.64 um, his threshold | 0.87 percent | 0.02 percent |
+| share under 69.12 um, my threshold | 12.90 percent | not reported |
+
+**The medians are the same to within two percent.** The impression that my sites
+were twice as tight was a unit artefact and is withdrawn. What survives is the
+tail, and it survives on its own terms. At his physical threshold my set holds
+429 sites against his effectively none, a factor of about 44 rather than the 645
+the raw headline implied. That is still the thing his cycle-3 note asked for, a
+set that actually contains tight contacts, and it is now stated in units that
+can be checked.
+
+The band table restated in microns: 0 to 34.6, 34.6 to 69.1, 69.1 to 103.7,
+103.7 to 172.8, and above 172.8. Two further points belong next to any such
+comparison. Even at level 0 the two grids differ, 8.64 against 7.91 um, a 9
+percent mismatch, so microns are the only honest unit here. And the two
+instruments measure different things, his near-band positive fraction against my
+ray-validated split sites, so correcting the unit closes the unit gap and not
+the definitional one.
+
+This correction applies to a comment already posted on villa #191 on 2026-08-19,
+which carries the 12.9 against 0.02 comparison. It is corrected in the thread
+rather than edited.
+
+`p11_microns.py` reproduces this section.
 

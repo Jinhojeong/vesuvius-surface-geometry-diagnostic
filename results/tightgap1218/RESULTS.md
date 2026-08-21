@@ -173,10 +173,10 @@ AMENDMENT_1.md is left as written. It is hash chained at `a07c2f86f39b3bd8` and
 referenced by `control_summary.json` and `p11_control2.py`, so it is corrected
 here rather than edited. `p11_bandreplay.py` reproduces the table.
 
-One stale digit worth naming rather than hiding. `CORRECTION_v3.json`, already
-uploaded inside the Kaggle version, says the verification is 18 checks. It is
-19. The file is not worth a 644 MB re-upload for one digit, and it points at
-this repo for the log, which carries the real count.
+One stale digit worth naming rather than hiding. `CORRECTION_v3.json`, uploaded
+inside the version-3 Kaggle release, says the verification is 18 checks. It was
+19. Version 3 is superseded, so that file is now history rather than guidance,
+and version 4 carries the right count for its own 17-check log.
 
 ## Correction, 2026-08-20, second entry: the CT is from the wrong grid
 

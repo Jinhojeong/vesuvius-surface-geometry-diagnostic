@@ -1,0 +1,19 @@
+{
+ "amendment": "f9d57773c715cb65",
+ "ct_level": 1,
+ "target_per_band": 60,
+ "realised": {
+  "6-10": 60,
+  "2-4": 60,
+  "4-6": 60,
+  "10+": 60,
+  "0-2": 60
+ },
+ "accepted": 300,
+ "skipped": {
+  "oob": 25,
+  "octant": 1,
+  "overlap": 518,
+  "read": 0
+ }
+}

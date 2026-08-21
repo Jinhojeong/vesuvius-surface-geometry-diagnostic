@@ -1,0 +1,57 @@
+=== 1. the defect that caused this rebuild ===
+PASS  CT at the site beats CT shifted 20 or 40 voxels  | 30 of 30
+PASS  mean CT under the label exceeds the background, all 300 crops  | median +6.1 grey, 97.0% positive, min -1.8
+PASS  crop intensity is byte-identical to CT level 1 at its own site  | 30/30
+PASS  crop intensity is NOT the old level-0 read
+
+=== 2. membership and manifest ===
+PASS  contact file count matches crops_summary  | 300 vs 300
+PASS  control file count matches control_summary  | 60 vs 60
+PASS  manifest and disk agree exactly  | disk 360 manifest 360, sym-diff 0
+PASS  sha256 matches on a 25-file sample  | 0 mismatches
+PASS  no duplicate crop names
+
+=== 3. the frozen rules actually held ===
+PASS  all five bands at the 60 target  | {"6-10": 60, "2-4": 60, "4-6": 60, "10+": 60, "0-2": 60}
+PASS  every crop's gap lies inside its stated band  | 0 outside
+PASS  no two accepted crops overlap by more than a quarter  | 0 violating pairs
+PASS  every crop lies wholly inside the level-1 volume  | 0 out of bounds
+
+=== 4. AMENDMENT_2 failure conditions ===
+PASS  accepts MORE than the displaced run (else the premise was wrong)  | 300 vs 254
+PASS  alignment holds under the shift test (the amendment's raw-correlation form of this is superseded, see RESULTS)  | 30 of 30; raw corr median 0.080 is emptiness-driven, not alignment
+PASS  band counts are NOT identical to v2 (else the change did not take)
+
+=== 5. contents every consumer needs ===
+PASS  contact crops carry every promised array  | []
+PASS  control crops carry every promised array  | []
+PASS  both_instances_present recomputes to the summary  | 245 vs 245
+
+=== summary ===
+{
+ "contact": 300,
+ "control": 60,
+ "bands": {
+  "6-10": 60,
+  "2-4": 60,
+  "4-6": 60,
+  "10+": 60,
+  "0-2": 60
+ },
+ "both_instances": 245,
+ "skipped": {
+  "oob": 25,
+  "octant": 1,
+  "overlap": 518,
+  "read": 0
+ },
+ "emptiness_contact": {
+  "median": 0.0,
+  "p90": 0.3879,
+  "frac_over_10pct": 0.2067,
+  "frac_over_25pct": 0.1467
+ },
+ "ct_corr_median": 0.08
+}
+
+ALL CHECKS PASSED

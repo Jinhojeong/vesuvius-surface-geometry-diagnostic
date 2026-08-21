@@ -1,0 +1,12 @@
+{
+ "amendment": "f9d57773c715cb65",
+ "ct_level": 1,
+ "accepted": 60,
+ "target": 60,
+ "skipped": {
+  "oob": 221,
+  "octant": 15,
+  "overlap": 48,
+  "thick": 295
+ }
+}

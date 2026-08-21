@@ -38,16 +38,31 @@ those level-1 block names and then read the CT out of the level-0 array, shape
 23,247 by 7,593 by 7,593. So every crop shipped CT from roughly half the true
 offset, a real region of the scroll but not the one its labels describe.
 
-Three measurements say so, and the third is the one that settles it.
+Two things fix it, and a third that I first reached for does not.
 
-| | shipped crop CT | CT level 1 at the same indices | CT level 0 over the matching physical box |
-| --- | --- | --- | --- |
-| correlation with the label | 0.11 to 0.19 | 0.46 to 0.65 | 0.46 to 0.65 |
-| fraction of the crop that is zero | 0.0000 to 0.0625 | 0.35 to 0.42 | |
+The block arithmetic. The repair blocks run to z0 11,368 with 256-voxel blocks,
+an extent of 11,624, which is the level-1 z extent exactly, and 3,797 matches
+the same way in y and x. No site can reach the midpoint of a 7,593-wide axis.
 
-Reading level 0 at doubled indices over a 256 cube and mean-pooling it back to
-128 reproduces the level-1 values exactly. That is what fixes level 1 as the
-correct region rather than merely the better-correlated one.
+The supersample identity. Reading level 0 at doubled indices over a 256 cube
+and mean-pooling back to 128 reproduces the level-1 values exactly, so level 1
+is the physically matching region rather than merely a better-correlated one.
+The shipped arrays are not equal to either.
+
+What does not work is correlating a crop's CT with its own label mask, which is
+what I used first. That contrast depends almost entirely on how much empty
+space the crop contains, because in a fully dense region the CT barely
+separates sheet from gap by absolute intensity. Across crops it runs 0.64 at 39
+percent emptiness down to 0.05 at zero emptiness. Quoting a range from a handful
+of crops as though it described the set was wrong, and the corrected form is the
+shift test below.
+
+The shift test is the one that settles alignment. Reading the CT at the same
+site but offset by 20 or 40 voxels scores worse than reading it at the site
+itself on 30 of 30 sampled crops. The mean CT under the label exceeds the mean
+under the background on 97.0 percent of all 300 crops, by a median of 6.1 grey
+levels. A
+misaligned CT would not care where it was read.
 
 **A null measured against an unrelated array is not a null, it is an artefact.**
 The first version's headline evidence was that the roughly 24 point
@@ -58,7 +73,7 @@ source changed keeps the within-crop disagreement, 173 of 209 crops between 35
 and 65 percent negative against 162 before, but now it sits on a CT that
 actually tracks the labels.
 
-`p11_gridcheck.py` reproduces the alignment table, `p14_correctct.py` is the
+`p11_gridcheck.py` and `v3_diag.py` reproduce the alignment evidence, `p14_correctct.py` is the
 published estimator with one line changed.
 
 ## What the spread means, which is not nothing

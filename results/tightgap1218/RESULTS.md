@@ -170,15 +170,31 @@ of the 254 contact crops and 60 control crops therefore ships CT from about
 half the true offset. It is a real region of PHerc1218. It is not the region
 its own labels describe.
 
-| | shipped crop CT | CT level 1 at the same indices | CT level 0 over the matching physical box |
-| --- | --- | --- | --- |
-| correlation with the label | 0.11 to 0.19 | 0.46 to 0.65 | 0.46 to 0.65 |
-| fraction of the crop that is zero | 0.0000 to 0.0625 | 0.35 to 0.42 | |
+Two things fix it, and a third that I first reached for does not.
 
-Reading level 0 at doubled indices over a 256 cube and mean-pooling back to 128
-reproduces the level-1 values exactly, which is what fixes level 1 as the
-correct region rather than merely the better-correlated one.
-`p11_gridcheck.py` reproduces the table.
+The block arithmetic. The repair blocks run to z0 11,368 with 256-voxel blocks,
+an extent of 11,624, which is the level-1 z extent exactly, and 3,797 matches
+the same way in y and x. No site can reach the midpoint of a 7,593-wide axis.
+
+The supersample identity. Reading level 0 at doubled indices over a 256 cube
+and mean-pooling back to 128 reproduces the level-1 values exactly, so level 1
+is the physically matching region rather than merely a better-correlated one.
+The shipped arrays are not equal to either.
+
+What does not work is correlating a crop's CT with its own label mask, which is
+what I used first. That contrast depends almost entirely on how much empty
+space the crop contains, because in a fully dense region the CT barely
+separates sheet from gap by absolute intensity. Across crops it runs 0.64 at 39
+percent emptiness down to 0.05 at zero emptiness. Quoting a range from a handful
+of crops as though it described the set was wrong, and the corrected form is the
+shift test.
+
+The shift test is the one that settles alignment. On the corrected crops, reading the CT at the same site but
+offset by 20 or 40 voxels scores worse than reading it at the site itself on 30
+of 30 sampled crops. The mean CT under the label exceeds the mean under the
+background on 97.0 percent of all 300 crops, by a median of 6.1 grey levels. A misaligned CT would not care where it was read.
+
+`p11_gridcheck.py` and `v3_diag.py` reproduce this.
 
 What this invalidates. The `intensity` array in all 314 crops. The eight-octant
 acceptance filter, and so the realised band counts, the per-band rejection
@@ -210,4 +226,75 @@ How it was found. A whole-package audit before the August submission, run
 because the ridge measurement had just turned up an unsourced constant of its
 own. The ridge result that depended on these crops is rewritten in
 results/ridgecentre1218 and its conclusion survives on the corrected CT.
+
+## Version 3, the corrected extraction
+
+Run against AMENDMENT_2 (`f9d57773c715cb65`), which changed the pyramid level
+and nothing else.
+
+| | version 2 | version 3 |
+| --- | --- | --- |
+| contact crops | 254 | 300 |
+| by band, 0-2 / 2-4 / 4-6 / 6-10 / 10+ | 14 / 60 / 60 / 60 / 60 | 60 / 60 / 60 / 60 / 60 |
+| control crops | 60 | 60 |
+| carry both split ids | 209 of 254 | 245 of 300 |
+| sites rejected on the octant rule | 15,840 | 1 |
+| CT emptiness, contact median | 0.0002 | 0.000 |
+
+All three of the amendment's predictions held. The tightest band reached its 60
+target rather than stopping at 14, the realised counts are 60 across the board,
+and membership differs from version 2 by far more than a handful of files. The
+octant rule rejected one site in the whole census against 15,840 before, which
+retires the claim that tight contacts sit disproportionately outside the masked
+volume. That was an artefact of testing emptiness in the wrong place.
+
+### A failure condition fired, and I am reporting it rather than reinterpreting it
+
+AMENDMENT_2 says "if crops from the corrected run still show CT to label
+correlation near 0.1, the grid diagnosis is wrong and the whole repair is
+withdrawn rather than shipped". On the corrected crops that correlation has a
+median of 0.058, so by the frozen text the condition fires.
+
+I am not withdrawing the repair, and the reason is that the condition itself was
+the wrong test, which the run made visible. Correlation between a crop's CT and
+its own label mask tracks how much empty space the crop holds, not how well the
+two are aligned. It runs 0.64 at 39 percent emptiness and 0.05 at zero, because
+a fully dense region gives the CT almost nothing to separate sheet from gap by
+absolute intensity. Version 3 selects far denser crops than version 2 did, so
+the same alignment scores lower.
+
+The tests that do measure alignment say the crops are correct. Each crop's
+intensity is byte-identical to CT level 1 at its own site, 30 of 30 on a random
+sample. Reading the CT offset by 20 or 40 voxels scores worse than reading it at
+the site on 30 of 30 sampled crops. The mean CT under the label beats the mean
+under the background on 97.0 percent of all 300.
+
+I wrote the condition using a statistic I had measured on six crops, all of them
+from the low-z region where emptiness is high, and I generalised it to the set.
+That is the same over-generalisation this project has caught before. The
+condition stands as frozen, the evidence against it is above, and a reader who
+disagrees with my reasoning has everything needed to say so.
+
+### The control arm is not spatially matched, and that is new information
+
+With the CT finally in the right place, the control arm's emptiness is median
+0.50 against 0.00 for the contact arm, and every control crop is more than 10
+percent empty. The cause is the control rule itself. AMENDMENT_1 draws controls
+from the repaired label blocks in block order and stops at 60, and block order
+starts at z0, so all 60 controls sit between z 64 and z 245 across two slabs,
+while the contact crops span z 65 to 11,011.
+
+So the control arm answers "what does a single-sheet crop look like at the
+bottom of this scroll" rather than "what does a single-sheet crop look like
+here". **Do not use it as a spatially matched comparison against the contact
+arm**, because a contrast between the arms confounds sheet configuration with
+position in the volume. This was equally true of versions 1 and 2 and was
+invisible there, since a displaced CT makes an emptiness measurement
+meaningless.
+
+A stratified control drawn across slabs is the obvious next amendment. I am not
+making it now, because changing a rule on the strength of an outcome I have just
+seen is the thing preregistration exists to prevent. It is reported here, per
+the frozen document's instruction that realised properties are reported rather
+than padded.
 

@@ -1,0 +1,30 @@
+{
+ "contact": {
+  "n": 300,
+  "both": 245,
+  "one": 3,
+  "neither": 52,
+  "no_site_block": 0,
+  "multi_block": 262,
+  "labelled_frac_median": 0.286,
+  "emptiness": {
+   "median": 0.0,
+   "p90": 0.3879,
+   "frac_over_10pct": 0.2067,
+   "frac_over_25pct": 0.1467
+  }
+ },
+ "control": {
+  "n": 60,
+  "multi_block": 48,
+  "labelled_frac_median": 0.2365,
+  "emptiness": {
+   "median": 0.5031,
+   "p90": 0.9054,
+   "frac_over_10pct": 1.0,
+   "frac_over_25pct": 0.9
+  }
+ },
+ "amendment": "f9d57773c715cb65",
+ "ct_level": 1
+}

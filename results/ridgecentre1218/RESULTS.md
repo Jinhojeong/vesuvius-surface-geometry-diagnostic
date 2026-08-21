@@ -92,7 +92,7 @@ actually tracks its labels should give.
 ## The other two failure conditions, with their numbers
 
 Sites are discarded when the corridor leaves the crop, when the labelled run has
-no interior, or when the profile is flat. On the correct CT that is 351 of 5,203
+no interior, or when the profile is flat. On the correct CT that is 351 of 5,276
 sites, a rate of 6.7 percent against the preregistered one-third threshold, and
 the flat-profile discard falls to zero because a CT that contains the sheet is
 never flat across it. The median absolute offset grows with the corridor, 0.50

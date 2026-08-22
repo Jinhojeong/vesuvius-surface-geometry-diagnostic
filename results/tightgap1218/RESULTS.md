@@ -3,6 +3,11 @@
 Executed against PREREGISTRATION.md (`9d5d71dbaf45ab85`) and AMENDMENT_1.md
 (`a07c2f86f39b3bd8`). Every count below is realised, not targeted.
 
+> **Version 5 is the one to use, 2026-08-22.** Versions 1 to 4 all carry at
+> least one defect in the instance labels. In version 5 the shipped gap
+> reproduces exactly from every crop's own labels, 300 of 300, which is the test
+> none of the earlier versions passes.
+>
 > **Unit correction, 2026-08-21.** The gap is in level-1 voxels of 17.28 um, not
 > the level-0 voxels the preregistration and the band table say. The comparison
 > against another contributor's validation geometry was therefore not
@@ -408,4 +413,49 @@ which carries the 12.9 against 0.02 comparison. It is corrected in the thread
 rather than edited.
 
 `p11_microns.py` reproduces this section.
+
+## Correction, 2026-08-22, fifth entry: the authoritative block has to be the census block
+
+Run against AMENDMENT_4 (`0a5d38b6e8bba1e9`). AMENDMENT_3 made the block
+containing the site authoritative, and because blocks overlap, the site sits
+inside more than one block for 76 of the 300 crops. Version 4 broke that tie by
+coordinate order. That is the wrong tie-break. `A` and `B` are block-local ids in
+the numbering of the block the census actually read, so `A_id = base + A` only
+means anything when `base` belongs to that block. For the 37 crops where
+coordinate order picked a different block, the ids named nothing.
+
+Version 4's own verification said "A_id/B_id are built on the authoritative site
+block, 300 of 300" and passed. That check was tautological. It confirmed the ids
+were built on whichever block the code had called authoritative, which is true by
+construction. Versions 1 to 3 used a third arbitrary tie-break, whichever
+candidate came last in filename order.
+
+| | v3 | v4 | v5 |
+| --- | --- | --- | --- |
+| carry both split ids | 245 of 300 | 263 of 300 | **300 of 300** |
+| shipped gap reproduces exactly from the crop's own labels | 218 of 300 | 263 of 300 | **300 of 300** |
+| pair-voxel loss to the overlap overwrite | mean 10.4 percent | zero | zero |
+
+**AMENDMENT_4 predicted exactly 276 and got 300, so its own failure condition
+fires.** The prediction came from resolving version 4's arrays through the census
+base, and those arrays had already lost census-block voxels to the overwrite, so
+it was a floor rather than a forecast. The 24-crop difference is not hand-waved.
+Twenty-four crops have census-base ids that are absent in version 4 and present
+in version 5, and 300 minus 276 is 24. The document stands as frozen and is
+corrected here.
+
+The consumer-facing test is the last row of that table, and it is the one that
+matters. Take a crop, take its own `instance` array, its own `A_id` and `B_id`,
+and run the frozen `gap_along_normal` at the crop centre. In version 5 that
+returns the shipped gap exactly for all 300. In version 3 it returned it for 218,
+and 6 crops landed in a different band than the one they ship under.
+
+One methodological note, because it nearly produced a false alarm. A first pass
+at that test used a reimplementation of `gap_along_normal` rather than the frozen
+function, taking whole-crop centroids instead of a radius-12 window and walking
+one direction per label instead of both signs per step. It scored 107 of 297 and
+looked like a serious defect. The frozen function scores 300 of 300 on the same
+data. The estimator was the variable.
+
+`p11_v5_labels.py` builds it, `p11_v5_verify.py` reproduces all seventeen checks.
 

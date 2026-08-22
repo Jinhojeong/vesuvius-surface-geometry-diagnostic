@@ -1,0 +1,40 @@
+=== is 300/300 real, or trivially true? ===
+PASS  A_id and B_id are distinct in every crop  | 0 crops with A==B
+PASS  both ids occupy real volume, not a stray voxel  | smallest instance: A 869, B 739 voxels; medians 8078 / 8375
+
+=== the consumer test: does the shipped gap reproduce from the crop's OWN labels? ===
+  remeasurable from own labels: 300 of 300
+PASS  shipped gap reproduces EXACTLY from the crop's own labels  | 300 of 300 exact; 0 land outside their stated band
+
+=== AMENDMENT_4 conditions ===
+PASS  no gap value changed against v3
+PASS  no band changed against v3
+PASS  same crop membership as v3  | 300 vs 300
+PASS  the census block is authoritative and written first in every crop  | 0 wrong
+  crops where v4's census-base ids were absent but v5's are present: 24
+PASS  the 300 minus 276 gap is explained by v4 overwriting census-block voxels  | 24 recovered, predicted 24
+
+=== unchanged from v4: alignment, manifest, rules ===
+PASS  crop intensity is byte-identical to CT level 1 at its own site  | 30/30
+PASS  mean CT under the label exceeds the background, all 300  | median +6.1, 97.0% positive
+PASS  contact 300 / control 60
+PASS  manifest and disk agree exactly
+PASS  sha256 matches on ALL 360 rows  | 0 mismatches
+PASS  all five bands at 60
+PASS  every gap lies inside its band
+PASS  both_instances_present recomputes to the summary  | 300 vs 300
+PASS  contact crops carry every promised array
+
+=== summary ===
+{
+ "contact": 300,
+ "control": 60,
+ "both": 300,
+ "one": 0,
+ "neither": 0,
+ "v4_both": 263,
+ "predicted": 276,
+ "gap_reproduces": "300 of 300"
+}
+
+ALL CHECKS PASSED

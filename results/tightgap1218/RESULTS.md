@@ -12,7 +12,7 @@ Executed against PREREGISTRATION.md (`9d5d71dbaf45ab85`) and AMENDMENT_1.md
 > the level-0 voxels the preregistration and the band table say. The comparison
 > against another contributor's validation geometry was therefore not
 > like-for-like, and the honest figure is 0.87 percent rather than 12.9 percent.
-> See the fourth correction at the end of this file. The gap values themselves
+> See correction 5 at the end of this file. The gap values themselves
 > are unchanged.
 >
 > **Defect notice, 2026-08-20.** The CT array in every published crop was read
@@ -20,7 +20,7 @@ Executed against PREREGISTRATION.md (`9d5d71dbaf45ab85`) and AMENDMENT_1.md
 > labels, the gaps and the gap population are unaffected. The crop intensities,
 > the eight-octant acceptance filter and everything downstream of it are.
 > Kaggle versions 1 and 2 should not be used for anything that reads the
-> intensity array. See the third correction at the end of this file.
+> intensity array. See correction 3 at the end of this file.
 
 
 ## Why it exists
@@ -108,7 +108,7 @@ re-derivation from labels rather than a leftover census population, per
 amendment 1, so it answers what a single-sheet crop looks like here and not
 what the census declined to flag. One scroll.
 
-## Correction, 2026-08-19
+## Correction 1, 2026-08-19: the published set carried six pilot orphans
 
 aviad12g audited the published set against this document and found a count
 mismatch: the Kaggle v1 manifest carried 260 contact crops with 17 in the 0 to 2
@@ -129,7 +129,7 @@ recomputed manifest. Every derived statistic above has been recomputed on the
 emptiness percentiles slightly. The band table and the gap population are
 unchanged, since the gap measurement never depended on crop membership.
 
-## Correction, 2026-08-20
+## Correction 2, 2026-08-20: the tight-band rejection figure had no source
 
 The rejection figure for the tightest band was wrong. This file and
 AMENDMENT_1.md both said that of 120 sampled sites under 2 voxels, 117 failed
@@ -183,7 +183,7 @@ inside the version-3 Kaggle release, says the verification is 18 checks. It was
 19. Version 3 is superseded, so that file is now history rather than guidance,
 and version 4 carries the right count for its own 17-check log.
 
-## Correction, 2026-08-20, second entry: the CT is from the wrong grid
+## Correction 3, 2026-08-20: the CT is from the wrong grid
 
 The repaired instance labels live on the CT's level-1 grid. The repair blocks
 run to z0 11,368 with 256-voxel blocks, an extent of 11,624, which is the
@@ -312,7 +312,8 @@ With the CT finally in the right place, the control arm's emptiness is median
 0.50 against 0.00 for the contact arm, and every control crop is more than 10
 percent empty. The cause is the control rule itself. AMENDMENT_1 draws controls
 from the repaired label blocks in block order and stops at 60, and block order
-starts at z0, so all 60 controls sit between z 64 and z 245 across two slabs,
+starts at z0. So all 60 controls come from that single lowest slab and sit
+between z 64 and z 245,
 while the contact crops span z 65 to 11,011.
 
 So the control arm answers "what does a single-sheet crop look like at the
@@ -329,7 +330,7 @@ seen is the thing preregistration exists to prevent. It is reported here, per
 the frozen document's instruction that realised properties are reported rather
 than padded.
 
-## Correction, 2026-08-21, third entry: block overlap was overwriting the split pair
+## Correction 4, 2026-08-21: block overlap was overwriting the split pair
 
 Run against AMENDMENT_3 (`db61e452e4cce9ca`). The repair blocks are 256 by 512
 by 512 on strides of 224 in z and 448 in y and x, so neighbours overlap by 32
@@ -363,7 +364,7 @@ principle as the earlier amendments. Its other conditions all hold. No gap value
 changed, no band changed, membership is the same 300 crops, and pair-voxel loss
 is zero for every crop.
 
-## Correction, 2026-08-21, fourth entry: the gap is in level-1 voxels, and the headline comparison was not like-for-like
+## Correction 5, 2026-08-21: the gap is in level-1 voxels, and the headline comparison was not like-for-like
 
 Rule 2 of the preregistration says the gap is measured "at the site voxel, in
 level-0 voxels", and `p11_gaps.py` repeats it. Both are wrong. The measurement
@@ -414,7 +415,7 @@ rather than edited.
 
 `p11_microns.py` reproduces this section.
 
-## Correction, 2026-08-22, fifth entry: the authoritative block has to be the census block
+## Correction 6, 2026-08-22: the authoritative block has to be the census block
 
 Run against AMENDMENT_4 (`0a5d38b6e8bba1e9`). AMENDMENT_3 made the block
 containing the site authoritative, and because blocks overlap, the site sits

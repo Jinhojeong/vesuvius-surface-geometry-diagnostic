@@ -6,6 +6,11 @@ instances, per sheet, with the normal oriented away from an assumed winding
 centre so that a negative offset means the CT ridge sits inward of the
 label-run centre.
 
+**Re-run on the version-5 membership, 2026-08-22.** The table below is the
+209-crop run on an earlier release. The current answer is at the end of this
+file, measured on all 300 version-5 crops with correctly stitched labels, and it
+agrees.
+
 **This file was rewritten on 2026-08-20 after the first version was withdrawn.**
 The first version read the CT out of the shipped crop arrays, which turned out
 to hold CT from a different physical region than their own labels. The answer
@@ -145,3 +150,51 @@ crops come from contact sites, so this samples the regime where sheets are close
 rather than the scroll as a whole. The corridor bounds the reportable offset by
 construction, which is why the sweep is reported rather than a single number.
 One scroll.
+
+## Re-run on version 5, 2026-08-22
+
+Per AMENDMENT_1 (`953017184b93ba59`), frozen before this ran. The earlier answer
+sat on 209 crops from a release whose labels had lost part of the split pair to
+an overlap overwrite, so it had to be redone once the labels were fixed. This run
+uses all 300 version-5 contact crops, every one of which carries both split ids.
+
+The winding-centre constant is retired. The primary is oriented by an axis fitted
+from the crops' own normals, at y 1,767 and x 1,776. That is close to the level-1
+volume centre of 1,898.5, which is what a scroll roughly centred in its volume
+should give, and it is a long way from the 3,796.5 the first run used.
+
+| corridor | crops | median | 95 percent interval | share negative | median absolute |
+| --- | --- | --- | --- | --- | --- |
+| ±3 vox | 300 | −0.06 | −0.25 to 0.00 | 50.0 percent | 0.50 |
+| ±4 vox | 300 | −0.13 | −0.25 to 0.00 | 50.3 percent | 0.63 |
+| ±8 vox | 300 | −0.25 | −0.38 to 0.00 | 53.3 percent | 1.19 |
+
+**The reading is unchanged. There is no systematic displacement.** The
+preregistration's third failure condition fires, the sign split is 50.0, 50.3 and
+53.3 percent negative, and it says in advance that a near-even split means no
+systematic relation. The axis-free test agrees, 248 of 300 crops have between 35
+and 65 percent of their own points negative and the median crop sits at exactly
+50 percent. The other two conditions do not fire. The discard rate is 296 of
+7,417 sites, 4.0 percent against the one-third threshold, and the median absolute
+offset falls as a share of the corridor, 0.167 then 0.156 then 0.148.
+
+**One thing did move and it should be said plainly.** On 209 crops the medians
+were 0.00 at every corridor with zero interior to the interval. On 300 they are
+−0.06, −0.13 and −0.25, and zero sits at the upper bound of all three intervals
+rather than inside them. Every point estimate is on the same side. That is a
+hint of a small inward bias that the earlier run did not show, and it is smaller
+than the sampling step of the profile at the tightest corridor. It does not
+survive the sign test, so it is not being claimed. It is being recorded so that
+anyone who repeats this on more data knows where to look.
+
+Every AMENDMENT_1 prediction held. Medians within a quarter voxel of zero,
+intervals containing zero, sign split inside 40 to 60 percent, and median
+absolute offsets within 0.2 voxels of the earlier figures. The amendment's added
+condition also passes, the fitted axis and the volume centre differ by at most
+0.06 voxels against interval widths of 0.25 and 0.38, so the answer is not an
+artefact of the axis choice.
+
+The scatter is what a consumer inherits, and it is essentially unchanged. Half
+the per-crop medians sit more than 0.50 voxels from the ridge at the tightest
+corridor. `p14_v5.py` reproduces this section.
+

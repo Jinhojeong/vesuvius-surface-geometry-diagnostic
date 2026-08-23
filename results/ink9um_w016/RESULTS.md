@@ -132,3 +132,40 @@ bar itself is segment-dependent too, 0.008 on PHerc0814 against 0.037 on
 PHerc1667, so seed-to-seed stability is not a fixed property of these weights.
 
 Depth window and direction were measured on w016 only and are not re-run here.
+
+## Adjacent work published on Discord while this sat in the repo
+
+Two threads in #ink-detection overlap this and are worth reading next to it,
+because one of them looks like a contradiction and is not.
+
+pscamillo, 2026-08-20, "9 um depth window: it's the jitter, not the depth".
+He **retrained** at 13, 9 and 5 slices. 13 and 9 were indistinguishable from 17,
+5 looked bad at 58 to 0 across 60 windows, and then the same 5-slice window with
+`max_offset=0` tied 60 of 60. So the cost was the plus or minus 2 jitter, which
+shifts a 5-slice window by up to 40 percent of its own depth, and the narrow
+model trains about 60 percent faster.
+
+That does not contradict arm 5 here, because arm 5 never retrained anything. It
+narrowed the window **at inference on a checkpoint trained at 17**, which is a
+different question and has a different answer. Taking a model trained with a
+17-slice receptive window and feeding it 5 slices costs 0.29 F1 on w016. Training
+a model at 5 slices without jitter appears to cost nothing. Both can be true, and
+the practical guidance changes depending on which one you are doing. My
+"leave the depth window alone" applies to the released checkpoints as shipped,
+not to anyone training their own, and it should be read that way.
+
+KLAVIS, 2026-08-18, "All 14 released 9 um ink checkpoints, scored per region".
+He scored the same 14 checkpoints on the same three regions in balanced accuracy,
+found a spread of up to 0.14, and found the obvious default worst on w016 at
+0.680 against 0.819. That is the same conclusion arm 1 reached in F1, reached
+independently and published two days before this file existed. He then went
+further than I did, using the 2.4 um model as dense pseudo-labels over 83 percent
+of each canvas against a hand-labelled 1.7 percent, retraining, and improving
+held-out accuracy on all three regions.
+
+One of his observations is a direct corroboration of something in this file. On
+w016 his higher-scoring model renders visibly worse letters, and AUC ranks that
+pair correctly where balanced accuracy at 0.5 does not. That is the same reason
+the rank claim here survives on AUC and fails on F1, and it is a better argument
+for it than mine, because his comes with a visible failure.
+

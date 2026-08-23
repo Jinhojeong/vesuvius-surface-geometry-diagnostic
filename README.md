@@ -24,8 +24,13 @@ full gallery with sources and selection rules is in
 | PHerc1203 thickness zone map, regenerated after a self-caught read bug | [figure](docs/evidence_gallery/thickness1203_v2_map.png) · [data](results/thickness1203) |
 | Preregistered placement A/B, off-seeds sit in label-void space | [figure](docs/evidence_gallery/placement_offseed_context.png) · [data](prereg_placement_ab) |
 
-Two experiments were frozen in public before they ran, and both are published
-as they came out. [prereg_retrain_ab](prereg_retrain_ab) asked whether
+Five designs were frozen in public before they ran, and every one is published
+as it came out, with five amendments each hash chained to the document it
+amends. Three of them are this month's datasets and measurements, in
+[results/tightgap1218](results/tightgap1218),
+[results/ridgecentre1218](results/ridgecentre1218) and
+[results/ink9um_w016](results/ink9um_w016). The two A/Bs are the older pair.
+[prereg_retrain_ab](prereg_retrain_ab) asked whether
 fine-tuning on repaired labels moves held-out weld separation and returned a
 null with a tight interval. [prereg_placement_ab](prereg_placement_ab) asked
 whether the hazard field's growth effect requires seeding on the flagged

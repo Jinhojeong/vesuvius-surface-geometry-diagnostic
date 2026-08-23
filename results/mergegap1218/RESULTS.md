@@ -1,8 +1,10 @@
 # Does the published surface prediction merge touching sheets, and does the gap predict it?
 
 Executed against PREREGISTRATION.md (`a8ae5f7740a5079a`) and its AMENDMENT_1
-(`1c8c9419c9ee69ba`). Measured on all 300 contact crops of the tight-contact
-validation set version 5, with the 60 single-sheet crops as a negative control.
+(`1c8c9419c9ee69ba`). Measured on the tight-contact validation set version 5, with the 60 single-sheet
+crops as a negative control. The set holds 300 contact crops, 60 per band; 296 of
+them carry at least twelve eligible sample points inside the amended radius and
+are the ones measured here, so the band counts below are 58, 58, 60, 60 and 60.
 The prediction is the published PHerc1218 `m7` surface, read at level 1, the same
 grid the labels and the crops sit on.
 

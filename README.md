@@ -48,9 +48,9 @@ seed-fixed) and two public baselines. Posted to
 ## Headline results
 
 Per-geometry-bin **AUC** (P(surface) at GT surface points vs near-sheet
-background points 2–10 vox away — firing-rate-free, ~6M+6M points per model):
+background points 2 to 10 vox away, firing-rate-free, ~6M+6M points per model):
 
-**Curvature** (orientation-structure-tensor dispersion, decile bins) — both
+**Curvature** (orientation-structure-tensor dispersion, decile bins), both
 models degrade monotonically through all 10 deciles:
 
 | model | flattest decile | most curved decile |
@@ -81,8 +81,8 @@ Geometry proxies derive from GT, so label quality confounds the strata. The
 ## Follow-up: label-completeness QC (`scripts/qc192_labels.py`)
 
 Turns the label-incompleteness hypothesis above into a measurement. For each
-patch it detects **candidate unlabeled sheets** — high-confidence predictions
->3 vox outside the GT that are sheet-shaped (planar PCA) and CT-bright — and
+patch it detects **candidate unlabeled sheets**, meaning high-confidence predictions
+>3 vox outside the GT that are sheet-shaped (planar PCA) and CT-bright, and
 scores the patch's label incompleteness.
 
 - Mean incompleteness across the 200 patches: **6.4%** of sheet voxels;
@@ -117,14 +117,14 @@ cause by elimination, then tested a fix against the official metric:
 What fixes it is continued training itself: 3000 steps on 500 fresh Dataset059
 patches (~50 min, one 11GB 2080 Ti) lifts <4 vox spacing AUC from **0.41 to 0.65**,
 with the whole degradation curve shifting up. Cost on the official
-`topometrics` leaderboard blend: none detectable — paired over n=123 patches,
+`topometrics` leaderboard blend: none detectable, paired over n=123 patches,
 delta −0.003 ± 0.004 (t p=0.43, Wilcoxon p=0.80), fine-tuned model ahead on
 68/123. An n=40 sample had suggested −0.01; it did not survive the larger
 sample. The operating threshold shifts from 0.4 to 0.6.
 
 Scaling exposure further (full 1554-patch pool, 6000 steps) gives the best
 numbers in 7 of 8 spacing bins and surface dice 0.850, but the compressed
-bin saturates around **0.65** — that plateau looks like the real remaining
+bin saturates around **0.65**. That plateau looks like the real remaining
 ceiling for this recipe (`results/finetune/full_auc.json`,
 `full_official.json`).
 
@@ -207,22 +207,22 @@ sweep), `scripts/loso_seed_val.py` (compact per-seed validation),
 
 ## Contents
 
-- `scripts/diag2_191.py` — recall stratification: sliding-window inference +
+- `scripts/diag2_191.py`, recall stratification: sliding-window inference +
   GT geometry (structure-tensor curvature, along-normal sheet spacing)
-- `scripts/diag4_auc.py` — the two-model per-bin AUC comparison (main result)
-- `scripts/diag3_d058.py` — nnUNetv2 baseline runner (trainer-fallback recipe)
-- `scripts/loader059.py` — loading recipe for `Model_epoch499.pth`
+- `scripts/diag4_auc.py`, the two-model per-bin AUC comparison (main result)
+- `scripts/diag3_d058.py`, nnUNetv2 baseline runner (trainer-fallback recipe)
+- `scripts/loader059.py`, loading recipe for `Model_epoch499.pth`
   (`_orig_mod.` prefix + duplicate per-task encoder keys + `separate_decoders`)
-- `scripts/oracle191.py` — CT-brightness label-incompleteness probe
-- `scripts/bimodal191.py` — along-normal peak analysis of the compressed-bin
+- `scripts/oracle191.py`, CT-brightness label-incompleteness probe
+- `scripts/bimodal191.py`, along-normal peak analysis of the compressed-bin
   ceiling (released vs fine-tuned), the resolution-limit vs post-process test
-- `scripts/peel191.py` — normal-direction split attempt and its official-metric
+- `scripts/peel191.py`, normal-direction split attempt and its official-metric
   cost (the post-process that does not help)
-- `scripts/loso_ft.py` — leave-one-scroll-out fine-tune (Scroll 1 only, `SEED` env)
-- `scripts/loso_eval.py`, `scripts/loso_sweep.py`, `scripts/loso_seed_val.py` —
+- `scripts/loso_ft.py`, leave-one-scroll-out fine-tune (Scroll 1 only, `SEED` env)
+- `scripts/loso_eval.py`, `scripts/loso_sweep.py` and `scripts/loso_seed_val.py`,
   cross-scroll transfer AUC, fair threshold sweep, and per-seed replication
-- `scripts/bimodal_loso.py` — merged-blob mechanism check on the unseen scroll
-- `results/` — per-patch CSVs, strata tables (JSON), figures
+- `scripts/bimodal_loso.py`, merged-blob mechanism check on the unseen scroll
+- `results/`, per-patch CSVs, strata tables (JSON), figures
 
 ## Reproduce
 
@@ -234,7 +234,7 @@ python scripts/diag2_191.py   # recall strata (per model)
 python scripts/diag4_auc.py   # two-model AUC strata
 ```
 
-Paths at the top of each script point at local data/model directories — adjust
+Paths at the top of each script point at local data/model directories, so adjust
 to your layout. GPU: everything runs on a single 11 GB RTX 2080 Ti.
 
 ## Reproduce the geometric-channel check
@@ -276,7 +276,7 @@ surface patch, reporting the official blend (TopoScore / SurfaceDice@2 / VOI)
 plus each term, connected-component stats and, when instance labels are
 given, instance count and instance-level VOI. A two-input mode prints an
 A -> B delta table (e.g. splitter OFF vs ON), which is the number that
-matters for split evaluation — see the metric-response notes in the #191
+matters for split evaluation, see the metric-response notes in the #191
 thread (the blend's VOI term rewards predicted mass, so read topology
 changes on the component/Betti side).
 
@@ -301,7 +301,7 @@ Frangi/EDT preprocessing anywhere in the eval loop.
 
 ## License
 
-MIT. Data and models are Vesuvius Challenge resources (CC BY-NC 4.0 — credit
+MIT. Data and models are Vesuvius Challenge resources (CC BY-NC 4.0, credit
 to the Vesuvius Challenge team and the `Dataset059` / model authors).
 
 ## Twin validation (2026-08)

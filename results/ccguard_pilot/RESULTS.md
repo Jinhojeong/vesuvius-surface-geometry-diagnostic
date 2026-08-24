@@ -3,8 +3,8 @@
 flummoxjr's harness (`flummoxjr/facing-pairs-harness`), run on the eight cells
 of aviad12g's physical-fusion pilot, which carry a probability map, a surface
 label and a per-voxel `turn_id`, exact sheet truth by construction. He asked,
-before anyone ran anything, for two numbers: the fraction of step-3 CC-guard
-rejections whose two points genuinely lie on different sheets, and the
+before anyone ran anything, for two numbers, the fraction of step-3 CC-guard
+rejections whose two points lie on different sheets in truth, and the
 false-accept rate on the sites the guard keeps.
 
 ## Chain of custody, all checked on this machine before scoring
@@ -12,8 +12,8 @@ false-accept rate on the sites the guard keeps.
 The harness self-test passes, three stages. His port is byte-identical to the
 archived original by his own verifier, re-run here, PASS. The eight cells pass
 aviad's shipped validator, 156 of 156 checks, and the manifest sha256 equals
-the value aviad published on villa #191, `506f3353...`. Batch settings:
-`--gt-instance turn_id`, `--log-rejected`, `--seed-mode caseid`.
+the value aviad published on villa #191, `506f3353...`. Batch settings were
+`--gt-instance turn_id`, `--log-rejected` and `--seed-mode caseid`.
 
 ## The two numbers he asked for
 
@@ -28,7 +28,7 @@ the value aviad published on villa #191, `506f3353...`. Batch settings:
 Ground truth resolved for every pair; no unresolved ids in either file.
 
 **The guard's rejections are real.** Overall 97.6 percent of rejected pairs
-are genuinely two distinct sheets that the label volume merges locally, which
+are two distinct sheets in truth, pairs the label volume merges locally, which
 is exactly the reading his Dataset059 survival rates (0.8, 5.2, 11.4 percent
 at 2-3, 3-4, 4-5 vox) assume. And the guard never falsely accepts: all 2,400
 kept sites are true two-sheet pairs, in every bin, on every cell.

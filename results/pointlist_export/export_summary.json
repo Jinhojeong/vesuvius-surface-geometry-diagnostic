@@ -1,0 +1,12 @@
+{
+ "rows": 14847533,
+ "distinct_ids": 635419,
+ "blocks": 1369,
+ "missing_table_key": 0,
+ "dropped_unmapped_vox": 0,
+ "overlap_lattice_repeats": 7102640,
+ "overlap_id_agreement": "4249/5126 = 0.8289",
+ "step": 8,
+ "frame": "L1 voxels, same grid and axes as the crossing table",
+ "source": "p1218_full/blocks + global_table.json, first-writer-wins on the step-8 lattice"
+}

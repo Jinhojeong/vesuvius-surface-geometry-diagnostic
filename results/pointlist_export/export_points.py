@@ -4,10 +4,13 @@ For Diego's route B (PR #1). Rules, stated so the manifest can repeat them:
   - lattice: every 8th voxel of the global L1 grid (coords divisible by 8)
   - ids: block-local labels mapped through global_table.json; unmapped ids
     dropped and counted
-  - overlaps: blocks visited in sorted (z0,y0,x0) order, first writer wins on
-    the lattice; since overlapping blocks map to the same global id when the
-    merge is right, an id disagreement on overlap is a merge fault, measured
-    separately below rather than silently resolved
+  - overlaps: blocks visited in plain lexicographic order of their full paths,
+    which is what sorted(glob(...)) gives and is NOT numeric z0,y0,x0 order
+    (z0, z10080, z10304, ..., z1120, ...). First writer wins on the lattice.
+    Since overlapping blocks map to the same global id when the merge is right,
+    an id disagreement on overlap is a merge fault, measured separately below
+    rather than silently resolved, and the visit order only decides the winner
+    on those disagreeing voxels.
 """
 import glob, gzip, json, re, os
 import numpy as np

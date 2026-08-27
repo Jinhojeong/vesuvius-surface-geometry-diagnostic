@@ -1,0 +1,14 @@
+{
+ "voxels": 216000329,
+ "assigned": 185331060,
+ "assigned_frac": 0.858,
+ "median_dr_vox": 2.625,
+ "overlap_voxels": 106629002,
+ "overlap_agreement": 0.8884,
+ "instances_eval": 475845,
+ "instances_gap": 139083,
+ "tol_abs": 15.0,
+ "tol_frac": 0.45,
+ "block_order": "paths",
+ "seconds": 920
+}

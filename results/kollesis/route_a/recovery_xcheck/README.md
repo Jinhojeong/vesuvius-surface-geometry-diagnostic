@@ -16,12 +16,17 @@ so the two requested checks have one answer.
 
 2,418 of the 9,034 unlabeled-material claims carry a pre-repair label at the
 exact voxel. The labelled fraction of the surrounding 5-cube has a median of
-0.42 over those hits, and only 27 sit in fully labelled neighbourhoods.
-Almost all are therefore edge grazes within the stated 32 to 60 micron
-prediction tolerance, and 27 are claims of no sheet where a labelled sheet
-exists. For
-the wedge crossings the rates are 93 of 3,344 at conf 1 and 7 of 281 at
-conf 2.
+0.42 over those hits, and only 13 of them sit in fully labelled
+neighbourhoods. Almost all are therefore edge grazes within the stated 32 to
+60 micron prediction tolerance, and 13 are claims of no sheet where a
+labelled sheet exists. For the wedge crossings the rates are 93 of 3,344 at
+conf 1 and 7 of 281 at conf 2, with 14 of those hundred hits interior rather
+than grazes.
+
+The z, theta, r to voxel conversion behind the wedge check was validated on
+3,000 rows of positions_merged first. Those land on labels at 85.3 percent
+at the exact voxel and 100 percent within 2 in-plane voxels, so the low
+wedge rate is a property of the claims rather than of the conversion.
 
 `xcheck_violations.csv` lists every exact-voxel hit, sorted so the fully
 labelled neighbourhoods come first, with the pre-repair global id and the
